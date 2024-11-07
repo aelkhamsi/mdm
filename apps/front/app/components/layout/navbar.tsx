@@ -25,7 +25,7 @@ export default function NavBar() {
               height="30"
               className="mr-2 rounded-sm"
             ></Image>
-            <p>Math&Maroc</p>
+            <p></p>
           </Link>
         </div>
       </div>
