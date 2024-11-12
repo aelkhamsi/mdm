@@ -21,8 +21,8 @@ export default function NavBar() {
             <Image
               src="/logo.png"
               alt="Precedent logo"
-              width="30"
-              height="30"
+              width="45"
+              height="45"
               className="mr-2 rounded-sm"
             ></Image>
             <p></p>
