@@ -1,6 +1,5 @@
 import { Github, Instagram } from 'lucide-react'
 import React from 'react'
-import { Button } from "ui";
 
 const HeroSection = () => {
   return (

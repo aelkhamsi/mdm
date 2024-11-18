@@ -5,7 +5,6 @@ import { useDemoModal } from "@/app/components/home/demo-modal";
 import Popover from "@/components/shared/popover";
 import Tooltip from "@/components/shared/tooltip";
 import { ChevronDown } from "lucide-react";
-import { Button } from 'ui';
 
 export default function ComponentGrid() {
   const { DemoModal, setShowDemoModal } = useDemoModal();
@@ -13,7 +12,6 @@ export default function ComponentGrid() {
   return (
     <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
       <DemoModal />
-      <Button variant="default">Outline</Button>
 
       <button
         onClick={() => setShowDemoModal(true)}
