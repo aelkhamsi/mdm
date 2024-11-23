@@ -1,4 +1,5 @@
 import "./globals.css";
+import "ui/globals.css";
 import cx from "classnames";
 import { sfPro, inter } from "./fonts";
 import Footer from "@/app/components/layout/footer";
