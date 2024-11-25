@@ -23,6 +23,18 @@ importers:
 
   apps/front:
     dependencies:
+      '@mdm/hooks':
+        specifier: workspace:*
+        version: link:../../packages/hooks
+      '@mdm/types':
+        specifier: workspace:*
+        version: link:../../packages/types
+      '@mdm/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      '@mdm/utils':
+        specifier: workspace:*
+        version: link:../../packages/utils
       '@radix-ui/react-dialog':
         specifier: ^1.0.5
         version: 1.1.2(@types/react-dom@18.2.8)(@types/react@18.2.24)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -65,9 +77,6 @@ importers:
       framer-motion:
         specifier: ^8.5.5
         version: 8.5.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      hooks:
-        specifier: workspace:*
-        version: link:../../packages/hooks
       lucide-react:
         specifier: 0.105.0-alpha.4
         version: 0.105.0-alpha.4(react@18.3.1)
@@ -92,19 +101,16 @@ importers:
       typescript:
         specifier: 5.2.2
         version: 5.2.2
-      ui:
-        specifier: workspace:*
-        version: link:../../packages/ui
       use-debounce:
         specifier: ^9.0.4
         version: 9.0.4(react@18.3.1)
-      utils:
-        specifier: workspace:*
-        version: link:../../packages/utils
       vaul:
         specifier: ^0.6.8
         version: 0.6.8(@types/react-dom@18.2.8)(@types/react@18.2.24)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
+      '@mdm/config':
+        specifier: workspace:*
+        version: link:../../packages/config
       '@tailwindcss/forms':
         specifier: ^0.5.6
         version: 0.5.9(tailwindcss@3.4.14)
@@ -123,9 +129,6 @@ importers:
       concurrently:
         specifier: ^7.6.0
         version: 7.6.0
-      config:
-        specifier: workspace:*
-        version: link:../../packages/config
       postcss:
         specifier: ^8.4.31
         version: 8.4.47
@@ -180,6 +183,12 @@ importers:
       '@chromatic-com/storybook':
         specifier: ^1.6.1
         version: 1.9.0(react@18.3.1)
+      '@mdm/config':
+        specifier: workspace:*
+        version: link:../config
+      '@mdm/utils':
+        specifier: workspace:*
+        version: link:../utils
       '@storybook/addon-essentials':
         specifier: ^8.2.5
         version: 8.3.6(storybook@8.3.6)(webpack-sources@3.2.3)
@@ -222,9 +231,6 @@ importers:
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
-      config:
-        specifier: workspace:*
-        version: link:../config
       eslint:
         specifier: ^8.57.0
         version: 8.57.1
@@ -249,9 +255,6 @@ importers:
       typescript:
         specifier: ^5.2.2
         version: 5.6.3
-      utils:
-        specifier: workspace:*
-        version: link:../utils
       vite:
         specifier: ^5.3.4
         version: 5.4.10(@types/node@22.8.4)(terser@5.36.0)

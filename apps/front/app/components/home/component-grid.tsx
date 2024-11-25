@@ -5,7 +5,7 @@ import { useDemoModal } from "@/app/components/home/demo-modal";
 import Popover from "@/components/shared/popover";
 import Tooltip from "@/components/shared/tooltip";
 import { ChevronDown } from "lucide-react";
-import { Button } from 'ui'
+import { Button } from '@mdm/ui'
 
 export default function ComponentGrid() {
   const { DemoModal, setShowDemoModal } = useDemoModal();
