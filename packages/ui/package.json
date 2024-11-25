@@ -11,11 +11,16 @@
   "main": "src/index.ts",
   "prettier": "config/prettier.config.js",
   "dependencies": {
+    "@mdm/hooks": "workspace:*",
     "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-popover": "^1.0.7",
+    "@radix-ui/react-tooltip": "^1.0.7",
     "lucide-react": "0.105.0-alpha.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "vaul": "^0.6.8"
   },
   "devDependencies": {
     "@mdm/config": "workspace:*",

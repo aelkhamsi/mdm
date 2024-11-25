@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { useDemoModal } from "@/app/components/home/demo-modal";
-import Popover from "@/components/shared/popover";
-import Tooltip from "@/components/shared/tooltip";
+import { Popover } from "@mdm/ui";
+import { Tooltip } from "@mdm/ui";
 import { ChevronDown } from "lucide-react";
 import { Button } from '@mdm/ui'
 

@@ -1,4 +1,4 @@
-import { BuyMeACoffee } from "@/components/shared/icons";
+import { BuyMeACoffee } from "@mdm/ui";
 
 export default function Footer() {
   return (
