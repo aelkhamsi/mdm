@@ -11,10 +11,11 @@
   "main": "src/index.ts",
   "prettier": "config/prettier.config.js",
   "dependencies": {
-    "clsx": "^2.0.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "lucide-react": "0.105.0-alpha.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tailwind-merge": "^1.14.0"
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.1",
@@ -31,6 +32,8 @@
     "@typescript-eslint/eslint-plugin": "^7.15.0",
     "@typescript-eslint/parser": "^7.15.0",
     "@vitejs/plugin-react": "^4.3.1",
+    "class-variance-authority": "^0.7.0",
+    "config": "workspace:*",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
@@ -38,15 +41,14 @@
     "prettier": "^3.3.3",
     "prop-types": "^15.8.1",
     "storybook": "^8.2.5",
-    "config": "workspace:*",
     "typescript": "^5.2.2",
+    "utils": "workspace:*",
     "vite": "^5.3.4"
   },
   "exports": {
     ".": "./src/index.ts",
     "./globals.css": "./src/globals.css",
     "./postcss.config": "./postcss.config.js",
-    "./tailwind.config": "./tailwind.config.ts",
-    "./lib/*": "./src/lib/*.ts"
+    "./tailwind.config": "./tailwind.config.ts"
   }
 }

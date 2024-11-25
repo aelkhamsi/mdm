@@ -1,7 +1,7 @@
 "use client";
 
 import { Dispatch, SetStateAction } from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "utils";
 import { Drawer } from "vaul";
 import * as Dialog from "@radix-ui/react-dialog";
 import { useMediaQuery } from "hooks";
