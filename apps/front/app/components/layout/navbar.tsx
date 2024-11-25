@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import useScroll from "@/lib/hooks/use-scroll";
+import { useScroll } from "hooks";
 
 export default function NavBar() {
-  const scrolled = useScroll(50);
+  const scrolled = useScroll(50)
 
   return (
     <>
