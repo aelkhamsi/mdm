@@ -2,10 +2,11 @@ import "./globals.css";
 import "@mdm/ui/globals.css";
 import cx from "classnames";
 import { sfPro, inter } from "./fonts";
-import Footer from "@/app/components/layout/footer";
+import Footer from "@/app/components/layout/footer/footer";
 import { Suspense } from "react";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
-import Navbar from "@/app/components/layout/navbar";
+import Navbar from "@/app/components/layout/navbar/navbar";
+import JotaiContextProvider from "./jotaiContextProvider";
 
 export const metadata = {
   title: "Precedent - Building blocks for your Next.js project",
@@ -22,16 +23,18 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={cx(sfPro.variable, inter.variable)}>
-        <Suspense fallback="...">
-          <Navbar />
-        </Suspense>
+        <JotaiContextProvider>
+          <Suspense fallback="...">
+            <Navbar />
+          </Suspense>
 
-        <main className="flex min-h-screen w-full flex-col items-center justify-center py-16">
-          {children}
-        </main>
+          <main className="flex min-h-screen w-full flex-col items-center justify-center py-16">
+            {children}
+          </main>
 
-        <Footer />
-        <VercelAnalytics />
+          <Footer />
+          <VercelAnalytics />
+        </JotaiContextProvider>
       </body>
     </html>
   );

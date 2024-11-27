@@ -12,10 +12,10 @@
   },
   "prettier": "config/prettier.config.js",
   "dependencies": {
-    "@mdm/ui": "workspace:*",
     "@mdm/hooks": "workspace:*",
-    "@mdm/utils": "workspace:*",
     "@mdm/types": "workspace:*",
+    "@mdm/ui": "workspace:*",
+    "@mdm/utils": "workspace:*",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-popover": "^1.0.7",
     "@radix-ui/react-tooltip": "^1.0.7",
@@ -30,6 +30,7 @@
     "eslint-config-next": "13.1.1",
     "focus-trap-react": "^10.2.2",
     "framer-motion": "^8.5.5",
+    "jotai": "^2.10.3",
     "lucide-react": "0.105.0-alpha.4",
     "ms": "^2.1.3",
     "next": "14.3.0-canary.57",
@@ -51,7 +52,7 @@
     "concurrently": "^7.6.0",
     "postcss": "^8.4.31",
     "prettier": "^2.8.8",
-    "prettier-plugin-tailwindcss": "^0.2.8", 
+    "prettier-plugin-tailwindcss": "^0.2.8",
     "tailwindcss": "^3.3.3"
   },
   "packageManager": "pnpm@9.3.0+sha512.ee7b93e0c2bd11409c6424f92b866f31d3ea1bef5fbe47d3c7500cdc3c9668833d2e55681ad66df5b640c61fa9dc25d546efa54d76d7f8bf54b13614ac293631"
