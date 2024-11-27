@@ -306,9 +306,6 @@ importers:
 
   packages/hooks:
     dependencies:
-      '@mdm/ui':
-        specifier: workspace:*
-        version: link:../ui
       react:
         specifier: ^18.3.1
         version: 18.3.1

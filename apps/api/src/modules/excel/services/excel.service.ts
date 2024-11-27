@@ -4,7 +4,6 @@ import * as tmp from 'tmp';
 import { ConfigService } from '@nestjs/config';
 import { columns, rowFactory, styleSheet } from '../config/applications.excel';
 import { UserService } from 'src/modules/user/services/user.service';
-import { groupBy } from 'src/utils/array';
 
 @Injectable()
 export class ExcelService {
@@ -22,14 +21,7 @@ export class ExcelService {
 
     // rows
     const users = await this.userService.findAll();
-    const usersGroupByTeams = groupBy(
-      users,
-      (user) => user?.team?.id ?? 'null',
-    );
-    const rows = rowFactory(
-      Object.values(usersGroupByTeams),
-      this.configService,
-    ).map(Object.values);
+    const rows = rowFactory(users, this.configService).map(Object.values);
 
     sheet.addRows(rows);
 

@@ -13,7 +13,7 @@ export default new DataSource({
   username: configService.get('MYSQL_USER'),
   password: configService.get('MYSQL_PASSWORD'),
   database: configService.get('MYSQL_DATABASE'),
-  entities: [`${__dirname}/../src/**/*.entity{.ts,.js}`],
+  entities: [`${__dirname}/../src/modules/**/*.entity{.ts,.js}`],
   migrations: [`${__dirname}/migrations/*{.ts,.js}`],
   migrationsTableName: 'migrations',
   synchronize: configService.get('NODE_ENV') === 'development',

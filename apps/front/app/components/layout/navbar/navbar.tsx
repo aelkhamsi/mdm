@@ -15,10 +15,11 @@ const NavBarActionButtonContent = ({
 }:{
   setShowAuthModal: Dispatch<SetStateAction<boolean>>
 }) => {
-  const [user, _] = useAtom(userAtom)  
+  const [user, _] = useAtom(userAtom)
+  console.log('user', user)
 
   return user
-    ? <UserNav firstName="Achraf" lastName="El Khamsi" email='achrafelkhamsi@gmail.com' />
+    ? <UserNav firstName={user?.firstName} lastName={user?.lastName} email={user?.email} />
     : <AuthButton setShowAuthModal={setShowAuthModal}/>
 }
 

@@ -1,3 +1,4 @@
+// Components
 export { Button, buttonVariants } from "./components/button"
 export { default as Input } from "./components/input"
 export { default as Modal } from "./components/modal"
@@ -11,3 +12,5 @@ export * from './components/toast'
 export * from './components/avatar'
 export * from './components/icons'
 
+// Hooks
+export * from './hooks/use-toast'

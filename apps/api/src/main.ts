@@ -3,7 +3,6 @@ import { AppModule } from './app.module';
 import 'reflect-metadata';
 import * as dotenv from 'dotenv';
 import { ClassSerializerInterceptor, ValidationPipe } from '@nestjs/common';
-import { CommandFactory } from 'nest-commander';
 
 // Load environment variables from .env file
 dotenv.config({ path: ['.env'] });
@@ -16,6 +15,6 @@ async function bootstrap() {
     }),
   );
   app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)));
-  await app.listen(5000);
+  await app.listen(6000);
 }
 bootstrap();

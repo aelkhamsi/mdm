@@ -20,7 +20,6 @@ import {
 import { AdminUserModule } from './modules/admin-user/admin-user.module';
 import { MailModule } from './modules/mail/mail.module';
 import { ExcelModule } from './modules/excel/excel.module';
-import { TeamModule } from './modules/team/team.module';
 
 @Module({
   imports: [
@@ -50,7 +49,6 @@ import { TeamModule } from './modules/team/team.module';
     AuthModule,
     MailModule,
     ExcelModule,
-    TeamModule,
   ],
   controllers: [AppController],
   providers: [
