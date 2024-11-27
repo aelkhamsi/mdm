@@ -67,3 +67,19 @@ export const truncate = (str: string, length: number) => {
   if (!str || str.length <= length) return str;
   return `${str.slice(0, length)}...`;
 };
+
+export const delay = (ms: number) => {
+  return new Promise( resolve => setTimeout(resolve, ms) );
+}
+
+export const camelCaseToText = (camel: string) => {
+  const result = camel.replace(/([A-Z])/g, " $1");
+  return result.charAt(0).toUpperCase() + result.slice(1);
+}
+
+export const shuffle = (unshuffled: any[]) => {
+  return unshuffled
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value)
+}

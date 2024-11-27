@@ -4,24 +4,31 @@ import Image from "next/image";
 import Link from "next/link";
 import { useScroll } from "@mdm/hooks";
 import { UserNav } from "./user-nav";
-import AuthButton from "./auth-button";
+import { useAuthModal } from "@/app/components/auth/auth-modal";
 import { userAtom } from "@/app/store/userAtom";
-import { Suspense } from "react";
+import { Dispatch, SetStateAction, Suspense } from "react";
 import { useAtom } from "jotai";
+import AuthButton from "./auth-button";
 
-const NavBarActionButtonContent = () => {
-  const [user, _] = useAtom(userAtom)
+const NavBarActionButtonContent = ({
+  setShowAuthModal
+}:{
+  setShowAuthModal: Dispatch<SetStateAction<boolean>>
+}) => {
+  const [user, _] = useAtom(userAtom)  
 
   return user
     ? <UserNav firstName="Achraf" lastName="El Khamsi" email='achrafelkhamsi@gmail.com' />
-    : <AuthButton setShowAuthModal={() => {}}/>
+    : <AuthButton setShowAuthModal={setShowAuthModal}/>
 }
 
 export default function NavBar() {
+  const { AuthModal, setShowAuthModal } = useAuthModal();
   const scrolled = useScroll(50)
 
   return (
     <>
+      <AuthModal />
       <div
         className={`fixed top-0 flex w-full justify-center ${
           scrolled
@@ -34,15 +41,14 @@ export default function NavBar() {
             <Image
               src="/logo.png"
               alt="Precedent logo"
-              width="35"
-              height="35"
+              width={35}
+              height={35}
               className="mr-2 rounded-sm"
             ></Image>
-            <p></p>
           </Link>
 
           <Suspense fallback="..." >
-            <NavBarActionButtonContent />
+            <NavBarActionButtonContent setShowAuthModal={setShowAuthModal} />
           </Suspense>
         </div>
       </div>
