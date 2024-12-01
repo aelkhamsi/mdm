@@ -4,6 +4,7 @@ import {
   HttpCode,
   HttpStatus,
   Post,
+  Res,
   UseGuards,
 } from '@nestjs/common';
 import { AuthService } from '../services/auth.service';
@@ -12,7 +13,6 @@ import { SignupDto } from '../dto/sign-up.dto';
 import { Public } from 'src/decorators/public.decorator';
 import { LoginAdminDto } from '../dto/login-admin.dto';
 import { SignupAdminDto } from '../dto/sign-up-admin.dto';
-import { UserService } from 'src/modules/user/services/user.service';
 import { ADMIN_ROLE } from 'src/constants';
 import { RolesGuard } from 'src/guards/roles.guard';
 import { Roles } from 'src/decorators/roles.decorator';
@@ -24,9 +24,17 @@ export class AuthController {
   @Public()
   @HttpCode(HttpStatus.OK)
   @Post('login')
-  login(@Body() loginDto: LoginDto) {
+  async login(@Res() res, @Body() loginDto: LoginDto) {
     const { email, password } = loginDto;
-    return this.authService.login(email, password);
+    const loginResponse = await this.authService.login(email, password);
+    const token = loginResponse?.access_token;
+    res.cookie('access_token', token, {
+      httpOnly: true,
+      sameSite: 'none',
+      secure: false,
+      maxAge: 3600 * 1000,
+    });
+    res.send(loginResponse);
   }
 
   @Public()
