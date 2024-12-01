@@ -5,12 +5,12 @@ import { cn } from "@mdm/utils"
 import { LoadingDots } from "@mdm/ui"
 import { Input, Button } from "@mdm/ui"
 import { useForm } from "react-hook-form"
-// import { logIn } from "@/api/AuthApi"
 import { useRouter } from "next/navigation"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@mdm/ui"
 import { useState } from "react"
 import { signInDefaultValues, signInSchema } from "@/app/schemas/signin.schema"
+import { logIn } from "@/app/api/AuthApi"
 
 interface SignInFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -19,31 +19,31 @@ export function SignInForm({ className, ...props }: SignInFormProps) {
     resolver: zodResolver(signInSchema),
     defaultValues: signInDefaultValues,
   })
+  const router = useRouter()
   const [isFormLoading, setIsFormLoading] = useState<boolean>(false)
   const [errorMessage, setErrorMessage] = useState<string>('')
-  const router = useRouter()
 
   const onSubmit = async (formData: any) => {
-    // const { email, password } = formData;
-    // setIsFormLoading(true)
-    // const response = await logIn(email, password) as any;
+    setIsFormLoading(true)
+    const { email, password } = formData;
+    const response = await logIn(email, password) as any;
 
-    // switch(response?.statusCode) {
-    //   case 200:
-    //     localStorage.setItem('access_token', response?.access_token);
-    //     router.push('/')
-    //     window.location.reload()
-    //     break;
-    //   case 400:
-    //   case 401:
-    //   case 404:
-    //     setErrorMessage('The email or password are incorrect')
-    //     setIsFormLoading(false)
-    //     break
-    //   default:
-    //     setErrorMessage('Server error. Please try later.')
-    //     setIsFormLoading(false)
-    // }
+    switch(response?.statusCode) {
+      case 200:
+        localStorage.setItem('access_token', response?.access_token);
+        router.push('/')
+        window.location.reload()
+        break;
+      case 400:
+      case 401:
+      case 404:
+        setErrorMessage('The email or password are incorrect')
+        setIsFormLoading(false)
+        break
+      default:
+        setErrorMessage('Server error. Please try later.')
+        setIsFormLoading(false)
+    }
   }
 
   return (

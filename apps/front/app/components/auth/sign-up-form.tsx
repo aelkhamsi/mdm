@@ -2,14 +2,12 @@
 
 import * as React from "react"
 
-import { cn } from "@mdm/utils"
-import { LoadingDots } from "@mdm/ui"
-import { Input, Button } from "@mdm/ui"
+import { cn, delay } from "@mdm/utils"
+import { LoadingDots, toast, Input, Button, Form, FormControl, FormField, FormItem, FormMessage } from "@mdm/ui"
 import { useForm } from "react-hook-form"
-// import { logIn, signUp } from "@/api/AuthApi"
+import { logIn, signUp } from "@/app/api/AuthApi"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { Form, FormControl, FormField, FormItem, FormMessage } from "@mdm/ui"
 import { useRouter } from "next/navigation"
 import { signUpDefaultValues, signUpSchema } from "@/app/schemas/signup.schema"
 
@@ -25,45 +23,45 @@ export function SignUpForm({ className, ...props }: SignUpFormProps) {
   const [errorMessage, setErrorMessage] = React.useState<string>('')
 
   const onSubmit = async (formData: any) => {
-    // setIsFormLoading(true)
-    // const { firstName, lastName, email, password } = formData
-    // const response = await signUp(firstName, lastName, email, password) as any
+    setIsFormLoading(true)
+    const { firstName, lastName, email, password } = formData
+    const response = await signUp(firstName, lastName, email, password) as any
 
-    // switch(response?.statusCode) {
-    //   case 200:
-    //     toast({
-    //       title: 'Account created!',
-    //       description: "You'll be redirected to the homepage",
-    //     })
+    switch(response?.statusCode) {
+      case 200:
+        toast({
+          title: 'Account created!',
+          description: "You'll be redirected to the homepage",
+        })
         
-    //     await delay(500)
-    //     const response = await logIn(email, password) as any
-    //     switch(response?.statusCode) {
-    //       case 200:
-    //         localStorage.setItem('access_token', response?.access_token);
-    //         setTimeout(() => {
-    //           window.location.reload();
-    //         }, 1000)
-    //         router.push('/');
+        await delay(500)
+        const response = await logIn(email, password) as any
+        switch(response?.statusCode) {
+          case 200:
+            localStorage.setItem('access_token', response?.access_token);
+            setTimeout(() => {
+              window.location.reload();
+            }, 1000)
+            router.push('/');
             
-    //         break;
-    //       case 400:
-    //         setTimeout(() => {
-    //           window.location.reload();
-    //         }, 1000)
-    //         router.push('/');
-    //         break;
-    //     }
-    //     break;
-    //   case 400:
-    //   case 401:
-    //     setErrorMessage('This email is already used')
-    //     setIsFormLoading(false)
-    //     break
-    //   default:
-    //     setErrorMessage('Server error. Please try later.')
-    //     setIsFormLoading(false)
-    // }
+            break;
+          case 400:
+            setTimeout(() => {
+              window.location.reload();
+            }, 1000)
+            router.push('/');
+            break;
+        }
+        break;
+      case 400:
+      case 401:
+        setErrorMessage('This email is already used')
+        setIsFormLoading(false)
+        break
+      default:
+        setErrorMessage('Server error. Please try later.')
+        setIsFormLoading(false)
+    }
   }
 
   return (

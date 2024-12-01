@@ -8,4 +8,4 @@ services:
     container_name: mdm_api
     restart: always
     ports:
-      - "6000:6000"
+      - "9000:9000"

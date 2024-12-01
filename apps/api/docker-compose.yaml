@@ -36,7 +36,7 @@ services:
     depends_on:
       - db
     ports:
-      - "6000:6000"
+      - "9000:9000"
     volumes:
       - ".:/home/node/app"
     environment:

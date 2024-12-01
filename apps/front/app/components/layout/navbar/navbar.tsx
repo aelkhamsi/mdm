@@ -16,7 +16,6 @@ const NavBarActionButtonContent = ({
   setShowAuthModal: Dispatch<SetStateAction<boolean>>
 }) => {
   const [user, _] = useAtom(userAtom)
-  console.log('user', user)
 
   return user
     ? <UserNav firstName={user?.firstName} lastName={user?.lastName} email={user?.email} />
