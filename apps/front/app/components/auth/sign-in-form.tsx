@@ -31,6 +31,7 @@ export function SignInForm({ className, ...props }: SignInFormProps) {
     switch(response?.statusCode) {
       case 200:
         localStorage.setItem('access_token', response?.access_token);
+        document.cookie = `access_token=${response?.access_token}`;
         router.push('/')
         window.location.reload()
         break;

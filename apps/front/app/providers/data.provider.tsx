@@ -12,7 +12,7 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     const initialize = async () => {
       const token = getToken();
-      console.log('token', token)
+
       try {
         if (!token || !checkToken(token)) {
           throw Error()

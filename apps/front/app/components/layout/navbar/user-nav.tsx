@@ -15,8 +15,8 @@ import {
 } from "@mdm/ui";
 import { useCallback } from "react";
 import { useRouter } from "next/navigation";
-// import { useSetRecoilState } from "recoil";
-// import { userState } from "@/store/userState";
+import { useSetAtom } from 'jotai';
+import { userAtom } from '@/app/store/userAtom';
 
 export function UserNav({
   firstName,
@@ -28,11 +28,12 @@ export function UserNav({
   email: string,
 }) {
   const router = useRouter();
-  // const setUserData = useSetRecoilState(userState);
+  const setUser = useSetAtom(userAtom);
 
   const handleLogOut = useCallback(() => {
     localStorage.removeItem('access_token');
-    // setUserData(undefined);
+    document.cookie = `access_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+    setUser(undefined)
 
     router.push('/');
     window.location.reload();
