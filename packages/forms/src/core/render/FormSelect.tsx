@@ -19,10 +19,10 @@ import {
 
 export const FormSelect = (
   form: UseFormReturn,
-  name: string,
   ...props
 ) => {
   const {
+    name,
     label, 
     placeholder, 
     description,

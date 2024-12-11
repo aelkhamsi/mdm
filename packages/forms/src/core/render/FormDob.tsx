@@ -19,8 +19,9 @@ import { format } from "@mdm/ui"
 import { CalendarIcon } from "@mdm/ui"
 
 
-export const FormDob = (form: UseFormReturn, name: string, ...props) => {
+export const FormDob = (form: UseFormReturn, ...props) => {
   const {
+    name,
     label,
     placeholder,
     description

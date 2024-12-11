@@ -6,11 +6,13 @@ import {
   FormMessage,
   FormDescription,
 } from '@mdm/ui'
-import { PhoneInput } from '@mdm/ui'
+import { Input } from '@mdm/ui'
 import { UseFormReturn } from 'react-hook-form'
 
-export const FormPhoneInput = (form: UseFormReturn, name: string, ...props) => {
+
+export const FormInput = (form: UseFormReturn, ...props) => {
   const {
+    name,
     label, 
     placeholder, 
     description
@@ -21,11 +23,11 @@ export const FormPhoneInput = (form: UseFormReturn, name: string, ...props) => {
       control={form.control}
       name={name}
       render={({ field }) => (
-        <FormItem className="flex flex-col mt-2 items-start">
-          <FormLabel className="text-left">{label}</FormLabel>
+        <FormItem>
+          <FormLabel>{label}</FormLabel>
 
-          <FormControl className="w-full">
-            <PhoneInput placeholder={placeholder} {...field} />
+          <FormControl>
+            <Input placeholder={placeholder} {...field} />
           </FormControl>
 
           <FormDescription>{description}</FormDescription>
