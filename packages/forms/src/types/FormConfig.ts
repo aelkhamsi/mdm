@@ -1,4 +1,4 @@
-import { FieldConfig } from "@/types/FieldConfig";
+import { FieldConfig } from "./FieldConfig";
 
 export type FormStepConfig = {
   id: string;
@@ -15,5 +15,3 @@ export type FormConfig = {
 
   formSteps: FormStepConfig[]
 }
-
-export type FormsConfig = FormConfig[]

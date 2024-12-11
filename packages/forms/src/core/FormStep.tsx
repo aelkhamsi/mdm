@@ -1,11 +1,11 @@
-import { FormStepConfig } from '@/types/FormConfig';
+import { FormStepConfig } from '../types/FormConfig';
 import { UseFormReturn } from 'react-hook-form';
 import { motion } from 'framer-motion';
 import { Separator } from '@mdm/ui';
-import { getFieldRenderFn } from '@/core/render';
-import { FieldConfig } from '@/types/FieldConfig';
+import { getFieldRenderFn } from './render';
+import { FieldConfig } from '../types/FieldConfig';
 
-const generateStep = ({
+export const FormStep = ({
   form,
   delta,
   formStepConfig,
@@ -42,5 +42,4 @@ const generateStep = ({
       </div>
     </motion.div>
   )
-  
 }

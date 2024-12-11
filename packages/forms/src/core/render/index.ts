@@ -1,9 +1,9 @@
-import { FieldType } from '@/types/FieldConfig';
-import { FormInput } from '@/core/render/FormInput';
-import { FormDob } from '@/core/render/FormDob';
-import { FormPhoneInput } from '@/core/render/FormPhoneInput';
-import { FormTextarea } from '@/core/render/FormTextarea';
-import { FormSelect } from '@/core/render/FormSelect';
+import { FieldType } from '../../types/FieldConfig';
+import { FormInput } from './FormInput';
+import { FormDob } from './FormDob';
+import { FormPhoneInput } from './FormPhoneInput';
+import { FormTextarea } from './FormTextarea';
+import { FormSelect } from './FormSelect';
 
 const getFieldRenderFn = (type: FieldType) => {
   switch(type) {

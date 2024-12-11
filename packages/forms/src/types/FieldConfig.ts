@@ -29,5 +29,5 @@ export type FieldConfig<T> = {
 
   type: FieldType;
 
-  validationRule: z.AnyZodObject;
+  validationRule: any;
 }

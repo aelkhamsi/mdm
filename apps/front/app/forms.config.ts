@@ -1,7 +1,7 @@
 import { z } from 'zod'
-import { FieldType } from "@mdm/forms"
+import { FormConfig, FieldType } from "@mdm/forms"
 
-const applicationFormConfig = {
+export const applicationFormConfig: FormConfig = {
   id: 'applicationForm',
   formSteps: [
     {
@@ -56,7 +56,3 @@ const applicationFormConfig = {
     }
   ]
 }
-
-export const formsConfig = [
-  applicationFormConfig,
-]
