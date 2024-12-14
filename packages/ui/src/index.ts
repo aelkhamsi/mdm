@@ -6,12 +6,12 @@ export { default as Modal } from "./components/modal"
 export { default as Label } from './components/label'
 export { default as Tooltip } from "./components/tooltip"
 export { default as CountingNumbers } from './components/counting-numbers'
-export { default as Calendar } from './components/calendar'
 export { default as Textarea } from './components/textarea'
 export { default as PhoneInput } from './components/phone-input'
 export { default as Separator } from './components/separator'
 export { default as Checkbox } from './components/checkbox'
 export { default as ProfileSkeleton } from './components/profile-skeleton'
+export { default as Calendar } from './components/calendar'
 export * from './components/dropdown-menu'
 export * from './components/form'
 export * from './components/toast'
