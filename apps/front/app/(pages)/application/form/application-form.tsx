@@ -16,18 +16,9 @@ import { postApplication, putApplication, updateApplicationStatus } from "@/app/
 import { useRouter } from "next/navigation"
 import { getSignedURL, uploadFile } from "@/app/api/MediaApi"
 import { LoadingDots } from "@mdm/ui"
-import { userAtom } from "@/app/store/userAtom";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@mdm/ui"
-import { useAtom } from "jotai";
 import { User } from "@mdm/types"
+import FormHeader from "./header/form-header"
+import FormErrorDialog from "./error/form-error-dialog"
 
 export const ApplicationForm = ({
   user
@@ -37,8 +28,9 @@ export const ApplicationForm = ({
   const [previousStep, setPreviousStep] = useState(0)
   const [currentStep, setCurrentStep] = useState(0)
   const [isFormLoading, setIsFormLoading] = useState(false);
-  const [error, setError] = useState<any>(undefined);
   const [showErrorDialog, setShowErrorDialog] = useState(false);
+  const [error, setError] = useState<any>(undefined);
+
   const router = useRouter()
   const delta = currentStep - previousStep
   const form = useForm<z.infer<typeof applicationSchema>>({
@@ -52,7 +44,7 @@ export const ApplicationForm = ({
   const onSubmit = async (formData: z.infer<typeof applicationSchema>) => {
     setIsFormLoading(true);
     const { cnie, schoolCertificate, grades, regulations, parentalAuthorization } = formData;
-    const uploadFolderName = '' // getUploadFolderName(userData.firstName, userData.lastName);
+    const uploadFolderName = getUploadFolderName(user?.firstName, user?.lastName);
     const uploadFileNames = ['cnie', 'school_certificate', 'grades', 'regulations', 'parental_authorization']
       .map(name => `${name}_${generateFileName()}`)
     const files = [cnie, schoolCertificate, grades, regulations, parentalAuthorization]
@@ -89,10 +81,10 @@ export const ApplicationForm = ({
       }) as any
 
       // Update Application status
-      // await updateApplicationStatus(applicationId, { status: userData?.application?.status?.status === 'NOTIFIED'
-      //   ? 'UPDATED'
-      //   : 'PENDING'
-      // }) as any;
+      await updateApplicationStatus(applicationId, { status: user?.application?.status?.status === 'NOTIFIED'
+        ? 'UPDATED'
+        : 'PENDING'
+      }) as any;
 
       toast({
         title: 'Application created with success',
@@ -147,26 +139,13 @@ export const ApplicationForm = ({
   return (
     <section className='w-full inset-0 flex flex-col justify-between mt-6'>
       {/* Header */}
-      <div className="flex justify-between">
-        <div className="space-y-0.5">
-          <h2 className="text-2xl font-bold tracking-tight">Candidature</h2>
-          <div className="text-muted-foreground">
-            Suivez les étapes ci-dessous pour compléter votre candidature
-          </div>
-        </div>
-
-        <div>
-          <Button onClick={onSave}>Sauvegarder & Terminer plus tard</Button>
-        </div>
-      </div>
-        
+      <FormHeader onSave={onSave} />
       <Separator className="my-6" />
-
-      {/* Steps */}
       <FormSteps currentStep={currentStep} />
 
-      {/* Navigation */}
+      {/* Top Navigation */}
       <FormNavigation
+        variant="arrows"
         currentStep={currentStep}
         form={form}
         setPreviousStep={setPreviousStep} 
@@ -212,9 +191,7 @@ export const ApplicationForm = ({
         </form>
       </Form>
       
-      
-
-      {/* Navigation */}
+      {/* Bottom Navigation */}
       <FormNavigation
         variant="button"
         form={form}
@@ -223,23 +200,7 @@ export const ApplicationForm = ({
         setCurrentStep={setCurrentStep} 
       />
 
-      {/* <Dialog open={showErrorDialog} onOpenChange={setShowErrorDialog}>
-        <DialogContent className="sm:max-w-[525px]">
-          <DialogHeader>
-            <DialogTitle className="my-2 text-red-700">La soumission de votre candidature a échouée</DialogTitle>
-            <DialogDescription className="text-xs space-y-2">
-              <p>
-                Une erreur est survenue lors de la soumission de votre candidature. <br/>
-                Message de l&apos;erreur: <span className="text-black">{error?.message} (app {userData?.application?.id ?? ''})</span>
-              </p>
-              <p>
-                Veuillez réessayer plus tard <span className="text-black">ou</span> contactez-nous sur l&apos;addresse email <span className="text-blue-500">math.maroc.mtym@gmail.com</span> en précisant votre nom, prénom et en joignant le message de l&apos;erreur çi-haut.
-              </p>
-              
-            </DialogDescription>
-          </DialogHeader>
-        </DialogContent>
-      </Dialog> */}
+      <FormErrorDialog showDialog={showErrorDialog} setShowDialog={setShowErrorDialog} error={error} />
     </section>
   )
 }

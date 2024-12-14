@@ -45,8 +45,9 @@ export const excludeFileFields = ({
 
 export const generateFileName = (bytes = 6) => c.randomBytes(bytes).toString("hex")
 
-export const getUploadFolderName = (firstName: string, lastName: string) => {
-  return firstName.toLowerCase().replace(' ', '') + '_' + lastName.toLowerCase().replace(' ', '');
+export const getUploadFolderName = (firstName: string|undefined, lastName: string|undefined) => {
+  if (!firstName || !lastName) return ''
+  return firstName?.toLowerCase().replace(' ', '') + '_' + lastName?.toLowerCase().replace(' ', '');
 }
 
 export const sanitizeApplication = (application: any) => {

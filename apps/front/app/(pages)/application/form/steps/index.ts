@@ -1,4 +1,8 @@
-import { Step } from "./step.type";
+type Step = {
+  id: string,
+  name: string,
+  fields?: string[],
+}
 
 export const steps: Step[] = [
   {
