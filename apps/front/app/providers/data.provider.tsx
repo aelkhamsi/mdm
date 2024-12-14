@@ -22,7 +22,6 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
         if (res?.statusCode !== 200) {
           throw Error()
         }
-
         setUser(res.user);
       } catch {
         setUser(undefined);

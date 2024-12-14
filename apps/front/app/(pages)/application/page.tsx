@@ -1,38 +1,22 @@
 "use client"
 
-import React from 'react'
-import { FormLayout, getFormSchema } from '@mdm/forms'
-import { applicationFormConfig } from '@/app/forms.config'
-import { z } from "zod"
+import { useAtom } from "jotai";
+import { ApplicationForm } from "./form/application-form";
+import { userAtom } from "@/app/store/userAtom";
+import { ProfileSkeleton } from "@mdm/ui"
 
-const ProfilePage = () => {
-  const formSchema = getFormSchema(applicationFormConfig)
+export default function ApplicationPage() {
+  const [user, _] = useAtom(userAtom)
 
-  const onSubmit = async (formData: z.infer<typeof formSchema>) => {
-  }
-
-  const onSave = async () => {   
-  }
-
-  const onError = async (errors: any) => {
-  }
-
-  return (
-    <div className="z-10 w-full px-5 max-w-screen-xl xl:px-0">
-      <div className="space-y-6 p-10 pb-16">
-        <FormLayout 
-          formConfig={applicationFormConfig}
-          title='Application Form'
-          description='This is a description of the application form'
-          onSubmitButtonLabel='Submit Application'
-          onSaveButtonLabel='Save & Continue later'
-          onSubmit={onSubmit}
-          onSave={onSave}
-          onError={onError}
-        />
+  if (user) {
+    return (
+      <div className="z-10 w-full px-5 max-w-screen-xl xl:px-0">
+        <div className="space-y-6 p-10 pb-16">
+          <ApplicationForm user={user} />
+        </div>
       </div>
-    </div>
-  )
+    )
+  } else { 
+    return <ProfileSkeleton />
+  }
 }
-
-export default ProfilePage
