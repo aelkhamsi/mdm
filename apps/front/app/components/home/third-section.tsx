@@ -21,8 +21,8 @@ const ThirdSection = () => {
       </div>
 
       {/* Content */}
-      <div className='relative isolate overflow-hidden w-full flex flex-col justify-center items-center py-24 bg-gray-950'>
-        <div className="w-full max-w-screen-xl text-white">
+      <div className='relative isolate overflow-hidden w-full flex flex-col justify-center items-center py-14 bg-gray-950'>
+        <div className="w-full max-w-screen-xl text-white p-4 md:p-0">
           Achraf
         </div>
       </div>
