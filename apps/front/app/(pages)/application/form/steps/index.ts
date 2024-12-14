@@ -1,33 +1,38 @@
 type Step = {
   id: string,
   name: string,
-  fields?: string[],
+  getFields: () => string[],
 }
 
 export const steps: Step[] = [
   {
     id: 'Étape 1',
     name: 'Informations Personnelles',
-    fields: ['firstName', 'lastName', 'dateOfBirth', 'identityCardNumber', 'city', 'region', 'phoneNumber', 'guardianFullName', 'guardianPhoneNumber', 'relationshipWithGuardian', 'specialConditions']
+    getFields: () => ['firstName', 'lastName', 'dateOfBirth', 'identityCardNumber', 'city', 'region', 'phoneNumber', 'guardianFullName', 'guardianPhoneNumber', 'relationshipWithGuardian', 'specialConditions']
+  },
+  {
+    id: 'Étape 1bis',
+    name: "Options de compétitions",
+    getFields: () => ['choices'],
   },
   {
     id: 'Étape 2',
     name: 'Éducation',
-    fields: ['educationLevel', 'educationField', 'highschool', 'averageGrade', 'ranking', 'mathAverageGrade', 'mathRanking', 'numberOfStudentsInClass']
+    getFields: () => ['educationLevel', 'educationField', 'highschool', 'averageGrade', 'ranking', 'mathAverageGrade', 'mathRanking', 'numberOfStudentsInClass']
   },
   {
     id: 'Étape 3',
     name: 'Compétition',
-    fields: ['hasPreviouslyParticipated', 'previousCompetitions', 'hasPreviouslyParticipatedInMtym', 'motivations', 'comments']
+    getFields: () => ['hasPreviouslyParticipated', 'previousCompetitions', 'hasPreviouslyParticipatedInMtym', 'motivations', 'comments']
   },
   {
     id: 'Étape 4',
     name: 'Uploads',
-    fields: ['cnie', 'schoolCertificate', 'grades', 'regulations', 'parentalAuthorization']
+    getFields: () => ['cnie', 'schoolCertificate', 'grades', 'regulations', 'parentalAuthorization']
   },
   { id: 'Étape 5', 
     name: 'Validation',
-    fields: ['termsAgreement']
+    getFields: () => ['termsAgreement']
   }
 ];
 

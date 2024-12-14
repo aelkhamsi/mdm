@@ -19,6 +19,7 @@ import { LoadingDots } from "@mdm/ui"
 import { User } from "@mdm/types"
 import FormHeader from "./header/form-header"
 import FormErrorDialog from "./error/form-error-dialog"
+import { ContestChoiceStep } from "./steps/contest-choice-step"
 
 export const ApplicationForm = ({
   user
@@ -161,23 +162,27 @@ export const ApplicationForm = ({
           )}
 
           {currentStep === 1 && (
-            <EducationStep form={form} delta={delta} />
+            <ContestChoiceStep form={form} delta={delta} />
           )}
 
           {currentStep === 2 && (
-            <CompetitionStep form={form} delta={delta} />
+            <EducationStep form={form} delta={delta} />
           )}
 
           {currentStep === 3 && (
-            <UploadStep form={form} delta={delta} />
+            <CompetitionStep form={form} delta={delta} />
           )}
 
           {currentStep === 4 && (
+            <UploadStep form={form} delta={delta} />
+          )}
+
+          {currentStep === 5 && (
             <ValidationStep form={form} delta={delta} />
           )}
 
           {/* Submit Button */}
-          {currentStep === 4 && (
+          {currentStep === 5 && (
             <div className='mt-20 text-center'> 
               <Button type="submit">
                 {isFormLoading ? (

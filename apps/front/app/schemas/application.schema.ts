@@ -16,9 +16,9 @@ export const applicationSchema: ZodSchema = z.object({
   identityCardNumber: z.string().optional(),
   city: z.string().min(1).max(50),
   region: z.string().nonempty("Please select an option"),
-  phoneNumber: z.string().refine(isValidPhoneNumber, { message: "Invalid phone number" }),
+  // phoneNumber: z.string().refine(isValidPhoneNumber, { message: "Invalid phone number" }),
   guardianFullName: z.string().min(1).max(50),
-  guardianPhoneNumber: z.string().refine(isValidPhoneNumber, { message: "Numéro de téléphone invalide" }),
+  // guardianPhoneNumber: z.string().refine(isValidPhoneNumber, { message: "Numéro de téléphone invalide" }),
   relationshipWithGuardian: z.string().min(1).max(50),
   specialConditions: z.string().optional().refine((val) => {
     if (val) {
@@ -26,6 +26,11 @@ export const applicationSchema: ZodSchema = z.object({
     }
     return true;
   } , { message: "Maximum 100 mots"}),
+
+  // Choices
+  choices: z.array(z.string()).refine((value) => value.some((item) => item), {
+    message: "You have to select at least one item.",
+  }),
 
   /* Education */
   educationLevel: z.string().nonempty("Please select an option"),
@@ -72,6 +77,8 @@ export const getApplicationDefaultValues = (userData: any) => ({
   guardianPhoneNumber: "",
   relationshipWithGuardian: "",
   specialConditions: "",
+
+  choices: [],
 
   educationLevel: "",
   educationField: "",
