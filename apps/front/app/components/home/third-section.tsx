@@ -1,4 +1,4 @@
-import { Button } from '@mdm/ui'
+import { Card } from '@/app/components/card';
 
 const ThirdSection = () => {
   return (
@@ -33,14 +33,26 @@ const ThirdSection = () => {
         <div
           className="md:flex w-full max-w-screen-xl text-sm my-4"
         >
-          <div className="w-full p-4 xl:p-0">
-            <p className="md:w-3/4">Le &apos;Moroccan Day of Mathematics&apos; (MDM) est un événement dédié aux passionnés de mathématiques, comprenant plusieurs compétitions et activités enrichissantes</p>
-            <p className="md:w-3/4">Pendant cet événement, les participants pourront s'affronter dans plusieurs compétitions selon leurs niveaux. En plus des compétitions, il y aura des conférences et des stands pour explorer différentes facettes des mathématiques</p>
+          <div className='w-full'>
+            <div className='text-center font-bold text-cyan-300 p-6'>
+              Compétitions
+            </div>
+
+            <div className="flex text-center space-x-6 px-14">
+              <Card title='Math Sprint' />
+              <Card title='Best Mathematical Video' />
+            </div>
           </div>
 
-          <div className="w-full p-4 xl:p-0">
-            <p className="md:w-3/4">Le &apos;Moroccan Day of Mathematics&apos; (MDM) est un événement dédié aux passionnés de mathématiques, comprenant plusieurs compétitions et activités enrichissantes</p>
-            <p className="md:w-3/4">Pendant cet événement, les participants pourront s'affronter dans plusieurs compétitions selon leurs niveaux. En plus des compétitions, il y aura des conférences et des stands pour explorer différentes facettes des mathématiques</p>
+          <div className='w-full'>
+            <div className='text-center font-bold text-purple-400 p-6'>
+              Activités
+            </div>
+
+            <div className="flex space-x-6 px-14">
+              <Card title='Conférences'/>
+              <Card title='Stands' />
+            </div>
           </div>
         </div>
       </div>
