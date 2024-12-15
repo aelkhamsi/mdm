@@ -3,7 +3,7 @@ import React from 'react'
 
 const HeroSection = () => {
   return (
-    <div className='w-full flex flex-col justify-center items-center py-28 bg-gradient-to-b from-transparent via-transparent to-[#edf7ff]'>
+    <div className='w-full flex flex-col justify-center items-center py-16 bg-gradient-to-b from-transparent via-transparent to-[#edf7ff]'>
 
       {/* Background Image */}
       <div className='absolute inset-0 z-[-8] overflow-hidden'>
@@ -40,13 +40,13 @@ const HeroSection = () => {
           </p>
         </a>
         <h1
-          className="animate-fade-up text-center text-[#131316] font-display text-4xl font-bold tracking-[0.01em] [text-wrap:balance] md:text-7xl md:leading-[5rem]"
+          className="animate-fade-up text-center text-[#131316] font-display text-4xl font-bold tracking-[0.04em] [text-wrap:balance] md:text-6xl md:leading-[4rem]"
           style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
         >
           Moroccan Day of Mathematics
         </h1>
         <p
-          className="mt-6 animate-fade-up text-center text-gray-500 opacity-0 [text-wrap:balance] md:text-xl"
+          className="mt-6 animate-fade-up text-center text-gray-500 opacity-0 [text-wrap:balance] md:text-base"
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
           Exploring the Rich Heritage, Modern Innovations, and Future Potential of Mathematics in Morocco.
