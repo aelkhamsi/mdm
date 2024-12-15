@@ -10,7 +10,7 @@ const SecondSection = () => {
       </h1>
 
       <div
-        className="md:flex w-full max-w-screen-xl my-8"
+        className="md:flex w-full text-sm max-w-screen-xl my-8"
       >
         <div className="w-full space-y-4 p-4 xl:p-0">
           <p className="md:w-3/4">Le &apos;Moroccan Day of Mathematics&apos; (MDM) est un événement dédié aux passionnés de mathématiques, comprenant plusieurs compétitions et activités enrichissantes</p>
@@ -20,7 +20,7 @@ const SecondSection = () => {
           </Button>
         </div>
 
-        <div className="w-full leading-[3rem] md:leading-[3.5rem] font-medium text-4xl p-4 xl:p-0">
+        <div className="w-full space-y-4 font-medium text-4xl p-4 xl:p-0">
           <p><span className='bg-gradient-to-br from-sky-500 to-[#272162] inline-block text-transparent bg-clip-text'>200+</span> Participants</p>
           <p><span className='bg-gradient-to-br from-sky-500 to-[#272162] inline-block text-transparent bg-clip-text'>3</span> Speakers</p>
           <p><span className='bg-gradient-to-br from-sky-500 to-[#272162] inline-block text-transparent bg-clip-text'>1</span> journée prise en charge</p>

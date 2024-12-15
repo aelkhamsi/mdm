@@ -1,4 +1,4 @@
-import React from 'react'
+import { Button } from '@mdm/ui'
 
 const ThirdSection = () => {
   return (
@@ -21,9 +21,27 @@ const ThirdSection = () => {
       </div>
 
       {/* Content */}
-      <div className='relative isolate overflow-hidden w-full flex flex-col justify-center items-center py-14 bg-gray-950'>
-        <div className="w-full max-w-screen-xl text-white p-4 md:p-0">
-          Achraf
+      <div className='relative isolate overflow-hidden w-full flex flex-col justify-center items-center py-14 bg-gray-950 text-white'>
+        <h1 className='text-4xl text-center font-bold'>
+          Activités & Conférences
+        </h1>
+
+        <div className='max-w-screen-sm text-sm text-center my-6 p-4 xl:p-0'>
+          Discover the exciting lineup of competitions, activities, and conferences that await you at this year's mathematics competition, where learning meets challenge and inspiration!
+        </div>
+
+        <div
+          className="md:flex w-full max-w-screen-xl text-sm my-4"
+        >
+          <div className="w-full p-4 xl:p-0">
+            <p className="md:w-3/4">Le &apos;Moroccan Day of Mathematics&apos; (MDM) est un événement dédié aux passionnés de mathématiques, comprenant plusieurs compétitions et activités enrichissantes</p>
+            <p className="md:w-3/4">Pendant cet événement, les participants pourront s'affronter dans plusieurs compétitions selon leurs niveaux. En plus des compétitions, il y aura des conférences et des stands pour explorer différentes facettes des mathématiques</p>
+          </div>
+
+          <div className="w-full p-4 xl:p-0">
+            <p className="md:w-3/4">Le &apos;Moroccan Day of Mathematics&apos; (MDM) est un événement dédié aux passionnés de mathématiques, comprenant plusieurs compétitions et activités enrichissantes</p>
+            <p className="md:w-3/4">Pendant cet événement, les participants pourront s'affronter dans plusieurs compétitions selon leurs niveaux. En plus des compétitions, il y aura des conférences et des stands pour explorer différentes facettes des mathématiques</p>
+          </div>
         </div>
       </div>
 
