@@ -1,5 +1,6 @@
-import { ImageSlider } from '@mdm/ui'
+// import { ImageSlider } from '@mdm/ui'
 import Link from "next/link";
+import { AnimatedTooltip } from '@/app/components/animated-tooltip';
 
 const getSlideshowImages = () => ([
   {src: '/organizing-team/achraf_el_khamsi.jpeg', key: 'photo-1'},
@@ -14,9 +15,72 @@ const getSlideshowImages = () => ([
   {src: '/organizing-team/lina_bellahmidi.jpeg', key: 'photo-10'},
 ])
 
+const people = [
+  {
+    id: 1,
+    name: "Achraf EL KHAMSI",
+    designation: "Software Engineer",
+    image: "/organizing-team/achraf_el_khamsi.jpeg",
+  },
+  {
+    id: 2,
+    name: "Adam LACHKAR",
+    designation: "Product Manager",
+    image: "/organizing-team/adam_lachkar.jpg",
+  },
+  {
+    id: 3,
+    name: "Jane Smith",
+    designation: "Data Scientist",
+    image: "/organizing-team/amine_hbar.jpeg",
+  },
+  {
+    id: 4,
+    name: "Emily Davis",
+    designation: "UX Designer",
+    image: "/organizing-team/ayman_amasrour.jpeg",
+  },
+  {
+    id: 5,
+    name: "Tyler Durden",
+    designation: "Soap Developer",
+    image: "/organizing-team/lina_bellahmidi.jpeg",
+  },
+  {
+    id: 6,
+    name: "Dora",
+    designation: "The Explorer",
+    image: "/organizing-team/kawtar_taik.jpeg",
+  },
+  {
+    id: 7,
+    name: "Dora",
+    designation: "The Explorer",
+    image: "/organizing-team/fatima_zahra_moudakir.jpeg",
+  },
+  {
+    id: 8,
+    name: "Dora",
+    designation: "The Explorer",
+    image: "/organizing-team/ayoub_ennadif.jpeg",
+  },
+  {
+    id: 9,
+    name: "Dora",
+    designation: "The Explorer",
+    image: "/organizing-team/ayoub_bennouna.jpg",
+  },
+  {
+    id: 10,
+    name: "Dora",
+    designation: "The Explorer",
+    image: "/organizing-team/aymane_maaitat.jpeg",
+  },
+];
+
 const FourthSection = () => {
   return (
-    <div className='relative isolate overflow-hidden w-full flex flex-col justify-center items-center py-14 space-y-4'>
+    <div className='relative isolate overflow-hidden w-full flex flex-col justify-center items-center py-14 space-y-6'>
       <h1 className='text-4xl font-bold'>
         Qui sommes-nous ?
       </h1>
@@ -26,15 +90,19 @@ const FourthSection = () => {
         Notre vision est celle d'un Maroc où chaque jeune a l'opportunité de réaliser son plein potentiel grâce à une éducation de qualité.
       </div>
 
-      <div 
+      {/* <div 
         className="relative overflow-hidden flex flex-col justify-center"  
       >
         <ImageSlider
           images={getSlideshowImages()}
           direction="left"
           speed="normal"
-          className='grayscale-[50%]'
+          className='grayscale-[20%]'
         />
+      </div> */}
+
+      <div className="flex flex-row items-center justify-center mb-10 w-full">
+        <AnimatedTooltip items={people} />
       </div>
 
       <Link
