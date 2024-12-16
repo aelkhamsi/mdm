@@ -17,7 +17,8 @@ export const FormNavigation = ({
   setCurrentStep: Dispatch<SetStateAction<number>>,
 }) => {
   const next = async () => {
-    const fields = steps[currentStep].getFields()
+    const formState = form.watch()
+    const fields = steps[currentStep].getFields(formState)
     const output = await form.trigger(fields, { shouldFocus: true })
     if (!output) return
 

@@ -1,14 +1,20 @@
+import { isOverEighteen } from '@mdm/utils';
+
 type Step = {
   id: string,
   name: string,
-  getFields: () => string[],
+  getFields: (formState: any) => string[],
 }
 
 export const steps: Step[] = [
   {
     id: 'Étape 1',
     name: 'Informations Personnelles',
-    getFields: () => ['firstName', 'lastName', 'dateOfBirth', 'identityCardNumber', 'city', 'region', 'phoneNumber', 'guardianFullName', 'guardianPhoneNumber', 'relationshipWithGuardian']
+    getFields: (formState: any) => {
+      const dob = formState?.dateOfBirth
+      const isAdult = isOverEighteen(dob)
+      return ['firstName', 'lastName', 'dateOfBirth', 'identityCardNumber', 'city', 'region', 'phoneNumber', ...(!isAdult ? ['guardianFullName', 'guardianPhoneNumber', 'relationshipWithGuardian'] : [])]
+    }
   },
   {
     id: 'Étape 2',

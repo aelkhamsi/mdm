@@ -1,17 +1,9 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
-import ms from "ms";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
-
-export const timeAgo = (timestamp: Date, timeOnly?: boolean): string => {
-  if (!timestamp) return "never";
-  return `${ms(Date.now() - new Date(timestamp).getTime())}${
-    timeOnly ? "" : " ago"
-  }`;
-};
 
 export async function fetcher<JSON = any>(
   input: RequestInfo,
@@ -89,3 +81,11 @@ export const groupBy = <T, K extends keyof any>(arr: T[], key: (i: T) => K) =>
     (groups[key(item)] ||= []).push(item);
     return groups;
   }, {} as Record<K, T[]>);
+
+export const isOverEighteen = (birthday: Date) => {
+  if (!birthday) return false;
+  var ageMs = Date.now() - birthday.getTime();
+  var ageDate = new Date(ageMs);
+  var age = Math.abs(ageDate.getUTCFullYear() - 1970);
+  return age >= 18
+}

@@ -16,9 +16,10 @@ export const applicationSchema: ZodSchema = z.object({
   identityCardNumber: z.string().optional(),
   city: z.string().min(1).max(50),
   region: z.string().nonempty("Please select an option"),
-  // phoneNumber: z.string().refine(isValidPhoneNumber, { message: "Invalid phone number" }),
+  phoneNumber: z.string().refine(isValidPhoneNumber, { message: "Invalid phone number" }),
+
   guardianFullName: z.string().min(1).max(50),
-  // guardianPhoneNumber: z.string().refine(isValidPhoneNumber, { message: "Numéro de téléphone invalide" }),
+  guardianPhoneNumber: z.string().refine(isValidPhoneNumber, { message: "Numéro de téléphone invalide" }),
   relationshipWithGuardian: z.string().min(1).max(50),
 
   // Choices
