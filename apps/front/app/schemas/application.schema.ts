@@ -20,12 +20,6 @@ export const applicationSchema: ZodSchema = z.object({
   guardianFullName: z.string().min(1).max(50),
   // guardianPhoneNumber: z.string().refine(isValidPhoneNumber, { message: "Numéro de téléphone invalide" }),
   relationshipWithGuardian: z.string().min(1).max(50),
-  specialConditions: z.string().optional().refine((val) => {
-    if (val) {
-      return val.split(' ').length <= 100
-    }
-    return true;
-  } , { message: "Maximum 100 mots"}),
 
   // Choices
   choices: z.array(z.string()).refine((value) => value.some((item) => item), {
@@ -76,7 +70,6 @@ export const getApplicationDefaultValues = (userData: any) => ({
   guardianFullName: "",
   guardianPhoneNumber: "",
   relationshipWithGuardian: "",
-  specialConditions: "",
 
   choices: [],
 

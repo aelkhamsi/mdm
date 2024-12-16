@@ -16,7 +16,7 @@ import {
   SelectLabel,
   SelectItem,
 } from "@mdm/ui"
-import { Input, Separator, Textarea } from "@mdm/ui"
+import { Input, Separator } from "@mdm/ui"
 import {
   Popover,
   PopoverContent,
@@ -67,12 +67,10 @@ export const PersonalInformationStep = ({
       transition={{ duration: 0.3, ease: 'easeInOut' }}
     >
       <h2 className='text-base font-semibold leading-7 text-[#0284C7]'>
-        Informations personnelles de l&apos;éléve
+        Informations personnelles
       </h2>
-      <p className='mt-1 text-sm leading-6 text-gray-600'>
-        Fournissez les informations personnelles de l&apos;éléve.
-        <Separator className='mt-4 bg-[#0284C7]'/>
-      </p>
+      <Separator className='mt-4 bg-[#0284C7]'/>
+
       <div className='mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-between'>
         {/* First Name */}
         <FormField
@@ -213,28 +211,7 @@ export const PersonalInformationStep = ({
             <FormItem className="flex flex-col mt-2 items-start">
               <FormLabel className="text-left">Téléphone <RequiredAsterisk /></FormLabel>
               <FormControl className="w-full">
-                {/* <PhoneInput placeholder="Enter a phone number" {...field} /> */}
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-      </div>
-      
-      <div className='mt-6 grid grid-cols-1 gap-4 justify-between'>
-        {/* Special conditions */}
-        <FormField
-          control={form.control}
-          name="specialConditions"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Avez-vous des problèmes de santé, des allergies, ou toute autre information que nous devons connaître pour vous assurer des conditions adéquates sur place?</FormLabel>
-              <FormControl>
-              <Textarea
-                placeholder="Maximum 100 mots"
-                className="resize-none"
-                {...field}
-              />
+                <PhoneInput placeholder="Enter a phone number" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -245,10 +222,8 @@ export const PersonalInformationStep = ({
       <h2 className='text-base font-semibold leading-7 text-[#0284C7] mt-6'>
         Informations personnelles du tuteur
       </h2>
-      <p className='mt-1 text-sm leading-6 text-gray-600'>
-        Fournissez les informations personnelles du tuteur de l&apos;éléve.
-        <Separator className='mt-4 bg-[#0284C7]'/>
-      </p>
+      <Separator className='mt-4 bg-[#0284C7]'/>
+
       <div className='mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-between'>
         {/* Guardian Full Name */}
         <FormField
@@ -273,7 +248,7 @@ export const PersonalInformationStep = ({
             <FormItem className="flex flex-col mt-2 items-start">
               <FormLabel className="text-left">Téléphone du tuteur <RequiredAsterisk /></FormLabel>
               <FormControl className="w-full">
-                {/* <PhoneInput placeholder="Enter a phone number" {...field} /> */}
+                <PhoneInput placeholder="Enter a phone number" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
