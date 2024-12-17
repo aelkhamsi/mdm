@@ -23,7 +23,7 @@ export const applicationSchema: ZodSchema = z.object({
   relationshipWithGuardian: z.string().min(1).max(50),
 
   // Choices
-  chosenActivities: z.array(z.string()).refine((value) => value.some((item) => item), {
+  activityChoices: z.array(z.string()).refine((value) => value.some((item) => item), {
     message: "You have to select at least one item.",
   }),
 
@@ -72,7 +72,7 @@ export const getApplicationDefaultValues = (userData: any) => ({
   guardianPhoneNumber: "",
   relationshipWithGuardian: "",
 
-  chosenActivities: [],
+  activityChoices: [],
 
   educationLevel: "",
   educationField: "",

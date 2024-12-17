@@ -64,7 +64,7 @@ export const ActivityChoiceStep = ({
 
       <FormField
         control={form.control}
-        name="chosenActivities"
+        name="activityChoices"
         render={() => (
           <>
             <FormItem className='flex flex-wrap justify-center space-y-0 gap-x-4 '>
@@ -72,7 +72,7 @@ export const ActivityChoiceStep = ({
                 <FormField
                   key={choice.value}
                   control={form.control}
-                  name="chosenActivities"
+                  name="activityChoices"
                   render={({ field }) => {
                     return (
                       <FormItem

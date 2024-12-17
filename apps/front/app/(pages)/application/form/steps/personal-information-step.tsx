@@ -230,7 +230,7 @@ export const PersonalInformationStep = ({
             <FormItem className="flex flex-col mt-2 items-start">
               <FormLabel className="text-left">Téléphone <RequiredAsterisk /></FormLabel>
               <FormControl className="w-full">
-                <PhoneInput placeholder="Enter a phone number" {...field} />
+                <PhoneInput onValueChange={field.onChange} defaultValue={field.value} defaultCountry='MA' />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -269,7 +269,7 @@ export const PersonalInformationStep = ({
                 <FormItem className="flex flex-col mt-2 items-start">
                   <FormLabel className="text-left">Téléphone du tuteur <RequiredAsterisk /></FormLabel>
                   <FormControl className="w-full">
-                    <PhoneInput placeholder="Enter a phone number" {...field} />
+                    <PhoneInput onValueChange={field.onChange} defaultValue={field.value} defaultCountry='MA' />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

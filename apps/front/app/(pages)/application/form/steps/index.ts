@@ -19,7 +19,7 @@ export const steps: Step[] = [
   {
     id: 'Étape 2',
     name: "Choix de compétitions",
-    getFields: () => ['choices'],
+    getFields: () => ['activityChoices'],
   },
   {
     id: 'Étape 3',

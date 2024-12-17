@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form"
 // import { resetPassword } from "@/api/AuthApi"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@mdm/ui"
-import { resetPasswordSchema, resetPasswordDefaultValues } from "@/app/schemas/reest-password.schema"
+import { resetPasswordSchema, resetPasswordDefaultValues } from "@/app/schemas/reset-password.schema"
 import { useState } from "react"
 
 
