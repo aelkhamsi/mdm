@@ -79,9 +79,9 @@ export const PersonalInformationStep = ({
       <h2 className='text-base font-semibold leading-7 text-[#0284C7]'>
         Informations personnelles
       </h2>
-      <Separator className='mt-4 bg-[#0284C7]'/>
+      <Separator className='my-6 bg-[#0284C7]'/>
 
-      <div className='mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-between'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-between'>
         {/* First Name */}
         <FormField
           control={form.control}

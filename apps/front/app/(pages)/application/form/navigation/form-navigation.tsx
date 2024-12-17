@@ -38,7 +38,7 @@ export const FormNavigation = ({
   }
 
   const arrowsTemplate =  (
-    <div className='mt-8 pt-5'>
+    <div className='my-6'>
       <div className='flex justify-between'>
         <button
           type='button'

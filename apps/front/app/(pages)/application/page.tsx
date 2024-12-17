@@ -11,9 +11,7 @@ export default function ApplicationPage() {
   if (user) {
     return (
       <div className="z-10 w-full px-5 max-w-screen-xl xl:px-0">
-        <div className="space-y-6 p-10 pb-16">
-          <ApplicationForm user={user} />
-        </div>
+        <ApplicationForm user={user} />
       </div>
     )
   } else { 

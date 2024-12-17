@@ -19,7 +19,7 @@ import { LoadingDots } from "@mdm/ui"
 import { User } from "@mdm/types"
 import FormHeader from "./header/form-header"
 import FormErrorDialog from "./error/form-error-dialog"
-import { ContestChoiceStep } from "./steps/contest-choice-step"
+import { ActivityChoiceStep } from "./steps/activity-choice-step"
 
 export const ApplicationForm = ({
   user
@@ -155,14 +155,14 @@ export const ApplicationForm = ({
 
       {/* Form */}
       <Form {...form}>
-        <form className='mt-6' onSubmit={form.handleSubmit(onSubmit, onError)}>
+        <form onSubmit={form.handleSubmit(onSubmit, onError)}>
           {/* Personal informations */}
           {currentStep === 0 && (
             <PersonalInformationStep form={form} delta={delta} />
           )}
 
           {currentStep === 1 && (
-            <ContestChoiceStep form={form} delta={delta} />
+            <ActivityChoiceStep form={form} delta={delta} />
           )}
 
           {currentStep === 2 && (
