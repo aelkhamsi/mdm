@@ -81,7 +81,7 @@ const people = [
 const FourthSection = () => {
   return (
     <div className='relative isolate overflow-hidden w-full flex flex-col justify-center items-center py-14 space-y-6'>
-      <h1 className='text-4xl font-bold'>
+      <h1 className='text-3xl font-bold'>
         Qui sommes-nous ?
       </h1>
 
