@@ -5,7 +5,7 @@ import { sfPro, inter } from "./lib/fonts";
 import Footer from "@/app/components/layout/footer/footer";
 import { Suspense } from "react";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
-import Navbar from "@/app/components/layout/navbar/navbar";
+import Header from "@/app/components/layout/header";
 import JotaiContextProvider from "./jotaiContextProvider";
 import { DataProvider } from "./providers/data.provider";
 
@@ -27,7 +27,7 @@ export default async function RootLayout({
         <JotaiContextProvider>
           <DataProvider>
             <Suspense fallback="...">
-              <Navbar />
+              <Header />
             </Suspense>
 
             <main className="flex min-h-screen w-full flex-col items-center py-20">

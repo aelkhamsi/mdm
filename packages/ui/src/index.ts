@@ -24,10 +24,12 @@ export * from './components/dialog'
 export * from './components/command'
 export * from './components/radio-group'
 export * from './components/scroll-area'
-export * from 'date-fns'
-export * from './components/accordion'
-export * from '@radix-ui/react-icons'
+export * from './components/navigation-menu'
 export * from './components/tabs'
+export * from './components/accordion'
+export * from 'date-fns'
+export * from '@radix-ui/react-icons'
+
 
 // Hooks
 export * from './hooks/use-toast'

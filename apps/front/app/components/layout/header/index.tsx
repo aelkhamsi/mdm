@@ -9,6 +9,7 @@ import { userAtom } from "@/app/store/userAtom";
 import { Dispatch, SetStateAction, Suspense } from "react";
 import { useAtom } from "jotai";
 import AuthButton from "./auth-button";
+import { Menu } from './menu'
 
 const NavBarActionButtonContent = ({
   setShowAuthModal
@@ -22,7 +23,7 @@ const NavBarActionButtonContent = ({
     : <AuthButton setShowAuthModal={setShowAuthModal}/>
 }
 
-export default function NavBar() {
+export default function Header() {
   const { AuthModal, setShowAuthModal } = useAuthModal();
   const scrolled = useScroll(50)
 
@@ -47,9 +48,12 @@ export default function NavBar() {
             ></Image>
           </Link>
 
-          <Suspense fallback="..." >
-            <NavBarActionButtonContent setShowAuthModal={setShowAuthModal} />
-          </Suspense>
+          <div className="flex">
+            <Menu />
+            <Suspense fallback="..." >
+              <NavBarActionButtonContent setShowAuthModal={setShowAuthModal} />
+            </Suspense>
+          </div>
         </div>
       </div>
     </>
