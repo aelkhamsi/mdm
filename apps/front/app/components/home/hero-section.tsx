@@ -1,31 +1,10 @@
 import { Github, Instagram } from 'lucide-react'
 import React from 'react'
+import DivCircuitBg from '../div-circuit-bg'
 
 const HeroSection = () => {
   return (
-    <div className='w-full flex flex-col justify-center items-center py-16 bg-gradient-to-b from-transparent via-transparent to-[#edf7ff]'>
-
-      {/* Background Image */}
-      <div className='absolute inset-0 z-[-8] overflow-hidden'>
-        <div className='absolute top-6 right-1/2 aspect-[969/887] w-[969px]'>
-          <picture>
-            <img className='absolute inset-0 h-full w-full' src="https://clerk.com/_next/static/media/circuit-lines@2xr.0351fb9a.png" />
-          </picture>
-          <picture>
-            <img className='absolute inset-0 h-full w-full' src="https://clerk.com/_next/static/media/circuit-components@2xl.288e1b6c.webp" />
-          </picture>
-        </div>
-        
-        <div className='absolute top-6 right-1/2 origin-right -scale-x-100 aspect-[969/887] w-[969px]'>
-          <picture>
-            <img className='absolute inset-0 h-full w-full' src="https://clerk.com/_next/static/media/circuit-lines@2xr.0351fb9a.png" />
-          </picture>
-          <picture>
-            <img className='absolute inset-0 h-full w-full' src="https://clerk.com/_next/static/media/circuit-components@2xl.288e1b6c.webp" />
-          </picture>
-        </div>
-      </div>
-
+    <DivCircuitBg className='bg-gradient-to-b from-transparent via-transparent to-[#edf7ff]'>
       {/* Hero Section */}
       <div className="w-full max-w-xl">
         <a
@@ -68,7 +47,7 @@ const HeroSection = () => {
           </a>
         </div>
       </div>
-    </div>
+    </DivCircuitBg>
   )
 }
 

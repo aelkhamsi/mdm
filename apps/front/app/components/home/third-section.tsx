@@ -39,8 +39,8 @@ const ThirdSection = () => {
             </div>
 
             <div className="flex text-center space-x-6 px-14">
-              <Card title='Math Sprint' />
-              <Card title='Best Mathematical Video' />
+              <Card title='Math Sprint' href='math-sprint' />
+              <Card title='Best Mathematical Video' href='best-math-video' />
             </div>
           </div>
 
@@ -50,8 +50,8 @@ const ThirdSection = () => {
             </div>
 
             <div className="flex space-x-6 px-14">
-              <Card title='Conférences'/>
-              <Card title='Stands' />
+              <Card title='Conférences' href='conferences'/>
+              <Card title='Stands' href='stand'/>
             </div>
           </div>
         </div>
