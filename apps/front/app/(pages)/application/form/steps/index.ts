@@ -24,7 +24,12 @@ export const steps: Step[] = [
   {
     id: 'Étape 3',
     name: 'Éducation',
-    getFields: () => ['educationLevel', 'educationField', 'highschool', 'averageGrade', 'ranking', 'mathAverageGrade', 'mathRanking', 'numberOfStudentsInClass']
+    getFields: (formState: any) => {
+      const isMathSprint = formState?.activityChoices?.find((choice: string) => choice === 'math_sprint') ? true : false
+      const isBestMathVideo = formState?.activityChoices?.find((choice: string) => choice === 'best_mathematical_video') ? true : false
+
+      return [...(isMathSprint || isBestMathVideo ? ['educationLevel', 'educationField', 'highschool'] : []), ...(isMathSprint ? ['averageGrade', 'ranking', 'mathAverageGrade', 'mathRanking', 'numberOfStudentsInClass'] : [])]
+    }
   },
   {
     id: 'Étape 4',

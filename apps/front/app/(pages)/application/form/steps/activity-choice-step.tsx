@@ -33,7 +33,7 @@ const choices = [
     target: 'Étudiants universitaires'
   },
   {
-    value: "conferences",
+    value: "visitor",
     label: "Visiteur (conférences et stands)",
     type: "Visite",
     color: 'green-700',

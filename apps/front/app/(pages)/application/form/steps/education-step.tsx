@@ -17,11 +17,25 @@ import {
   SelectLabel,
   SelectItem,
 } from "@mdm/ui"
+import { useActivityChoice } from '../../hooks/use-activity-choices'
 
-const educationLevels = [
-  {label: "Tronc commun", value:"tronc-commun"},
-  {label: "1ère année Bac", value:"1bac"},
+const educationLevelsPrimary = [
+  {label: "CE6", value:"ce6"},
+  {label: "CE5", value:"ce5"},
+  {label: "CE4", value:"ce4"},
+  {label: "CE3", value:"ce3"},
+  {label: "CE2", value:"ce2"},
+  {label: "CE1", value:"ce1"},
+]
+const educationLevelsSecondary = [
+  {label: "3AC", value:"3ac"},
+  {label: "2AC", value:"2ac"},
+  {label: "1AC", value:"1ac"},
+]
+const educationLevelsHighschool = [
   {label: "2ème année Bac", value:"2bac"},
+  {label: "1ère année Bac", value:"1bac"},
+  {label: "Tronc commun", value:"tronc-commun"},
 ]
 
 const educationFields = [
@@ -55,6 +69,11 @@ export const EducationStep = ({
   form: UseFormReturn,
   delta: number
 }) => {
+  const {
+    isMathSprint,
+    isBestMathVideo,
+  } = useActivityChoice(form);
+
   return (
     <motion.div
       initial={{ x: delta >= 0 ? '50%' : '-50%', opacity: 0 }}
@@ -64,160 +83,173 @@ export const EducationStep = ({
       <h2 className='text-base font-semibold leading-7 text-[#0284C7]'>
         Éducation
       </h2>
-      <p className='mt-1 text-sm leading-6 text-gray-600'>
-        Fournissez des informations à propos de vos études
-        <Separator className='mt-4 bg-[#0284C7]'/>
-      </p>
-      <div className='mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 justify-between'>
-        {/* Education Level */}
-        <FormField
-          control={form.control}
-          name="educationLevel"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Niveau d&apos;étude <RequiredAsterisk /></FormLabel>
-              <FormControl>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Choose an option" />
-                  </SelectTrigger>
-                  <SelectContent className="max-h-60">
-                    <SelectGroup>
-                      <SelectLabel>Education Levels</SelectLabel>
-                      {educationLevels.map(level =>
-                        <SelectItem key={level.value} value={level.value}>{level.label}</SelectItem>
-                      )}
-                    </SelectGroup>
-                  </SelectContent>
-                </Select> 
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+      <Separator className='my-6 bg-[#0284C7]'/>
 
-        {/* Education Field */}
-        <FormField
-          control={form.control}
-          name="educationField"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Filière d&apos;étude<RequiredAsterisk /></FormLabel>
-              <FormControl>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Choose an option" />
-                  </SelectTrigger>
-                  <SelectContent className="max-h-60">
-                    <SelectGroup>
-                      <SelectLabel>Education Fields</SelectLabel>
-                      {educationFields.map(field =>
-                        <SelectItem key={field.value} value={field.value}>{field.label}</SelectItem>
-                      )}
-                    </SelectGroup>
-                  </SelectContent>
-                </Select>
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+      {(isMathSprint || isBestMathVideo) && (
+        <div className='mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 justify-between'>
+          {/* Education Level */}
+          <FormField
+            control={form.control}
+            name="educationLevel"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Niveau d&apos;étude <RequiredAsterisk /></FormLabel>
+                <FormControl>
+                  <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Choose an option" />
+                    </SelectTrigger>
+                    <SelectContent className="max-h-60">
+                      <SelectGroup>
+                        <SelectLabel>Lycée <Separator className='mt-2 bg-gray-300' /></SelectLabel>
+                        {educationLevelsHighschool.map(level =>
+                          <SelectItem key={level.value} value={level.value}>{level.label}</SelectItem>
+                        )}
+                        <SelectLabel>Collège <Separator className='mt-2 bg-gray-300' /></SelectLabel>
+                        {educationLevelsSecondary.map(level =>
+                          <SelectItem key={level.value} value={level.value}>{level.label}</SelectItem>
+                        )}
+                        <SelectLabel>Primaire <Separator className='mt-2 bg-gray-300' /></SelectLabel>
+                        {educationLevelsPrimary.map(level =>
+                          <SelectItem key={level.value} value={level.value}>{level.label}</SelectItem>
+                        )}
+                      </SelectGroup>
+                    </SelectContent>
+                  </Select> 
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
-        {/* Highschool */}
-        <FormField
-          control={form.control}
-          name="highschool"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>École / Établissement<RequiredAsterisk /></FormLabel>
-              <FormControl>
-                <Input placeholder="Highschool" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-      </div>
+          {/* Education Field */}
+          <FormField
+            control={form.control}
+            name="educationField"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Filière d&apos;étude<RequiredAsterisk /></FormLabel>
+                <FormControl>
+                  <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Choose an option" />
+                    </SelectTrigger>
+                    <SelectContent className="max-h-60">
+                      <SelectGroup>
+                        <SelectLabel>Filière</SelectLabel>
+                        {educationFields.map(field =>
+                          <SelectItem key={field.value} value={field.value}>{field.label}</SelectItem>
+                        )}
+                      </SelectGroup>
+                    </SelectContent>
+                  </Select>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
-      <h2 className='text-base font-semibold leading-7 text-[#0284C7] mt-6'>
-        Notes
-      </h2>
-      <p className='mt-1 text-sm leading-6 text-gray-600'>
-        Fournir les Notes de l&apos;année scolaire 2023/2024
-        <Separator className='mt-4 bg-[#0284C7]'/>
-      </p>
-      <div className='mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-between'>
-        {/* Guardian Full Name */}
-        <FormField
-          control={form.control}
-          name="averageGrade"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Moyenne générale du 2e semestre<RequiredAsterisk /></FormLabel>
-              <FormControl>
-                <Input placeholder="Entrez votre moyenne générale" type="number" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+          {/* Highschool */}
+          <FormField
+            control={form.control}
+            name="highschool"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>École / Établissement<RequiredAsterisk /></FormLabel>
+                <FormControl>
+                  <Input placeholder="Highschool" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+      )}
 
-        <FormField
-          control={form.control}
-          name="ranking"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Classement général<RequiredAsterisk /></FormLabel>
-              <FormControl>
-                <Input placeholder="Entrez votre classement général" type="number" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+      {isMathSprint && (
+        <>
+          <h2 className='text-base font-semibold leading-7 text-[#0284C7] mt-6'>
+            Notes
+          </h2>
+          <p className='mt-1 text-sm leading-6 text-gray-600'>
+            Fournir les Notes du <span className='font-semibold'>deuxième semestre de l&apos;année scolaire 2023/2024</span>
+            <Separator className='mt-4 bg-[#0284C7]'/>
+          </p>
 
-        <FormField
-          control={form.control}
-          name="mathAverageGrade"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Moyenne de mathématiques<RequiredAsterisk /></FormLabel>
-              <FormControl>
-                <Input placeholder="Entrez votre moyenne de mathématiques" type="number" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <FormField
-          control={form.control}
-          name="mathRanking"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Classement en mathématiques<RequiredAsterisk /></FormLabel>
-              <FormControl>
-                <Input placeholder="Entrez votre classement en mathématiques" type="number" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <FormField
-          control={form.control}
-          name="numberOfStudentsInClass"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Nombre d&apos;élèves dans la classe<RequiredAsterisk /></FormLabel>
-              <FormControl>
-                <Input placeholder="Entrez le nombre d&apos;élèves dans votre classe" type="number" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-      </div>
+          <div className='mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-between'>
+            {/* Guardian Full Name */}
+            <FormField
+              control={form.control}
+              name="averageGrade"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Moyenne générale<RequiredAsterisk /></FormLabel>
+                  <FormControl>
+                    <Input placeholder="Entrez votre moyenne générale" type="number" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+    
+            <FormField
+              control={form.control}
+              name="ranking"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Classement général<RequiredAsterisk /></FormLabel>
+                  <FormControl>
+                    <Input placeholder="Entrez votre classement général" type="number" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+    
+            <FormField
+              control={form.control}
+              name="mathAverageGrade"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Moyenne de mathématiques<RequiredAsterisk /></FormLabel>
+                  <FormControl>
+                    <Input placeholder="Entrez votre moyenne de mathématiques" type="number" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+    
+            <FormField
+              control={form.control}
+              name="mathRanking"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Classement en mathématiques<RequiredAsterisk /></FormLabel>
+                  <FormControl>
+                    <Input placeholder="Entrez votre classement en mathématiques" type="number" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+    
+            <FormField
+              control={form.control}
+              name="numberOfStudentsInClass"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Nombre d&apos;élèves dans la classe<RequiredAsterisk /></FormLabel>
+                  <FormControl>
+                    <Input placeholder="Entrez le nombre d&apos;élèves dans votre classe" type="number" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+        </>
+      )}
     </motion.div>
   )
 }

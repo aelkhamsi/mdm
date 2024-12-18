@@ -88,7 +88,7 @@ export const FormNavigation = ({
   )
 
   const buttonTemplate = (
-    <div className='mt-12 pt-5 flex flex-row space-x-8 justify-center'>
+    <div className='mt-6 pt-5 flex flex-row space-x-8 justify-center'>
       <Button className="w-[10rem] bg-gray-600" onClick={prev} disabled={currentStep === 0}>Étape Précédente</Button>
       <Button className="w-[10rem] bg-[#0284C7]" onClick={next} disabled={currentStep === steps.length - 1}>Étape Suivante</Button>
     </div>
