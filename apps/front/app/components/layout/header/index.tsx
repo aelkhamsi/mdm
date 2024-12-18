@@ -2,14 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useScroll } from "@mdm/hooks";
+import { useMediaQuery, useScroll } from "@mdm/hooks";
 import { UserNav } from "./user-nav";
 import { useAuthModal } from "@/app/components/auth/auth-modal";
 import { userAtom } from "@/app/store/userAtom";
-import { Dispatch, SetStateAction, Suspense } from "react";
+import { Dispatch, SetStateAction, Suspense, useState } from "react";
 import { useAtom } from "jotai";
 import AuthButton from "./auth-button";
 import { Menu } from './menu'
+import { HamburgerMenuIcon } from "@mdm/ui";
 
 const NavBarActionButtonContent = ({
   setShowAuthModal
@@ -50,6 +51,7 @@ export default function Header() {
 
           <div className="flex">
             <Menu />
+
             <Suspense fallback="..." >
               <NavBarActionButtonContent setShowAuthModal={setShowAuthModal} />
             </Suspense>

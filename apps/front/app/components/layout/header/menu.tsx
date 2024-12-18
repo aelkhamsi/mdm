@@ -1,6 +1,11 @@
-import { forwardRef } from "react"
+"use client"
+
+import { forwardRef, useEffect, useMemo, useState } from "react"
 import Link from "next/link"
+import { useRouter } from "next/navigation";
 import {
+  Cross1Icon,
+  HamburgerMenuIcon,
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
@@ -8,21 +13,38 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@mdm/ui"
-import { links } from './data/links'
 import { cn } from '@mdm/utils'
+import { useMediaQuery } from "@mdm/hooks"
 
-export const Menu = () => {
-  return (
+export const Menu = ({
+
+}:{
+
+}) => {
+  const { isMobile, isTablet} = useMediaQuery();
+  const [showMenu, setShowMenu] = useState(false);
+  const router = useRouter();
+  
+  const onMenuClick = (href: string) => {
+    setShowMenu(false);
+    router.push(href);
+  }
+
+  useEffect(() => {
+    setShowMenu(isMobile || isTablet ? false : true)
+  }, [isMobile, isTablet])
+
+  const template = (
     <NavigationMenu>
-      <NavigationMenuList>
+      <NavigationMenuList className={(isMobile || isTablet) ? 'flex flex-col' : ''}>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-xs mr-4">Compétitions</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="text-xs mr-6">Compétitions</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[300px] gap-3 p-4 md:w-[400px] md:grid-cols-2 lg:w-[500px]">
-              <ListItem href="/math-sprint" title="Math Sprint">
+              <ListItem href="/math-sprint" title="Math Sprint" onClick={() => {onMenuClick("/math-sprint")}}>
                 Re-usable components built using Radix UI and Tailwind CSS.
               </ListItem>
-              <ListItem href="/best-math-video" title="Best Math Video">
+              <ListItem href="/best-math-video" title="Best Math Video" onClick={() => {onMenuClick("/best-math-video")}}>
                 How to install dependencies and structure your app.
               </ListItem>
             </ul>
@@ -30,13 +52,13 @@ export const Menu = () => {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-xs mr-4">Activités</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="text-xs mr-6">Activités</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[300px] gap-3 p-4 md:w-[400px] md:grid-cols-2 lg:w-[500px]">
-              <ListItem href="/stand" title="Stands">
+              <ListItem href="/stand" title="Stands" onClick={() => {onMenuClick("/stand")}}>
                 Re-usable components built using Radix UI and Tailwind CSS.
               </ListItem>
-              <ListItem href="/conferences" title="Conférences">
+              <ListItem href="/conferences" title="Conférences" onClick={() => {onMenuClick("/conferences")}}>
                 How to install dependencies and structure your app.
               </ListItem>
             </ul>
@@ -44,22 +66,40 @@ export const Menu = () => {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link href="/organizing-team" legacyBehavior passHref>
-            <NavigationMenuLink className="text-xs font-medium mr-4">
-              Equipe organisatrice
-            </NavigationMenuLink>
-          </Link>
+          <NavigationMenuLink className="text-xs font-medium mr-6 hover:cursor-pointer hover:underline" onClick={() => {onMenuClick("/organizing-team")}}>
+            Equipe organisatrice
+          </NavigationMenuLink>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link href="/faq" legacyBehavior passHref>
-            <NavigationMenuLink className="text-xs font-medium mr-4">
-              FAQ
-            </NavigationMenuLink>
-          </Link>
+          <NavigationMenuLink className="text-xs font-medium mr-6 hover:cursor-pointer hover:underline" onClick={() => {onMenuClick("/faq")}}>
+            FAQ
+          </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
+  )
+
+  return (
+    <>
+      {(isMobile || isTablet) && <HamburgerMenuIcon className="h-6 w-6 mr-4 mt-[.1rem]" onClick={() => {setShowMenu(!showMenu)}}/>}
+
+      <div 
+        className={(isMobile || isTablet) 
+          ? `absolute min-h-screen w-full top-14 left-0 bg-white p-4 ${!showMenu ? 'hidden' : ''} transition-all text-center`
+          : ''
+        }
+      >
+        {(isMobile || isTablet) && (
+          <div className="flex justify-between">
+            <div>{" "}</div>
+            <Cross1Icon className="h-6 w-6 mr-4" onClick={() => {setShowMenu(false)}}/>
+          </div>
+        )}
+        
+        {template}
+      </div>
+    </>
   )
 }
 
