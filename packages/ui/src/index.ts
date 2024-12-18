@@ -27,6 +27,7 @@ export * from './components/scroll-area'
 export * from 'date-fns'
 export * from './components/accordion'
 export * from '@radix-ui/react-icons'
+export * from './components/tabs'
 
 // Hooks
 export * from './hooks/use-toast'
