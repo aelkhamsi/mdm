@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { FormSteps } from "./header/form-steps"
 import { FormNavigation } from "./navigation/form-navigation"
-import { PersonalInformationStep, EducationStep, CompetitionStep, UploadStep, ValidationStep } from "./steps"
+import { PersonalInformationStep, EducationStep, MotivationStep, UploadStep, ValidationStep } from "./steps"
 import { useForm } from "react-hook-form"
 import { applicationSchema, getApplicationDefaultValues } from "@/app/schemas/application.schema"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -170,7 +170,7 @@ export const ApplicationForm = ({
           )}
 
           {currentStep === 3 && (
-            <CompetitionStep form={form} delta={delta} />
+            <MotivationStep form={form} delta={delta} />
           )}
 
           {currentStep === 4 && (

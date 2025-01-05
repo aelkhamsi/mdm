@@ -13,6 +13,12 @@ module.exports = {
   future: {
     hoverOnlyWhenSupported: true,
   },
+  safelist: [
+    'border-border',
+    'text-orange-700',
+    'text-blue-700',
+    'text-green-700',
+  ],
   theme: {
     extend: {
       fontFamily: {

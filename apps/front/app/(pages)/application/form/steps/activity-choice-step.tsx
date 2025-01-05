@@ -13,28 +13,28 @@ import { Checkbox } from '@mdm/ui'
 const choices = [
   {
     value: "math_sprint",
-    label: "Math Sprint",
+    label: "🏃‍♀️‍➡️ Math Sprint",
     type: "Compétition",
     color: 'orange-700',
     target: 'Élèves collège/lycée'
   },
   {
     value: "best_mathematical_video",
-    label: "Best mathematical video",
+    label: "📽️ Best mathematical video",
     type: "Compétition",
     color: 'orange-700',
     target: 'Ouvert pour tous'
   },
   {
     value: "stand",
-    label: "Présenter en Stand",
+    label: "🎤 Présenter en Stand",
     type: "Organisation",
     color: 'blue-700',
     target: 'Étudiants universitaires'
   },
   {
     value: "visitor",
-    label: "Visiteur (conférences et stands)",
+    label: "🏖️ Visiteur (conférences et stands)",
     type: "Visite",
     color: 'green-700',
     target: 'Ouvert pour tous'

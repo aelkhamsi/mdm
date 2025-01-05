@@ -49,7 +49,7 @@ export const steps: Step[] = [
 
 export { PersonalInformationStep } from './personal-information-step'
 export { EducationStep } from './education-step'
-export { CompetitionStep } from "./competition-step"
+export { MotivationStep } from "./motivation-step"
 export { UploadStep } from './upload-step'
 export { ValidationStep } from './validation-step'
 
