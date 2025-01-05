@@ -1,4 +1,4 @@
-import { Github, Instagram, Scroll, MessageCircleIcon } from 'lucide-react'
+import { Instagram, Scroll, MessageCircleIcon } from 'lucide-react'
 import React from 'react'
 import DivCircuitBg from '../div-circuit-bg'
 import Link from 'next/link'
@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <DivCircuitBg className='bg-gradient-to-b from-transparent via-transparent to-[#edf7ff]'>
       {/* Hero Section */}
-      <div className="w-full flex flex-col items-center max-w-xl space-y-6">
+      <div className="w-full flex flex-col items-center max-w-xl space-y-10">
         <a
           href="https://www.instagram.com/mathmaroc/"
           target="_blank"
@@ -22,19 +22,21 @@ const HeroSection = () => {
           </p>
         </a>
 
-        <h1
-          className="animate-fade-up opacity-0 text-center text-[#131316] font-display text-4xl font-bold tracking-[0.04em] [text-wrap:balance] md:text-4xl md:leading-[3rem]"
-          style={{ animationDelay: "0.20s", animationFillMode: "forwards" }}
-        >
-          Moroccan Day of Mathematics
-        </h1>
+        <div className='space-y-2'>
+          <h1
+            className="animate-fade-up opacity-0 text-center text-[#131316] font-display text-4xl font-bold tracking-[0.04em] [text-wrap:balance] md:text-5xl md:leading-[3rem]"
+            style={{ animationDelay: "0.20s", animationFillMode: "forwards" }}
+          >
+            Moroccan Day of Mathematics
+          </h1>
 
-        <p
-          className="animate-fade-up opacity-0 text-center text-gray-500 [text-wrap:balance] md:text-sm"
-          style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
-        >
-          Exploring the Rich Heritage, Modern Innovations, and Future Potential of Mathematics in Morocco.
-        </p>
+          <p
+            className="animate-fade-up opacity-0 text-center text-gray-500 [text-wrap:balance] md:text-sm"
+            style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
+          >
+            Exploring the Rich Heritage, Modern Innovations, and Future Potential of Mathematics in Morocco.
+          </p>
+        </div>
 
         <div
           className="mx-auto flex animate-fade-up items-center justify-center space-x-5 opacity-0"
@@ -71,16 +73,16 @@ const HeroSection = () => {
             </p>
 
             <div className="flex space-x-4 items-center">
-              <div className="h-6 flex items-center">
+              <Link className="h-7 flex items-center" href="/sponsors">
                 <Image
                   src="/mm.png"
                   alt="Math&Maroc Logo"
                   width={0}
                   height={0}
                   sizes="100vw"
-                  className="h-full w-auto filter grayscale brightness-100 contrast-125"
+                  className="h-full w-auto filter grayscale brightness-100 contrast-125 hover:grayscale-0 hover:brightness-100 hover:contrast-100"
                 />
-              </div>
+              </Link>
             </div>
           </div>
           
@@ -90,26 +92,26 @@ const HeroSection = () => {
             </p>
             
             <div className="flex space-x-4 items-center">
-              <div className="h-6 flex items-center">
+              <Link className="h-7 flex items-center" href="/sponsors">
                 <Image
                   src="/adria.png"
                   alt="Adria Logo"
                   width={0}
                   height={0}
                   sizes="100vw"
-                  className="h-full w-auto filter grayscale brightness-50 contrast-125"
+                  className="h-full w-auto filter grayscale brightness-50 contrast-125 hover:grayscale-0 hover:brightness-100 hover:contrast-100"
                 />
-              </div>
-              <div className="h-6 flex items-center">
+              </Link>
+              <Link className="h-7 flex items-center" href="/sponsors">
                 <Image
                   src="/evalmee.png"
                   alt="Evalmee Logo"
                   width={0}
                   height={0}
                   sizes="100vw"
-                  className="h-full w-auto filter grayscale brightness-75 contrast-125"
+                  className="h-full w-auto filter grayscale brightness-75 contrast-125 hover:grayscale-0 hover:brightness-100 hover:contrast-100"
                 />
-              </div>
+              </Link>
             </div>
           </div>
         </div>

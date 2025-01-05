@@ -148,7 +148,7 @@ export const PersonalInformationStep = ({
                     selected={field.value}
                     onSelect={(value) => {
                       const _isAdult = isOverEighteen(value as Date)
-                      setIsAdult(_isAdult ? true : false)
+                      setIsAdult(_isAdult)
                       if (_isAdult) {
                         form.setValue('guardianFullName', '')
                         form.setValue('guardianPhoneNumber', '')

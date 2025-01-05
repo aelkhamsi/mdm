@@ -23,7 +23,7 @@ const ThirdSection = () => {
       {/* Content */}
       <div className='relative isolate overflow-hidden w-full flex flex-col justify-center items-center py-14 bg-gray-950 text-white'>
         <h1 className='text-3xl text-center font-bold'>
-          Activités & Conférences
+          Activités & Compétitions
         </h1>
 
         <div className='max-w-screen-sm text-sm text-center my-6 p-4 xl:p-0'>
