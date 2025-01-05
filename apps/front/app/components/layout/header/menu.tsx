@@ -36,11 +36,11 @@ export const Menu = ({
 
   const template = (
     <NavigationMenu>
-      <NavigationMenuList className={(isMobile || isTablet) ? 'flex flex-col' : ''}>
+      <NavigationMenuList className={(isMobile || isTablet) ? 'flex flex-col space-y-4' : ''}>
         <NavigationMenuItem>
           <NavigationMenuTrigger className="text-xs mr-6">Compétitions</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[300px] gap-3 p-4 md:w-[400px] md:grid-cols-2 lg:w-[500px]">
+            <ul className="grid w-[270px] p-4 md:w-[400px] md:grid-cols-2 lg:w-[500px]">
               <ListItem href="/math-sprint" title="Math Sprint" onClick={() => {onMenuClick("/math-sprint")}}>
                 Re-usable components built using Radix UI and Tailwind CSS.
               </ListItem>
@@ -66,8 +66,17 @@ export const Menu = ({
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuLink className="text-xs font-medium mr-6 hover:cursor-pointer hover:underline" onClick={() => {onMenuClick("/organizing-team")}}>
+          <NavigationMenuLink 
+            className={"text-xs font-medium mr-6 hover:cursor-pointer hover:underline"} 
+            onClick={() => {onMenuClick("/organizing-team")}}
+          >
             Equipe organisatrice
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <NavigationMenuLink className="text-xs font-medium mr-6 hover:cursor-pointer hover:underline" onClick={() => {onMenuClick("/partners")}}>
+            Partners
           </NavigationMenuLink>
         </NavigationMenuItem>
 
@@ -97,7 +106,9 @@ export const Menu = ({
           </div>
         )}
         
-        {template}
+        <div className="flex justify-center">
+          {template}
+        </div>
       </div>
     </>
   )

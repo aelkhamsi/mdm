@@ -73,7 +73,7 @@ const HeroSection = () => {
             </p>
 
             <div className="flex space-x-4 items-center">
-              <Link className="h-7 flex items-center" href="/sponsors">
+              <Link className="h-7 flex items-center" href="/partners">
                 <Image
                   src="/mm.png"
                   alt="Math&Maroc Logo"
@@ -92,7 +92,7 @@ const HeroSection = () => {
             </p>
             
             <div className="flex space-x-4 items-center">
-              <Link className="h-7 flex items-center" href="/sponsors">
+              <Link className="h-7 flex items-center" href="/partners">
                 <Image
                   src="/adria.png"
                   alt="Adria Logo"
@@ -102,7 +102,7 @@ const HeroSection = () => {
                   className="h-full w-auto filter grayscale brightness-50 contrast-125 hover:grayscale-0 hover:brightness-100 hover:contrast-100"
                 />
               </Link>
-              <Link className="h-7 flex items-center" href="/sponsors">
+              <Link className="h-7 flex items-center" href="/partners">
                 <Image
                   src="/evalmee.png"
                   alt="Evalmee Logo"
