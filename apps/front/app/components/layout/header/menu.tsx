@@ -76,7 +76,7 @@ export const Menu = ({
 
         <NavigationMenuItem>
           <NavigationMenuLink className="text-xs font-medium mr-6 hover:cursor-pointer hover:underline" onClick={() => {onMenuClick("/partners")}}>
-            Partners
+            Partenaires
           </NavigationMenuLink>
         </NavigationMenuItem>
 

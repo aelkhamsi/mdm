@@ -1,55 +1,89 @@
-import { BuyMeACoffee } from "@mdm/ui";
+import Link from 'next/link'
+import Image from 'next/image'
+import { Separator } from '@mdm/ui';
 
 export default function Footer() {
   return (
-    <footer className="border-grid border-t py-6 md:px-8 md:py-0">
-      <div className="container-wrapper">
-        <div className="container py-4">
-          <div className="text-balance text-center text-sm leading-loose text-muted-foreground md:text-left">
-            Built by{" "}
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium underline underline-offset-4"
-            >
-              shadcn
-            </a>
-            . The source code is available on{" "}
-            <a
-              href="#"
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium underline underline-offset-4"
-            >
-              GitHub
-            </a>
-            .
+    <footer>
+      {/* Transition border */}
+      <div className="relative w-full flex justify-between -mt-11 h-11">
+        <div className="mr-[calc(-1*(theme(spacing.8)-theme(spacing[1.5])))] h-11 flex-auto bg-gray-950"></div>
+        <div className="flex justify-between mx-auto w-full px-[1.6rem] sm:max-w-[40rem] md:max-w-[48rem] lg:max-w-[64rem] xl:max-w-[80rem]">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="0,100 0,0 100,100" fill="#030712" />
+            <polygon points="100,0 0,0 100,100" fill="#FFF" />
+          </svg>
+
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="0,0 100,0 0,100" fill="#FFF" />
+            <polygon points="100,100 100,0 0,100" fill="#030712" />
+          </svg>
+        </div>
+        <div className="ml-[calc(-1*(theme(spacing.8)-theme(spacing[1.5])))] h-11 flex-auto bg-gray-950"></div>
+      </div>
+
+      {/* Content */}
+      <div className='flex flex-col justify-center items-center w-full py-12 space-y-6 bg-gray-950 text-white'>
+        <div className='flex flex-col space-y-8 md:flex-row md:justify-between md:space-y-0 w-3/4'>
+          {/* LEFT */}
+          <div>
+            <div className="flex space-x-4 items-center">
+              <Link className="h-9 flex items-center" href="/">
+                <Image
+                  src="/mm_light.png"
+                  alt="Math&Maroc Logo"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  className="h-full w-auto filter grayscale brightness-100 contrast-125 hover:grayscale-0 hover:brightness-100 hover:contrast-100"
+                />
+              </Link>
+            </div>
+
+            <div className='text-xs max-w-[15rem] mt-2'>
+              Inspirer, éduquer, et former les leaders scientifiques de demain.
+            </div>
           </div>
+
+          {/* RIGHT */}
+          <div className='flex text-xs space-x-12'>
+            <div className='space-y-6'>
+              <h1 className='font-bold'>Activités</h1>
+              <ul className='space-y-2'>
+                <li><Link href='/math-sprint' className='hover:underline'>Math Sprint</Link></li>
+                <li><Link href='/best-math-video' className='hover:underline'>Best Math Video</Link></li>
+                <li><Link href='/stands' className='hover:underline'>Stands</Link></li>
+                <li><Link href='/conferences' className='hover:underline'>Conférences</Link></li>
+              </ul>
+            </div>
+
+            <div className='space-y-6'>
+              <h1 className='font-bold'>Pages</h1>
+              <ul className='space-y-2'>
+                <li><Link href='/organizing-team' className='hover:underline'>Equipe organisatrice</Link></li>
+                <li><Link href='/partners' className='hover:underline'>Partenaires</Link></li>
+                <li><Link href='/faq' className='hover:underline'>FAQ</Link></li>
+              </ul>
+            </div>
+
+            <div className='space-y-6'>
+              <h1 className='font-bold'>Réseaux</h1>
+              <ul className='space-y-2'>
+                <li><Link href='https://www.instagram.com/mathmaroc/' target='_blank' className='hover:underline'>Instagram</Link></li>
+                <li><Link href='https://www.youtube.com/@mathmaroc1396' target='_blank' className='hover:underline'>Youtube</Link></li>
+                <li><Link href='https://www.linkedin.com/company/mathemaroc/posts/?feedView=all' target='_blank' className='hover:underline'>Linkedin</Link></li>
+                <li><Link href='https://www.facebook.com/MathsMaroc2' target='_blank' className='hover:underline'>Facebook</Link></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <Separator className='w-3/4 bg-gray-600' />
+
+        <div className='w-3/4 text-xs text-left text-gray-600'>
+          Math&Maroc © 2025. All Rights Reserved
         </div>
       </div>
     </footer>
-    // <div className="absolute w-full py-5 text-center">
-    //   <p className="text-gray-500">
-    //     A project by{" "}
-    //     <a
-    //       className="font-semibold text-gray-600 underline-offset-4 transition-colors hover:underline"
-    //       href="https://twitter.com/steventey"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Steven Tey
-    //     </a>
-    //   </p>
-    //   <a
-    //     href="https://www.buymeacoffee.com/steventey"
-    //     target="_blank"
-    //     rel="noopener noreferrer"
-    //     className="mx-auto mt-2 flex max-w-fit items-center justify-center space-x-2 rounded-lg border border-gray-200 bg-white px-6 py-2 transition-all duration-75 hover:scale-105"
-    //   >
-    //     <BuyMeACoffee className="h-6 w-6" />
-    //     <p className="font-medium text-gray-600">Buy me a coffee</p>
-    //   </a>
-    // </div>
   );
 }

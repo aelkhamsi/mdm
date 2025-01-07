@@ -64,7 +64,7 @@ const HeroSection = () => {
         </div>
 
         <div
-          className="flex animate-fade-up opacity-0 items-center justify-around w-full"
+          className="flex flex-col space-y-4 md:flex-row md:space-y-0 animate-fade-up opacity-0 items-center justify-around w-full"
           style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
         >
           <div className='flex items-center space-x-4'>

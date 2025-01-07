@@ -13,7 +13,7 @@ import { Checkbox } from '@mdm/ui'
 const choices = [
   {
     value: "math_sprint",
-    label: "🏃‍♀️‍➡️ Math Sprint",
+    label: "🏁 Math Sprint",
     type: "Compétition",
     color: 'orange-700',
     target: 'Élèves collège/lycée'

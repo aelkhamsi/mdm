@@ -38,7 +38,7 @@ const ThirdSection = () => {
               Compétitions
             </div>
 
-            <div className="flex text-center space-x-6 px-14">
+            <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-6 text-center px-14">
               <Card title='Math Sprint' href='math-sprint' />
               <Card title='Best Mathematical Video' href='best-math-video' />
             </div>
@@ -49,9 +49,9 @@ const ThirdSection = () => {
               Activités
             </div>
 
-            <div className="flex space-x-6 px-14">
+            <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-6 text-center px-14">
               <Card title='Conférences' href='conferences'/>
-              <Card title='Stands' href='stand'/>
+              <Card title='Stands' href='stands'/>
             </div>
           </div>
         </div>

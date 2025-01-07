@@ -1,4 +1,3 @@
-// import { ImageSlider } from '@mdm/ui'
 import Link from "next/link";
 import { AnimatedTooltip } from '@/app/components/animated-tooltip';
 
@@ -70,17 +69,11 @@ const people = [
     designation: "The Explorer",
     image: "/organizing-team/ayoub_bennouna.jpg",
   },
-  {
-    id: 10,
-    name: "Dora",
-    designation: "The Explorer",
-    image: "/organizing-team/aymane_maaitat.jpeg",
-  },
 ];
 
 const FourthSection = () => {
   return (
-    <div className='relative isolate overflow-hidden w-full flex flex-col justify-center items-center py-14 space-y-6'>
+    <div className='relative isolate overflow-hidden w-full flex flex-col justify-center items-center py-12 px-2 space-y-6'>
       <h1 className='text-3xl font-bold'>
         Qui sommes-nous ?
       </h1>

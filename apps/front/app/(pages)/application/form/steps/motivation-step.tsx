@@ -66,7 +66,7 @@ export const MotivationStep = ({
       {isMathSprint && (
         <>
           <h2 className='mt-6 text-sm font-semibold leading-5 text-black'>
-            <span className='text-2xl'>🏃‍♀️‍➡️</span> Math Sprint
+            <span className='text-2xl'>🏁</span> Math Sprint
           </h2>
           <Separator className='mt-1 bg-black'/>
 
