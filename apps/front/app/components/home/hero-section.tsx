@@ -102,16 +102,6 @@ const HeroSection = () => {
                   className="h-full w-auto filter grayscale brightness-50 contrast-125 hover:grayscale-0 hover:brightness-100 hover:contrast-100"
                 />
               </Link>
-              <Link className="h-7 flex items-center" href="/partners">
-                <Image
-                  src="/evalmee.png"
-                  alt="Evalmee Logo"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  className="h-full w-auto filter grayscale brightness-75 contrast-125 hover:grayscale-0 hover:brightness-100 hover:contrast-100"
-                />
-              </Link>
             </div>
           </div>
         </div>
