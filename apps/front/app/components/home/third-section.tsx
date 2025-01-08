@@ -31,7 +31,7 @@ const ThirdSection = () => {
         </div>
 
         <div
-          className="md:flex w-full max-w-screen-xl text-sm my-4"
+          className="md:flex w-full lg:w-3/4 text-sm my-4"
         >
           <div className='w-full'>
             <div className='text-center font-bold text-cyan-300 p-6'>
@@ -40,7 +40,7 @@ const ThirdSection = () => {
 
             <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-6 text-center px-14">
               <Card title='Math Sprint' href='math-sprint' />
-              <Card title='Best Mathematical Video' href='best-math-video' />
+              <Card title='Best Math Video' href='best-math-video' />
             </div>
           </div>
 

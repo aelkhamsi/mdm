@@ -10,7 +10,6 @@ import { Dispatch, SetStateAction, Suspense, useState } from "react";
 import { useAtom } from "jotai";
 import AuthButton from "./auth-button";
 import { Menu } from './menu'
-import { HamburgerMenuIcon } from "@mdm/ui";
 
 const NavBarActionButtonContent = ({
   setShowAuthModal
@@ -38,7 +37,7 @@ export default function Header() {
             : "bg-white/0"
         } z-30 transition-all`}
       >
-        <div className="mx-5 flex h-16 w-full max-w-screen-xl items-center justify-between">
+        <div className="mx-5 flex h-12 w-full lg:w-3/4 items-center justify-between">
           <Link href="/" className="flex items-center font-display text-2xl">
             <Image
               src="/logo.png"
@@ -49,7 +48,7 @@ export default function Header() {
             ></Image>
           </Link>
 
-          <div className="flex">
+          <div className="flex items-center">
             <Menu />
 
             <Suspense fallback="..." >

@@ -91,7 +91,7 @@ export const Menu = ({
 
   return (
     <>
-      {(isMobile || isTablet) && <HamburgerMenuIcon className="h-6 w-6 mr-4 mt-[.1rem]" onClick={() => {setShowMenu(!showMenu)}}/>}
+      {(isMobile || isTablet) && <HamburgerMenuIcon className="h-6 w-6 mr-4 mt-[.1rem] hover:cursor-pointer" onClick={() => {setShowMenu(!showMenu)}}/>}
 
       <div 
         className={(isMobile || isTablet) 
@@ -100,7 +100,7 @@ export const Menu = ({
         }
       >
         {(isMobile || isTablet) && (
-          <div className="flex justify-between">
+          <div className="flex justify-between hover:cursor-pointer">
             <div>{" "}</div>
             <Cross1Icon className="h-6 w-6 mr-4" onClick={() => {setShowMenu(false)}}/>
           </div>
