@@ -9,7 +9,7 @@ const HeroSection = () => {
     <DivCircuitBg className='bg-gradient-to-b from-transparent via-transparent to-[#edf7ff]'>
       {/* Hero Section */}
       <div className="w-full flex flex-col items-center max-w-xl space-y-10">
-        <a
+        {/* <a
           href="https://www.instagram.com/mathmaroc/"
           target="_blank"
           rel="noreferrer"
@@ -20,21 +20,32 @@ const HeroSection = () => {
           <p className="text-sm font-semibold text-[#e1306c]">
             Introducing Math&Maroc
           </p>
-        </a>
+        </a> */}
+
+        {/* Logo */}
+        <div className="z-10">
+          <Image
+            src="/mdm_logo.png"
+            alt="M&M logo"
+            width='400'
+            height='200'
+          />
+        </div>
 
         <div className='space-y-2'>
           <h1
-            className="animate-fade-up opacity-0 text-center text-[#131316] font-display text-4xl font-bold tracking-[0.04em] [text-wrap:balance] md:text-5xl md:leading-[3rem]"
+            className="animate-fade-up opacity-0 text-center text-[#131316] font-display text-4xl font-bold tracking-[0.05em] text-wrap:balance md:text-5xl md:leading-[3rem]"
             style={{ animationDelay: "0.20s", animationFillMode: "forwards" }}
           >
-            Moroccan Day of Mathematics
+            Le plus grand événement de mathématique au Maroc
           </h1>
 
           <p
             className="animate-fade-up opacity-0 text-center text-gray-500 [text-wrap:balance] md:text-sm"
             style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
           >
-            Exploring the Rich Heritage, Modern Innovations, and Future Potential of Mathematics in Morocco.
+            Explorer le riche patrimoine, les innovations modernes et le potentiel futur des mathématiques au Maroc
+            {/* Exploring the Rich Heritage, Modern Innovations, and Future Potential of Mathematics in Morocco. */}
           </p>
         </div>
 
