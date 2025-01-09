@@ -41,7 +41,7 @@ const HeroSection = () => {
           </h1>
 
           <p
-            className="animate-fade-up opacity-0 text-center text-gray-500 [text-wrap:balance] md:text-sm"
+            className="animate-fade-up opacity-0 text-center text-gray-500 text-wrap:balance"
             style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
           >
             Explorer le riche patrimoine, les innovations modernes et le potentiel futur des mathématiques au Maroc
@@ -54,7 +54,7 @@ const HeroSection = () => {
           style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
         >
           <Link
-            className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-xs text-gray-600 shadow-md transition-colors hover:border-gray-800"
+            className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-gray-600 shadow-md transition-colors hover:border-gray-800"
             href="/application"
           >
             <Scroll className='h-4 w-4'/>
@@ -64,7 +64,7 @@ const HeroSection = () => {
           </Link>
 
           <Link
-            className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-xs text-gray-600 shadow-md transition-colors hover:border-gray-800"
+            className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-gray-600 shadow-md transition-colors hover:border-gray-800"
             href="/faq"
           >
             <MessageCircleIcon className='h-4 w-4'/>

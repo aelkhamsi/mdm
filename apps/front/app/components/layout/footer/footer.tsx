@@ -40,13 +40,13 @@ export default function Footer() {
               </Link>
             </div>
 
-            <div className='text-xs max-w-[15rem] mt-2'>
+            <div className='text-sm max-w-[15rem] mt-2'>
               Inspirer, éduquer, et former les leaders scientifiques de demain.
             </div>
           </div>
 
           {/* RIGHT */}
-          <div className='flex text-xs space-x-12'>
+          <div className='flex text-sm space-x-12'>
             <div className='space-y-6'>
               <h1 className='font-bold'>Activités</h1>
               <ul className='space-y-2'>
@@ -80,7 +80,7 @@ export default function Footer() {
 
         <Separator className='w-3/4 bg-gray-600' />
 
-        <div className='w-3/4 text-xs text-left text-gray-600'>
+        <div className='w-3/4 text-sm text-left text-gray-600'>
           Math&Maroc © 2025. All Rights Reserved
         </div>
       </div>

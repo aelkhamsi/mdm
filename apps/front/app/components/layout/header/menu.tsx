@@ -38,28 +38,28 @@ export const Menu = ({
     <NavigationMenu>
       <NavigationMenuList className={(isMobile || isTablet) ? 'flex flex-col space-y-4' : ''}>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-xs mr-6">Compétitions</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="text-sm mr-6">Compétitions</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[270px] p-4 md:w-[400px] md:grid-cols-2 lg:w-[500px]">
               <ListItem href="/math-sprint" title="Math Sprint" onClick={() => {onMenuClick("/math-sprint")}}>
-                Re-usable components built using Radix UI and Tailwind CSS.
+                La compétition de math pour les collégiens et lycéens
               </ListItem>
               <ListItem href="/best-math-video" title="Best Math Video" onClick={() => {onMenuClick("/best-math-video")}}>
-                How to install dependencies and structure your app.
+                Partagez votre passion au grand public
               </ListItem>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-xs mr-6">Activités</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="text-sm mr-6">Activités</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[300px] gap-3 p-4 md:w-[400px] md:grid-cols-2 lg:w-[500px]">
               <ListItem href="/stands" title="Stands" onClick={() => {onMenuClick("/stands")}}>
-                Re-usable components built using Radix UI and Tailwind CSS.
+                Rencontrez des gens passionnés de mathématique
               </ListItem>
               <ListItem href="/conferences" title="Conférences" onClick={() => {onMenuClick("/conferences")}}>
-                How to install dependencies and structure your app.
+                Découvrez ce que les experts ont à vous offrir
               </ListItem>
             </ul>
           </NavigationMenuContent>
@@ -67,7 +67,7 @@ export const Menu = ({
 
         <NavigationMenuItem>
           <NavigationMenuLink 
-            className={"text-xs font-medium mr-6 hover:cursor-pointer hover:underline"} 
+            className={"text-sm font-medium mr-6 hover:cursor-pointer hover:underline"} 
             onClick={() => {onMenuClick("/organizing-team")}}
           >
             Equipe organisatrice
@@ -75,13 +75,13 @@ export const Menu = ({
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuLink className="text-xs font-medium mr-6 hover:cursor-pointer hover:underline" onClick={() => {onMenuClick("/partners")}}>
+          <NavigationMenuLink className="text-sm font-medium mr-6 hover:cursor-pointer hover:underline" onClick={() => {onMenuClick("/partners")}}>
             Partenaires
           </NavigationMenuLink>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuLink className="text-xs font-medium mr-6 hover:cursor-pointer hover:underline" onClick={() => {onMenuClick("/faq")}}>
+          <NavigationMenuLink className="text-sm font-medium mr-6 hover:cursor-pointer hover:underline" onClick={() => {onMenuClick("/faq")}}>
             FAQ
           </NavigationMenuLink>
         </NavigationMenuItem>
