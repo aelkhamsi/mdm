@@ -1,4 +1,5 @@
 import DivCircuitBg from "@/app/components/div-circuit-bg"
+import TennisArcade from "@/app/components/tennis-arcade"
 
 export default function ConferencesPage() {
 
@@ -8,6 +9,14 @@ export default function ConferencesPage() {
         <h1 className="text-center text-3xl font-bold drop-shadow-sm">
           <span className='bg-gradient-to-br from-sky-800 to-[#272162] inline-block text-transparent bg-clip-text'>Conférences</span>
         </h1>
+      </div>
+
+      <div className="text-xl text-center text-gray-500 mt-[10rem]">
+        We are working hard to give you more details soon!
+      </div>
+
+      <div className="mt-10">
+        <TennisArcade />
       </div>
     </DivCircuitBg>
   )

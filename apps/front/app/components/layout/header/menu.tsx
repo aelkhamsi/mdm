@@ -55,7 +55,7 @@ export const Menu = ({
           <NavigationMenuTrigger className="text-xs mr-6">Activités</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[300px] gap-3 p-4 md:w-[400px] md:grid-cols-2 lg:w-[500px]">
-              <ListItem href="/stand" title="Stands" onClick={() => {onMenuClick("/stand")}}>
+              <ListItem href="/stands" title="Stands" onClick={() => {onMenuClick("/stands")}}>
                 Re-usable components built using Radix UI and Tailwind CSS.
               </ListItem>
               <ListItem href="/conferences" title="Conférences" onClick={() => {onMenuClick("/conferences")}}>
