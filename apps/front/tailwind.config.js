@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const plugin = require("tailwindcss/plugin");
-const uiConfig = require('ui/tailwind.config');
+const uiConfig = require('../../packages/ui/tailwind.config');
 
 
 module.exports = {
