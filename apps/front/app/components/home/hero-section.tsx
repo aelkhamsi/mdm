@@ -23,7 +23,7 @@ const HeroSection = () => {
         </a> */}
 
         {/* Logo */}
-        <div className="z-10">
+        <div className="z-10 p-4 md:p-0">
           <Image
             src="/mdm_logo.png"
             alt="M&M logo"

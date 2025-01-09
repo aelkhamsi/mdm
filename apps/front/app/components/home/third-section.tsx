@@ -27,7 +27,7 @@ const ThirdSection = () => {
         </h1>
 
         <div className='max-w-screen-sm text-base text-center my-6 p-4 xl:p-0'>
-          Discover the exciting lineup of competitions, activities, and conferences that await you at this year's mathematics competition, where learning meets challenge and inspiration!
+          Découvrez le programme captivant de compétitions, d'activités et de conférences qui vous attend cette année, où l'apprentissage rencontre défi et inspiration !
         </div>
 
         <div
