@@ -84,7 +84,7 @@ const HeroSection = () => {
             </p>
 
             <div className="flex space-x-4 items-center">
-              <Link className="h-7 flex items-center" href="/partners">
+              <Link className="h-8 flex items-center" href="/partners">
                 <Image
                   src="/mm.png"
                   alt="Math&Maroc Logo"
@@ -103,9 +103,9 @@ const HeroSection = () => {
             </p>
             
             <div className="flex space-x-4 items-center">
-              <Link className="h-7 flex items-center" href="/partners">
+              <Link className="h-10 flex items-center" href="/partners">
                 <Image
-                  src="/adria.png"
+                  src="/adria_official_partner.png"
                   alt="Adria Logo"
                   width={0}
                   height={0}
