@@ -13,7 +13,7 @@ export default function BestMathVideoPage() {
           className="flex flex-col w-full md:flex-row md:justify-between md:space-x-8 text-base"
         >
           <div className="w-full space-y-4 p-4">
-            <p className='font-bold text-xs text-cyan-600'>C'est quoi Math Sprint</p>
+            <p className='font-bold text-xs text-cyan-600'>C'est quoi Best Math Video</p>
             <h1 className='font-bold text-3xl'>Une compétition pour les esprits mathématiques affûtés</h1>
             <p className="text-lg">Les mathématiques sont partout autour de nous, souvent cachées dans les subtilités de la vie quotidienne. Nous vous invitons donc à devenir notre guide à travers ce monde captivant!</p>
             <p className="text-lg">Pour ce faire, réalisez de manière individuelle une vidéo originale de 4 minutes maximum où vous expliquez un concept mathématique de votre choix. Choisissez un sujet qui vous fascine; une notion de géométrie, une formule algébrique,une démonstration créative. Soyez imaginatifs et rendez ce concept accessible pour le public. </p>

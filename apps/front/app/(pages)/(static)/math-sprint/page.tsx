@@ -31,7 +31,7 @@ export default function MathSprintPage() {
             <p className="text-lg">Pour cette année, on a deux nouveautés:
               <ul className="list-disc">
                 <li>Il y aura deux épreuves MathSprint: une pour les collègiens et une pour les lycéens</li>
-                <li>Les meilleures performances dans chaque épreuve vont pouvoir accéder à une épreuve finale à exercices ouverts pour tout les niveaux</li>
+                <li>Les meilleures performances dans chaque épreuve vont pouvoir accéder à une épreuve finale à exercices ouverts pour tous les niveaux</li>
               </ul>
             </p>
           </div>
@@ -49,12 +49,12 @@ export default function MathSprintPage() {
         >
           <div className="w-full space-y-4 p-4">
             <p className='font-bold text-xs text-cyan-600'>La séléction</p>
-            <p className="text-lg">Avant de pouvoir participer à cette compétition, un test de séléction sera mené pour évaluer le niveaux des potentiels participants</p>
+            <p className="text-lg">Avant de pouvoir participer à cette compétition, un test de sélection sera mené pour évaluer le niveau des potentiels participants</p>
             <p className="text-lg">
               La procédure retenue sera choisie ultérieurement parmi les options suivantes:
               <ul className="list-disc">
                 <li><span className="font-bold">Plateforme en ligne: </span> Le test sera effectué sur une plateforme en ligne sous la forme d'un QCM surveillé par caméra</li>
-                <li><span className="font-bold">Entretien individuel: </span> Les candidats vont être contacté pour passer un entretien individuel en ligne. Les examinateurs évalueront la capacité à résoudre des questions de logique et de mathématiques</li>
+                <li><span className="font-bold">Entretien individuel: </span> Les candidats vont être contactés pour passer un entretien individuel en ligne. Les examinateurs évalueront la capacité à résoudre des questions de logique et de mathématiques</li>
               </ul>
             </p>
           </div>
