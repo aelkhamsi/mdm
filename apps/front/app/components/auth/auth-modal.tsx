@@ -36,8 +36,8 @@ const AuthModal = ({
             <Image
               src="/mdm_logo_header.svg"
               alt="Precedent logo"
-              width={35}
-              height={35}
+              width={55}
+              height={55}
               className="mr-2 rounded-sm"
             ></Image>
           </a>

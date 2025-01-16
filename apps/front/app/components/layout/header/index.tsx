@@ -2,12 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useMediaQuery, useScroll } from "@mdm/hooks";
+import { useScroll } from "@mdm/hooks";
 import { UserNav } from "./user-nav";
 import { useAuthModal } from "@/app/components/auth/auth-modal";
 import { userAtom } from "@/app/store/userAtom";
 import { Dispatch, SetStateAction, Suspense, useState } from "react";
-import { useAtom } from "jotai";
+import { useAtomValue } from "jotai";
 import AuthButton from "./auth-button";
 import { Menu } from './menu'
 
@@ -16,11 +16,11 @@ const NavBarActionButtonContent = ({
 }:{
   setShowAuthModal: Dispatch<SetStateAction<boolean>>
 }) => {
-  const [user, _] = useAtom(userAtom)
+  const user = useAtomValue(userAtom)
 
   return user
     ? <UserNav firstName={user?.firstName} lastName={user?.lastName} email={user?.email} />
-    : '' //<AuthButton setShowAuthModal={setShowAuthModal}/>
+    : <AuthButton setShowAuthModal={setShowAuthModal}/>
 }
 
 export default function Header() {
