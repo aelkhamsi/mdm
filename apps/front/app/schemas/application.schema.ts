@@ -32,15 +32,25 @@ export const applicationSchema: ZodSchema = z.object({
   educationField: z.string().nonempty("Please select an option"),
   highschool: z.string().min(1).max(50),
   averageGrade: z.string().min(1).max(50),
-  mathAverageGrade: z.string().min(1).max(50),
   ranking: z.string().min(1).max(50),
+  mathAverageGrade: z.string().min(1).max(50),
   mathRanking: z.string().min(1).max(50),
   numberOfStudentsInClass: z.string().min(1).max(50),
 
-  /* Competition */
-  hasPreviouslyParticipated: z.enum(["yes", "no"], { required_error: "Please select an option." }),
+  /* Motivation */
+  hasPreviouslyParticipated: z.enum(["yes", "no"], { message: "Please select an option." }),
   previousCompetitions: z.string().optional(),
-  hasPreviouslyParticipatedInMtym: z.enum(["yes", "no", "not-selected"], { required_error: "Please select an option." }),
+
+  videoTitle: z.string().min(1).max(50),
+  videoLink: z.string().min(1).max(50),
+  videoSubject: z.string().min(1).refine(async text => text.split(' ').length <= 300, { message: "Text can't be more than 300 words", }),
+  videoMotivations: z.string().min(1).refine(async text => text.split(' ').length <= 300, { message: "Text can't be more than 300 words", }),
+  videoRessources: z.string().min(1).refine(async text => text.split(' ').length <= 300, { message: "Text can't be more than 300 words", }),
+
+  standSubjectTitle: z.string().min(1).max(50),
+  standSubjectDetails: z.string().min(1).refine(async text => text.split(' ').length <= 300, { message: "Text can't be more than 300 words", }),
+  standMembers: z.array(z.string()).optional(),
+  
   motivations: z.string().min(1).refine(async text => text.split(' ').length <= 300, { message: "Text can't be more than 300 words", }),
   comments: z.string().optional().refine((val) => {
     if (val) {

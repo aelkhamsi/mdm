@@ -287,7 +287,7 @@ export const MotivationStep = ({
                     <FormField
                       control={form.control}
                       key={field.id}
-                      name={`standMembers.${index}.value`}
+                      name={`standMembers.${index}`}
                       render={({ field }) => (
                         <FormItem>
                           <FormControl>
@@ -305,7 +305,7 @@ export const MotivationStep = ({
                 variant="outline"
                 size="sm"
                 className="mt-2"
-                onClick={() => append({ value: "" })}
+                onClick={() => append("")}
               >
                 Ajouter un membre
               </Button>

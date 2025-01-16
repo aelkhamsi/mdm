@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { UseFormReturn } from 'react-hook-form'
+import { ActivityChoiceValues } from '../form/steps/activity-choice-step';
 
 export const useActivityChoice = (form: UseFormReturn) => {
   const [isMathSprint, setIsMathSprint] = useState<boolean>()
@@ -10,10 +11,10 @@ export const useActivityChoice = (form: UseFormReturn) => {
   useEffect(() => {
     const formState = form.watch()
     const activityChoices = formState.activityChoices
-    setIsMathSprint(activityChoices?.find((choice: string) => choice === 'math_sprint') ? true : false)
-    setIsBestMathVideo(activityChoices?.find((choice: string) => choice === 'best_mathematical_video') ? true : false)
-    setIsStand(activityChoices?.find((choice: string) => choice === 'stand') ? true : false)
-    setVisitor(activityChoices?.find((choice: string) => choice === 'visitor') ? true : false)
+    setIsMathSprint(activityChoices?.find((choice: string) => choice === ActivityChoiceValues.MATH_SPRINT) ? true : false)
+    setIsBestMathVideo(activityChoices?.find((choice: string) => choice === ActivityChoiceValues.BEST_MATH_VIDEO) ? true : false)
+    setIsStand(activityChoices?.find((choice: string) => choice === ActivityChoiceValues.STAND) ? true : false)
+    setVisitor(activityChoices?.find((choice: string) => choice === ActivityChoiceValues.VISITOR) ? true : false)
   }, [])
 
   return {

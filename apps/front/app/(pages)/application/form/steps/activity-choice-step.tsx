@@ -10,30 +10,37 @@ import {
 import { Separator } from '@mdm/ui'
 import { Checkbox } from '@mdm/ui'
 
+export enum ActivityChoiceValues {
+  MATH_SPRINT = 'math_sprint',
+  BEST_MATH_VIDEO = 'best_math_video',
+  STAND = 'stand',
+  VISITOR = 'visitor'
+}
+
 const choices = [
   {
-    value: "math_sprint",
+    value: ActivityChoiceValues.MATH_SPRINT,
     label: "🏁 Math Sprint",
     type: "Compétition",
     color: 'orange-700',
     target: 'Élèves collège/lycée'
   },
   {
-    value: "best_mathematical_video",
+    value: ActivityChoiceValues.BEST_MATH_VIDEO,
     label: "📽️ Best mathematical video",
     type: "Compétition",
     color: 'orange-700',
     target: 'Ouvert pour tous'
   },
   {
-    value: "stand",
+    value: ActivityChoiceValues.STAND,
     label: "🎤 Présenter en Stand",
     type: "Organisation",
     color: 'blue-700',
     target: 'Étudiants universitaires'
   },
   {
-    value: "visitor",
+    value: ActivityChoiceValues.VISITOR,
     label: "🏖️ Visiteur (conférences et stands)",
     type: "Visite",
     color: 'green-700',
@@ -55,10 +62,10 @@ export const ActivityChoiceStep = ({
       transition={{ duration: 0.3, ease: 'easeInOut' }}
     >
       <h2 className='text-base font-semibold leading-7 text-[#0284C7]'>
-        Choix de compétition
+        Choix des activités
       </h2>
       <p className='mt-1 text-sm leading-6 text-gray-600'>
-        Choisissez les compétitions auxquelles vous voulez participer
+        Choisissez les activités/compétitions auxquelles vous voulez participer
         <Separator className='mt-4 mb-8 bg-[#0284C7]'/>
       </p>
 
@@ -79,14 +86,14 @@ export const ActivityChoiceStep = ({
                         key={choice.value}
                         className="text-center"
                       >
-                        <FormLabel className="font-normal text-xs cursor-pointer">
-                          <div className={`text-left text-[10px] font-semibold text-${choice.color}`}>
+                        <FormLabel className="font-normal text-sm cursor-pointer">
+                          <div className={`text-left text-[11px] font-semibold text-${choice.color}`}>
                             {choice.type}
                           </div>
-                          <div className={`flex items-center justify-center p-4 bg-gray-50 border-[1px] w-[7rem] h-[6rem]`}>
+                          <div className={`flex items-center justify-center p-4 bg-gray-50 border-[1px] w-[8rem] h-[7rem]`}>
                             {choice.label}
                           </div>
-                          <div className='text-left text-[10px] text-gray-600'>
+                          <div className='text-left text-xs text-gray-600'>
                             {choice.target}
                           </div>
                         </FormLabel>
