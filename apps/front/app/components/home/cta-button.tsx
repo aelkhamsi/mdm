@@ -15,13 +15,13 @@ const CtaButton = () => {
   const router = useRouter()
 
   const handleClick = () => {
-    if (user) {
-      setIsLoading(true)
-      router.push('/application')
-    }
-    else {
-      setShowAuthModal(true)
-    }
+    // if (user) {
+    //   setIsLoading(true)
+    //   router.push('/application')
+    // }
+    // else {
+    //   setShowAuthModal(true)
+    // }
   }
 
   return (

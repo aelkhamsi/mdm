@@ -8,7 +8,7 @@ import FaqButton from './faq-button'
 
 const HeroSection = () => {
   return (
-    <DivCircuitBg className='bg-gradient-to-b from-transparent via-transparent to-[#edf7ff]'> 
+    <DivCircuitBg className='bg-gradient-to-b from-transparent via-transparent to-blue-50'> 
       {/* Hero Section */}
       <div className="w-full flex flex-col items-center max-w-xl space-y-10">
         {/* Logo */}
@@ -18,7 +18,7 @@ const HeroSection = () => {
         >
           <Image
             src="/mdm_logo.svg"
-            alt="M&M logo"
+            alt="MDM logo"
             width='400'
             height='200'
           />

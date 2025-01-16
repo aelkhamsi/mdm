@@ -20,7 +20,7 @@ const NavBarActionButtonContent = ({
 
   return user
     ? <UserNav firstName={user?.firstName} lastName={user?.lastName} email={user?.email} />
-    : <AuthButton setShowAuthModal={setShowAuthModal}/>
+    : '' // <AuthButton setShowAuthModal={setShowAuthModal}/>
 }
 
 export default function Header() {
@@ -41,10 +41,10 @@ export default function Header() {
           <Link href="/" className="flex items-center font-display text-2xl">
             <Image
               src="/mdm_logo_header.svg"
-              alt="Precedent logo"
+              alt="MDM logo"
               width={45}
               height={45}
-              className="mr-2 rounded-sm"
+              className="mr-2"
             ></Image>
           </Link>
 
