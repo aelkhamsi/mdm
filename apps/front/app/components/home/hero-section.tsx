@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const HeroSection = () => {
   return (
-    <DivCircuitBg className='bg-gradient-to-b from-transparent via-transparent to-[#edf7ff]'>
+    <DivCircuitBg className='bg-gradient-to-b from-transparent via-transparent to-[#edf7ff]'> 
       {/* Hero Section */}
       <div className="w-full flex flex-col items-center max-w-xl space-y-10">
         {/* <a
@@ -25,7 +25,7 @@ const HeroSection = () => {
         {/* Logo */}
         <div className="z-10 p-4 md:p-0">
           <Image
-            src="/mdm_logo.png"
+            src="/mdm_logo.svg"
             alt="M&M logo"
             width='400'
             height='200'
@@ -79,12 +79,12 @@ const HeroSection = () => {
           style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
         >
           <div className='flex items-center space-x-4'>
-            <p className='text-xs text-gray-500'>
+            <p className='text-sm text-gray-500'>
               Organized by
             </p>
 
             <div className="flex space-x-4 items-center">
-              <Link className="h-8 flex items-center" href="/partners">
+              <Link className="h-12 flex items-center" href="/partners">
                 <Image
                   src="/mm.png"
                   alt="Math&Maroc Logo"
@@ -98,12 +98,12 @@ const HeroSection = () => {
           </div>
           
           <div className="flex space-x-4 items-center">
-            <p className='text-xs text-gray-500'>
+            <p className='text-sm text-gray-500'>
               Trusted by
             </p>
             
             <div className="flex space-x-4 items-center">
-              <Link className="h-10 flex items-center" href="/partners">
+              <Link className="h-14 flex items-center" href="/partners">
                 <Image
                   src="/adria_official_partner.png"
                   alt="Adria Logo"

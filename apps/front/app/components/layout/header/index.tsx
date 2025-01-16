@@ -42,8 +42,8 @@ export default function Header() {
             <Image
               src="/logo.png"
               alt="Precedent logo"
-              width={35}
-              height={35}
+              width={45}
+              height={45}
               className="mr-2 rounded-sm"
             ></Image>
           </Link>
