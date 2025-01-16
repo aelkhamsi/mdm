@@ -37,7 +37,7 @@ const HeroSection = () => {
             className="animate-fade-up opacity-0 text-center font-display text-4xl font-bold tracking-[0.05em] text-wrap:balance md:text-5xl md:leading-[3rem]"
             style={{ animationDelay: "0.20s", animationFillMode: "forwards" }}
           >
-            <span className='bg-gradient-to-br from-[#292660] to-stone-700 inline-block text-transparent bg-clip-text'>Le plus grand événement de mathématiques au Maroc</span>
+            <span className='bg-gradient-to-br from-[#292660] to-stone-800 inline-block text-transparent bg-clip-text'>Le plus grand événement de mathématiques au Maroc</span>
           </h1>
 
           {/* <p
