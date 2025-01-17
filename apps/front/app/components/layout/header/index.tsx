@@ -20,7 +20,7 @@ const NavBarActionButtonContent = ({
 
   return user
     ? <UserNav firstName={user?.firstName} lastName={user?.lastName} email={user?.email} />
-    : '' // <AuthButton setShowAuthModal={setShowAuthModal}/>
+    : <AuthButton setShowAuthModal={setShowAuthModal}/>
 }
 
 export default function Header() {
