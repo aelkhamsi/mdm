@@ -34,11 +34,10 @@ export const computeSHA256 = async (file: File) => {
 }
 
 export const excludeFileFields = ({
-  cnie,
-  schoolCertificate,
-  grades,
-  regulations,
-  parentalAuthorization,
+  fileCnie,
+  fileMembersCnie,
+  fileGrades,
+  fileParentalAuthorization,
   termsAgreement,
   ...keep
 }: any) => keep

@@ -12,7 +12,6 @@ import { Input } from '@mdm/ui'
 import { Button } from '@mdm/ui'
 import { Separator, Textarea } from "@mdm/ui"
 import { RadioGroup, RadioGroupItem } from '@mdm/ui';
-import { cn } from '@mdm/utils'
 import { useActivityChoice } from 'app/(pages)/application/hooks/use-activity-choices';
 
 const RequiredAsterisk = () => <span className="text-red-500"> * </span>;

@@ -2,9 +2,9 @@ import { Button } from '@mdm/ui'
 import { EventHandler, MouseEvent } from 'react'
 
 const FormHeader = ({
-  onSave
+  onClickSave
 }:{
-  onSave: EventHandler<MouseEvent>,
+  onClickSave: EventHandler<MouseEvent>,
 }) => {
   return ( 
     <div className="flex justify-between">
@@ -16,7 +16,7 @@ const FormHeader = ({
       </div>
 
       <div>
-        <Button onClick={onSave}>Sauvegarder & Terminer plus tard</Button>
+        <Button onClick={onClickSave}>Sauvegarder & Terminer plus tard</Button>
       </div>
     </div>
   )
