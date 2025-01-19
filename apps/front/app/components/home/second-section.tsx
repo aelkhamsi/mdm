@@ -59,9 +59,8 @@ const SecondSection = () => {
 
         <div className='w-full flex justify-center p-4 md:p-0'>
           <div className="w-fit space-y-4 font-medium text-4xl">
-            <p><span className='bg-gradient-to-br from-sky-500 to-[#272162] inline-block text-transparent bg-clip-text'>200+</span> Participants</p>
-            <p><span className='bg-gradient-to-br from-sky-500 to-[#272162] inline-block text-transparent bg-clip-text'>3</span> Speakers</p>
-            <p><span className='bg-gradient-to-br from-sky-500 to-[#272162] inline-block text-transparent bg-clip-text'>1</span> journée prise en charge</p>
+            <p><span className='bg-gradient-to-br from-sky-500 to-[#272162] inline-block text-transparent bg-clip-text'>600+</span> Participants</p>
+            <p><span className='bg-gradient-to-br from-sky-500 to-[#272162] inline-block text-transparent bg-clip-text'>5+</span> Speakers</p>
             <p>🏆 Des prix pour les meilleurs</p>
           </div>
         </div>
