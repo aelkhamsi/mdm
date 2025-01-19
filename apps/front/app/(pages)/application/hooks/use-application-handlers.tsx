@@ -54,7 +54,7 @@ export const useApplicationHandlers = (
         description: 'You can access your current application in your profile page',
       });
 
-      router.push('/')
+      router.push('/profile/application')
       setTimeout(() => {
         window.location.reload();
       }, 1000)
@@ -87,7 +87,7 @@ export const useApplicationHandlers = (
         description: 'You can access your current application in your profile page',
       });
       
-      router.push('/')
+      router.push('/profile/application')
       setTimeout(() => {
         window.location.reload();
       }, 1000)

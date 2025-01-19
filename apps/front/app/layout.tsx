@@ -8,6 +8,7 @@ import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
 import Header from "@/app/components/layout/header";
 import JotaiContextProvider from "./jotaiContextProvider";
 import { DataProvider } from "./providers/data.provider";
+import { Toaster } from "@mdm/ui";
 
 export const metadata = {
   title: "MDM 2025",
@@ -34,6 +35,7 @@ export default async function RootLayout({
             </main>
 
             <Footer />
+            <Toaster />
             <VercelAnalytics />
           </DataProvider>
         </JotaiContextProvider>

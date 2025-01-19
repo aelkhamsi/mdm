@@ -89,3 +89,12 @@ export const isOverEighteen = (birthday: Date) => {
   var age = Math.abs(ageDate.getUTCFullYear() - 1970);
   return age >= 18
 }
+
+export function formatDate(input: string | number): string {
+  const date = new Date(input)
+  return date.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  })
+}

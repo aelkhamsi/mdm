@@ -10,7 +10,7 @@ export default function ApplicationPage() {
 
   if (user) {
     return (
-      <div className="z-10 w-full px-5 max-w-screen-xl xl:px-0">
+      <div className="z-10 w-full lg:w-3/4 px-5 lg:px-0">
         <ApplicationForm user={user} />
       </div>
     )
