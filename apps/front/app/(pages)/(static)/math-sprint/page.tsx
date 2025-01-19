@@ -28,10 +28,10 @@ export default function MathSprintPage() {
             <p className='font-bold text-xs text-cyan-600'>C'est quoi Math Sprint</p>
             <h1 className='font-bold text-3xl'>Une compétition pour les esprits mathématiques affûtés</h1>
             <p className="text-lg">C&apos;est une compétition mathématique individuelle d&apos;une heure sous forme de QCM</p>
-            <p className="text-lg">Pour cette année, on a deux nouveautés:
+            <p className="text-lg">Pour cette année, on a <span className="font-bold">2 nouveautés</span>:
               <ul className="list-disc">
-                <li>Il y aura deux épreuves MathSprint: une pour les collègiens et une pour les lycéens</li>
-                <li>Les meilleures performances dans chaque épreuve vont pouvoir accéder à une épreuve finale à exercices ouverts pour tous les niveaux</li>
+                <li>Il y aura deux épreuves MathSprint: une pour les <span className="font-bold text-[#1C55FF]">collègiens</span> et une pour les <span className="font-bold text-[#1C55FF]">lycéens</span></li>
+                <li>Les meilleures performances dans chaque épreuve vont pouvoir accéder à une <span className="font-bold">épreuve finale</span> à exercices ouverts pour tous les niveaux</li>
               </ul>
             </p>
           </div>

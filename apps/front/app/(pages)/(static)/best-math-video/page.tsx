@@ -26,7 +26,7 @@ export default function BestMathVideoPage() {
               className="flex flex-wrap rounded-lg animate-fade-up opacity-0"
               style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
             >
-              <iframe width="555" height="315" src="https://www.youtube.com/embed/-2ReWN_PuXg?si=BiGxemUMrDTLZbHz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe width="555" height="315" src="https://www.youtube.com/embed/-2ReWN_PuXg?si=BiGxemUMrDTLZbHz" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </div>
           </div>
         </div>

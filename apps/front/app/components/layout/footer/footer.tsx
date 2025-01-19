@@ -41,7 +41,7 @@ export default function Footer() {
             </div>
 
             <div className='text-sm max-w-[15rem] mt-2'>
-              Inspirer, éduquer, et former les leaders scientifiques de demain.
+              Unlocking the scientific potential of Moroccan youth.
             </div>
           </div>
 

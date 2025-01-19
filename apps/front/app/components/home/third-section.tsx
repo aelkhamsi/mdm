@@ -39,8 +39,13 @@ const ThirdSection = () => {
             </div>
 
             <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-6 text-center px-14">
-              <Card title='Math Sprint' href='math-sprint' />
-              <Card title='Best Math Video' href='best-math-video' />
+              <Card href='math-sprint'>
+                Math Sprint<br/>
+                <span className='font-base text-sm text-gray-400'>(collège & lycée)</span>
+              </Card>
+              <Card href='best-math-video'>
+                Best Math Video
+              </Card>
             </div>
           </div>
 
@@ -50,8 +55,13 @@ const ThirdSection = () => {
             </div>
 
             <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-6 text-center px-14">
-              <Card title='Conférences' href='conferences'/>
-              <Card title='Stands' href='stands'/>
+              <Card href='conferences'>
+                Conférences
+              </Card>
+              <Card href='stands'>
+                Stands<br/>
+                <span className='font-base text-sm text-gray-400'>(université)</span>
+              </Card>
             </div>
           </div>
         </div>
