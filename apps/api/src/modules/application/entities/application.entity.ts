@@ -61,8 +61,9 @@ export class Application {
   @Column({ type: 'varchar', default: '' })
   relationshipWithGuardian: string;
 
-  @Column({ type: 'text', nullable: true })
-  specialConditions: string;
+  // Choices
+  @Column({ type: 'text' })
+  activityChoices: string[];
 
   /* Education */
   @Column({ type: 'varchar', default: '' })
@@ -89,37 +90,60 @@ export class Application {
   @Column({ type: 'varchar', default: '' })
   numberOfStudentsInClass: string;
 
-  /* Competition */
+  /* Motivations */
+
+  // -> Math sprint
   @Column({ type: 'varchar', default: '' })
   hasPreviouslyParticipated: string;
 
   @Column({ type: 'text', nullable: true })
   previousCompetitions: string;
 
+  // -> Best math video
   @Column({ type: 'varchar', default: '' })
-  hasPreviouslyParticipatedInMtym: string;
+  videoTitle: string;
 
+  @Column({ type: 'varchar', default: '' })
+  videoLink: string;
+
+  @Column({ type: 'text', nullable: true })
+  videoSubject: string;
+
+  @Column({ type: 'text', nullable: true })
+  videoMotivations: string;
+
+  @Column({ type: 'text', nullable: true })
+  videoRessources: string;
+
+  // -> Stand
+  @Column({ type: 'varchar', default: '' })
+  standSubjectTitle: string;
+
+  @Column({ type: 'text', nullable: true })
+  standSubjectDetails: string;
+
+  @Column({ type: 'text' })
+  standMembers: string[];
+
+  // -> motivations
   @Column({ type: 'text', nullable: true })
   motivations: string;
 
   @Column({ type: 'text', nullable: true })
   comments: string;
 
-  /* Files */
+  /* Uploads */
   @Column({ type: 'varchar', nullable: true })
-  cnieUrl: string;
+  fileCnieUrl: string;
 
   @Column({ type: 'varchar', nullable: true })
-  schoolCertificateUrl: string;
+  fileMembersCnieUrl: string;
 
   @Column({ type: 'varchar', nullable: true })
-  gradesUrl: string;
+  fileGradesUrl: string;
 
   @Column({ type: 'varchar', nullable: true })
-  regulationsUrl: string;
-
-  @Column({ type: 'varchar', nullable: true })
-  parentalAuthorizationUrl: string;
+  fileParentalAuthorizationUrl: string;
 
   /* createAt & updatedAt */
   @CreateDateColumn({

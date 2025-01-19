@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Repository } from 'typeorm';
+import { DeepPartial, Repository } from 'typeorm';
 import { Application } from '../entities/application.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { CreateApplicationDto } from '../dto/create-application.dto';

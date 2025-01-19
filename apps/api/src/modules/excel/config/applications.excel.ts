@@ -87,7 +87,6 @@ export const rowFactory = (users: any[], configService) => {
         guardianPhoneNumber: application?.guardianPhoneNumber,
         relationshipWithGuardian:
           relationshipWithGuardianLabels[application?.relationshipWithGuardian],
-        specialConditions: application?.specialConditions,
 
         educationLevel: educationLevelLabels[application?.educationLevel],
         educationField: educationFieldLabels[application?.educationField],
@@ -100,30 +99,20 @@ export const rowFactory = (users: any[], configService) => {
 
         hasPreviouslyParticipated: application?.hasPreviouslyParticipated,
         previousCompetitions: application?.previousCompetitions,
-        hasPreviouslyParticipatedInMtym:
-          application?.hasPreviouslyParticipatedInMtym,
         motivations: application?.motivations,
         comments: application?.comments,
 
         cnieUrl: {
           text: 'link',
-          hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.cnieUrl}`,
-        },
-        schoolCertificateUrl: {
-          text: 'link',
-          hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.schoolCertificateUrl}`,
+          hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.fileCnieUrl}`,
         },
         gradesUrl: {
           text: 'link',
-          hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.gradesUrl}`,
-        },
-        regulationsUrl: {
-          text: 'link',
-          hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.regulationsUrl}`,
+          hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.fileGradesUrl}`,
         },
         parentalAuthorizationUrl: {
           text: 'link',
-          hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.parentalAuthorizationUrl}`,
+          hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.fileParentalAuthorizationUrl}`,
         },
 
         status: application?.status?.status,

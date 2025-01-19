@@ -44,10 +44,7 @@ export class ApplicationStatus {
   cnieStatus: FileStatus;
 
   @Column({ type: 'varchar', default: 'PENDING' })
-  schoolCertificateStatus: FileStatus;
-
-  @Column({ type: 'varchar', default: 'PENDING' })
-  regulationsStatus: FileStatus;
+  membersCnieStatus: FileStatus;
 
   @Column({ type: 'varchar', default: 'PENDING' })
   gradesStatus: FileStatus;

@@ -1,7 +1,5 @@
 import { getToken } from "@/app/lib/utils";
 
-const BASE_URL = 'http://localhost:3000/';
-
 const getHeaders = (token?: string) => ({
   'Content-Type': 'application/json',
   Authorization: `Bearer ${token ?? getToken()}`,

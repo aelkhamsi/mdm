@@ -12,13 +12,13 @@ export class UpdateApplicationStatusDto {
 
   @IsString()
   @IsOptional()
-  schoolCertificateStatus: FileStatus;
-
-  @IsString()
-  @IsOptional()
-  regulationsStatus: FileStatus;
+  membersCnieStatus: FileStatus;
 
   @IsString()
   @IsOptional()
   gradesStatus: FileStatus;
+
+  @IsString()
+  @IsOptional()
+  parentalAuthorizationStatus: FileStatus;
 }

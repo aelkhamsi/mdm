@@ -42,9 +42,10 @@ export class CreateApplicationDto {
   @IsOptional()
   relationshipWithGuardian: string;
 
+  // Activity Choices
   @IsString()
   @IsOptional()
-  specialConditions: string;
+  activityChoices: string[];
 
   /* Education */
   @IsString()
@@ -79,7 +80,7 @@ export class CreateApplicationDto {
   @IsOptional()
   numberOfStudentsInClass: string;
 
-  /* Competition */
+  /* Motivations */
   @IsString()
   @IsOptional()
   hasPreviouslyParticipated: string;
@@ -90,7 +91,35 @@ export class CreateApplicationDto {
 
   @IsString()
   @IsOptional()
-  hasPreviouslyParticipatedInMtym: string;
+  videoTitle: string;
+
+  @IsString()
+  @IsOptional()
+  videoLink: string;
+
+  @IsString()
+  @IsOptional()
+  videoSubject: string;
+
+  @IsString()
+  @IsOptional()
+  videoMotivations: string;
+
+  @IsString()
+  @IsOptional()
+  videoRessources: string;
+
+  @IsString()
+  @IsOptional()
+  standSubjectTitle: string;
+
+  @IsString()
+  @IsOptional()
+  standSubjectDetails: string;
+
+  @IsString()
+  @IsOptional()
+  standMembers: string[];
 
   @IsString()
   @IsOptional()
@@ -103,21 +132,17 @@ export class CreateApplicationDto {
   /* Files */
   @IsString()
   @IsOptional()
-  cnieUrl: string;
+  fileCnieUrl: string;
 
   @IsString()
   @IsOptional()
-  schoolCertificateUrl: string;
+  fileMembersCnieUrl: string;
 
   @IsString()
   @IsOptional()
-  gradesUrl: string;
+  fileGradesUrl: string;
 
   @IsString()
   @IsOptional()
-  regulationsUrl: string;
-
-  @IsString()
-  @IsOptional()
-  parentalAuthorizationUrl: string;
+  fileParentalAuthorizationUrl: string;
 }

@@ -81,7 +81,7 @@ export const getApplicationDefaultValues = (userData: any) => ({
   guardianPhoneNumber: "",
   relationshipWithGuardian: "",
 
-  activityChoices: [],
+  activityChoices: "",
 
   educationLevel: "",
   educationField: "",
@@ -94,7 +94,14 @@ export const getApplicationDefaultValues = (userData: any) => ({
 
   hasPreviouslyParticipated: "",
   previousCompetitions: "",
-  hasPreviouslyParticipatedInMtym: "",
+  videoTitle: "",
+  videoLink: "",
+  videoSubject: "",
+  videoMotivations: "",
+  videoRessources: "",
+  standSubjectTitle: "",
+  standSubjectDetails: "",
+  standMembers: "",
   motivations: "",
   comments: "",
 

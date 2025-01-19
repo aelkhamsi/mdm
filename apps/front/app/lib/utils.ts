@@ -55,7 +55,9 @@ export const sanitizeApplication = (application: any) => {
   Object.keys(application).forEach((key) => {
     newObject[key] = (key === 'dateOfBirth')
       ? new Date(application[key])
-      : application[key]===null ? "" : application[key]
+      : key === 'activityChoices' || key === 'standMembers'
+        ? JSON.parse(application[key])
+        : application[key]===null ? "" : application[key]
   });
   return newObject;
 }
