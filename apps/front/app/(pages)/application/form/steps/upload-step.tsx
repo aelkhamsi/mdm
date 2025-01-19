@@ -61,13 +61,13 @@ export const UploadStep = ({
             {/* CNIE */}
             <FormField
               control={form.control}
-              name="cnie"
+              name="fileCnie"
               render={({ field }) => {
                 if (field?.value && field?.value.length) {
                   const dataTransfer = new DataTransfer();
                   dataTransfer.items.add(field?.value[0]);
                   setTimeout(() => {
-                    const fileInputElement = document.querySelector('#cnie') as HTMLInputElement;
+                    const fileInputElement = document.querySelector('#fileCnie') as HTMLInputElement;
                     fileInputElement.files = dataTransfer.files;
                   }, 300)
                 }
@@ -77,10 +77,10 @@ export const UploadStep = ({
                     <FormLabel>Justificatif d&apos;identité du participant avec photo (carte d&apos;identité, passeport…) <RequiredAsterisk /></FormLabel>
                     <FormControl>
                     <Input
-                      {...form.register("cnie", {
+                      {...form.register("fileCnie", {
                         required: "Ce document est obligatoire",
                       })}
-                      id="cnie"
+                      id="fileCnie"
                       type="file"
                     />
                     </FormControl>
@@ -96,13 +96,13 @@ export const UploadStep = ({
             {/* GRADES */}
             <FormField
               control={form.control}
-              name="grades"
+              name="fileGrades"
               render={({ field }) => {
                 if (field?.value && field?.value.length) {
                   const dataTransfer = new DataTransfer();
                   dataTransfer.items.add(field?.value[0]);
                   setTimeout(() => {
-                    const fileInputElement = document.querySelector('#grades') as HTMLInputElement;
+                    const fileInputElement = document.querySelector('#fileGrades') as HTMLInputElement;
                     fileInputElement.files = dataTransfer.files;
                   }, 300)
                 }
@@ -112,10 +112,10 @@ export const UploadStep = ({
                     <FormLabel>Bulletin de l&apos;année scolaire 2023-2024 (année derniére)<RequiredAsterisk /></FormLabel>
                     <FormControl>
                       <Input
-                        {...form.register("grades", {
+                        {...form.register("fileGrades", {
                           required: "Ce document est obligatoire",
                         })}
-                        id="grades"
+                        id="fileGrades"
                         placeholder="id"
                         type="file"
                       />
@@ -133,13 +133,13 @@ export const UploadStep = ({
             {!isAdult &&
               <FormField
                 control={form.control}
-                name="parentalAuthorization"
+                name="fileParentalAuthorization"
                 render={({ field }) => {
                   if (field?.value && field?.value.length) {
                     const dataTransfer = new DataTransfer();
                     dataTransfer.items.add(field?.value[0]);
                     setTimeout(() => {
-                      const fileInputElement = document.querySelector('#parentalAuthorization') as HTMLInputElement;
+                      const fileInputElement = document.querySelector('#fileParentalAuthorization') as HTMLInputElement;
                       fileInputElement.files = dataTransfer.files;
                     }, 300)
                   }
@@ -149,10 +149,10 @@ export const UploadStep = ({
                       <FormLabel>Autorisation parentale signée et légalisée par le tuteur légal (<Link className="text-blue-500 underline" href='https://drive.google.com/file/d/19I9hXIptNqAL_RDT6C1m2uA5FFok-Lmd/view?usp=drive_link' target="_blank">fichier</Link>)<RequiredAsterisk /></FormLabel>
                       <FormControl>
                         <Input
-                          {...form.register("parentalAuthorization", {
+                          {...form.register("fileParentalAuthorization", {
                             required: "Ce document est obligatoire",
                           })}
-                          id="parentalAuthorization"
+                          id="fileParentalAuthorization"
                           placeholder="id"
                           type="file"                    
                         />
@@ -183,13 +183,13 @@ export const UploadStep = ({
             {/* CNIE */}
             <FormField
               control={form.control}
-              name="cnie"
+              name="fileCnie"
               render={({ field }) => {
                 if (field?.value && field?.value.length) {
                   const dataTransfer = new DataTransfer();
                   dataTransfer.items.add(field?.value[0]);
                   setTimeout(() => {
-                    const fileInputElement = document.querySelector('#cnie') as HTMLInputElement;
+                    const fileInputElement = document.querySelector('#fileCnie') as HTMLInputElement;
                     fileInputElement.files = dataTransfer.files;
                   }, 300)
                 }
@@ -199,10 +199,10 @@ export const UploadStep = ({
                     <FormLabel>Justificatif d&apos;identité du participant avec photo (carte d&apos;identité, passeport…) <RequiredAsterisk /></FormLabel>
                     <FormControl>
                     <Input
-                      {...form.register("cnie", {
+                      {...form.register("fileCnie", {
                         required: "Ce document est obligatoire",
                       })}
-                      id="cnie"
+                      id="fileCnie"
                       type="file"
                     />
                     </FormControl>
@@ -219,13 +219,13 @@ export const UploadStep = ({
             {!isAdult &&
               <FormField
                 control={form.control}
-                name="parentalAuthorization"
+                name="fileParentalAuthorization"
                 render={({ field }) => {
                   if (field?.value && field?.value.length) {
                     const dataTransfer = new DataTransfer();
                     dataTransfer.items.add(field?.value[0]);
                     setTimeout(() => {
-                      const fileInputElement = document.querySelector('#parentalAuthorization') as HTMLInputElement;
+                      const fileInputElement = document.querySelector('#fileParentalAuthorization') as HTMLInputElement;
                       fileInputElement.files = dataTransfer.files;
                     }, 300)
                   }
@@ -235,10 +235,10 @@ export const UploadStep = ({
                       <FormLabel>Autorisation parentale signée et légalisée par le tuteur légal (<Link className="text-blue-500 underline" href='https://drive.google.com/file/d/19I9hXIptNqAL_RDT6C1m2uA5FFok-Lmd/view?usp=drive_link' target="_blank">fichier</Link>)<RequiredAsterisk /></FormLabel>
                       <FormControl>
                         <Input
-                          {...form.register("parentalAuthorization", {
+                          {...form.register("fileParentalAuthorization", {
                             required: "Ce document est obligatoire",
                           })}
-                          id="parentalAuthorization"
+                          id="fileParentalAuthorization"
                           placeholder="id"
                           type="file"                    
                         />
@@ -269,13 +269,13 @@ export const UploadStep = ({
             {/* CNIE */}
             <FormField
               control={form.control}
-              name="cnie"
+              name="fileMembersCnie"
               render={({ field }) => {
                 if (field?.value && field?.value.length) {
                   const dataTransfer = new DataTransfer();
                   dataTransfer.items.add(field?.value[0]);
                   setTimeout(() => {
-                    const fileInputElement = document.querySelector('#cnie') as HTMLInputElement;
+                    const fileInputElement = document.querySelector('#fileMembersCnie') as HTMLInputElement;
                     fileInputElement.files = dataTransfer.files;
                   }, 300)
                 }
@@ -285,10 +285,10 @@ export const UploadStep = ({
                     <FormLabel>Justificatif d&apos;identité des participants (carte d&apos;identité, passeport…) <RequiredAsterisk /></FormLabel>
                     <FormControl>
                     <Input
-                      {...form.register("cnie", {
+                      {...form.register("fileMembersCnie", {
                         required: "Ce document est obligatoire",
                       })}
-                      id="cnie"
+                      id="fileMembersCnie"
                       type="file"
                     />
                     </FormControl>

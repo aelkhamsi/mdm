@@ -1,8 +1,5 @@
-"use client"
-
 import { motion } from 'framer-motion'
 import { UseFormReturn } from 'react-hook-form'
-import { useEffect } from 'react'
 import {
   FormControl,
   FormField,
@@ -31,7 +28,7 @@ import { PhoneInput } from "@mdm/ui"
 import { cn, isOverEighteen } from '@mdm/utils'
 import { Button } from "@mdm/ui"
 import { format } from "@mdm/ui"
-import { useAge } from '../../hooks/use-age'
+import { useAge } from '@/app/(pages)/application/hooks/use-age'
 
 const regions = [
   {label: "Tanger-Tétouan-Al Hoceïma", value:"tanger-tetouan-al-houceima"},

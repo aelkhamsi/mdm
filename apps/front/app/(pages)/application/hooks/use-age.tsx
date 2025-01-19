@@ -8,8 +8,10 @@ export const useAge = (form: UseFormReturn) => {
   useEffect(() => {
     const formState = form.watch()
     const dateOfBirth = formState?.dateOfBirth
-    const isAdult = isOverEighteen(dateOfBirth as Date)
-    setIsAdult(isAdult)
+    if (dateOfBirth) {
+      const isAdult = isOverEighteen(dateOfBirth as Date)
+      setIsAdult(isAdult)
+    }
   }, [])
 
   return {

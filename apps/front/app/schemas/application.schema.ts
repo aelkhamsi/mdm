@@ -60,11 +60,10 @@ export const applicationSchema: ZodSchema = z.object({
   } , { message: "Text can't be more than 100 words"}),
 
   /* Uploads */
-  cnie: zodFileValidation,
-  schoolCertificate: zodFileValidation,
-  grades: zodFileValidation,
-  regulations: zodFileValidation,
-  parentalAuthorization: zodFileValidation,
+  fileCnie: zodFileValidation,
+  fileMembersCnie: zodFileValidation,
+  fileGrades: zodFileValidation,
+  fileParentalAuthorization: zodFileValidation,
 
   /* Terms of agreement */
   termsAgreement: z.boolean().default(false).refine(value => value === true, { message: "Vous devez accepter les Conditions Générales."}),
@@ -99,11 +98,10 @@ export const getApplicationDefaultValues = (userData: any) => ({
   motivations: "",
   comments: "",
 
-  cnie: undefined,
-  schoolCertificate: undefined,
-  grades: undefined,
-  regulations: undefined,
-  parentalAuthorization: undefined,
+  fileCnie: undefined,
+  fileMembersCnie: undefined,
+  fileGrades: undefined,
+  fileParentalAuthorization: undefined,
 
   termsAgreement: false,
 })

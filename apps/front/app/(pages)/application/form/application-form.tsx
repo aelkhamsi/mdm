@@ -44,64 +44,67 @@ export const ApplicationForm = ({
 
   const onSubmit = async (formData: z.infer<typeof applicationSchema>) => {
     setIsFormLoading(true);
-    const { cnie, schoolCertificate, grades, regulations, parentalAuthorization } = formData;
-    const uploadFolderName = getUploadFolderName(user?.firstName, user?.lastName);
-    const uploadFileNames = ['cnie', 'school_certificate', 'grades', 'regulations', 'parental_authorization']
-      .map(name => `${name}_${generateFileName()}`)
-    const files = [cnie, schoolCertificate, grades, regulations, parentalAuthorization]
-      .map((files, index) => new File(
-        [files[0]], 
-        uploadFileNames[index] + '.' + files[0].name.split('.').pop(),
-        { type: files[0].type },
-      ))
+    console.log('formData', formData)
+    return;
+
+    // const { cnie, schoolCertificate, grades, regulations, parentalAuthorization } = formData;
+    // const uploadFolderName = getUploadFolderName(user?.firstName, user?.lastName);
+    // const uploadFileNames = ['cnie', 'school_certificate', 'grades', 'regulations', 'parental_authorization']
+    //   .map(name => `${name}_${generateFileName()}`)
+    // const files = [cnie, schoolCertificate, grades, regulations, parentalAuthorization]
+    //   .map((files, index) => new File(
+    //     [files[0]], 
+    //     uploadFileNames[index] + '.' + files[0].name.split('.').pop(),
+    //     { type: files[0].type },
+    //   ))
     
-    try {
-      // Post application
-      const applicationResponse = await postApplication(excludeFileFields(formData)) as any
+    // try {
+    //   // Post application
+    //   const applicationResponse = await postApplication(excludeFileFields(formData)) as any
 
-      if (applicationResponse?.statusCode !== 200) {
-        throw new Error(applicationResponse?.message ?? 'Post of application failed')
-      }
+    //   if (applicationResponse?.statusCode !== 200) {
+    //     throw new Error(applicationResponse?.message ?? 'Post of application failed')
+    //   }
 
-      const applicationId = applicationResponse?.id;
+    //   const applicationId = applicationResponse?.id;
 
-      // Upload files
-      for (const file of files) {
-        const checksum = await computeSHA256(file);
-        const signedURLResponse = await getSignedURL(`upload_mtym/${uploadFolderName}/${file.name}`, file.type, file.size, checksum) as any;
-        await uploadFile(signedURLResponse?.url, file) as any;
-      }
+    //   // Upload files
+    //   for (const file of files) {
+    //     const checksum = await computeSHA256(file);
+    //     const signedURLResponse = await getSignedURL(`upload_mtym/${uploadFolderName}/${file.name}`, file.type, file.size, checksum) as any;
+    //     await uploadFile(signedURLResponse?.url, file) as any;
+    //   }
 
-      // Update Application upload links
-      await putApplication(applicationId, {
-        cnieUrl: `upload_mtym/${uploadFolderName}/${files[0].name}`,
-        schoolCertificateUrl: `upload_mtym/${uploadFolderName}/${files[1].name}`,
-        gradesUrl: `upload_mtym/${uploadFolderName}/${files[2].name}`,
-        regulationsUrl: `upload_mtym/${uploadFolderName}/${files[3].name}`,
-        parentalAuthorizationUrl: `upload_mtym/${uploadFolderName}/${files[4].name}`,
-      }) as any
+    //   // Update Application upload links
+    //   await putApplication(applicationId, {
+    //     cnieUrl: `upload_mtym/${uploadFolderName}/${files[0].name}`,
+    //     schoolCertificateUrl: `upload_mtym/${uploadFolderName}/${files[1].name}`,
+    //     gradesUrl: `upload_mtym/${uploadFolderName}/${files[2].name}`,
+    //     regulationsUrl: `upload_mtym/${uploadFolderName}/${files[3].name}`,
+    //     parentalAuthorizationUrl: `upload_mtym/${uploadFolderName}/${files[4].name}`,
+    //   }) as any
 
-      // Update Application status
-      await updateApplicationStatus(applicationId, { status: user?.application?.status?.status === 'NOTIFIED'
-        ? 'UPDATED'
-        : 'PENDING'
-      }) as any;
+    //   // Update Application status
+    //   await updateApplicationStatus(applicationId, { status: user?.application?.status?.status === 'NOTIFIED'
+    //     ? 'UPDATED'
+    //     : 'PENDING'
+    //   }) as any;
 
-      toast({
-        title: 'Application created with success',
-        description: 'You can access your current application in your profile page',
-      });
+    //   toast({
+    //     title: 'Application created with success',
+    //     description: 'You can access your current application in your profile page',
+    //   });
 
-      router.push('/profile/application')
-      setTimeout(() => {
-        window.location.reload();
-      }, 1000)
-    } catch(err: any) {
-      setError(err);
-      setShowErrorDialog(true);
-    } finally {
-      setIsFormLoading(false);
-    }
+    //   router.push('/profile/application')
+    //   setTimeout(() => {
+    //     window.location.reload();
+    //   }, 1000)
+    // } catch(err: any) {
+    //   setError(err);
+    //   setShowErrorDialog(true);
+    // } finally {
+    //   setIsFormLoading(false);
+    // }
   }
 
   const onSave = async () => {

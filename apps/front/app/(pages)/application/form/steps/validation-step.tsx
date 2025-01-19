@@ -51,8 +51,8 @@ export const ValidationStep = ({
                     Conditions Générales <RequiredAsterisk />
                   </FormLabel>
                   <FormDescription>
-                  Je confirme avoir lu entièrement le règlement de la compétition et m&apos;engage à le respecter.<br/> 
-                  En particulier, je m&apos;engage à être présent sur le campus de AUI Ifrane pendant toute la durée de la compétition (sauf dérogation demandée par mail et approuvée explicitement par le comité d&apos;organisation)<br/>
+                  Je confirme avoir lu entièrement le règlement (lien) de l&apos;événement et m'engage à le respecter.<br/>
+                  En particulier, je m'engage à participer à toutes les compétitions choisies après validation de ma candidature (sauf dérogation demandée par mail et approuvée explicitement par le comité d'organisation).
                   </FormDescription>
                 </div>
               </FormItem>

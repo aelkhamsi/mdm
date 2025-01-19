@@ -57,7 +57,18 @@ export const steps: Step[] = [
   {
     id: 'Étape 5',
     name: 'Uploads',
-    getFields: () => ['cnie', 'schoolCertificate', 'grades', 'regulations', 'parentalAuthorization']
+    getFields: (formState: any) => {
+      const isMathSprint = formState?.activityChoices?.find((choice: string) => choice === ActivityChoiceValues.MATH_SPRINT) ? true : false
+      const isBestMathVideo = formState?.activityChoices?.find((choice: string) => choice === ActivityChoiceValues.BEST_MATH_VIDEO) ? true : false
+      const isStand = formState?.activityChoices?.find((choice: string) => choice === ActivityChoiceValues.STAND) ? true : false
+      const isAdult = isOverEighteen(formState?.dateOfBirth)
+
+      return [
+        ...(isMathSprint ? ['fileCnie', 'fileGrades', ...(!isAdult ? ['fileParentalAuthorization'] : [])] : []),
+        ...(isBestMathVideo ? ['fileCnie', ...(!isAdult ? ['fileParentalAuthorization'] : [])] : []),
+        ...(isStand ? ['fileMembersCnie'] : []),
+      ]
+    }
   },
   { id: 'Étape 6', 
     name: 'Validation',
