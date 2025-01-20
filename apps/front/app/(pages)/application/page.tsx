@@ -9,11 +9,7 @@ export default function ApplicationPage() {
   const user = useAtomValue(userAtom)
 
   if (user) {
-    return (
-      <div className="z-10 w-full lg:w-3/4 px-5 lg:px-0">
-        <ApplicationForm user={user} />
-      </div>
-    )
+    return <ApplicationForm user={user} />
   } else { 
     return <ProfileSkeleton />
   }

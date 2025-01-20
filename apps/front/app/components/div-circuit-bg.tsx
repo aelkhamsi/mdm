@@ -13,7 +13,7 @@ const DivCircuitBg = ({
     <div className={`w-full flex flex-col justify-center items-center py-6 ${className}`}>
 
       {/* Background Image */}
-      <div className={`absolute inset-0 z-[-8] overflow-hidden ${classNameBgImage}`}>
+      <div className={`absolute inset-0 overflow-hidden ${classNameBgImage}`}>
         <div className='absolute top-6 right-1/2 aspect-[969/887] w-[969px]'>
           <picture>
             <img className='absolute inset-0 h-full w-full' src="https://clerk.com/_next/static/media/circuit-lines@2xr.0351fb9a.png" />
@@ -33,7 +33,9 @@ const DivCircuitBg = ({
         </div>
       </div>
 
-      {children}
+      <div className="pt-24">
+        {children}
+      </div>
     </div> 
   )
 }

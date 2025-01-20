@@ -1,4 +1,3 @@
-import { MessageCircleIcon } from 'lucide-react'
 import React from 'react'
 import DivCircuitBg from '../div-circuit-bg'
 import Link from 'next/link'
@@ -8,7 +7,10 @@ import FaqButton from './faq-button'
 
 const HeroSection = () => {
   return (
-    <DivCircuitBg className='bg-gradient-to-b from-transparent via-transparent to-blue-50'> 
+    <DivCircuitBg 
+      className='bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-50 via-cyan-50/[.5] to-[#FFF]'
+      classNameBgImage='opacity-70'
+    > 
       {/* Hero Section */}
       <div className="w-full flex flex-col items-center max-w-xl space-y-10">
         {/* Logo */}
@@ -52,7 +54,7 @@ const HeroSection = () => {
               Organized by
             </p>
 
-            <div className="flex space-x-4 items-center">
+            <div className="flex space-x-4 items-center bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#E5FF52]/[.15] via-transparent to-transparent">
               <Link className="h-12 flex items-center" href="/partners">
                 <Image
                   src="/mm.png"
@@ -71,7 +73,7 @@ const HeroSection = () => {
               Trusted by
             </p>
             
-            <div className="flex space-x-4 items-center">
+            <div className="flex space-x-4 items-center bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#E5FF52]/[.15] via-transparent to-transparent">
               <Link className="h-14 flex items-center" href="/partners">
                 <Image
                   src="/adria_official_partner.png"

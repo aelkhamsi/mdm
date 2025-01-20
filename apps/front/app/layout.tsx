@@ -30,7 +30,7 @@ export default async function RootLayout({
               <Header />
             </Suspense>
 
-            <main className="flex min-h-screen w-full flex-col items-center py-20">
+            <main className="flex min-h-screen w-full flex-col items-center">
               {children}
             </main>
 

@@ -18,7 +18,7 @@ interface ProfileLayoutProps {
 
 export default function ProfileLayout({ children }: ProfileLayoutProps) {
   return (
-    <div className="z-10 w-full lg:w-3/4 px-5 lg:px-0">
+    <div className="pt-24 w-full lg:w-3/4 px-5 lg:px-0">
       <div className="space-y-6 py-10">
         <div className="space-y-0.5">
           <h2 className="text-2xl font-bold tracking-tight">Profil</h2>
