@@ -8,7 +8,7 @@ import FaqButton from './faq-button'
 const HeroSection = () => {
   return (
     <DivCircuitBg 
-      className='bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-50 via-cyan-50/[.5] to-[#FFF]'
+      className='bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-100/[.8] via-cyan-50/[.5] to-[#FFF]'
       classNameBgImage='opacity-70'
     > 
       {/* Hero Section */}
