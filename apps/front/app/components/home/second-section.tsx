@@ -32,7 +32,7 @@ const SecondSection = () => {
           <p className='font-bold text-xs text-[#1C55FF]'>Une première édition d'excellence</p>
           <h1 className='font-bold text-3xl'>MDM 2024 avec l&apos;UM6P, l'alliance de l'excellence et de l'innovation</h1>
           <p>L'édition passée de MDM s'est tenue à Ben Guerir en collboration avec l&apos;<span className='font-bold'>UM6P</span></p>
-          <p>Une édition qui a réuni une centaine de passionnés de mathématique autour de conférences d'expert, de stands et de compétitions. </p>
+          <p>Une édition qui a réuni une centaine de passionnés de mathématiques autour de conférences d'experts, de stands et de compétitions</p>
           <p>En 2025, MDM promet d'aller encore plus loin, en offrant une expérience enrichie avec de nouvelles activités, des intervenants de renommée internationale et des opportunités inédites pour tous les passionnés de mathématiques</p>
 
         </div>

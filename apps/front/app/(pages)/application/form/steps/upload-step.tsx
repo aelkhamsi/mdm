@@ -109,7 +109,7 @@ export const UploadStep = ({
 
                 return (
                   <FormItem>
-                    <FormLabel>Bulletin de l&apos;année scolaire 2023-2024 (année derniére)<RequiredAsterisk /></FormLabel>
+                    <FormLabel>Bulletin du premier semestre de l&apos;année scolaire courante 2024-2025<RequiredAsterisk /></FormLabel>
                     <FormControl>
                       <Input
                         {...form.register("fileGrades", {
@@ -121,7 +121,7 @@ export const UploadStep = ({
                       />
                     </FormControl>
                     <FormDescription>
-                      <span className="text-blue-500">Remarque</span>: votre bulletin sera utilisé pour vérifier les notes que vous avez fournis précedemment.
+                      <span className="text-blue-500">Remarque</span>: votre bulletin sera utilisé pour vérifier les notes que vous avez fournies précédemment.
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
@@ -158,7 +158,7 @@ export const UploadStep = ({
                         />
                       </FormControl>
                       <FormDescription>
-                          <span className="text-blue-500">Remarque</span>: il faut l&apos;imprimer, la signer à la main, la légaliser, puis le scanner; <span className="font-bold">la légalisation est obligatoire</span>.
+                          <span className="text-blue-500">Remarque</span>: il faut l&apos;imprimer, la signer à la main, la légaliser, puis la scanner; <span className="font-bold">la légalisation est obligatoire</span>.
                       </FormDescription>
                       <FormMessage />
                     </FormItem>

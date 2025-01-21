@@ -80,7 +80,7 @@ const FourthSection = () => {
 
       <div className='max-w-screen-md text-center my-6 xl:p-0'>
         Nous sommes avant tout des gens passionnés par la science, et unis par l'envie de partager et de former les leaders de demain.
-        Notre vision est celle d'un Maroc où chaque jeune a l'opportunité de réaliser son plein potentiel grâce à une éducation de qualité.
+        Notre vision est celle d'un Maroc où chaque jeune a l'opportunité de réaliser son plein potentiel grâce à une éducation de qualité
       </div>
 
       {/* <div 

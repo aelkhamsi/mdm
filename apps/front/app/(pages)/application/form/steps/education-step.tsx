@@ -172,7 +172,7 @@ export const EducationStep = ({
             Notes
           </h2>
           <p className='mt-1 text-sm leading-6 text-gray-600'>
-            Fournir les Notes du <span className='font-semibold'>deuxième semestre de l&apos;année scolaire 2023/2024</span>
+            Fournir les notes du <span className='font-semibold'>premier semestre de l&apos;année scolaire courante 2024/2025</span>
             <Separator className='mt-4 bg-[#0284C7]'/>
           </p>
 

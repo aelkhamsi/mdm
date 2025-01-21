@@ -27,7 +27,7 @@ const ThirdSection = () => {
         </h1>
 
         <div className='max-w-screen-sm text-base text-center my-6 p-4 xl:p-0'>
-          Découvrez le programme captivant de compétitions, d'activités et de conférences qui vous attend cette année, où l'apprentissage rencontre défi et inspiration !
+          Découvrez le programme captivant de compétitions, d'activités et de conférences qui vous attend cette année !
         </div>
 
         <div

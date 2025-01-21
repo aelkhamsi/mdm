@@ -242,7 +242,7 @@ export const MotivationStep = ({
               name="standSubjectTitle"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Quel est le titre de votre sujet? <RequiredAsterisk /></FormLabel>
+                  <FormLabel>Quel est votre sujet? <RequiredAsterisk /></FormLabel>
                   <FormControl>
                     <Input placeholder="Entrez le titre de votre sujet" {...field} />
                   </FormControl>
@@ -277,7 +277,7 @@ export const MotivationStep = ({
                   Membres de l&apos;équipe
                 </FormLabel>
                 <FormDescription>
-                  Ajouter les noms et prénoms de tout les membres de votre équipe
+                  Ajouter les noms et prénoms de tous les membres de votre équipe
                 </FormDescription>
               </div>
               
