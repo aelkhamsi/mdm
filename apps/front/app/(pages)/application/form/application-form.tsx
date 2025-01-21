@@ -47,7 +47,7 @@ export const ApplicationForm = ({
   }
 
   return (
-    <section className='w-full inset-0 flex flex-col justify-between mt-6'>
+    <section className='w-full inset-0 flex flex-col justify-between mt-6 mb-20'>
       {/* Header */}
       <FormHeader onClickSave={onClickSave} />
       <Separator className="my-6" />

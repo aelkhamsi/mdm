@@ -14,22 +14,22 @@ export const useFileUpload = () => {
       .map(name => `${name}_${generateFileName()}`)
     const files = [fileCnie, fileMembersCnie, fileGrades, fileParentalAuthorization]
       .map((files, index) => {
-        if (files) {
+        if (files && files.length) {
           return new File(
             [files[0]], 
-            uploadFileNames[index] + '.' + files[0].name.split('.').pop(),
-            { type: files[0].type },
+            uploadFileNames[index] + '.' + files[0]?.name.split('.').pop(),
+            { type: files[0]?.type },
           )
         }
         
-        return files
+        return undefined
       })
     
     return files
   }
 
   const uploadFiles = async (
-    files: File[], 
+    files: (File|undefined)[], 
     user: User|undefined
   ) => {
     const uploadFolderName = getUploadFolderName(user?.firstName, user?.lastName);
@@ -45,7 +45,7 @@ export const useFileUpload = () => {
 
   const updateApplicationFiles = async (
     applicationId: number, 
-    files: File[], 
+    files: (File|undefined)[], 
     user: User|undefined
   ) => {
     const uploadFolderName = getUploadFolderName(user?.firstName, user?.lastName);
