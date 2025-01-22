@@ -1,8 +1,7 @@
 "use client"
 
-import { forwardRef, useEffect, useMemo, useState } from "react"
-import Link from "next/link"
-import { useRouter } from "next/navigation";
+import { forwardRef, useEffect, useState } from "react"
+import Link from 'next/link'
 import {
   Cross1Icon,
   HamburgerMenuIcon,
@@ -16,19 +15,9 @@ import {
 import { cn } from '@mdm/utils'
 import { useMediaQuery } from "@mdm/hooks"
 
-export const Menu = ({
-
-}:{
-
-}) => {
+export const Menu = () => {
   const { isMobile, isTablet} = useMediaQuery();
   const [showMenu, setShowMenu] = useState(false);
-  const router = useRouter();
-  
-  const onMenuClick = (href: string) => {
-    setShowMenu(false);
-    router.push(href);
-  }
 
   useEffect(() => {
     setShowMenu(isMobile || isTablet ? false : true)
@@ -41,12 +30,17 @@ export const Menu = ({
           <NavigationMenuTrigger className="text-sm mr-6">Compétitions</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[270px] p-4 md:w-[400px] md:grid-cols-2 lg:w-[500px]">
-              <ListItem href="/math-sprint" title="Math Sprint" onClick={() => {onMenuClick("/math-sprint")}}>
-                La compétition de math pour les collégiens et lycéens
-              </ListItem>
-              <ListItem href="/best-math-video" title="Best Math Video" onClick={() => {onMenuClick("/best-math-video")}}>
-                Partagez votre passion au grand public
-              </ListItem>
+              <Link href="/math-sprint">
+                <ListItem title="Math Sprint">
+                  La compétition de math pour les collégiens et lycéens
+                </ListItem>
+              </Link>
+              
+              <Link href="/best-math-video">
+                <ListItem title="Best Math Video">
+                  Partagez votre passion au grand public
+                </ListItem>
+              </Link>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
@@ -55,35 +49,46 @@ export const Menu = ({
           <NavigationMenuTrigger className="text-sm mr-6">Activités</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[300px] gap-3 p-4 md:w-[400px] md:grid-cols-2 lg:w-[500px]">
-              <ListItem href="/stands" title="Stands" onClick={() => {onMenuClick("/stands")}}>
-                Rencontrez des gens passionnés de mathématique
-              </ListItem>
-              <ListItem href="/conferences" title="Conférences" onClick={() => {onMenuClick("/conferences")}}>
-                Découvrez ce que les experts ont à vous offrir
-              </ListItem>
+              <Link href="/stands">
+                <ListItem title="Stands">
+                  Rencontrez des gens passionnés de mathématique
+                </ListItem>
+              </Link>
+              
+              <Link href="/conferences">
+                <ListItem title="Conférences">
+                  Découvrez ce que les experts ont à vous offrir
+                </ListItem>
+              </Link>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuLink 
-            className={"text-sm font-medium mr-6 hover:cursor-pointer hover:underline"} 
-            onClick={() => {onMenuClick("/organizing-team")}}
+          <Link 
+            className="text-sm font-medium mr-6 hover:cursor-pointer hover:underline"
+            href="/organizing-team"
           >
             Equipe organisatrice
-          </NavigationMenuLink>
+          </Link>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuLink className="text-sm font-medium mr-6 hover:cursor-pointer hover:underline" onClick={() => {onMenuClick("/partners")}}>
+          <Link 
+            className="text-sm font-medium mr-6 hover:cursor-pointer hover:underline" 
+            href="/partners"
+          >
             Partenaires
-          </NavigationMenuLink>
+          </Link>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuLink className="text-sm font-medium mr-6 hover:cursor-pointer hover:underline" onClick={() => {onMenuClick("/faq")}}>
+          <Link 
+            className="text-sm font-medium mr-6 hover:cursor-pointer hover:underline" 
+            href="/faq"
+          >
             FAQ
-          </NavigationMenuLink>
+          </Link>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
