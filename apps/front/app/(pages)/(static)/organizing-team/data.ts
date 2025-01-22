@@ -1,5 +1,10 @@
 export const organizingCommittee = [
   {
+    name: 'Manal SAOUI',
+    imageSrc: '/organizing-team/manal_saoui.jpeg',
+    linkedinSrc: 'https://www.linkedin.com/in/manal-saoui/',
+  },
+  {
     name: 'Ismail BOUHAJ',
     imageSrc: '/organizing-team/ismail_bouhaj.jpeg',
     linkedinSrc: 'https://linkedin.com/in/ismail-bouhaj-240745235',
@@ -10,34 +15,39 @@ export const organizingCommittee = [
     linkedinSrc: 'https://linkedin.com/in/omar-bennouna-a6b64b197',
   },
   {
-    name: 'Lina BELLAHMIDI',
-    imageSrc: '/organizing-team/lina_bellahmidi.jpeg',
-    linkedinSrc: 'https://linkedin.com/in/lina-bellahmidi-0b1251248',
+    name: 'Abderrahmane ECHAARANI',
+    imageSrc: '/organizing-team/abderrahmane_echaarani.jpeg',
+    linkedinSrc: 'https://www.linkedin.com/in/abderrahmane-echaarani-41ab66201/',
   },
   {
-    name: 'Mohammed-Younes GUEDDARI',
-    imageSrc: '/organizing-team/mohammed_younes_gueddari.jpeg',
-    linkedinSrc: 'https://linkedin.com/in/mohammed-younes-gueddari-4299b6147',
+    name: 'Oussama ZOUHRY',
+    imageSrc: '/organizing-team/oussama_zouhry.jpeg',
+    linkedinSrc: 'https://www.linkedin.com/in/oussama-zouhry/',
   },
   {
-    name: 'Manal SAOUI',
-    imageSrc: '/organizing-team/manal_saoui.jpeg',
-    linkedinSrc: 'https://www.linkedin.com/in/manal-saoui/',
+    name: 'Chaimaa LOUTFI',
+    imageSrc: '/organizing-team/chaimaa_loutfi.jpeg',
+    linkedinSrc: 'https://www.linkedin.com/in/chaimaa-loutfi-93bba821a/',
   },
   {
-    name: 'Mohammed Reda EL MESSAOUDI',
-    imageSrc: '/organizing-team/mohamed_reda_el_messaoudi.jpg',
-    linkedinSrc: 'http://linkedin.com/in/mohamed-reda-el-messaoudi-bb21b2332',
+    name: 'Samy ESSEBBABI',
+    imageSrc: '/organizing-team/samy_essebbabi.jpeg',
+    linkedinSrc: 'https://www.linkedin.com/in/samy-essebbabi-1ba520245/',
   },
   {
-    name: 'Amine HBAR',
-    imageSrc: '/organizing-team/amine_hbar.jpeg',
-    linkedinSrc: 'https://www.linkedin.com/in/amine-hbar-0748a2246/?originalSubdomain=fr',
+    name: 'Zaynab MERIMI',
+    imageSrc: '/organizing-team/zaynab_merimi.jpeg',
+    linkedinSrc: 'https://www.linkedin.com/in/zaynab-merimi-347093218/',
   },
   {
-    name: 'Fatima Zahra MOUDAKIR',
-    imageSrc: '/organizing-team/fatima_zahra_moudakir.jpeg',
-    linkedinSrc: 'https://linkedin.com/in/fatima-zahra-moudakir-615527246',
+    name: 'Chaimaa RADIOUSSE',
+    imageSrc: '/organizing-team/chaimaa_radiousse.jpeg',
+    linkedinSrc: 'https://www.linkedin.com/in/chaimaa-radiousse-9b9752265/',
+  },
+  {
+    name: 'Ilyass BOUAZZA',
+    imageSrc: '/organizing-team/ilyass_bouazza.jpeg',
+    linkedinSrc: 'https://www.linkedin.com/in/ilyass-bouazza-98030b290/',
   },
   {
     name: 'Achraf EL KHAMSI',
@@ -45,37 +55,19 @@ export const organizingCommittee = [
     linkedinSrc: 'https://linkedin.com/in/achrafelkhamsi',
   },
   {
-    name: 'Adam LACHKAR',
-    imageSrc: '/organizing-team/adam_lachkar.jpg',
-    linkedinSrc: 'https://www.linkedin.com/in/adam-lachkar-630010305/',
+    name: 'Fatima Zahra MOUDAKIR',
+    imageSrc: '/organizing-team/fatima_zahra_moudakir.jpeg',
+    linkedinSrc: 'https://linkedin.com/in/fatima-zahra-moudakir-615527246',
   },
   {
-    name: 'Ayman AMASROUR',
-    imageSrc: '/organizing-team/ayman_amasrour.jpeg',
-    linkedinSrc: 'https://www.linkedin.com/in/ayman-amasrour-1a280228a/',
-  },
-  {
-    name: 'Ayoub EN-NADIF',
-    imageSrc: '/organizing-team/ayoub_ennadif.jpeg',
-    linkedinSrc: 'https://www.linkedin.com/in/ayoub-en-nadif-439a63225/',
-  },
-  {
-    name: 'Souhail ELBAKKARE',
+    name: 'Souhail ELBAKKAR',
     imageSrc: '/organizing-team/souhail_elbakkare.jpeg',
     linkedinSrc: 'https://www.linkedin.com/in/souhail-elbakkar-9aab2a284/',
   },
   {
-    name: 'Kawtar TAÏK',
-    imageSrc: '/organizing-team/kawtar_taik.jpeg',
-    linkedinSrc: 'https://www.linkedin.com/in/kawtar-ta%C3%AFk-7544a11b9/',
-  },
-];
-
-export const staff = [
-  {
-    name: 'Issam TAUIL',
-    imageSrc: '/organizing-team/issam_tauil.jpeg',
-    linkedinSrc: 'https://linkedin.com/in/issam-tauil-8b70a9205',
+    name: 'Hamza LASRI',
+    imageSrc: '/organizing-team/unknown.jpg',
+    linkedinSrc: 'https://www.linkedin.com/in/hamza-lasri-bb8347247/',
   },
 ];
 

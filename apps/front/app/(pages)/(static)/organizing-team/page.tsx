@@ -1,7 +1,6 @@
 import { Linkedin } from '@mdm/ui';
 import {
   organizingCommittee,
-  staff,
   webDevelopment,
   brandDesign,
 } from './data';
@@ -48,7 +47,7 @@ export default function OrganizingTeamPage() {
   const shuffledOrganizingCommitte = shuffle(organizingCommittee)
 
   return (
-    <DivCircuitBg classNameBgImage='opacity-50'>
+    <DivCircuitBg classNameBgImage='opacity-50 -z-[8]'>
       <div className="w-full max-w-sm md:max-w-screen-lg px-5 xl:px-0 mt-10 space-y-6">
         <h1 className="text-center text-4xl font-bold drop-shadow-sm">
           <span className='bg-gradient-to-br from-sky-800 to-[#272162] inline-block text-transparent bg-clip-text'>Math&Maroc</span> <span className='font-extralight'>{" | "}</span>
@@ -56,7 +55,7 @@ export default function OrganizingTeamPage() {
         </h1>
 
         <div 
-          className="flex justify-around flex-wrap gap-6 shadow-md p-8 rounded-lg md:gap-x-12"
+          className="flex justify-around flex-wrap gap-6 p-8 rounded-lg md:gap-x-12"
         >
           {shuffledOrganizingCommitte.map(person =>
             <Card
@@ -68,28 +67,7 @@ export default function OrganizingTeamPage() {
           )}
         </div>
 
-        <div className='flex flex-col justify-around space-y-6 flex-wrap gap-y-6 md:flex-row md:space-y-0'>
-          {/* STAFF */}
-          <div className='w-full md:w-1/2 space-y-4'>
-            <h1 className="text-center text-3xl font-bold drop-shadow-sm">
-              <span className='bg-gradient-to-br from-sky-800 to-[#272162] inline-block text-transparent bg-clip-text'>Math&Maroc</span> <span className='font-extralight'>{" | "}</span>
-              <span className='bg-gradient-to-br from-black to-stone-500 inline-block text-transparent bg-clip-text'>Staff</span>
-            </h1>
-            
-            <div 
-              className="flex justify-around flex-wrap gap-6 shadow-md p-8 rounded-lg mr-6"
-            >
-              {staff.map(person =>
-                <Card
-                  key={person.name.toLowerCase().replace(' ', '_')}
-                  name={person.name}
-                  imageSrc={person.imageSrc} 
-                  linkedinSrc={person.linkedinSrc}
-                />
-              )}
-            </div>
-          </div>
-          
+        <div className='flex flex-col justify-around space-y-6 flex-wrap gap-y-6 md:flex-row md:space-y-0'>          
           {/* WEB DEV */}
           <div className='w-full md:w-1/2 space-y-4'>
             <h1 className="text-center text-3xl font-bold drop-shadow-sm">

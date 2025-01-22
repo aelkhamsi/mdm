@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { AnimatedTooltip } from '@/app/components/animated-tooltip';
+import { ImageSlider } from "@mdm/ui";
 
 const getSlideshowImages = () => ([
   {src: '/organizing-team/achraf_el_khamsi.jpeg', key: 'photo-1'},
@@ -16,57 +17,57 @@ const getSlideshowImages = () => ([
 
 const people = [
   {
-    id: 1,
-    name: "Achraf EL KHAMSI",
-    designation: "Software Engineer",
-    image: "/organizing-team/achraf_el_khamsi.jpeg",
-  },
-  {
     id: 2,
-    name: "Adam LACHKAR",
-    designation: "Student @ EMINES",
-    image: "/organizing-team/adam_lachkar.jpg",
+    name: "Oussama ZOUHRY",
+    designation: "Student @ Ecole Polytechnique X",
+    image: "/organizing-team/oussama_zouhry.jpeg",
   },
   {
     id: 3,
-    name: "Amine HBAR",
-    designation: "Student @ École polytechnique",
-    image: "/organizing-team/amine_hbar.jpeg",
+    name: "Chaimaa LOUTFI",
+    designation: "Student @ EPFL",
+    image: "/organizing-team/chaimaa_loutfi.jpeg",
   },
   {
     id: 4,
-    name: "Ayman AMASROUR",
-    designation: "",
-    image: "/organizing-team/ayman_amasrour.jpeg",
+    name: "Chaimaa RADIOUSSE",
+    designation: "Student @ ENSEIRB-MATMECA",
+    image: "/organizing-team/chaimaa_radiousse.jpeg",
   },
   {
     id: 5,
-    name: "Lina BELLAHMIDI",
-    designation: "Student @ EMI",
-    image: "/organizing-team/lina_bellahmidi.jpeg",
-  },
-  {
-    id: 6,
-    name: "Kawtar TAIK",
-    designation: "Student @ ENSIAS",
-    image: "/organizing-team/kawtar_taik.jpeg",
-  },
-  {
-    id: 7,
-    name: "Fatim Zahra MOUDAKIR",
-    designation: "",
+    name: "Fatima Zahra MOUDAKIR",
+    designation: "Computer Science Student",
     image: "/organizing-team/fatima_zahra_moudakir.jpeg",
   },
   {
+    id: 1,
+    name: "Achraf EL KHAMSI",
+    designation: "Software Engineer @ Bouygues Telecom",
+    image: "/organizing-team/achraf_el_khamsi.jpeg",
+  },
+  {
+    id: 6,
+    name: "Ismail BOUHAJ",
+    designation: "Student @ ETH",
+    image: "/organizing-team/ismail_bouhaj.jpeg",
+  },
+  {
+    id: 7,
+    name: "Omar BENNOUNA",
+    designation: "Phd @ MIT",
+    image: "/organizing-team/omar_bennouna.jpeg",
+  },
+  {
     id: 8,
-    name: "Ayoub ENNADIF",
-    designation: "Student @ EMINES",
-    image: "/organizing-team/ayoub_ennadif.jpeg",
+    name: "MANAL SAOUI",
+    designation: "Shift Manager @ Amazon",
+    image: "/organizing-team/manal_saoui.jpeg",
   },
   {
     id: 9,
     name: "Ayoub BENNOUNA",
-    designation: "Medicine Student & Brand Designer",
+    designation: "Medical Student & Brand Designer",
     image: "/organizing-team/ayoub_bennouna.jpg",
   },
 ];
