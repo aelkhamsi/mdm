@@ -36,7 +36,7 @@ export default function MathSprintPage() {
             </p>
           </div>
 
-          <div className="w-full">
+          <div className="w-full -z-[6]">
             <ImageStack
               images={images}
               autoplay={true}

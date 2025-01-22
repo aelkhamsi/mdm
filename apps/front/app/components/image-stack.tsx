@@ -21,17 +21,13 @@ export const ImageStack = ({
     setActive((prev) => (prev + 1) % images.length);
   };
 
-  const handlePrev = () => {
-    setActive((prev) => (prev - 1 + images.length) % images.length);
-  };
-
   const isActive = (index: number) => {
     return index === active;
   };
 
   useEffect(() => {
     if (autoplay) {
-      const interval = setInterval(handleNext, 5000);
+      const interval = setInterval(handleNext, 4000);
       return () => clearInterval(interval);
     }
   }, [autoplay]);
