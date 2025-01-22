@@ -18,6 +18,9 @@ module.exports = {
     'text-orange-700',
     'text-blue-700',
     'text-green-700',
+    'border-orange-700',
+    'border-blue-700',
+    'border-green-700',
   ],
   theme: {
     extend: {

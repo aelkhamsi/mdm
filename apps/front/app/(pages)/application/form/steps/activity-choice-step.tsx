@@ -30,7 +30,7 @@ const choices = [
     label: "📽️ Best mathematical video",
     type: "Compétition",
     color: 'orange-700',
-    target: 'Ouvert pour tous'
+    target: 'Élèves primaire/collège/lycée'
   },
   {
     value: ActivityChoiceValues.STAND,
@@ -86,11 +86,11 @@ export const ActivityChoiceStep = ({
                         key={choice.value}
                         className="text-center"
                       >
-                        <FormLabel className="font-normal text-sm cursor-pointer">
+                        <FormLabel className="font-normal text-sm hover:cursor-pointer">
                           <div className={`text-left text-[11px] font-semibold text-${choice.color}`}>
                             {choice.type}
                           </div>
-                          <div className={`flex items-center justify-center p-4 bg-gray-50 border-[1px] w-[8rem] h-[7rem]`}>
+                          <div className={`flex items-center justify-center p-4 bg-gray-50 border-[1px] w-[10rem] h-[8rem] hover:border-blue-300`}>
                             {choice.label}
                           </div>
                           <div className='text-left text-xs text-gray-600'>
