@@ -5,7 +5,7 @@ export const generalQuestions = [
   },
   {
     question: "Quel est le délai d’inscription ?",
-    anwser: "La date limite est fixée au 01/03 N'attendez pas jusqu'au dernier jour pour soumettre votre candidature. Aucune exception ne sera accordée pour les candidatures tardives, quelles que soient les raisons invoquées, telles que l'oubli, des problèmes de connexion internet ou toute autre excuse."
+    anwser: "La date limite est fixée au XX N'attendez pas jusqu'au dernier jour pour soumettre votre candidature. Aucune exception ne sera accordée pour les candidatures tardives, quelles que soient les raisons invoquées, telles que l'oubli, des problèmes de connexion internet ou toute autre excuse."
   },
   {
     question: "Y-a-t-il des frais à payer pour la nourriture, et les activités ?",
@@ -19,8 +19,6 @@ export const generalQuestions = [
     question: "Où pourrais-je vous contacter si j’ai une demande spéciale, ou une autre question ?",
     anwser: "Vous pouvez envoyer un email à la boîte mail suivante: mdm.math.maroc@gmail.com"
   },
-
-
   {
     question: "Pourrais-je participer même si je n’ai pas encore de carte d’identité nationale ?",
     anwser: "Oui, il suffit de mettre une preuve d’identité qui contient une photo; exemples: attestation de scolarité, carte étudiant, carte de club, carte de fondation…"
@@ -35,51 +33,148 @@ export const generalQuestions = [
   },
   {
     question: "Quelle langue doit être utilisée lors de la journée ?",
-    anwser: "Vous êtes libre d’utiliser n’importe quelle langue pendant les préparations. Par contre les rendus doivent être en français ou anglais.  "
+    anwser: "Vous êtes libre d’utiliser n’importe quelle langue pendant les préparations. Par contre les rendus doivent être en français ou anglais."
   },
 ]
 
 
 export const mathSprintQuestions = [
   {
-    question: "Question 1",
-    anwser: "Anwser 1"
+    question: "Comment savoir si j’ai été sélectionné",
+    anwser: "Vous serez notifié par email et on vous ajoutera dans un groupe whatsapp, pensez à bien vérifier que vous avez mis le bon numéro de téléphone qui contient whatsapp."
   },
   {
-    question: "Question 2",
-    anwser: "Anwser 2"
+    question: "Quand est-ce qu’on sera notifié si on est sélectionné ?",
+    anwser: "Les résultats de sélection seront envoyés au plus tard mi-mars."
+  },
+  {
+    question: "Est-ce qu’il y aura des problèmes différents selon le niveau scolaire ?",
+    anwser: "Non, tous les candidats auront affaire aux mêmes problèmes. il y aura juste deux types d’épreuves : une pour le collège et l’autre pour le lycée."
+  },
+  {
+    question: "Y-a-t-il des problèmes sur lesquels on pourra s'entraîner ?",
+    anwser: "Vous trouverez des problèmes d'entraînement dans la page dédiée à mathSprint."
+  },
+  {
+    question: "Est-ce qu’il y aura des certificats de participation ?",
+    anwser: "Oui, il y aura des certificats aux gagnants ainsi qu’aux participants."
+  },
+  {
+    question: "Quels sont les prix à gagner ?",
+    anwser: "Les prix seront annoncés avant la journée de MDM sur nos réseaux sociaux."
   },
 ]
 
 export const bestMathVideoQuestions = [
   {
-    question: "Question 3",
-    anwser: "Anwser 3"
+    question: "Qui peut s’inscrire ?",
+    anwser: "La compétition “Best Mathematical Video” est ouverte à tous les élèves de moins de 18 ans, du primaire, du collège et du lycée."
   },
   {
-    question: "Question 4",
-    anwser: "Anwser 4"
+    question: "Comment puis-je m'inscrire à la compétition ?",
+    anwser: "Il faut remplir le formulaire d'inscription en choisissant “Best Mathematical Video” dans le choix des activités."
+  },
+  {
+    question: "Puis-je participer tout en étant candidat à d’autres compétitions de MDM (ex: Math sprint)",
+    anwser: "Oui tout à fait."
+  },
+  {
+    question: "Quel est le délai d’inscription ?",
+    anwser: ""
+  },
+  {
+    question: "Puis-je participer en équipe ?",
+    anwser: "Non, les participations sont individuelles."
+  },
+  {
+    question: "Puis-je soumettre plusieurs vidéos ?",
+    anwser: "Non. Chaque participation est unique. Toute autre soumission sera automatiquement rejetée."
+  },
+
+  {
+    question: "Y a-t-il une durée limite pour la vidéo ?",
+    anwser: "La vidéo doit durer au maximum 4 minutes et au minimum 3 minutes. Au-delà de ceci la vidéo sera sanctionnée."
+  },
+  {
+    question: "Dans quelle langue doit être réalisée la vidéo ?",
+    anwser: "Les langues autorisées sont la darija marocaine, l’arabe, le français et l’anglais. Nous ne mesurons pas votre maîtrise de la langue ainsi nous vous encourageons à utiliser la langue où vous êtes le plus à l’aise."
+  },
+  {
+    question: "Quels critères seront utilisés pour évaluer les vidéos ?",
+    anwser: "Les critères les plus importants sont: la clarté et l’exactitude des explications, le cheminement logique, la créativité et la bonne présentation. Attention: Toute utilisation excessive d’IA sera pénalisée (Par exemple si le script de la vidéo est lu par une IA)."
+  },
+  {
+    question: "Je ne souhaite pas montrer mon visage sur la vidéo; Est-ce un problème?",
+    anwser: "Non. Si vous n’êtes pas à l’aise à le faire, ne vous inquiétez pas ce n’est pas obligatoire (mais encouragé si vous le pouvez). Il est cependant nécessaire que vous utilisiez votre propre voix pour expliquer et non une IA."
+  },
+  {
+    question: "Quelles sont les consignes à respecter ?",
+    anwser: "Réalisez une vidéo d’une durée maximale de 4 minutes où vous expliquez de manière inventive un concept/théorème mathématique. Toutes les sources utilisées dans la vidéo doivent être citées (Sites web, articles, vidéos, IA, logiciels etc ). Le titre de la vidéo doit être sous la forme: Nom_Prénom_Titre de la vidéo.#MDM"
+  },
+  {
+    question: "Puis-je obtenir de l’aide d’un adulte pour préparer ma vidéo ?",
+    anwser: "Oui avec modération. N’oubliez pas que le travail doit être fait par vous."
+  },
+  {
+    question: "Je ne sais pas comment faire le montage, serais-je pénalisé?",
+    anwser: "Ne vous inquiétez pas! On ne juge pas vos aptitudes de montage mais plutôt le contenu de la vidéo. Il suffit que la vidéo soit cohérente et présentable. Vous trouverez par ailleurs une liste de logiciels de montage pour vous aider à démarrer sur la page de Best Math video. Vous n’êtes bien entendu pas obligés de les utiliser."
+  },
+  {
+    question: "Puis-je inclure des graphiques, animations ou effets spéciaux dans ma vidéo ?",
+    anwser: "Oui. Nous vous encourageons vivement à le faire. Le but est de rendre la vidéo aussi ludique que possible."
+  },
+  {
+    question: "Puis-je choisir n’importe quel sujet?",
+    anwser: "Oui. L’idée de la compétition est que vous expliquiez un théorème ou un concept mathématique de la manière la plus abordable. Nous ne recherchons pas un cours classique ni une simple narration historique, mais une vraie explication du concept lui-même."
+  },
+  {
+    question: "Comment dois-je soumettre ma vidéo ?",
+    anwser: "La vidéo doit être uploadée en premier lieu sur youtube, ensuite le lien doit être mis dans le formulaire d’inscription."
+  },
+  {
+    question: "Les vidéos seront-elles partagées publiquement ou resteront-elles privées ?",
+    anwser: "Les vidéos seront partagées publiquement sur Youtube."
+  },
+  {
+    question: "Y a-t-il un vote public ?",
+    anwser: "Oui, Les vidéos présélectionnées par notre jury seront soumises à un vote public. Un prix “Choix du public” sera décerné à la personne ayant le plus de votes."
+  },
+  {
+    question: "Quand et comment les gagnants seront-ils annoncés ?",
+    anwser: "Les gagnants seront contactés par email brièvement après l’évaluation des participations."
+  },
+  {
+    question: "Si je suis parmi les gagnants, suis-je obligé d’assister à la journée MDM ?",
+    anwser: "Oui. En signant le règlement, tu t'engages à te présenter à MDM si ta vidéo a été sélectionnée."
+  },
+  {
+    question: "Quels sont les prix à gagner ?",
+    anwser: "Les prix seront annoncés avant la compétition sur nos réseaux."
+  },
+  {
+    question: "Est-ce qu'un certificat de participation sera remis à tous les participants ?",
+    anwser: "Non. Seuls les gagnants auront un certificat."
   },
 ]
 
 export const standQuestions = [
-  {
-    question: "Question 5",
-    anwser: "Anwser 5"
-  },
-  {
-    question: "Question 6",
-    anwser: "Anwser 6"
-  },
+  // {
+  //   question: "Question 5",
+  //   anwser: "Anwser 5"
+  // },
+  // {
+  //   question: "Question 6",
+  //   anwser: "Anwser 6"
+  // },
 ]
 
 export const conferencesQuestions = [
-  {
-    question: "Question 7",
-    anwser: "Anwser 7"
-  },
-  {
-    question: "Question 8",
-    anwser: "Anwser 8"
-  },
+  // {
+  //   question: "Question 7",
+  //   anwser: "Anwser 7"
+  // },
+  // {
+  //   question: "Question 8",
+  //   anwser: "Anwser 8"
+  // },
 ]

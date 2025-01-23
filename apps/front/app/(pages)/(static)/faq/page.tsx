@@ -8,7 +8,7 @@ export default function ConferencesPage() {
 
   return (
     <DivCircuitBg classNameBgImage="opacity-50 -z-[8]">
-      <div className="w-full max-w-sm md:max-w-screen-md px-5 xl:px-0 space-y-6">
+      <div className="w-full max-w-sm md:max-w-screen-md px-5 xl:px-0 space-y-6 mb-20">
         <h1 className="text-center text-3xl font-bold drop-shadow-sm">
           <span className='bg-gradient-to-br from-sky-800 to-[#272162] inline-block text-transparent bg-clip-text'>FAQ</span>
         </h1>
@@ -33,13 +33,13 @@ export default function ConferencesPage() {
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
           <Tabs defaultValue="general">
-            {/* <TabsList className="grid grid-cols-2 md:grid-cols-5">
+            <TabsList className="grid grid-cols-1 md:grid-cols-3">
               <TabsTrigger value="general" className="text-sm">Général</TabsTrigger>
               <TabsTrigger value="math_sprint">Math Sprint</TabsTrigger>
               <TabsTrigger value="best_math_video">Best Math Video</TabsTrigger>
-              <TabsTrigger value="stand">Stand</TabsTrigger>
-              <TabsTrigger value="conferences">Conférences</TabsTrigger>
-            </TabsList> */}
+              {/* <TabsTrigger value="stand">Stand</TabsTrigger>
+              <TabsTrigger value="conferences">Conférences</TabsTrigger> */}
+            </TabsList>
 
             <div className="mt-18 md:mt-0">
               <TabsContent value="general">
@@ -54,13 +54,13 @@ export default function ConferencesPage() {
                 <FaqAccordion items={bestMathVideoQuestions} />
               </TabsContent>
 
-              <TabsContent value="stand">
+              {/* <TabsContent value="stand">
                 <FaqAccordion items={standQuestions} />
               </TabsContent>
 
               <TabsContent value="conferences">
                 <FaqAccordion items={conferencesQuestions} />
-              </TabsContent>
+              </TabsContent> */}
             </div>
           </Tabs>
         </div>
