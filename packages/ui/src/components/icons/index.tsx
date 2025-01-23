@@ -9,3 +9,7 @@ export { default as BuyMeACoffee } from "./buymeacoffee";
 export { default as CustomPlusIcon } from './plus';
 export { default as Linkedin } from './linkedin';
 export { default as Brush } from './brush';
+export { default as PlayButtonIcon } from './play-button'
+export { default as StarShineIcon } from './star-shine-icon'
+export { default as GlitterIcon } from './glitter'
+export { default as LightbulbIcon } from './lightbulb'
