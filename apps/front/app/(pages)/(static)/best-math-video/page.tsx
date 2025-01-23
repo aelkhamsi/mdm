@@ -1,33 +1,77 @@
 import DivCircuitBg from "@/app/components/div-circuit-bg"
+import { Button, GlitterIcon, LightbulbIcon, PlayButtonIcon, StarShineIcon } from "@mdm/ui"
+import Link from 'next/link'
 
 export default function BestMathVideoPage() {
 
   return (
     <DivCircuitBg classNameBgImage="opacity-50 -z-[8]">
-      <div className="w-full max-w-sm md:max-w-screen-xl px-5 xl:px-0 space-y-6">
-        <h1 className="text-center text-4xl font-bold drop-shadow-sm">
-          <span className='bg-gradient-to-br from-sky-800 to-[#272162] inline-block text-transparent bg-clip-text'>Best Mathematical Video</span>
-        </h1>
+      <div className="flex flex-col items-center w-full lg:w-3/4 px-5 lg:px-0 space-y-14 mb-20">
+        <div className="space-y-4">
+          <h1 className="text-center text-4xl font-bold drop-shadow-sm">
+            <span className='bg-gradient-to-br from-sky-600 to-[#1C55FF] inline-block text-transparent bg-clip-text'>
+              Best Mathematical Video
+            </span>
+          </h1>
 
+          <div
+            className="w-full lg-w-3/4 text-xl text-center"
+          >
+            Les mathématiques sont partout autour de nous, souvent cachées dans les subtilités de la vie quotidienne. <br/> 
+            Nous vous invitons donc à devenir notre guide à travers ce monde captivant!
+          </div>
+        </div>
+        
         <div
-          className="flex flex-col w-full md:flex-row md:justify-between md:space-x-8 text-base"
+          className="flex flex-col w-full gap-y-6 lg:flex-row lg:justify-between lg:space-x-8 lg:gap-y-0 text-base"
         >
-          <div className="w-full space-y-4 p-4">
-            <p className='font-bold text-xs text-cyan-600'>C'est quoi Best Math Video</p>
-            <h1 className='font-bold text-3xl'>Partagez votre passion au grand public</h1>
-            <p className="text-lg">Les mathématiques sont partout autour de nous, souvent cachées dans les subtilités de la vie quotidienne. Nous vous invitons donc à devenir notre guide à travers ce monde captivant!</p>
-            <p className="text-lg">Pour ce faire, réalisez de <span className="font-bold text-[#1C55FF]">manière individuelle</span> une vidéo originale de <span className="font-bold text-[#1C55FF]">4 minutes maximum</span> où vous expliquez un concept mathématique de votre choix. Choisissez un sujet qui vous fascine; une notion de géométrie, une formule algébrique,une démonstration créative. Soyez imaginatifs et rendez ce concept accessible pour le public</p>
+          <div className="w-full space-y-4 p-10 bg-[#F9FAFB] rounded-3xl shadow-sm border-[1px] border-gray-100">
+            <div className="flex justify-center">
+              <div className="w-fit p-[10px] bg-[#1C55FF] rounded-full">
+                <PlayButtonIcon className="h-8 w-8"/>
+              </div>
+            </div>
+
+            <h1 className='text-center font-bold text-2xl'>Partagez votre passion</h1>
+            <p className="text-center text-lg">Réalisez de <span className="font-bold text-[#557fff]">manière individuelle</span> une vidéo originale de <span className="font-bold text-[#557fff]">4 minutes maximum</span> où vous expliquez un concept mathématique de votre choix.</p>
           </div>
 
-          <div className="w-full flex flex-col justify-center space-y-4">
-            <p className='font-bold text-xs text-cyan-600'>Le vainqueur de la dernière édition</p>
-
-            <div 
-              className="flex flex-wrap rounded-lg animate-fade-up opacity-0"
-              style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
-            >
-              <iframe width="555" height="315" src="https://www.youtube.com/embed/-2ReWN_PuXg?si=BiGxemUMrDTLZbHz" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+          <div className="w-full space-y-4 p-10 bg-[#F9FAFB] rounded-3xl shadow-sm border-[1px] border-gray-100">
+            <div className="flex justify-center">
+              <div className="w-fit p-[10px] bg-[#1C55FF] rounded-full">
+                <StarShineIcon className="h-8 w-8"/>
+              </div>
             </div>
+
+            <h1 className='text-center font-bold text-2xl'>Choisissez un sujet fascinant</h1>
+            <p className="text-center text-lg">Une notion de géométrie, une formule algébrique,une démonstration créative. Soyez imaginatifs et rendez ce concept accessible pour le public</p>
+          </div>
+
+          <div className="w-full space-y-4 p-10 bg-[#F9FAFB] rounded-3xl shadow-sm border-[1px] border-gray-100">
+            <div className="flex justify-center">
+              <div className="w-fit p-[10px] bg-[#1C55FF] rounded-full">
+                <LightbulbIcon className="h-8 w-8"/>
+              </div>
+            </div>
+
+            <h1 className='text-center font-bold text-2xl'>Illustrez vos concepts</h1>
+            
+            <p className="text-center text-lg">
+              Utilisez des exemples concrets, des animations, des illustrations ou des histoires pour rendre votre explication vivante et mémorable.
+            </p>
+          </div>
+
+          <div className="w-full space-y-4 p-10 bg-[#F9FAFB] rounded-3xl shadow-sm border-[1px] border-gray-100">
+            <div className="flex justify-center">
+              <div className="w-fit p-[10px] bg-[#1C55FF] rounded-full">
+                <GlitterIcon className="h-8 w-8"/>
+              </div>
+            </div>
+
+            <h1 className='text-center font-bold text-2xl'>Soyez créatif</h1>
+            <p className="text-center text-lg">
+              Laissez libre court à votre créativité!
+              Il s&apos;agit de vulgariser un concept mathématique de manière ludique et intéressante, pas de donner un cours.</p>
           </div>
         </div>
 
@@ -35,7 +79,7 @@ export default function BestMathVideoPage() {
           className="flex flex-col w-full md:flex-row md:justify-between md:space-x-8 text-base"
         >
           <div className="w-full space-y-4 p-4">
-            <p className='font-bold text-xs text-cyan-600'>L&apos;évaluation</p>
+            <p className='font-bold text-sm text-[#1C55FF]'>L&apos;évaluation</p>
             <h1 className='font-bold text-3xl'>Quels sont les critères d&apos;évaluation ?</h1>
             <p className="text-lg">
               <ul className="list-disc ml-4">
@@ -44,22 +88,52 @@ export default function BestMathVideoPage() {
                 <li>Présentation</li>
                 <li>Créativité</li>
                 <li>Engagement et interactivité</li>
-                <li>Élimination directe suite à l’usage excessif d’AI</li>
+                <li>Élimination directe suite à l&apos;usage excessif d&apos;IA</li>
               </ul>
             </p>
           </div>
 
-          {/* <div className="w-full space-y-4 p-4">
-            <p className='font-bold text-xs text-cyan-600'>La participation</p>
-            <h1 className='font-bold text-3xl'>Comment Participer ?</h1>
+          <div className="w-full space-y-4 p-4">
+            <p className='font-bold text-sm text-[#1C55FF]'>Consignes</p>
+            <h1 className='font-bold text-3xl'>Quelques consignes</h1>
             <p className="text-lg">
-              <ul className="list-disc">
-                <li>La participation à ce challenge est individuelle et unique</li>
-                <li>Choisissez un sujet mathématique que vous trouvez intéressant</li>
-                <li>Créez une vidéo d’une durée maximale de 4 minutes dans laquelle vous expliquez ce concept d&apos;une manière engageante</li>
+              <ul className="list-disc ml-4">
+                <li>
+                  L&apos;<span className="font-bold text-[#1C55FF]">arabe</span>, la <span className="font-bold text-[#1C55FF]">Darija marocaine</span>, le <span className="font-bold text-[#1C55FF]">français</span> et l&apos;<span className="font-bold text-[#1C55FF]">anglais</span> sont autorisés comme langues de la vidéo.
+                </li>
+                <li>Toute vulgarisation simple de l&apos;histoire du concept seule ne sera pas acceptée. Nous vous invitons à expliquer les concepts par des démonstrations bien faites.</li>
+                <li>L&apos;usage de l&apos;IA en cas de besoin doit être modéré.</li>
               </ul>
             </p>
-          </div> */}
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center w-full lg:w-3/4 space-y-6">
+          <div className="text-7xl text-center">🏆</div>
+          <div className="text-3xl font-bold text-center lg:w-3/4">
+            Des récompenses attendent les vidéos les plus instructives et interactives !
+          </div>
+          <div className="text-xl text-center">
+            Le visionnage des vidéos sélectionnées, l&apos;annonce des gagnants et la remise des prix auront lieu pendant la journée marocaine des mathématiques.<br/>
+            Nous nous réjouissons de découvrir et d&apos;apprendre à vos côtés les merveilles des mathématiques!
+          </div>
+        </div>
+
+        <div className="w-full flex flex-col space-y-10 lg:flex-row lg:justify-around lg:space-y-0 lg:space-x-10 p-10 bg-[#030712] text-white rounded-3xl shadow-lg shadow-[#1C55FF]/70">
+          <div className="flex flex-col gap-y-2 items-center">
+            <h2 className='font-bold text-2xl'>Rejoindre l&apos;aventure</h2>
+            <p className="text-lg">Laissez-vous inspirer par la beauté des mathématiques</p>
+            <Link className="" href='#'>
+              <Button className="text-black bg-white">Participer</Button>
+            </Link>
+          </div>
+
+          <div className="flex flex-col gap-y-4 items-center">
+            <h2 className='font-bold text-2xl'>Une question ?</h2>
+            <Link className="" href='/faq'>
+              <Button className="text-black text-base bg-white">Consulter la FAQ</Button>
+            </Link>
+          </div>
         </div>
       </div>
     </DivCircuitBg>

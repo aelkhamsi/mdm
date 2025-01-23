@@ -33,7 +33,7 @@ const DivCircuitBg = ({
         </div>
       </div>
 
-      <div className="pt-24">
+      <div className="flex flex-col justify-center items-center pt-24">
         {children}
       </div>
     </div> 
