@@ -30,13 +30,13 @@ export const Menu = () => {
           <NavigationMenuTrigger className="text-sm mr-6">Compétitions</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[270px] p-4 md:w-[400px] md:grid-cols-2 lg:w-[500px]">
-              <Link href="/math-sprint">
+              <Link href="/math-sprint" onClick={() => {setShowMenu(false)}}>
                 <ListItem title="Math Sprint">
                   La compétition de math pour les collégiens et lycéens
                 </ListItem>
               </Link>
               
-              <Link href="/best-math-video">
+              <Link href="/best-math-video" onClick={() => {setShowMenu(false)}}>
                 <ListItem title="Best Math Video">
                   Partagez votre passion au grand public
                 </ListItem>
@@ -49,13 +49,13 @@ export const Menu = () => {
           <NavigationMenuTrigger className="text-sm mr-6">Activités</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[300px] gap-3 p-4 md:w-[400px] md:grid-cols-2 lg:w-[500px]">
-              <Link href="/stands">
+              <Link href="/stands" onClick={() => {setShowMenu(false)}}>
                 <ListItem title="Stands">
                   Rencontrez des gens passionnés de mathématique
                 </ListItem>
               </Link>
               
-              <Link href="/conferences">
+              <Link href="/conferences" onClick={() => {setShowMenu(false)}}>
                 <ListItem title="Conférences">
                   Découvrez ce que les experts ont à vous offrir
                 </ListItem>
@@ -68,6 +68,7 @@ export const Menu = () => {
           <Link 
             className="text-sm font-medium mr-6 hover:cursor-pointer hover:underline"
             href="/organizing-team"
+            onClick={() => {setShowMenu(false)}}
           >
             Equipe organisatrice
           </Link>
@@ -77,6 +78,7 @@ export const Menu = () => {
           <Link 
             className="text-sm font-medium mr-6 hover:cursor-pointer hover:underline" 
             href="/partners"
+            onClick={() => {setShowMenu(false)}}
           >
             Partenaires
           </Link>
@@ -86,6 +88,7 @@ export const Menu = () => {
           <Link 
             className="text-sm font-medium mr-6 hover:cursor-pointer hover:underline" 
             href="/faq"
+            onClick={() => {setShowMenu(false)}}
           >
             FAQ
           </Link>
