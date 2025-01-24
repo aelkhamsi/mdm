@@ -1,22 +1,25 @@
-import { Button } from '@mdm/ui'
 import { ImageStack } from '../image-stack'
 
 const images = [
   {
-    name: '1',
-    src: '/past-edition/1.jpeg' 
+    name: 'MDM conference',
+    src: '/past-edition/mdm_1.webp' 
   },
   {
-    name: '2',
-    src: '/past-edition/2.jpeg' 
+    name: 'MDM conference',
+    src: '/past-edition/mdm_2.webp' 
   },
   {
-    name: '3',
-    src: '/past-edition/3.jpeg' 
+    name: 'MDM conference',
+    src: '/past-edition/mdm_3.webp' 
   },
   {
-    name: '4',
-    src: '/past-edition/4.jpeg' 
+    name: 'MathSprint contest',
+    src: '/past-edition/mathsprint_1.webp' 
+  },
+  {
+    name: 'MathSprint contest',
+    src: '/past-edition/mathsprint_2.webp'
   },
 ]
 

@@ -3,12 +3,12 @@ import { ImageStack } from "@/app/components/image-stack"
 
 const images = [
   {
-    name: '4',
-    src: '/past-edition/4.jpeg' 
+    name: 'MathSprint contest',
+    src: '/past-edition/mathsprint_1.webp' 
   },
   {
-    name: '5',
-    src: '/past-edition/5.jpeg' 
+    name: 'MathSprint contest',
+    src: '/past-edition/mathsprint_2.webp'
   },
 ]
 
