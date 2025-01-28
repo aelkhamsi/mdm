@@ -120,7 +120,7 @@ export default function BestMathVideoPage() {
         </div>
 
         <div className="w-full flex flex-col space-y-10 lg:flex-row lg:justify-around lg:space-y-0 lg:space-x-10 p-10 bg-[#030712] text-white rounded-3xl shadow-lg shadow-[#1C55FF]/70">
-          <div className="flex flex-col gap-y-2 items-center text-center">
+          <div className="flex flex-col gap-y-2 items-center">
             <h2 className='font-bold text-2xl'>Rejoindre l&apos;aventure</h2>
             <p className="text-lg">Laissez-vous inspirer par la beauté des mathématiques</p>
             <Link className="" href='#'>
