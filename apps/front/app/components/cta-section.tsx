@@ -1,7 +1,6 @@
-import Link from 'next/link'
 import CtaButton from './home/cta-button'
 import FaqButton from './home/faq-button'
-import './cta-section.css'
+import './pattern.css'
 
 const CtaSection = ({
   className
