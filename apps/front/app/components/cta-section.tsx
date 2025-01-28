@@ -3,9 +3,13 @@ import CtaButton from './home/cta-button'
 import FaqButton from './home/faq-button'
 import './cta-section.css'
 
-const CtaSection = () => {
+const CtaSection = ({
+  className
+}:{
+  className?: string
+}) => {
   return (
-    <div className="pattern text-center w-1/2 p-10 space-y-8 text-white custom-shadow">
+    <div className={`pattern text-center w-1/2 p-10 space-y-8 text-white custom-shadow ${className}`}>
       <div className='space-y-2'>
         <h2 className='font-bold text-3xl'>Rejoindre l&apos;aventure</h2>
         <p className="text-base">Laissez-vous inspirer par la beauté des mathématiques</p>    
