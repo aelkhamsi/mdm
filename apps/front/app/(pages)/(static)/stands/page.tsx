@@ -1,9 +1,8 @@
 import CtaSection from "@/app/components/cta-section"
 import DivCircuitBg from "@/app/components/div-circuit-bg"
-import { AwardIcon, BoardGamesIcon, Button, LightbulbIcon, Separator, StarShineIcon } from "@mdm/ui"
-import Link from 'next/link'
+import { AwardIcon, BoardGamesIcon, LightbulbIcon, Separator, StarShineIcon } from "@mdm/ui"
 
-export default function BestMathVideoPage() {
+export default function StandsPage() {
 
   return (
     <DivCircuitBg classNameBgImage="opacity-50 -z-[8]">
