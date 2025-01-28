@@ -1,3 +1,4 @@
+import CtaSection from "@/app/components/cta-section"
 import DivCircuitBg from "@/app/components/div-circuit-bg"
 import { AwardIcon, BoardGamesIcon, Button, LightbulbIcon, Separator, StarShineIcon } from "@mdm/ui"
 import Link from 'next/link'
@@ -6,7 +7,7 @@ export default function BestMathVideoPage() {
 
   return (
     <DivCircuitBg classNameBgImage="opacity-50 -z-[8]">
-      <div className="flex flex-col w-full lg:w-3/4 px-5 lg:px-0 space-y-14 mb-20">
+      <div className="flex flex-col items-center w-full lg:w-3/4 px-5 lg:px-0 space-y-14 mb-20">
         {/* TITLE */}
         <div className="space-y-4">
           <h1 className="text-center text-4xl font-bold drop-shadow-sm">
@@ -76,7 +77,7 @@ export default function BestMathVideoPage() {
         </div>
 
         {/* ANIMATORS SECTION */}
-        <div className="text-left text-xl">
+        <div className="text-left w-full">
           <h2 className="text-3xl font-bold">Pour les animateurs</h2>
           <Separator className="my-4 bg-[#1C55FF]" />
 
@@ -122,22 +123,7 @@ export default function BestMathVideoPage() {
         </div>
 
         {/* FOOTER */}
-        <div className="w-full flex flex-col space-y-10 lg:flex-row lg:justify-around lg:space-y-0 lg:space-x-10 p-10 bg-[#030712] text-white rounded-3xl shadow-lg shadow-[#1C55FF]/70">
-          <div className="flex flex-col gap-y-2 items-center">
-            <h2 className='font-bold text-2xl'>Rejoindre l&apos;aventure</h2>
-            <p className="text-lg">Laissez-vous inspirer par la beauté des mathématiques</p>
-            <Link className="" href='#'>
-              <Button className="text-black bg-white">Participer</Button>
-            </Link>
-          </div>
-
-          <div className="flex flex-col gap-y-4 items-center">
-            <h2 className='font-bold text-2xl'>Une question ?</h2>
-            <Link className="" href='/faq'>
-              <Button className="text-black text-base bg-white">Consulter la FAQ</Button>
-            </Link>
-          </div>
-        </div>
+        <CtaSection />
       </div>
     </DivCircuitBg>
   )

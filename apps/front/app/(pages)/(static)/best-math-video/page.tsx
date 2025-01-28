@@ -1,6 +1,6 @@
 import DivCircuitBg from "@/app/components/div-circuit-bg"
-import { Button, GlitterIcon, LightbulbIcon, PlayButtonIcon, StarShineIcon } from "@mdm/ui"
-import Link from 'next/link'
+import { GlitterIcon, LightbulbIcon, PlayButtonIcon, StarShineIcon } from "@mdm/ui"
+import CtaSection from "@/app/components/cta-section"
 
 export default function BestMathVideoPage() {
 
@@ -23,7 +23,7 @@ export default function BestMathVideoPage() {
         </div>
         
         <div
-          className="flex flex-col w-full gap-y-6 lg:flex-row lg:justify-between lg:space-x-8 lg:gap-y-0 text-base"
+          className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 text-base"
         >
           <div className="w-full space-y-4 p-10 bg-[#F9FAFB] rounded-3xl shadow-sm border-[1px] border-gray-100">
             <div className="flex justify-center">
@@ -119,22 +119,7 @@ export default function BestMathVideoPage() {
           </div>
         </div>
 
-        <div className="w-full flex flex-col space-y-10 lg:flex-row lg:justify-around lg:space-y-0 lg:space-x-10 p-10 bg-[#030712] text-white rounded-3xl shadow-lg shadow-[#1C55FF]/70">
-          <div className="flex flex-col gap-y-2 items-center">
-            <h2 className='font-bold text-2xl'>Rejoindre l&apos;aventure</h2>
-            <p className="text-lg">Laissez-vous inspirer par la beauté des mathématiques</p>
-            <Link className="" href='#'>
-              <Button className="text-black bg-white">Participer</Button>
-            </Link>
-          </div>
-
-          <div className="flex flex-col gap-y-4 items-center">
-            <h2 className='font-bold text-2xl'>Une question ?</h2>
-            <Link className="" href='/faq'>
-              <Button className="text-black text-base bg-white">Consulter la FAQ</Button>
-            </Link>
-          </div>
-        </div>
+        <CtaSection />
       </div>
     </DivCircuitBg>
   )
