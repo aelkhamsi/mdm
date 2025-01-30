@@ -46,7 +46,7 @@ const HeroSection = () => {
         </div>
 
         <div
-          className="flex flex-col space-y-4 md:flex-row md:space-y-0 animate-fade-up opacity-0 items-center justify-around w-full"
+          className="flex flex-col items-center justify-between w-full space-y-4 md:flex-row md:space-y-0 animate-fade-up opacity-0 "
           style={{ animationDelay: "0.35s", animationFillMode: "forwards" }}
         >
           <div className='flex items-center space-x-4'>
@@ -54,37 +54,44 @@ const HeroSection = () => {
               Organized by
             </p>
 
-            <div className="flex space-x-4 items-center bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#E5FF52]/[.15] via-transparent to-transparent">
-              <Link className="h-12 flex items-center" href="/partners">
-                <Image
-                  src="/mm.png"
-                  alt="Math&Maroc Logo"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  className="h-full w-auto filter grayscale brightness-100 contrast-125 hover:grayscale-0 hover:brightness-100 hover:contrast-100"
-                />
-              </Link>
-            </div>
+            <Link className="h-10 flex items-center bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#E5FF52]/[.15] via-transparent to-transparent" href="/partners">
+              <Image
+                src="/mm.png"
+                alt="Math&Maroc Logo"
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="h-full w-auto filter grayscale brightness-100 contrast-125 hover:grayscale-0 hover:brightness-100 hover:contrast-100"
+              />
+            </Link>
           </div>
-          
+            
           <div className="flex space-x-4 items-center">
             <p className='text-sm text-gray-500'>
               Trusted by
             </p>
             
-            <div className="flex space-x-4 items-center bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#E5FF52]/[.15] via-transparent to-transparent">
-              <Link className="h-14 flex items-center" href="/partners">
-                <Image
-                  src="/adria_official_partner.png"
-                  alt="Adria Logo"
-                  width={0}
-                  height={0}
-                  sizes="100vw"
-                  className="h-full w-auto filter grayscale brightness-50 contrast-125 hover:grayscale-0 hover:brightness-100 hover:contrast-100"
-                />
-              </Link>
-            </div>
+            <Link className="h-12 flex items-center bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#E5FF52]/[.15] via-transparent to-transparent" href="/partners">
+              <Image
+                src="/adria_official_partner.png"
+                alt="Adria Logo"
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="h-full w-auto filter grayscale brightness-50 contrast-125 hover:grayscale-0 hover:brightness-100 hover:contrast-100"
+              />
+            </Link>
+
+            <Link className="h-5 flex items-center bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#E5FF52]/[.15] via-transparent to-transparent" href="/partners">
+              <Image
+                src="/euromed_logo.png"
+                alt="Adria Logo"
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="h-full w-auto filter grayscale brightness-70 contrast-125 hover:grayscale-0 hover:brightness-100 hover:contrast-100"
+              />
+            </Link>
           </div>
         </div>
       </div>
