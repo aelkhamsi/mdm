@@ -84,8 +84,8 @@ const HeroSection = () => {
 
             <Link className="h-5 flex items-center bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#E5FF52]/[.15] via-transparent to-transparent" href="/partners">
               <Image
-                src="/euromed_logo.png"
-                alt="Adria Logo"
+                src="/uemf_logo_2.png"
+                alt="UEMF Logo"
                 width={0}
                 height={0}
                 sizes="100vw"
