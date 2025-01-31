@@ -1,6 +1,6 @@
-import CtaButton from './home/cta-button'
-import FaqButton from './home/faq-button'
-import './pattern.css'
+import CtaButton from './cta-button'
+import FaqButton from './faq-button'
+import '../pattern.css'
 
 const CtaSection = ({
   className

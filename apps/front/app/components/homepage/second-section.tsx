@@ -1,6 +1,5 @@
-import { CalendarIcon, LocationIcon } from '@mdm/ui'
+import { CalendarMDMIcon, LocationIcon } from '@mdm/ui'
 import { ImageStack } from '../image-stack'
-import { BookmarkIcon } from 'lucide-react'
 
 const images = [
   {
@@ -40,7 +39,7 @@ const SecondSection = () => {
           <p>Pendant cet événement, les participants pourront s'affronter dans plusieurs compétitions selon leurs niveaux. En plus des compétitions, il y aura des conférences et des stands pour explorer différentes facettes des mathématiques</p>
           <div className='flex justify-center gap-x-8'>
             <div className='flex items-center justify-center'>
-              <CalendarIcon />
+              <CalendarMDMIcon />
               <div className="text-sm font-semibold text-[#272162]">19 avril 2025</div>
             </div>
 

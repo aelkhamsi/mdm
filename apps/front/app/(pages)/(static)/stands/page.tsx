@@ -1,4 +1,4 @@
-import CtaSection from "@/app/components/cta-section"
+import CtaSection from "@/app/components/cta/cta-section"
 import DivCircuitBg from "@/app/components/div-circuit-bg"
 import { AwardIcon, BoardGamesIcon, LightbulbIcon, Separator, StarShineIcon } from "@mdm/ui"
 

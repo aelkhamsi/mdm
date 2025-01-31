@@ -1,6 +1,6 @@
 import DivCircuitBg from "@/app/components/div-circuit-bg"
 import { GlitterIcon, LightbulbIcon, PlayButtonIcon, StarShineIcon } from "@mdm/ui"
-import CtaSection from "@/app/components/cta-section"
+import CtaSection from "@/app/components/cta/cta-section"
 
 export default function BestMathVideoPage() {
 

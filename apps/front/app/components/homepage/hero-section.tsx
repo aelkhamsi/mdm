@@ -2,8 +2,8 @@ import React from 'react'
 import DivCircuitBg from '../div-circuit-bg'
 import Link from 'next/link'
 import Image from 'next/image'
-import CtaButton from './cta-button'
-import FaqButton from './faq-button'
+import CtaButton from '../cta/cta-button'
+import FaqButton from '../cta/faq-button'
 
 const HeroSection = () => {
   return (
