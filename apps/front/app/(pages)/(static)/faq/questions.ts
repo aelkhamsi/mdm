@@ -5,7 +5,7 @@ export const generalQuestions = [
   },
   {
     question: "Quel est le délai d’inscription ?",
-    anwser: "La date limite est fixée au XX N'attendez pas jusqu'au dernier jour pour soumettre votre candidature. Aucune exception ne sera accordée pour les candidatures tardives, quelles que soient les raisons invoquées, telles que l'oubli, des problèmes de connexion internet ou toute autre excuse."
+    anwser: "La date limite pour les visiteurs est fixée au 10 avril 2025. Pour la participation aux compétitions ou à l'animation des stands, vous trouverez les dates limites sur leurs pages correspondantes. N'attendez pas jusqu'au dernier jour pour soumettre votre candidature. Aucune exception ne sera accordée pour les candidatures tardives, quelles que soient les raisons invoquées, telles que l'oubli, des problèmes de connexion internet ou toute autre excuse."
   },
   {
     question: "Y-a-t-il des frais à payer pour la nourriture, et les activités ?",
@@ -17,7 +17,7 @@ export const generalQuestions = [
   },
   {
     question: "Où pourrais-je vous contacter si j’ai une demande spéciale, ou une autre question ?",
-    anwser: "Vous pouvez envoyer un email à la boîte mail suivante: mdm.math.maroc@gmail.com"
+    anwser: "Vous pouvez envoyer un email à la boîte mail suivante: mathmarocmdm@gmail.com"
   },
   {
     question: "Pourrais-je participer même si je n’ai pas encore de carte d’identité nationale ?",
@@ -53,7 +53,7 @@ export const mathSprintQuestions = [
   },
   {
     question: "Y-a-t-il des problèmes sur lesquels on pourra s'entraîner ?",
-    anwser: "Vous trouverez des problèmes d'entraînement dans la page dédiée à mathSprint."
+    anwser: "Vous trouverez des problèmes d'entraînement dans la page dédiée à Math Sprint."
   },
   {
     question: "Est-ce qu’il y aura des certificats de participation ?",
@@ -71,16 +71,8 @@ export const bestMathVideoQuestions = [
     anwser: "La compétition “Best Mathematical Video” est ouverte à tous les élèves de moins de 18 ans, du primaire, du collège et du lycée."
   },
   {
-    question: "Comment puis-je m'inscrire à la compétition ?",
-    anwser: "Il faut remplir le formulaire d'inscription en choisissant “Best Mathematical Video” dans le choix des activités."
-  },
-  {
     question: "Puis-je participer tout en étant candidat à d’autres compétitions de MDM (ex: Math sprint)",
     anwser: "Oui tout à fait."
-  },
-  {
-    question: "Quel est le délai d’inscription ?",
-    anwser: ""
   },
   {
     question: "Puis-je participer en équipe ?",
@@ -90,26 +82,13 @@ export const bestMathVideoQuestions = [
     question: "Puis-je soumettre plusieurs vidéos ?",
     anwser: "Non. Chaque participation est unique. Toute autre soumission sera automatiquement rejetée."
   },
-
   {
     question: "Y a-t-il une durée limite pour la vidéo ?",
     anwser: "La vidéo doit durer au maximum 4 minutes et au minimum 3 minutes. Au-delà de ceci la vidéo sera sanctionnée."
   },
   {
-    question: "Dans quelle langue doit être réalisée la vidéo ?",
-    anwser: "Les langues autorisées sont la darija marocaine, l’arabe, le français et l’anglais. Nous ne mesurons pas votre maîtrise de la langue ainsi nous vous encourageons à utiliser la langue où vous êtes le plus à l’aise."
-  },
-  {
-    question: "Quels critères seront utilisés pour évaluer les vidéos ?",
-    anwser: "Les critères les plus importants sont: la clarté et l’exactitude des explications, le cheminement logique, la créativité et la bonne présentation. Attention: Toute utilisation excessive d’IA sera pénalisée (Par exemple si le script de la vidéo est lu par une IA)."
-  },
-  {
     question: "Je ne souhaite pas montrer mon visage sur la vidéo; Est-ce un problème?",
     anwser: "Non. Si vous n’êtes pas à l’aise à le faire, ne vous inquiétez pas ce n’est pas obligatoire (mais encouragé si vous le pouvez). Il est cependant nécessaire que vous utilisiez votre propre voix pour expliquer et non une IA."
-  },
-  {
-    question: "Quelles sont les consignes à respecter ?",
-    anwser: "Réalisez une vidéo d’une durée maximale de 4 minutes où vous expliquez de manière inventive un concept/théorème mathématique. Toutes les sources utilisées dans la vidéo doivent être citées (Sites web, articles, vidéos, IA, logiciels etc ). Le titre de la vidéo doit être sous la forme: Nom_Prénom_Titre de la vidéo.#MDM"
   },
   {
     question: "Puis-je obtenir de l’aide d’un adulte pour préparer ma vidéo ?",
@@ -128,16 +107,8 @@ export const bestMathVideoQuestions = [
     anwser: "Oui. L’idée de la compétition est que vous expliquiez un théorème ou un concept mathématique de la manière la plus abordable. Nous ne recherchons pas un cours classique ni une simple narration historique, mais une vraie explication du concept lui-même."
   },
   {
-    question: "Comment dois-je soumettre ma vidéo ?",
-    anwser: "La vidéo doit être uploadée en premier lieu sur youtube, ensuite le lien doit être mis dans le formulaire d’inscription."
-  },
-  {
     question: "Les vidéos seront-elles partagées publiquement ou resteront-elles privées ?",
-    anwser: "Les vidéos seront partagées publiquement sur Youtube."
-  },
-  {
-    question: "Y a-t-il un vote public ?",
-    anwser: "Oui, Les vidéos présélectionnées par notre jury seront soumises à un vote public. Un prix “Choix du public” sera décerné à la personne ayant le plus de votes."
+    anwser: "Les vidéos seront partagées publiquement sur Youtube. En signant le règlement de MDM, vous consentez à ceci."
   },
   {
     question: "Quand et comment les gagnants seront-ils annoncés ?",
