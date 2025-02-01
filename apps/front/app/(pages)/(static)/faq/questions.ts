@@ -12,8 +12,8 @@ export const generalQuestions = [
     anwser: "La date limite pour les visiteurs est fixée au 10 avril 2025. Pour la participation aux compétitions ou à l'animation des stands, vous trouverez les dates limites sur leurs pages correspondantes. N'attendez pas jusqu'au dernier jour pour soumettre votre candidature. Aucune exception ne sera accordée pour les candidatures tardives, quelles que soient les raisons invoquées, telles que l'oubli, des problèmes de connexion internet ou toute autre excuse."
   },
   {
-    question: "Y-a-t-il des frais à payer pour la nourriture, et les activités ?",
-    anwser: "Non, tous les frais de nourriture et d'activités sont pris en charge pour les participants tout au long de l'événement. Seuls les frais de transport sont à leur charge."
+    question: "Est-ce que la nourriture et le transport seront pris en charge ?",
+    anwser: "Non, tout le transport et la nourriture seront entièrement à votre charge. En cas d’exception, vous en serez informés."
   },
   {
     question: "Est-ce que nos parents peuvent nous accompagner pendant l’événement ?",

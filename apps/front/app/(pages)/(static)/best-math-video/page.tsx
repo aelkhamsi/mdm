@@ -35,7 +35,7 @@ export default function BestMathVideoPage() {
             </div>
 
             <h1 className='text-center font-bold text-2xl'>Partagez votre passion</h1>
-            <p className="text-center text-lg">Réalisez de <span className="font-bold text-[#557fff]">manière individuelle</span> une vidéo originale de <span className="font-bold text-[#557fff]">4 minutes maximum</span> où vous expliquerez un concept mathématique de votre choix.</p>
+            <p className="text-center text-lg">Réalisez de <span className="font-bold text-[#557fff]">manière individuelle</span> une vidéo originale de <span className="font-bold text-[#557fff]">3 à 4 minutes maximum</span> où vous expliquerez un concept mathématique de votre choix.</p>
           </div>
 
           <div className="w-full space-y-4 p-10 bg-[#F9FAFB] rounded-3xl shadow-sm border-[1px] border-gray-100">
@@ -83,13 +83,13 @@ export default function BestMathVideoPage() {
           <div className="w-full space-y-4 p-4">
             <p className='font-bold text-sm text-[#1C55FF]'>Consignes</p>
             <h2 className='font-bold text-3xl'>Quelques consignes</h2>
-            <p className="text-lg">
-              <ul className="list-disc ml-4">
+            <p>
+              <ul className="list-disc ml-4 text-lg">
                 <li>
                   Les langues autorisées sont la <span className="font-bold text-[#1C55FF]">Darija marocaine</span>, l&apos;<span className="font-bold text-[#1C55FF]">arabe</span>, le <span className="font-bold text-[#1C55FF]">français</span> et l&apos;<span className="font-bold text-[#1C55FF]">anglais</span>. Nous ne mesurons pas votre maîtrise de la langue, ainsi nous vous encourageons à utiliser la langue où vous êtes le plus à l&apos;aise.
                 </li>
                 <li>Toute vulgarisation simple de l&apos;histoire du concept seule <span className="font-bold">ne sera pas acceptée</span>. Nous vous invitons à expliquer les concepts par des démonstrations bien faites.</li>
-                <li>La vidéo doit être uploadée en premier lieu sur youtube avec un titre sous la forme <span className="font-bold">Nom_Prénom_Titre de la vidéo.#MDM</span>, ensuite le lien doit être renseigné dans le formulaire d&apos;inscription.</li>
+                <li>La vidéo doit être uploadée en premier lieu sur youtube avec un titre sous la forme: <span className="font-bold">{"<Titre de la vidéo> | <Nom prénom> #MDM"}</span>, ensuite le lien doit être renseigné dans le formulaire d&apos;inscription.</li>
                 <li>Les vidéos présélectionnées par notre jury seront soumises à un <span className="font-bold">vote public</span>.</li>
                 <li>L&apos;usage de l&apos;IA en cas de besoin doit être modéré.</li>
               </ul>
@@ -100,8 +100,8 @@ export default function BestMathVideoPage() {
             <div className="space-y-4">
               <p className='font-bold text-sm text-[#1C55FF]'>L&apos;évaluation</p>
               <h2 className='font-bold text-3xl'>Quels sont les critères d&apos;évaluation ?</h2>
-              <p className="text-lg">
-                <ul className="list-disc ml-4">
+              <p>
+                <ul className="list-disc ml-4 text-lg">
                   <li>Exactitude du contenu mathématique</li>
                   <li>Clarté et fluidité</li>
                   <li>Présentation</li>
@@ -117,7 +117,7 @@ export default function BestMathVideoPage() {
               <div className="flex space-x-4 items-center">
                 <h2 className='font-bold text-3xl'>Ressources et liens utiles</h2>
                 <Link 
-                  href='https://drive.google.com/file/d/1jRGCxsF3OnEkZKyV8P8zLKD9-QUF5Qh5/view?usp=sharing'
+                  href='https://drive.google.com/file/d/1NQTSKHSDq14uSFtG-6naHjCdZ6vOW8K1/view?usp=sharing'
                   target="_blank" 
                   className="flex space-x-4 text-blue-500 hover:underline">
                   Lien <ExternalLink />
