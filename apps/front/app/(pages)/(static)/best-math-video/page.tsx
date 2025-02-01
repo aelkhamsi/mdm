@@ -20,7 +20,7 @@ export default function BestMathVideoPage() {
             className="w-full lg-w-3/4 text-xl text-center"
           >
             Les mathématiques sont partout autour de nous, souvent cachées dans les subtilités de la vie quotidienne. <br/> 
-            Si vous êtes étudiants en <span className="font-bold">primaire, collège ou lycée</span>, nous vous invitons donc à devenir notre guide à travers ce monde captivant!
+            Si vous êtes étudiants en <span className="font-bold">primaire, collège ou lycée</span>, nous vous invitons à devenir notre guide à travers ce monde captivant!
           </div>
         </div>
         
