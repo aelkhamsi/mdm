@@ -70,7 +70,7 @@ export default function BestMathVideoPage() {
               </div>
             </div>
 
-            <h1 className='text-center font-bold text-2xl'>Soyez créatif</h1>
+            <h1 className='text-center font-bold text-2xl'>Soyez créatifs</h1>
             <p className="text-center text-lg">
               Laissez libre court à votre créativité!
               Il s&apos;agit de vulgariser un concept mathématique de manière ludique et intéressante, pas de donner un cours.</p>

@@ -47,7 +47,7 @@ export default function StandsPage() {
                 </div>
               </div>
 
-              <h1 className='text-center font-bold text-2xl'>Participer activement</h1>
+              <h1 className='text-center font-bold text-2xl'>Participez activement</h1>
               <p className="text-center text-xl">Engagez-vous dans des activités pratiques, des démonstrations en direct ou des jeux stimulants proposés par les animateurs.</p>
             </div>
 
@@ -58,7 +58,7 @@ export default function StandsPage() {
                 </div>
               </div>
 
-              <h1 className='text-center font-bold text-2xl'>Explorer les applications des maths</h1>
+              <h1 className='text-center font-bold text-2xl'>Explorez les applications des maths</h1>
               <p className="text-center text-xl">De l&apos;intelligence artificielle aux solutions pour le développement du Maroc.</p>
             </div>
 
@@ -69,7 +69,7 @@ export default function StandsPage() {
                 </div>
               </div>
 
-              <h1 className='text-center font-bold text-2xl'>Voter pour votre stand préféré</h1>
+              <h1 className='text-center font-bold text-2xl'>Votez pour votre stand préféré</h1>
               <p className="text-center text-xl">Prenez part à l&apos;évaluation en désignant le stand qui vous aura le plus impressionné</p>
             </div>
           </div>

@@ -66,7 +66,7 @@ const SecondSection = () => {
         className="flex flex-col md:flex-row md:justify-between md:space-x-8 w-full lg:w-3/4 text-base my-14"
       >
         <div className="w-full flex flex-col px-4 space-y-4">
-          <p>L'édition passée de MDM s'est tenue à <span className='font-bold text-[#1C55FF]'>Ben Guerir</span> en collboration avec l&apos;<span className='font-bold text-[#1C55FF]'>UM6P</span></p>
+          <p>L'édition passée de MDM s'est tenue à Ben Guerir en collaboration avec l&apos;UM6P</p>
           <p>Une édition qui a réuni une centaine de passionnés de mathématiques autour de conférences d'experts, de stands et de compétitions</p>
           <p>En 2025, MDM promet d'aller encore plus loin, en offrant une expérience enrichie avec de nouvelles activités, des intervenants de renommée internationale et des opportunités inédites pour tous les passionnés de mathématiques</p>
         </div>

@@ -51,7 +51,7 @@ export const Menu = () => {
             <ul className="grid w-[300px] gap-3 p-4 md:w-[400px] md:grid-cols-2 lg:w-[500px]">
               <Link href="/stands" onClick={() => {setShowMenu(false)}}>
                 <ListItem title="Stands">
-                  Rencontrez des gens passionnés de mathématique
+                  Rencontrez des gens passionnés de mathématiques
                 </ListItem>
               </Link>
               

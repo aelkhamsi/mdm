@@ -1,5 +1,9 @@
 export const generalQuestions = [
   {
+    question: "Combien de temps durera l'événement ?",
+    anwser: "L'événement durera une journée. Le programme complet de cette journée sera publié ultérieurement."
+  },
+  {
     question: "Qui peut s'inscrire ?",
     anwser: "Toute personne intéressée par les mathématiques peut participer à cet événement."
   },
@@ -25,15 +29,15 @@ export const generalQuestions = [
   },
   {
     question: "Faut-il une lettre de motivation lors de l’inscription ?",
-    anwser: "Non, les lettres de motivation ne seront pas prises en considération. Par contre dans le formulaire d’inscription il sera demandé d’inclure une motivation de max 300 mots."
+    anwser: "Non, les lettres de motivation ne seront pas prises en considération. Par contre dans le formulaire d’inscription il sera demandé d’inclure une motivation de max 300 mots pour les participants aux compétitions ou aux animateurs de stands."
   },
   {
     question: "Que faire si je n’ai pas encore reçu mon relevé de notes ?",
-    anwser: "Normalement, vous avez tous le bulletin de l’année dernière, si vous l’avez perdu il est de votre responsabilité de solliciter votre école pour une copie. En cas de preuve sérieuse on peut accepter un bulletin d’une année précédente."
+    anwser: "Normalement, vous avez tous le bulletin du premier semestre de l'année en cours. Si vous l’aviez perdu, il est de votre responsabilité de solliciter votre école pour une copie. En cas de preuve sérieuse on peut accepter le bulletin de l'année précédente."
   },
   {
-    question: "Quelle langue doit être utilisée lors de la journée ?",
-    anwser: "Vous êtes libre d’utiliser n’importe quelle langue pendant les préparations. Par contre les rendus doivent être en français ou anglais."
+    question: "Quelle est la langue utilisée pour les conférences?",
+    anwser: "Les conférences sont en français."
   },
 ]
 
@@ -124,7 +128,7 @@ export const bestMathVideoQuestions = [
   },
   {
     question: "Est-ce qu'un certificat de participation sera remis à tous les participants ?",
-    anwser: "Non. Seuls les gagnants auront un certificat."
+    anwser: "Tous les participants peuvent recevoir une attestation de participation sur demande. Veuillez nous contacter sur mathmarocmdm@gmail.com."
   },
 ]
 
