@@ -1,6 +1,5 @@
 import { CalendarIcon, LocationIcon } from '@mdm/ui'
 import { ImageStack } from '../image-stack'
-import { BookmarkIcon } from 'lucide-react'
 
 const images = [
   {
