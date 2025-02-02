@@ -24,7 +24,7 @@ export default function ConferencesPage() {
           className="animate-fade-up bg-clip-text text-center font-display opacity-0"
           style={{ animationDelay: "0.20s", animationFillMode: "forwards" }}
         >
-          Pour toute autre question non traitée sur le site vous pouvez nous contacter via nos réseaux sociaux ou par email<br/>
+          Pour toute autre question non traitée sur le site vous pouvez nous contacter via nos réseaux sociaux ou par email sur <span className="text-blue-500">mathmarocmdm@gmail.com</span><br/>
           Notez cependant que nous ne pouvons répondre qu&apos;aux questions non discutées sur le site.
         </p>
 
