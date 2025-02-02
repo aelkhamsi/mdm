@@ -66,8 +66,23 @@ export const organizingCommittee = [
   },
   {
     name: 'Hamza LASRI',
-    imageSrc: '/organizing-team/unknown.webp',
+    imageSrc: '/organizing-team/hamza_lasri.webp',
     linkedinSrc: 'https://www.linkedin.com/in/hamza-lasri-bb8347247/',
+  },
+  {
+    name: 'Jad LASIRI',
+    imageSrc: '/organizing-team/unknown.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/jad-lasiri-6b7bb0292/',
+  },
+  {
+    name: 'Ayman AMASROUR',
+    imageSrc: '/organizing-team/ayman_amasrour.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/ayman-amasrour-1a280228a/',
+  },
+  {
+    name: 'Amjad EL KHADER',
+    imageSrc: '/organizing-team/amjad_el_khader.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/amjad-el-khader-a26b492b9/',
   },
 ];
 
