@@ -146,7 +146,7 @@ export const UploadStep = ({
 
                   return (
                     <FormItem>
-                      <FormLabel>Autorisation parentale signée et légalisée par le tuteur légal (<Link className="text-blue-500 underline" href='https://drive.google.com/file/d/19I9hXIptNqAL_RDT6C1m2uA5FFok-Lmd/view?usp=drive_link' target="_blank">fichier</Link>)<RequiredAsterisk /></FormLabel>
+                      <FormLabel>Autorisation parentale signée et légalisée par le tuteur légal (<Link className="text-blue-500 underline" href='https://drive.google.com/file/d/1gF5avT-WrBoUxD1DoCi4f3Hgk-OCiJyV/view?usp=sharing' target="_blank">fichier</Link>)<RequiredAsterisk /></FormLabel>
                       <FormControl>
                         <Input
                           {...form.register("fileParentalAuthorization", {
@@ -232,7 +232,7 @@ export const UploadStep = ({
 
                   return (
                     <FormItem>
-                      <FormLabel>Autorisation parentale signée et légalisée par le tuteur légal (<Link className="text-blue-500 underline" href='https://drive.google.com/file/d/19I9hXIptNqAL_RDT6C1m2uA5FFok-Lmd/view?usp=drive_link' target="_blank">fichier</Link>)<RequiredAsterisk /></FormLabel>
+                      <FormLabel>Autorisation parentale signée et légalisée par le tuteur légal (<Link className="text-blue-500 underline" href='https://drive.google.com/file/d/1gF5avT-WrBoUxD1DoCi4f3Hgk-OCiJyV/view?usp=sharing' target="_blank">fichier</Link>)<RequiredAsterisk /></FormLabel>
                       <FormControl>
                         <Input
                           {...form.register("fileParentalAuthorization", {
