@@ -17,7 +17,7 @@ export default function ConferencesPage() {
           className="animate-fade-up bg-clip-text text-center font-display opacity-0"
           style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
         >
-          Vous avez une question ? Veuillez lire les questions-réponses sur cette FAQ où vous allez trouver les réponses aux questions les plus posées par les participants de l&apos;édition précédente.
+          Une question ? Consultez cette FAQ, où vous trouverez les réponses aux demandes les plus fréquentes des participants de l&apos;édition précédente.
         </p>
 
         <p
@@ -25,7 +25,7 @@ export default function ConferencesPage() {
           style={{ animationDelay: "0.20s", animationFillMode: "forwards" }}
         >
           Pour toute autre question non traitée sur le site vous pouvez nous contacter via nos réseaux sociaux ou par email<br/>
-          Notez cependant que nous ne pourrons répondre qu&apos;aux questions non discutées sur le site.
+          Notez cependant que nous ne pouvons répondre qu&apos;aux questions non discutées sur le site.
         </p>
 
         <div

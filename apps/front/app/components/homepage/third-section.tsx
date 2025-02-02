@@ -44,7 +44,8 @@ const ThirdSection = () => {
                 <span className='font-base text-sm text-gray-400'>(collège & lycée)</span>
               </Card>
               <Card href='best-math-video'>
-                Best Math Video
+                Best Math Video <br/>
+                <span className='font-base text-sm text-gray-400'>(primaire, collège & lycée)</span>
               </Card>
             </div>
           </div>
