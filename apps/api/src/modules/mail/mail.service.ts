@@ -19,7 +19,7 @@ export class MailService {
     await this.mailerService.sendMail({
       to: user.email,
       // from: '"Support Team" <support@example.com>', // override default from
-      subject: 'MTYM | Reset your password',
+      subject: 'MDM | Reset your password',
       template: './reset-password',
       context: {
         firstName: user.firstName,
