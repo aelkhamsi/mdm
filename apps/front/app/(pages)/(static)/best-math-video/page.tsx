@@ -46,7 +46,7 @@ export default function BestMathVideoPage() {
             </div>
 
             <h1 className='text-center font-bold text-2xl'>Choisissez un sujet fascinant</h1>
-            <p className="text-center text-lg">Une notion de géométrie, une formule algébrique,une démonstration créative. Soyez imaginatifs et rendez ce concept accessible pour le public</p>
+            <p className="text-center text-lg">Une notion de géométrie, une formule algébrique, une démonstration créative. Soyez imaginatifs et rendez ce concept accessible pour le public</p>
           </div>
 
           <div className="w-full space-y-4 p-10 bg-[#F9FAFB] rounded-3xl shadow-sm border-[1px] border-gray-100">

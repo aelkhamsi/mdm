@@ -49,7 +49,7 @@ export default function MathSprintPage() {
         >
           <div className="w-full space-y-4 p-4">
             <p className='font-bold text-sm text-[#1C55FF]'>La sélection</p>
-            <h1 className='font-bold text-3xl'>Comment se passera la selection ?</h1>
+            <h1 className='font-bold text-3xl'>Comment se passera la sélection ?</h1>
             <p className="text-lg">Avant de pouvoir participer à cette compétition, un test de sélection sera mené pour évaluer le niveau des potentiels participants</p>
             <p className="text-lg">Le test sera effectué sur une <span className="font-semibold text-gray-800">plateforme en ligne</span> sous la forme d'un QCM surveillé par caméra</p>
           </div>
