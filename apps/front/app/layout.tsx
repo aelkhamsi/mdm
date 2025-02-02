@@ -9,8 +9,6 @@ import Header from "@/app/components/layout/header";
 import JotaiContextProvider from "./jotaiContextProvider";
 import { DataProvider } from "./providers/data.provider";
 import { Toaster } from "@mdm/ui";
-import Script from "next/script";
-import { Head } from "next/document";
 
 
 export const metadata = {
@@ -26,21 +24,6 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <Script id="next"
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=G-DJES2Z0KBB`}>
-        </Script>
-        <Script id="next">
-            {
-                `window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-DJES2Z0KBB');`
-            }
-        </Script>
-      </Head>
-
       <body className={cx(sfPro.variable, inter.variable)}>
         <JotaiContextProvider>
           <DataProvider>
