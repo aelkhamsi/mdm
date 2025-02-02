@@ -52,7 +52,7 @@ export const ValidationStep = ({
                     Conditions Générales <RequiredAsterisk />
                   </FormLabel>
                   <FormDescription>
-                  Je confirme avoir lu entièrement le règlement <Link className="text-blue-500 font-bold" href="https://drive.google.com/file/d/1RvnwZIeWNjBkiVz2y-z8OnY-uTp_gwpc/view?usp=sharing" target="_blank">(lien)</Link> de l&apos;événement et m'engage à le respecter.<br/>
+                  Je confirme avoir lu entièrement le règlement <Link className="text-blue-500 font-bold" href="https://drive.google.com/file/d/1ftLHsg2iXXupb8Yp_Mma54V82VgpPf-c/view?usp=sharing" target="_blank">(lien)</Link> de l&apos;événement et m'engage à le respecter.<br/>
                   En particulier, je m'engage à participer à toutes les compétitions choisies après validation de ma candidature (sauf dérogation demandée par mail et approuvée explicitement par le comité d'organisation).
                   </FormDescription>
                 </div>
