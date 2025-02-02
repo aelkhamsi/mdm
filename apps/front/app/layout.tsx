@@ -55,7 +55,6 @@ export default async function RootLayout({
             <Footer />
             <Toaster />
             <VercelAnalytics />
-            <GoogleAnalytics />
           </DataProvider>
         </JotaiContextProvider>
       </body>
