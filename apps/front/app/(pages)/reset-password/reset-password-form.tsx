@@ -8,7 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@mdm/ui"
 import { toast } from "@mdm/ui"
 import { useRouter, useSearchParams } from "next/navigation"
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { updateUser } from "@/app/api/UsersApi";
 import { getUserDataFromToken } from "@/app/lib/utils";
 

@@ -33,15 +33,6 @@ export const computeSHA256 = async (file: File) => {
   return hashHex;
 }
 
-export const excludeFileFields = ({
-  fileCnie,
-  fileMembersCnie,
-  fileGrades,
-  fileParentalAuthorization,
-  termsAgreement,
-  ...keep
-}: any) => keep
-
 export const generateFileName = (bytes = 6) => c.randomBytes(bytes).toString("hex")
 
 export const getUploadFolderName = (firstName: string|undefined, lastName: string|undefined) => {

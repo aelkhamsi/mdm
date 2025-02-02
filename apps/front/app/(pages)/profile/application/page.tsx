@@ -42,7 +42,6 @@ const getBadgeClassname = (status: string) => {
 
 export default function ApplicationPage() {
   const user = useAtomValue(userAtom)
-  console.log('user', user)
   const [content, setContent] = useState<any>(undefined);
   const router = useRouter();
   
