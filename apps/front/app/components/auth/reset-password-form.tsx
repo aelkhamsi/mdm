@@ -5,11 +5,11 @@ import { cn } from "@mdm/utils"
 import { LoadingDots } from "@mdm/ui"
 import { Input, Button } from "@mdm/ui"
 import { useForm } from "react-hook-form"
-// import { resetPassword } from "@/api/AuthApi"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@mdm/ui"
 import { resetPasswordSchema, resetPasswordDefaultValues } from "@/app/schemas/reset-password.schema"
 import { useState } from "react"
+import { resetPassword } from "@/app/api/AuthApi"
 
 
 interface ResetPasswordFormProps extends React.HTMLAttributes<HTMLDivElement> {}
@@ -24,24 +24,24 @@ export function ResetPasswordForm({ className, ...props }: ResetPasswordFormProp
   const [successMessage, setSuccessMessage] = useState<string>('')
 
   const onSubmit = async (formData: any) => {
-    // const { email } = formData;
-    // setIsFormLoading(true)
-    // const response = await resetPassword(email) as any;
+    const { email } = formData;
+    setIsFormLoading(true)
+    const response = await resetPassword(email) as any;
 
-    // switch(response?.statusCode) {
-    //   case 200:
-    //     setIsFormLoading(false)
-    //     setSuccessMessage(`An email was sent to your inbox.\n Please check your SPAM folder if it didn't reach your inbox`);
-    //     break;
-    //   case 400:
-    //   case 401:
-    //     setErrorMessage('The email is incorrect')
-    //     setIsFormLoading(false)
-    //     break
-    //   default:
-    //     setErrorMessage('Server error. Please try later.')
-    //     setIsFormLoading(false)
-    // }
+    switch(response?.statusCode) {
+      case 200:
+        setIsFormLoading(false)
+        setSuccessMessage(`An email was sent to your inbox.\n Please check your SPAM folder if it didn't reach your inbox`);
+        break;
+      case 400:
+      case 401:
+        setErrorMessage('The email is incorrect')
+        setIsFormLoading(false)
+        break
+      default:
+        setErrorMessage('Server error. Please try later.')
+        setIsFormLoading(false)
+    }
   }
 
   return (
