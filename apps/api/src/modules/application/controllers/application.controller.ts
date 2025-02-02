@@ -99,7 +99,7 @@ export class ApplicationController {
       );
 
       const applicationStatus = application?.status;
-      if (applicationStatus.status === 'NOTIFIED') {
+      if (applicationStatus && applicationStatus.status === 'NOTIFIED') {
         this.applicationStatusService.update(applicationStatus?.id, {
           ...applicationStatus,
           status: 'UPDATED',
