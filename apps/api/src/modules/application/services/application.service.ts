@@ -50,6 +50,7 @@ export class ApplicationService {
       .createQueryBuilder('application')
       .where('application.id = :id', { id })
       .leftJoinAndSelect('application.status', 'status')
+      .leftJoinAndSelect('application.user', 'user')
       .getOne();
   }
 

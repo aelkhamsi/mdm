@@ -127,12 +127,11 @@ export class ApplicationController {
     @Request() req,
   ) {
     const userId = req['user'].id;
-    const application = await this.applicationService.findOneByUserId(userId);
+    const application = await this.applicationService.findOneById(id);
+    const user = application?.user;
 
-    if (id !== application?.id) {
-      throw new ForbiddenException(
-        `This user 'id: ${userId}') can not update this application (id: ${application?.id})`,
-      );
+    if (user && user?.id !== userId) {
+      throw new ForbiddenException('This user can not update this application');
     }
 
     const update = await this.applicationService.update(
@@ -169,7 +168,7 @@ export class ApplicationController {
     }
 
     const update = await this.applicationStatusService.update(
-      application.status.id,
+      application.status?.id,
       updateApplicationStatusDto,
     );
 
