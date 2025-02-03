@@ -64,7 +64,7 @@ export const ApplicationForm = ({
 
       {/* Form */}
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit, onError)}>
+        <form onSubmit={form.handleSubmit(() => {}, onError)}>
           {/* Personal informations */}
           {currentStep === 0 && (
             <PersonalInformationStep form={form} delta={delta} />
@@ -93,7 +93,7 @@ export const ApplicationForm = ({
           {/* Submit Button */}
           {currentStep === 5 && (
             <div className='mt-20 text-center'> 
-              <Button onClick={() => onSubmit(form.watch())}>
+              <Button type="submit" onClick={() => onSubmit(form.watch())}>
                 {isFormLoading ? (
                   <LoadingDots color="#808080" />
                 ) : (
