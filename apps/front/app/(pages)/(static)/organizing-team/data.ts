@@ -60,11 +60,6 @@ export const organizingCommittee = [
     linkedinSrc: 'https://linkedin.com/in/fatima-zahra-moudakir-615527246',
   },
   {
-    name: 'Souhail ELBAKKAR',
-    imageSrc: '/organizing-team/souhail_elbakkare.webp',
-    linkedinSrc: 'https://www.linkedin.com/in/souhail-elbakkar-9aab2a284/',
-  },
-  {
     name: 'Hamza LASRI',
     imageSrc: '/organizing-team/hamza_lasri.webp',
     linkedinSrc: 'https://www.linkedin.com/in/hamza-lasri-bb8347247/',
