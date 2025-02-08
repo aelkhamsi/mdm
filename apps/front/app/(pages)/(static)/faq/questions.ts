@@ -120,11 +120,11 @@ export const bestMathVideoQuestions = [
   },
   {
     question: "Si je suis parmi les gagnants, suis-je obligé d’assister à la journée MDM ?",
-    anwser: "Oui. En signant le règlement, tu t'engages à te présenter à MDM si ta vidéo a été sélectionnée."
+    anwser: "Oui. En signant le règlement, tu t'engages à te présenter à MDM si ta vidéo a été sélectionnée. En cas d'empêchement majeur, contactez nous."
   },
   {
     question: "Quels sont les prix à gagner ?",
-    anwser: "Les prix seront annoncés avant la compétition sur nos réseaux."
+    anwser: "4 gagnants seront choisi comme suit: 3 prix du jury math et maroc et 1 prix choix du public"
   },
   {
     question: "Est-ce qu'un certificat de participation sera remis à tous les participants ?",
