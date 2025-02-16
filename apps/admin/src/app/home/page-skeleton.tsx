@@ -1,5 +1,4 @@
 import { Skeleton } from '@/components/shared/skeleton';
-import React from 'react';
 
 const PageSkeleton = () => {
   return (

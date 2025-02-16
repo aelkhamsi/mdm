@@ -1,6 +1,4 @@
-import React from 'react'
-
-enum ActivityChoiceValues {
+export enum ActivityChoiceValues {
   MATH_SPRINT = 'math_sprint',
   BEST_MATH_VIDEO = 'best_math_video',
   STAND = 'stand',
@@ -41,7 +39,7 @@ const ActivityChoiceCard = ({
 }
 
 export const getActivityChoiceClassname = (activity: string) => {
-  const baseClassname = 'w-fit rounded-lg px-2';
+  const baseClassname = 'w-fit rounded-xl px-2';
   let colorClassname;
 
   switch(activity) {
