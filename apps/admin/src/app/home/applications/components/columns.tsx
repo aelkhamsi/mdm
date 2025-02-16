@@ -126,7 +126,7 @@ export const columns: ColumnDef<ApplicationRow>[] = [
       )
     },
     cell: ({ row }) => {
-      const choices = JSON.parse(row.getValue('activityChoices')).sort()
+      const choices = JSON.parse(row.getValue('activityChoices'))?.sort()
       return <ApplicationActivityChoices activityChoices={choices} className='flex flex-col gap-y-1 items-center' />
     },
     filterFn: (row, id, value) => {      

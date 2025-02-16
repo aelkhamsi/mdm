@@ -128,7 +128,7 @@ export default function ApplicationDetailsPage({ params }: { params: { id: strin
             </div>
 
             <>
-              <ApplicationActivityChoices activityChoices={JSON.parse(application?.activityChoices).sort()} className='flex flex-start gap-x-2' />
+              <ApplicationActivityChoices activityChoices={JSON.parse(application?.activityChoices)?.sort()} className='flex flex-start gap-x-2' />
             </>
 
             <TabsList className="flex justify-start space-x-8 h-[4rem] bg-slate-200 text-black">
