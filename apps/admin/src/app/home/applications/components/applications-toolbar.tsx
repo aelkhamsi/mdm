@@ -4,11 +4,12 @@ import { Cross2Icon } from "@radix-ui/react-icons"
 import { Table } from "@tanstack/react-table"
 import { Button } from "@/components/shared/button"
 import { ApplicationsViewOptions } from "./applications-view-options"
-import { statuses } from "./statuses"
+import { statusOptions } from "./application-status"
 import { ApplicationsFacetedFilter } from "./applications-faceted-filter"
 import { FileTextIcon } from "@radix-ui/react-icons"
 import axios from 'axios-typescript';
 import { getToken } from "@/lib/utils"
+import { activityOptions } from "./application-activity-choices"
 
 export interface ApplicationsToolbarProps<TData> {
   table: Table<TData>
@@ -44,7 +45,14 @@ export function ApplicationsToolbar<TData>({
           <ApplicationsFacetedFilter
             column={table.getColumn("status")}
             title="Status"
-            options={statuses}
+            options={statusOptions}
+          />
+        )}
+        {table.getColumn("activityChoices") && (
+          <ApplicationsFacetedFilter
+            column={table.getColumn("activityChoices")}
+            title="Competitions"
+            options={activityOptions}
           />
         )}
         {isFiltered && (

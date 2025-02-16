@@ -7,6 +7,25 @@ enum ActivityChoiceValues {
   VISITOR = 'visitor'
 }
 
+export const activityOptions = [
+  {
+    value: ActivityChoiceValues.MATH_SPRINT,
+    label: "Math Sprint",
+  },
+  {
+    value: ActivityChoiceValues.BEST_MATH_VIDEO,
+    label: "Best Math Video",
+  },
+  {
+    value: ActivityChoiceValues.STAND,
+    label: "Stand",
+  },
+  {
+    value: ActivityChoiceValues.VISITOR,
+    label: "Visitor",
+  }
+]
+
 const ActivityChoiceCard = ({
   activity,
   className

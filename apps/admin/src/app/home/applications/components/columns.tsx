@@ -130,6 +130,10 @@ export const columns: ColumnDef<ApplicationRow>[] = [
       const choices = JSON.parse(row.getValue('activityChoices')).sort()
       return <ApplicationActivityChoices activityChoices={choices} />
     },
+    filterFn: (row, id, value) => {      
+      const choices = JSON.parse(row.getValue(id))
+      return value.some((filterValue: string) => choices.includes(filterValue))
+    },
   },
   {
     accessorKey: "status",
