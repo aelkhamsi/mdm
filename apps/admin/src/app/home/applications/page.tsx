@@ -13,7 +13,6 @@ export default function ApplicationsPage() {
 
   useEffect(() => {
     if (applications) {
-      console.log('applications', applications)
       setTableData(
         applications.map((application: any) => ({
           id: application?.id,

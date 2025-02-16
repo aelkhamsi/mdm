@@ -35,7 +35,6 @@ const FilesTable = ({
 }:{
   application: any
 }) => {
-  console.log('application', application)
   return (
     <Table>
       <TableHeader>

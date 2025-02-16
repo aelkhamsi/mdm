@@ -5,7 +5,6 @@ import ApplicationStatus from './application-status'
 import { Button } from '@/components/shared/button'
 import { useRouter } from 'next/navigation'
 import { ArrowUpDown } from 'lucide-react'
-import { formatDate } from '@/lib/utils'
 import ApplicationActivityChoices from './application-activity-choices'
 
 export type ApplicationRow = {
@@ -128,7 +127,7 @@ export const columns: ColumnDef<ApplicationRow>[] = [
     },
     cell: ({ row }) => {
       const choices = JSON.parse(row.getValue('activityChoices')).sort()
-      return <ApplicationActivityChoices activityChoices={choices} />
+      return <ApplicationActivityChoices activityChoices={choices} className='flex flex-col gap-y-1 items-center' />
     },
     filterFn: (row, id, value) => {      
       const choices = JSON.parse(row.getValue(id))

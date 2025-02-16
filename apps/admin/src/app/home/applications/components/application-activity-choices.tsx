@@ -41,7 +41,7 @@ const ActivityChoiceCard = ({
 }
 
 export const getActivityChoiceClassname = (activity: string) => {
-  const baseClassname = 'w-fit rounded-lg my-1 px-2';
+  const baseClassname = 'w-fit rounded-lg px-2';
   let colorClassname;
 
   switch(activity) {
@@ -63,13 +63,15 @@ export const getActivityChoiceClassname = (activity: string) => {
 }
 
 const ApplicationActivityChoices = ({
-  activityChoices
+  activityChoices,
+  className
 }:{
-  activityChoices: string[]
+  activityChoices: string[],
+  className?: string,
 }) => {
 
   return (
-    <div className='flex flex-col items-center'>
+    <div className={className}>
       {
         activityChoices.map(activity => {
           const className = getActivityChoiceClassname(activity)
