@@ -13,15 +13,16 @@ export default function ApplicationsPage() {
 
   useEffect(() => {
     if (applications) {
+      console.log('applications', applications)
       setTableData(
         applications.map((application: any) => ({
           id: application?.id,
           firstName: application?.user?.firstName,
           lastName: application?.user?.lastName,
           email: application?.user?.email,
-          dateOfBirth: application?.dateOfBirth,
           city: application?.city,
           establishment: application?.highschool,
+          activityChoices: application?.activityChoices,
           status: application?.status?.status,
         }))
       )

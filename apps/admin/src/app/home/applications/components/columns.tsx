@@ -6,14 +6,15 @@ import { Button } from '@/components/shared/button'
 import { useRouter } from 'next/navigation'
 import { ArrowUpDown } from 'lucide-react'
 import { formatDate } from '@/lib/utils'
+import ApplicationActivityChoices from './application-activity-choices'
 
 export type ApplicationRow = {
   id: string
   firstName: string,
   lastName: string,
-  dateOfBirth: string,
   city: string,
   establishment: string,
+  activityChoices: string,
   status: string,
 }
 
@@ -87,21 +88,6 @@ export const columns: ColumnDef<ApplicationRow>[] = [
     },
   },
   {
-    accessorKey: "dateOfBirth",
-    header: ({ column }) => {
-      return (
-        <Button
-          variant="ghost"
-          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
-          Date of Birth
-          <ArrowUpDown className="ml-2 h-4 w-4" />
-        </Button>
-      )
-    },
-    cell: ({ row }) => formatDate(row.getValue('dateOfBirth')),
-  },
-  {
     accessorKey: "city",
     header: ({ column }) => {
       return (
@@ -127,6 +113,22 @@ export const columns: ColumnDef<ApplicationRow>[] = [
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       )
+    },
+  },
+  {
+    accessorKey: "activityChoices",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+        >
+          Activity Choices
+        </Button>
+      )
+    },
+    cell: ({ row }) => {
+      const choices = JSON.parse(row.getValue('activityChoices')).sort()
+      return <ApplicationActivityChoices activityChoices={choices} />
     },
   },
   {
