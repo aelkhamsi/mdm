@@ -96,12 +96,19 @@ const Field = ({
 export default function ApplicationDetailsPage({ params }: { params: { id: string } }) {
   const [applications, setApplications] = useRecoilState(applicationsState);
   const [application, setApplication] = useState<any>(undefined);
+  const [activityChoices, setActivityChoices] = useState<any>(undefined)
   const id = parseInt(params.id);
   const router = useRouter();
 
   useEffect(() => {
     if (applications) {
-      setApplication(applications.find((application: any) => application?.id === id))
+      const searchResult = applications.find((application: any) => application?.id === id)
+      setApplication(searchResult)
+      const activityChoices = JSON.parse(searchResult?.activityChoices)
+      setActivityChoices(activityChoices
+        ? activityChoices?.sort()
+        : undefined
+      )
     }
   }, [applications])
 
@@ -128,7 +135,7 @@ export default function ApplicationDetailsPage({ params }: { params: { id: strin
             </div>
 
             <>
-              <ApplicationActivityChoices activityChoices={JSON.parse(application?.activityChoices)} className='flex flex-start gap-x-2' />
+              <ApplicationActivityChoices activityChoices={activityChoices} className='flex flex-start gap-x-2' />
             </>
 
             <TabsList className="flex justify-start space-x-8 h-[4rem] bg-slate-200 text-black">

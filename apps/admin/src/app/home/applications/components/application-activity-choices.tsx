@@ -70,7 +70,7 @@ const ApplicationActivityChoices = ({
 
   return (
     <div className={className}>
-      {
+      {activityChoices &&
         activityChoices?.map(activity => {
           const className = getActivityChoiceClassname(activity)
           return <ActivityChoiceCard key={activity} activity={activity} className={className} />
