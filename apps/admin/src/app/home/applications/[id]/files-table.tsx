@@ -8,7 +8,6 @@ import {
 } from "@/components/shared/table";
 import Link from "next/link";
 import { FileIcon } from "@/components/shared/icons";
-import FileStatus from "./file-status";
 
 const FileCard = ({
   href,
@@ -36,6 +35,7 @@ const FilesTable = ({
 }:{
   application: any
 }) => {
+  console.log('application', application)
   return (
     <Table>
       <TableHeader>
@@ -47,35 +47,34 @@ const FilesTable = ({
       </TableHeader>
 
       <TableBody>
-        <TableRow key='cnie'>
-          <TableCell>CNIE</TableCell>
-          <TableCell><FileCard href={application?.cnieUrl} /></TableCell>
-          <TableCell><FileStatus slug='cnie' application={application} /></TableCell>
-        </TableRow>
+        {application?.fileCnieUrl && 
+          <TableRow key='cnie'>
+            <TableCell>CNIE</TableCell>
+            <TableCell><FileCard href={application?.fileCnieUrl} /></TableCell>
+          </TableRow>
+        }
 
-        <TableRow key='school-certificate'>
-          <TableCell>School Certificate</TableCell>
-          <TableCell><FileCard href={application?.schoolCertificateUrl} /></TableCell>
-          <TableCell><FileStatus slug='schoolCertificate' application={application} /></TableCell>
-        </TableRow>
+        {application?.fileMembersCnieUrl && 
+          <TableRow key='members-cnie'>
+            <TableCell>Members CNIE</TableCell>
+            <TableCell><FileCard href={application?.fileMembersCnieUrl} /></TableCell>
+          </TableRow>
+        }
 
-        <TableRow key='grades'>
-          <TableCell>Grades 2023/2024</TableCell>
-          <TableCell><FileCard href={application?.gradesUrl} /></TableCell>
-          <TableCell><FileStatus slug='grades' application={application} /></TableCell>
-        </TableRow>
+        {application?.fileGradesUrl && 
+          <TableRow key='grades'>
+            <TableCell>Grades</TableCell>
+            <TableCell><FileCard href={application?.fileGradesUrl} /></TableCell>
+          </TableRow>
+        }
 
-        <TableRow key='regulations'>
-          <TableCell>Handwritten signed regulation</TableCell>
-          <TableCell><FileCard href={application?.regulationsUrl} /></TableCell>
-          <TableCell><FileStatus slug='regulations' application={application} /></TableCell>
-        </TableRow>
-
-        <TableRow key='parental-authorization'>
-          <TableCell>Parental Authorization</TableCell>
-          <TableCell><FileCard href={application?.parentalAuthorizationUrl} /></TableCell>
-          <TableCell><FileStatus slug='parentalAuthorization' application={application} /></TableCell>
-        </TableRow>
+        {application?.fileParentalAuthorizationUrl && 
+          <TableRow key='parental-authorization'>
+            <TableCell>Parental Authorization</TableCell>
+            <TableCell><FileCard href={application?.fileParentalAuthorizationUrl} /></TableCell>
+          </TableRow>
+        }
+        
       </TableBody>
     </Table>
   )

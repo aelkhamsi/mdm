@@ -129,7 +129,7 @@ export default function ApplicationDetailsPage({ params }: { params: { id: strin
             <TabsList className="flex justify-start space-x-8 h-[4rem] bg-slate-200 text-black">
               <TabsTrigger value="personal-informations" className='text-base h-full'>Personal Informations</TabsTrigger>
               <TabsTrigger value="education" className='text-base h-full'>Education</TabsTrigger>
-              <TabsTrigger value="competition" className='text-base h-full'>Competition</TabsTrigger>
+              <TabsTrigger value="competition" className='text-base h-full'>Motivation</TabsTrigger>
               <TabsTrigger value="uploads" className='text-base h-full'>Uploads</TabsTrigger>
             </TabsList>
             <Separator className="my-6" />
@@ -148,7 +148,6 @@ export default function ApplicationDetailsPage({ params }: { params: { id: strin
                 <Field label='Guardian full name'>{renderText(application?.guardianFullName)}</Field>
                 <Field label='Guardian phone number'>{renderText(application?.guardianPhoneNumber)}</Field>
                 <Field label='Relationship with guardian'>{renderText(relationshipWithGuardianLabels[application?.relationshipWithGuardian])}</Field>
-                <Field label='Special conditions'>{renderText(application?.specialConditions)}</Field>
               </div>
             </TabsContent>
             
@@ -171,10 +170,36 @@ export default function ApplicationDetailsPage({ params }: { params: { id: strin
             {/* COMPETTION */}
             <TabsContent value="competition">
               <div className='space-y-6'>
+                <h2 className='font-bold text-lg'>
+                  Math Sprint
+                  <Separator />
+                </h2>
+                
                 <Field label='Have you participated in competitions before (Olympiads, national contests...) ?'>{renderText(booleanLabels[application?.hasPreviouslyParticipated])}</Field>
                 <Field label='If yes, please specify which ones and the achieved result.'>{renderText(application?.previousCompetitions)}</Field>
-                <Field label='Have you participated in MTYM 2023/2024 ?'>{renderText(booleanLabels[application?.hasPreviouslyParticipatedInMtym])}</Field>
-                <Separator className="my-6" />
+
+                <h2 className='font-bold text-lg'>
+                  Best Math Video
+                  <Separator />
+                </h2>
+                <Field label='Title'>{renderText(application?.videoTitle)}</Field>
+                <Field label='Link'>{renderText(application?.videoLink)}</Field>
+                <Field label='Subject'>{renderText(application?.videoSubject)}</Field>
+                <Field label='Motivations'>{renderText(application?.videoMotivations)}</Field>
+                <Field label='Ressources'>{renderText(application?.videoRessources)}</Field>
+
+                <h2 className='font-bold text-lg'>
+                  Stand
+                  <Separator />
+                </h2>
+                <Field label='Subject Title'>{renderText(application?.standSubjectTitle)}</Field>
+                <Field label='Subject Details'>{renderText(application?.standSubjectDetails)}</Field>
+                <Field label='Members'>{renderText(application?.standMembers)}</Field>
+
+                <h2 className='font-bold text-lg'>
+                  General
+                  <Separator />
+                </h2>
                 <Field label='Motivations'>{renderText(application?.motivations)}</Field>
                 <Field label='Comments'>{renderText(application?.comments)}</Field>
               </div>
