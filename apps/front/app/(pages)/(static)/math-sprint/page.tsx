@@ -1,6 +1,8 @@
 import CtaSection from "@/app/components/cta/cta-section"
 import DivCircuitBg from "@/app/components/div-circuit-bg"
 import { ImageStack } from "@/app/components/image-stack"
+import { ExamIcon } from "@mdm/ui";
+import Link from "next/link";
 
 const images = [
   {
@@ -61,7 +63,30 @@ export default function MathSprintPage() {
           <div className="w-full space-y-4 p-4">
             <p className='font-bold text-sm text-[#1C55FF]'>Le syllabus</p>
             <h1 className='font-bold text-3xl'>Quels sujets concernent l'épreuve ?</h1>
-            <p className="text-lg">Le syllabus qui concerne l&apos;épreuve de Math Sprint sera publié prochainement.</p>
+            
+            <div className="flex space-x-4">
+              <Link href='https://drive.google.com/file/d/1oG592RsHhdLEnlkb1ibhtdFTMp8JGcfR/view?usp=sharing' target="_blank">
+                <div 
+                  className="h-[8rem] w-[10rem] bg-white border-b-4 border-b-red-500 border-2 shadow-md flex justify-center items-center rounded-md py-2 hover:cursor-pointer"
+                > 
+                  <div className="flex flex-col items-center text-center">
+                    <span className="font-bold">Syllabus Collège</span>
+                    <ExamIcon className="h-[4rem]"/>
+                  </div>
+                </div>
+              </Link>
+
+              <Link href='https://drive.google.com/file/d/1NEpyPsLgbNPHhAJM-IIoV2wlQ8st0kWT/view?usp=sharing' target="_blank">
+                <div 
+                  className="h-[8rem] w-[9rem] bg-white border-b-4 border-b-red-500 border-2 shadow-md flex justify-center items-center rounded-md py-2 hover:cursor-pointer"
+                > 
+                  <div className="flex flex-col items-center text-center">
+                    <span className="font-bold">Syllabus Lycée</span>
+                    <ExamIcon className="h-[4rem]"/>
+                  </div>
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
 
