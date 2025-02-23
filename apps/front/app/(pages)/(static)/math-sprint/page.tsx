@@ -1,7 +1,7 @@
 import CtaSection from "@/app/components/cta/cta-section"
 import DivCircuitBg from "@/app/components/div-circuit-bg"
 import { ImageStack } from "@/app/components/image-stack"
-import { ExamIcon } from "@mdm/ui";
+import { DumbbellIcon, ExamIcon } from "@mdm/ui";
 import Link from "next/link";
 
 const images = [
@@ -64,10 +64,10 @@ export default function MathSprintPage() {
             <p className='font-bold text-sm text-[#1C55FF]'>Le syllabus</p>
             <h1 className='font-bold text-3xl'>Quels sujets concernent l'épreuve ?</h1>
             
-            <div className="flex space-x-4">
+            <div className="flex flex-col items-center space-y-4 md:flex-row md:space-x-4 md:space-y-0">
               <Link href='https://drive.google.com/file/d/1oG592RsHhdLEnlkb1ibhtdFTMp8JGcfR/view?usp=sharing' target="_blank">
                 <div 
-                  className="h-[8rem] w-[10rem] bg-white border-b-4 border-b-red-500 border-2 shadow-md flex justify-center items-center rounded-md py-2 hover:cursor-pointer"
+                  className="h-[8rem] w-[9rem] bg-white border-b-4 border-b-red-500 border-2 shadow-md flex justify-center items-center rounded-md hover:cursor-pointer"
                 > 
                   <div className="flex flex-col items-center text-center">
                     <span className="font-bold">Syllabus Collège</span>
@@ -78,11 +78,22 @@ export default function MathSprintPage() {
 
               <Link href='https://drive.google.com/file/d/1NEpyPsLgbNPHhAJM-IIoV2wlQ8st0kWT/view?usp=sharing' target="_blank">
                 <div 
-                  className="h-[8rem] w-[9rem] bg-white border-b-4 border-b-red-500 border-2 shadow-md flex justify-center items-center rounded-md py-2 hover:cursor-pointer"
+                  className="h-[8rem] w-[9rem] bg-white border-b-4 border-b-red-500 border-2 shadow-md flex justify-center items-center rounded-md hover:cursor-pointer"
                 > 
                   <div className="flex flex-col items-center text-center">
                     <span className="font-bold">Syllabus Lycée</span>
                     <ExamIcon className="h-[4rem]"/>
+                  </div>
+                </div>
+              </Link>
+
+              <Link href='https://www.mathraining.be/' target="_blank">
+                <div 
+                  className="h-[8rem] w-[9rem] bg-white border-b-4 border-b-red-500 border-2 shadow-md flex justify-center items-center rounded-md hover:cursor-pointer"
+                > 
+                  <div className="flex flex-col items-center text-center">
+                    <span className="font-bold">Entrainement</span>
+                    <DumbbellIcon className="h-[4rem]"/>
                   </div>
                 </div>
               </Link>
