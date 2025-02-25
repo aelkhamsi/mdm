@@ -1,14 +1,18 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { Workbook } from 'exceljs';
+import { ApplicationService } from 'src/modules/application/services/application.service';
 import * as tmp from 'tmp';
 import { ConfigService } from '@nestjs/config';
-import { columns, rowFactory, styleSheet } from '../config/applications.excel';
-import { UserService } from 'src/modules/user/services/user.service';
+import {
+  columns as applicationColumns,
+  rowFactory as applicationRowFactory,
+  styleSheet as styleApplicationsSheet,
+} from '../config/applications.excel';
 
 @Injectable()
 export class ExcelService {
   constructor(
-    private readonly userService: UserService,
+    private readonly applicationService: ApplicationService,
     private readonly configService: ConfigService,
   ) {}
 
@@ -17,16 +21,19 @@ export class ExcelService {
     const sheet = workbook.addWorksheet('applications');
 
     // colums
-    sheet.columns = columns;
+    sheet.columns = applicationColumns;
 
     // rows
-    const users = await this.userService.findAll();
-    const rows = rowFactory(users, this.configService).map(Object.values);
-
+    const rows = [];
+    const result = await this.applicationService.findAll();
+    const applications = applicationRowFactory(result, this.configService);
+    applications.forEach((application: any) => {
+      rows.push(Object.values(application));
+    });
     sheet.addRows(rows);
 
     // style
-    styleSheet(sheet);
+    styleApplicationsSheet(sheet);
 
     const file = await new Promise((resolve) => {
       tmp.file(

@@ -1,142 +1,158 @@
-import { User } from 'src/modules/user/entities/user.entity';
-import {
-  educationFieldLabels,
-  educationLevelLabels,
-  regionLabels,
-  relationshipWithGuardianLabels,
-} from '../labels';
+import { regionLabels } from '../labels';
 
 export const columns = [
-  { header: 'Application Id', key: 'application-id', width: 10 },
+  { header: 'Id', key: 'id', width: 5 },
   { header: 'First Name', key: 'first-name', width: 15 },
   { header: 'Last Name', key: 'last-name', width: 15 },
   { header: 'Email', key: 'email', width: 25 },
   { header: 'Date of Birth', key: 'dob', width: 15 },
   { header: 'CNIE', key: 'cnie', width: 12 },
+  // { header: 'Student Nº (Massar or CNE)', key: 'student-number', width: 12 },
   { header: 'City', key: 'city', width: 15 },
   { header: 'Region', key: 'region', width: 20 },
-  { header: 'Phone number', key: 'phone-number', width: 20 },
-  { header: 'Guardian Full Name', key: 'guardian-full-name', width: 25 },
-  { header: 'Guardian Phone Number', key: 'guardian-phone-number', width: 25 },
+  { header: 'Phone number', key: 'phone-number', width: 17 },
   {
-    header: 'Relationship With Guardian',
+    header: 'Guardian full name',
+    key: 'guardian-full-name',
+    width: 20,
+  },
+  {
+    header: 'Guardian phone number',
+    key: 'guardian-phone-number',
+    width: 20,
+  },
+  {
+    header: 'Relationship with Guardian',
     key: 'relationship-with-guardian',
     width: 20,
   },
-  { header: 'Special conditions', key: 'special conditions', width: 30 },
+  {
+    header: 'Activity Choices',
+    key: 'activity-choices',
+    width: 30,
+  },
+  // { header: 'Special Conditions', key: 'id', width: 20 },
 
-  { header: 'Education level', key: 'education-level', width: 25 },
-  { header: 'Education field', key: 'education-field', width: 25 },
-  { header: 'Highschool', key: 'highschool', width: 20 },
-  { header: 'Average grade', key: 'average-grade', width: 15 },
-  { header: 'Math Average grade', key: 'math-average-grade', width: 15 },
-  { header: 'Ranking', key: 'ranking', width: 15 },
-  { header: 'Math Ranking', key: 'math-ranking', width: 15 },
-  {
-    header: 'Number of students in class',
-    key: 'number-of-students',
-    width: 15,
-  },
+  // { header: 'Highschool', key: 'highschool', width: 15 },
+  // {
+  //   header: '[semestre] Moyenne générale',
+  //   key: 'semester-average-grade',
+  //   width: 15,
+  // },
+  // {
+  //   header: '[semestre] Moyenne en Mathématique',
+  //   key: 'semester-math-average-grade',
+  //   width: 15,
+  // },
+  // {
+  //   header: '[semestre] Classement général',
+  //   key: 'semester-ranking',
+  //   width: 15,
+  // },
+  // {
+  //   header: '[semestre] Classement en Mathématique',
+  //   key: 'semester-math-ranking',
+  //   width: 15,
+  // },
+  // {
+  //   header: '[examen] Moyenne générale',
+  //   key: 'examen-average-grade',
+  //   width: 15,
+  // },
+  // {
+  //   header: '[examen] Moyenne en Mathématique',
+  //   key: 'examen-math-average-grade',
+  //   width: 15,
+  // },
 
-  {
-    header: 'Have you participated in competitions before ?',
-    key: 'has-previously-participated',
-    width: 15,
-  },
-  { header: 'Achieved result', key: 'achieved-result', width: 20 },
-  {
-    header: 'Have you participated in MTYM before ?',
-    key: 'has-previously-participated-in-mmc',
-    width: 15,
-  },
-  { header: 'Motivations', key: 'id', width: 30 },
-  { header: 'Comments', key: 'id', width: 30 },
+  // { header: 'Motivations', key: 'id', width: 30 },
+  // {
+  //   header: 'Have you participated in competitions before ?',
+  //   key: 'has-previously-participated',
+  //   width: 15,
+  // },
+  // { header: 'Details of experience', key: 'details-of-experience', width: 20 },
+  // { header: 'Comments', key: 'id', width: 30 },
 
-  { header: 'CNIE', key: 'cnie', width: 10 },
-  { header: 'School certificate', key: 'school-certificate', width: 10 },
-  { header: 'Grades', key: 'grades', width: 10 },
-  { header: 'Regulations', key: 'regulations', width: 10 },
-  {
-    header: 'Parental authorization',
-    key: 'parental-authorization',
-    width: 10,
-  },
+  // { header: 'Identity document', key: 'identity-document', width: 10 },
+  // { header: 'School certificate', key: 'school-certificate', width: 10 },
+  // { header: 'Grades', key: 'grades', width: 10 },
+  // { header: 'Regulations', key: 'regulations', width: 10 },
+  // {
+  //   header: 'Parental authorization',
+  //   key: 'parental-authorization',
+  //   width: 10,
+  // },
+
   { header: 'Status', key: 'status', width: 15 },
 ];
 
-export const rowFactory = (users: any[], configService) => {
+export const rowFactory = (applications: any[], configService) => {
   const awsBucketName = configService.get('AWS_BUCKET_NAME');
   const awsBucketRegion = configService.get('AWS_BUCKET_REGION');
-  const mapGroup = (group: any[]) => {
-    const groupRows = [];
-    group.forEach((user: User) => {
-      const application = user?.application;
-      if (!application) return;
 
-      const userData = {
-        id: application?.id,
-        firstName: user?.firstName,
-        lastName: user?.lastName,
-        email: user?.email,
-        dateOfBirth: new Date(application?.dateOfBirth),
-        identityCardNumber: application?.identityCardNumber,
-        city: application?.city,
-        region: regionLabels[application?.region],
-        phoneNumber: application?.phoneNumber,
-        guardianFullName: application?.guardianFullName,
-        guardianPhoneNumber: application?.guardianPhoneNumber,
-        relationshipWithGuardian:
-          relationshipWithGuardianLabels[application?.relationshipWithGuardian],
+  return applications.map((application: any) => ({
+    id: application?.id,
+    firstName: application?.user?.firstName,
+    lastName: application?.user?.lastName,
+    email: application?.user?.email,
+    dateOfBirth: new Date(application?.dateOfBirth),
+    identityCardNumber: application?.identityCardNumber,
+    // studentNumber: application?.studentNumber,
+    city: application?.city,
+    region: regionLabels[application?.region],
+    phoneNumber: application?.phoneNumber,
+    guardianFullName: application?.guardianFullName,
+    guardianPhoneNumber: application?.guardianPhoneNumber,
+    relationshipWithGuardian: application?.relationshipWithGuardian,
 
-        educationLevel: educationLevelLabels[application?.educationLevel],
-        educationField: educationFieldLabels[application?.educationField],
-        highschool: application?.highschool,
-        averageGrade: application?.averageGrade,
-        mathAverageGrade: application?.mathAverageGrade,
-        ranking: application?.ranking,
-        mathRanking: application?.mathRanking,
-        numberOfStudentsInClass: application?.numberOfStudentsInClass,
+    activityChoices:
+      application?.activityChoices != '""'
+        ? JSON.parse(application?.activityChoices)?.join(';')
+        : '',
+    // specialConditions: application?.specialConditions,
 
-        hasPreviouslyParticipated: application?.hasPreviouslyParticipated,
-        previousCompetitions: application?.previousCompetitions,
-        motivations: application?.motivations,
-        comments: application?.comments,
+    // highschool: application?.highschool,
+    // semesterAverageGrade: application?.semesterAverageGrade,
+    // semesterMathAverageGrade: application?.semesterMathAverageGrade,
+    // semesterRanking: application?.semesterRanking,
+    // semesterMathRanking: application?.semesterMathRanking,
+    // finalsAverageGrade: application?.finalsAverageGrade,
+    // finalsMathAverageGrade: application?.finalsMathAverageGrade,
 
-        cnieUrl: {
-          text: 'link',
-          hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.fileCnieUrl}`,
-        },
-        gradesUrl: {
-          text: 'link',
-          hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.fileGradesUrl}`,
-        },
-        parentalAuthorizationUrl: {
-          text: 'link',
-          hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.fileParentalAuthorizationUrl}`,
-        },
+    // motivations: application?.motivations,
+    // hasPreviouslyParticipated: application?.hasPreviouslyParticipated,
+    // previousCompetitions: application?.previousCompetitions,
+    // comments: application?.comments,
 
-        status: application?.status?.status,
-      };
+    // cnieUrl: {
+    //   text: 'link',
+    //   hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.cnieUrl}`,
+    // },
+    // schoolCertificateUrl: {
+    //   text: 'link',
+    //   hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.schoolCertificateUrl}`,
+    // },
+    // gradesUrl: {
+    //   text: 'link',
+    //   hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.gradesUrl}`,
+    // },
+    // regulationsUrl: {
+    //   text: 'link',
+    //   hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.regulationsUrl}`,
+    // },
+    // parentalAuthorizationUrl: {
+    //   text: 'link',
+    //   hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.parentalAuthorizationUrl}`,
+    // },
 
-      groupRows.push(userData);
-    });
-
-    groupRows.push({});
-    return groupRows;
-  };
-
-  const rows = users.reduce((prev, current) => {
-    const groupRows = mapGroup(current);
-    prev.push(...groupRows);
-    return prev;
-  }, []);
-
-  return rows;
+    status: application?.status?.status,
+  }));
 };
 
 export const styleSheet = (sheet) => {
   // personal informations style
-  for (let i = 2; i <= 13; i++) {
+  for (let i = 2; i <= 14; i++) {
     sheet.getColumn(i).fill = {
       type: 'pattern',
       pattern: 'solid',
@@ -146,39 +162,39 @@ export const styleSheet = (sheet) => {
   }
 
   // education style
-  for (let i = 14; i <= 21; i++) {
-    sheet.getColumn(i).fill = {
-      type: 'pattern',
-      pattern: 'solid',
-      bgColor: { argb: 'E4FFDE' },
-      fgColor: { argb: 'E4FFDE' },
-    };
-  }
+  // for (let i = 15; i <= 21; i++) {
+  //   sheet.getColumn(i).fill = {
+  //     type: 'pattern',
+  //     pattern: 'solid',
+  //     bgColor: { argb: 'E4FFDE' },
+  //     fgColor: { argb: 'E4FFDE' },
+  //   };
+  // }
 
-  // competition style
-  for (let i = 22; i <= 26; i++) {
-    sheet.getColumn(i).fill = {
-      type: 'pattern',
-      pattern: 'solid',
-      bgColor: { argb: 'F8E3E6' },
-      fgColor: { argb: 'F8E3E6' },
-    };
-  }
+  // // competition style
+  // for (let i = 22; i <= 25; i++) {
+  //   sheet.getColumn(i).fill = {
+  //     type: 'pattern',
+  //     pattern: 'solid',
+  //     bgColor: { argb: 'F8E3E6' },
+  //     fgColor: { argb: 'F8E3E6' },
+  //   };
+  // }
 
-  // uploads style
-  for (let i = 27; i <= 32; i++) {
-    sheet.getColumn(i).fill = {
-      type: 'pattern',
-      pattern: 'solid',
-      bgColor: { argb: 'DAEAF6' },
-      fgColor: { argb: 'DAEAF6' },
-    };
+  // // uploads style
+  // for (let i = 26; i <= 30; i++) {
+  //   sheet.getColumn(i).fill = {
+  //     type: 'pattern',
+  //     pattern: 'solid',
+  //     bgColor: { argb: 'DAEAF6' },
+  //     fgColor: { argb: 'DAEAF6' },
+  //   };
 
-    sheet.getColumn(i).font = {
-      underline: true,
-      color: { argb: 'FF0000FF' },
-    };
-  }
+  //   sheet.getColumn(i).font = {
+  //     underline: true,
+  //     color: { argb: 'FF0000FF' },
+  //   };
+  // }
 
   // header style
   sheet.getRow(1).height = 70;
