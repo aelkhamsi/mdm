@@ -22,20 +22,30 @@ const links = [
   },
 ];
 
+const countApplications = (applications: any[], activityChoice?: ActivityChoiceValues) => {
+  return (applications||[])?.reduce(
+    (count: any[], application: any) => {
+      const activityChoices = JSON.parse(application?.activityChoices || '[]');
+      if (!activityChoice || activityChoices.includes(activityChoice)) {
+        count[0]++;
+        if (application?.status?.status === 'PENDING') {
+          count[1]++
+        }
+      }
+    
+      return count;
+    }, 
+    [0, 0]
+  );
+}
+
 export default function Home() {
   const applications = useRecoilValue(applicationsState);
-  const mathSprintNumbers = applications?.filter((application: any) =>
-    JSON.parse(application?.activityChoices).includes(ActivityChoiceValues.MATH_SPRINT)
-  ).length
-  const bestMathVideoNumbers = applications?.filter((application: any) =>
-    JSON.parse(application?.activityChoices).includes(ActivityChoiceValues.BEST_MATH_VIDEO)
-  ).length
-  const standNumbers = applications?.filter((application: any) =>
-    JSON.parse(application?.activityChoices).includes(ActivityChoiceValues.STAND)
-  ).length
-  const visitorNumbers = applications?.filter((application: any) =>
-    JSON.parse(application?.activityChoices).includes(ActivityChoiceValues.VISITOR)
-  ).length
+  const [countAll, countPending] = countApplications(applications)
+  const [mathSprintAll, mathSprintPending] = countApplications(applications, ActivityChoiceValues.MATH_SPRINT)
+  const [bestMathVideoAll, bestMathVideoPending] = countApplications(applications, ActivityChoiceValues.BEST_MATH_VIDEO)
+  const [standAll, standPending] = countApplications(applications, ActivityChoiceValues.STAND)
+  const [visitorAll, visitorPending] = countApplications(applications, ActivityChoiceValues.VISITOR)
 
   return (
     <>
@@ -49,10 +59,11 @@ export default function Home() {
       <HoverEffect items={links} className="flex justify-center gap-x-4"/>
 
       <div className="flex gap-x-4">
-        <Stats title={'Math Sprint'} value={mathSprintNumbers} />
-        <Stats title={'Best Math Video'} value={bestMathVideoNumbers} />
-        <Stats title={'Stand'} value={standNumbers} />
-        <Stats title={'Visitor'} value={visitorNumbers} />
+        <Stats title='General' className="text-white bg-[#272162]" valueAll={countAll} valuePending={countPending} />
+        <Stats title='🏁 Math Sprint' className="bg-gray-300" valueAll={mathSprintAll} valuePending={mathSprintPending} />
+        <Stats title='📽️ Best Math Video' className="bg-gray-300" valueAll={bestMathVideoAll} valuePending={bestMathVideoPending} />
+        <Stats title='🎤 Stand' className="bg-gray-300" valueAll={standAll} valuePending={standPending} />
+        <Stats title='🏖️ Visitor' className="bg-gray-300" valueAll={visitorAll} valuePending={visitorPending} />
       </div>
     </>
   )
