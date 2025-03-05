@@ -42,7 +42,7 @@ export const applicationSchema: ZodSchema = z.object({
   previousCompetitions: z.string().optional(),
 
   videoTitle: z.string().min(1).max(50),
-  videoLink: z.string().min(1).max(50),
+  videoLink: z.string().min(1).max(100),
   videoSubject: z.string().min(1).refine(async text => text.split(' ').length <= 300, { message: "Text can't be more than 300 words", }),
   videoMotivations: z.string().min(1).refine(async text => text.split(' ').length <= 300, { message: "Text can't be more than 300 words", }),
   videoRessources: z.string().min(1).refine(async text => text.split(' ').length <= 300, { message: "Text can't be more than 300 words", }),
