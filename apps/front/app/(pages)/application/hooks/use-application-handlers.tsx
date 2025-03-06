@@ -97,13 +97,7 @@ export const useApplicationHandlers = (
     }    
   }
 
-  const onError = async (errors: any) => {
-    toast({
-      title: "The form is invalid",
-      description: "Not all required fields have been filled in.",
-      variant: 'destructive',
-    })
-  }
+  const onError = async (errors: any) => {}
 
   return {
     onSubmit,
