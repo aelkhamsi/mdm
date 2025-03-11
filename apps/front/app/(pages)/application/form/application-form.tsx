@@ -46,6 +46,8 @@ export const ApplicationForm = ({
     onSave(form)
   }
 
+  console.log('application', user?.application)
+
   return (
     <section className='w-full inset-0 flex flex-col justify-between mt-6 mb-20'>
       {/* Header */}
