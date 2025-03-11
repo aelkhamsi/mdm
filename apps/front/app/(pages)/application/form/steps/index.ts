@@ -64,9 +64,14 @@ export const steps: Step[] = [
       const isAdult = isOverEighteen(formState?.dateOfBirth)
 
       return [
-        ...(isMathSprint ? ['fileCnie', 'fileGrades', ...(!isAdult ? ['fileParentalAuthorization'] : [])] : []),
-        ...(isBestMathVideo ? ['fileCnie', ...(!isAdult ? ['fileParentalAuthorization'] : [])] : []),
-        ...(isStand ? ['fileMembersCnie'] : []),
+        ...(isMathSprint ? [
+          !formState?.fileCnieUrl ? 'fileCnie' : '',
+          !formState?.fileGradesUrl ? 'fileGrades' : '', 
+          ...(!isAdult ? [!formState?.fileParentalAuthorizationUrl ? 'fileParentalAuthorization' : ''] : [])] : []),
+        ...(isBestMathVideo ? [
+          !formState?.fileCnieUrl ? 'fileCnie' : '', 
+          ...(!isAdult ? [!formState?.fileParentalAuthorizationUrl ? 'fileParentalAuthorization' : ''] : [])] : []),
+        ...(isStand ? [!formState?.fileMembersCnieUrl ? 'fileMembersCnie' : ''] : []),
       ]
     }
   },

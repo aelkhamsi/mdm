@@ -26,7 +26,7 @@ export const FileInput = ({
       onFileChange(fileField[0])
     } else if (fileUrl) {
       setLabel('Modifier le fichier')
-      setPlaceholder('Fichier Uploadé!')
+      setPlaceholder('✅ Fichier Uploadé!')
     } else {
       setLabel('Ajouter un fichier')
       setPlaceholder('Aucun fichier')

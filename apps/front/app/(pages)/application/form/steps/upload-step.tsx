@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { UseFormReturn } from 'react-hook-form'
+import { ControllerRenderProps, UseFormReturn } from 'react-hook-form'
 import { Input, Separator } from "@mdm/ui"
 import {
   FormControl,
@@ -23,14 +23,18 @@ export const UploadStep = ({
   form: UseFormReturn,
   delta: number
 }) => {
-  const {
-    isMathSprint,
-    isBestMathVideo,
-    isStand
-  } = useActivityChoice(form);
-  const {
-    isAdult
-  } = useAge(form)
+  const { isMathSprint, isBestMathVideo, isStand } = useActivityChoice(form);
+  const { isAdult } = useAge(form)
+  const initFileInput = (field: ControllerRenderProps, id: string) => {
+    if (field?.value && field?.value.length) {
+      const dataTransfer = new DataTransfer();
+      dataTransfer.items.add(field?.value[0]);
+      setTimeout(() => {
+        const fileInputElement = document.querySelector(`#${id}`) as HTMLInputElement;
+        fileInputElement.files = dataTransfer.files;
+      }, 300)
+    }
+  }
 
   return (
     <motion.div
@@ -64,14 +68,7 @@ export const UploadStep = ({
               control={form.control}
               name="fileCnie"
               render={({ field }) => {
-                if (field?.value && field?.value.length) {
-                  const dataTransfer = new DataTransfer();
-                  dataTransfer.items.add(field?.value[0]);
-                  setTimeout(() => {
-                    const fileInputElement = document.querySelector('#fileCnie') as HTMLInputElement;
-                    fileInputElement.files = dataTransfer.files;
-                  }, 300)
-                }
+                initFileInput(field, "fileCnie")
 
                 return (
                   <FormItem>
@@ -93,14 +90,7 @@ export const UploadStep = ({
               control={form.control}
               name="fileGrades"
               render={({ field }) => {
-                if (field?.value && field?.value.length) {
-                  const dataTransfer = new DataTransfer();
-                  dataTransfer.items.add(field?.value[0]);
-                  setTimeout(() => {
-                    const fileInputElement = document.querySelector('#fileGrades') as HTMLInputElement;
-                    fileInputElement.files = dataTransfer.files;
-                  }, 300)
-                }
+                initFileInput(field, "fileGrades")
 
                 return (
                   <FormItem>
@@ -123,14 +113,7 @@ export const UploadStep = ({
                 control={form.control}
                 name="fileParentalAuthorization"
                 render={({ field }) => {
-                  if (field?.value && field?.value.length) {
-                    const dataTransfer = new DataTransfer();
-                    dataTransfer.items.add(field?.value[0]);
-                    setTimeout(() => {
-                      const fileInputElement = document.querySelector('#fileParentalAuthorization') as HTMLInputElement;
-                      fileInputElement.files = dataTransfer.files;
-                    }, 300)
-                  }
+                  initFileInput(field, "fileParentalAuthorization")
 
                   return (
                     <FormItem>
@@ -166,14 +149,7 @@ export const UploadStep = ({
               control={form.control}
               name="fileCnie"
               render={({ field }) => {
-                if (field?.value && field?.value.length) {
-                  const dataTransfer = new DataTransfer();
-                  dataTransfer.items.add(field?.value[0]);
-                  setTimeout(() => {
-                    const fileInputElement = document.querySelector('#fileCnie') as HTMLInputElement;
-                    fileInputElement.files = dataTransfer.files;
-                  }, 300)
-                }
+                initFileInput(field, "fileCnie")
 
                 return (
                   <FormItem>
@@ -196,14 +172,7 @@ export const UploadStep = ({
                 control={form.control}
                 name="fileParentalAuthorization"
                 render={({ field }) => {
-                  if (field?.value && field?.value.length) {
-                    const dataTransfer = new DataTransfer();
-                    dataTransfer.items.add(field?.value[0]);
-                    setTimeout(() => {
-                      const fileInputElement = document.querySelector('#fileParentalAuthorization') as HTMLInputElement;
-                      fileInputElement.files = dataTransfer.files;
-                    }, 300)
-                  }
+                  initFileInput(field, "fileParentalAuthorization")
 
                   return (
                     <FormItem>
@@ -239,14 +208,7 @@ export const UploadStep = ({
               control={form.control}
               name="fileMembersCnie"
               render={({ field }) => {
-                if (field?.value && field?.value.length) {
-                  const dataTransfer = new DataTransfer();
-                  dataTransfer.items.add(field?.value[0]);
-                  setTimeout(() => {
-                    const fileInputElement = document.querySelector('#fileMembersCnie') as HTMLInputElement;
-                    fileInputElement.files = dataTransfer.files;
-                  }, 300)
-                }
+                initFileInput(field, "fileMembersCnie")
 
                 return (
                   <FormItem>
