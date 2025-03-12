@@ -44,7 +44,7 @@ export const useFileUpload = () => {
   }
 
   const updateApplicationFiles = async (
-    formData: any, 
+    formData: z.infer<typeof applicationSchema>, 
     files: (File|undefined)[], 
     user: User|undefined
   ) => {

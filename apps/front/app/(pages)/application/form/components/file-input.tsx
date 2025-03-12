@@ -19,10 +19,10 @@ export const FileInput = ({
 
   useEffect(() => {
     const formState = form.watch()
-    const fileField = formState[id]
-    const fileUrl = formState[`${id}Url`]
+    const fileField = formState?.[id]
+    const fileUrl = formState?.[`${id}Url`]
     
-    if (fileField.length) {
+    if (fileField?.length) {
       onFileChange(fileField[0])
     } else if (fileUrl) {
       setLabel('Modifier le fichier')
