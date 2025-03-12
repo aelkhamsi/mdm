@@ -62,11 +62,27 @@ export const steps: Step[] = [
       const isBestMathVideo = formState?.activityChoices?.find((choice: string) => choice === ActivityChoiceValues.BEST_MATH_VIDEO) ? true : false
       const isStand = formState?.activityChoices?.find((choice: string) => choice === ActivityChoiceValues.STAND) ? true : false
       const isAdult = isOverEighteen(formState?.dateOfBirth)
+      const isFileUploaded = (key: string) => !!formState?.[`${key}Url`]
+
+      const mathSprintFields = isMathSprint ? [
+        !isFileUploaded('fileCnie') ? 'fileCnie' : '',
+        !isFileUploaded('fileGrades') ? 'fileGrades' : '', 
+        ...(!isAdult ? [!isFileUploaded('fileParentalAuthorization') ? 'fileParentalAuthorization' : ''] : [])
+      ] : []
+      
+      const bestMathVideoFields = isBestMathVideo ? [
+        !isFileUploaded('fileCnie') ? 'fileCnie' : '', 
+        ...(!isAdult ? [!isFileUploaded('fileParentalAuthorization') ? 'fileParentalAuthorization' : ''] : [])
+      ] : []
+
+      const standFields = isStand ? [
+        !isFileUploaded('fileMembersCnie') ? 'fileMembersCnie' : ''
+      ] : []
 
       return [
-        ...(isMathSprint ? ['fileCnie', 'fileGrades', ...(!isAdult ? ['fileParentalAuthorization'] : [])] : []),
-        ...(isBestMathVideo ? ['fileCnie', ...(!isAdult ? ['fileParentalAuthorization'] : [])] : []),
-        ...(isStand ? ['fileMembersCnie'] : []),
+        ...mathSprintFields,
+        ...bestMathVideoFields,
+        ...standFields,
       ]
     }
   },

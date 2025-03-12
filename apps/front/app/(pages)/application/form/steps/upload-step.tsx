@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { UseFormReturn } from 'react-hook-form'
+import { ControllerRenderProps, UseFormReturn } from 'react-hook-form'
 import { Input, Separator } from "@mdm/ui"
 import {
   FormControl,
@@ -12,6 +12,7 @@ import {
 import Link from 'next/link';
 import { useActivityChoice } from '@/app/(pages)/application/hooks/use-activity-choices';
 import { useAge } from '@/app/(pages)/application/hooks/use-age';
+import { FileInput } from '../components/file-input';
 
 const RequiredAsterisk = () => <span className="text-red-500"> * </span>;
 
@@ -22,14 +23,18 @@ export const UploadStep = ({
   form: UseFormReturn,
   delta: number
 }) => {
-  const {
-    isMathSprint,
-    isBestMathVideo,
-    isStand
-  } = useActivityChoice(form);
-  const {
-    isAdult
-  } = useAge(form)
+  const { isMathSprint, isBestMathVideo, isStand } = useActivityChoice(form);
+  const { isAdult } = useAge(form)
+  const initFileInput = (field: ControllerRenderProps, id: string) => {
+    if (field?.value && field?.value.length) {
+      const dataTransfer = new DataTransfer();
+      dataTransfer.items.add(field?.value[0]);
+      setTimeout(() => {
+        const fileInputElement = document.querySelector(`#${id}`) as HTMLInputElement;
+        fileInputElement.files = dataTransfer.files;
+      }, 300)
+    }
+  }
 
   return (
     <motion.div
@@ -63,26 +68,13 @@ export const UploadStep = ({
               control={form.control}
               name="fileCnie"
               render={({ field }) => {
-                if (field?.value && field?.value.length) {
-                  const dataTransfer = new DataTransfer();
-                  dataTransfer.items.add(field?.value[0]);
-                  setTimeout(() => {
-                    const fileInputElement = document.querySelector('#fileCnie') as HTMLInputElement;
-                    fileInputElement.files = dataTransfer.files;
-                  }, 300)
-                }
+                initFileInput(field, "fileCnie")
 
                 return (
                   <FormItem>
                     <FormLabel>Justificatif d&apos;identité du participant avec photo (carte d&apos;identité, passeport…) <RequiredAsterisk /></FormLabel>
                     <FormControl>
-                    <Input
-                      {...form.register("fileCnie", {
-                        required: "Ce document est obligatoire",
-                      })}
-                      id="fileCnie"
-                      type="file"
-                    />
+                      <FileInput form={form} id="fileCnie" />
                     </FormControl>
                     <FormDescription>
                       <span className="text-blue-500">Remarque</span>: Le document doit de préference être la CNIE ou le passeport. Sinon, vous pouvez envoyer tout document contenant les informations de l&apos;élève avec sa photo; ou bien son acte de naissance accompagné de sa photo dans le même PDF.
@@ -98,27 +90,13 @@ export const UploadStep = ({
               control={form.control}
               name="fileGrades"
               render={({ field }) => {
-                if (field?.value && field?.value.length) {
-                  const dataTransfer = new DataTransfer();
-                  dataTransfer.items.add(field?.value[0]);
-                  setTimeout(() => {
-                    const fileInputElement = document.querySelector('#fileGrades') as HTMLInputElement;
-                    fileInputElement.files = dataTransfer.files;
-                  }, 300)
-                }
+                initFileInput(field, "fileGrades")
 
                 return (
                   <FormItem>
                     <FormLabel>Bulletin du premier semestre de l&apos;année scolaire courante 2024-2025<RequiredAsterisk /></FormLabel>
                     <FormControl>
-                      <Input
-                        {...form.register("fileGrades", {
-                          required: "Ce document est obligatoire",
-                        })}
-                        id="fileGrades"
-                        placeholder="id"
-                        type="file"
-                      />
+                      <FileInput form={form} id="fileGrades" />
                     </FormControl>
                     <FormDescription>
                       <span className="text-blue-500">Remarque</span>: votre bulletin sera utilisé pour vérifier les notes que vous avez fournies précédemment.
@@ -135,27 +113,13 @@ export const UploadStep = ({
                 control={form.control}
                 name="fileParentalAuthorization"
                 render={({ field }) => {
-                  if (field?.value && field?.value.length) {
-                    const dataTransfer = new DataTransfer();
-                    dataTransfer.items.add(field?.value[0]);
-                    setTimeout(() => {
-                      const fileInputElement = document.querySelector('#fileParentalAuthorization') as HTMLInputElement;
-                      fileInputElement.files = dataTransfer.files;
-                    }, 300)
-                  }
+                  initFileInput(field, "fileParentalAuthorization")
 
                   return (
                     <FormItem>
                       <FormLabel>Autorisation parentale signée et légalisée par le tuteur légal (<Link className="text-blue-500 underline" href='https://drive.google.com/file/d/15xD6J3oTd8pBoO5AS8BU-kOvJvvT77N1/view?usp=sharing' target="_blank">fichier</Link>)<RequiredAsterisk /></FormLabel>
                       <FormControl>
-                        <Input
-                          {...form.register("fileParentalAuthorization", {
-                            required: "Ce document est obligatoire",
-                          })}
-                          id="fileParentalAuthorization"
-                          placeholder="id"
-                          type="file"                    
-                        />
+                        <FileInput form={form} id="fileParentalAuthorization" />
                       </FormControl>
                       <FormDescription>
                           <span className="text-blue-500">Remarque</span>: il faut l&apos;imprimer, la signer à la main, la légaliser, puis la scanner; <span className="font-bold">la légalisation est obligatoire</span>.
@@ -185,26 +149,13 @@ export const UploadStep = ({
               control={form.control}
               name="fileCnie"
               render={({ field }) => {
-                if (field?.value && field?.value.length) {
-                  const dataTransfer = new DataTransfer();
-                  dataTransfer.items.add(field?.value[0]);
-                  setTimeout(() => {
-                    const fileInputElement = document.querySelector('#fileCnie') as HTMLInputElement;
-                    fileInputElement.files = dataTransfer.files;
-                  }, 300)
-                }
+                initFileInput(field, "fileCnie")
 
                 return (
                   <FormItem>
                     <FormLabel>Justificatif d&apos;identité du participant avec photo (carte d&apos;identité, passeport…) <RequiredAsterisk /></FormLabel>
                     <FormControl>
-                    <Input
-                      {...form.register("fileCnie", {
-                        required: "Ce document est obligatoire",
-                      })}
-                      id="fileCnie"
-                      type="file"
-                    />
+                      <FileInput form={form} id="fileCnie" />
                     </FormControl>
                     <FormDescription>
                       <span className="text-blue-500">Remarque</span>: Le document doit de préference être la CNIE ou le passeport. Sinon, vous pouvez envoyer tout document contenant les informations de l&apos;élève avec sa photo; ou bien son acte de naissance accompagné de sa photo dans le même PDF.
@@ -221,27 +172,13 @@ export const UploadStep = ({
                 control={form.control}
                 name="fileParentalAuthorization"
                 render={({ field }) => {
-                  if (field?.value && field?.value.length) {
-                    const dataTransfer = new DataTransfer();
-                    dataTransfer.items.add(field?.value[0]);
-                    setTimeout(() => {
-                      const fileInputElement = document.querySelector('#fileParentalAuthorization') as HTMLInputElement;
-                      fileInputElement.files = dataTransfer.files;
-                    }, 300)
-                  }
+                  initFileInput(field, "fileParentalAuthorization")
 
                   return (
                     <FormItem>
                       <FormLabel>Autorisation parentale signée et légalisée par le tuteur légal (<Link className="text-blue-500 underline" href='https://drive.google.com/file/d/15xD6J3oTd8pBoO5AS8BU-kOvJvvT77N1/view?usp=sharing' target="_blank">fichier</Link>)<RequiredAsterisk /></FormLabel>
                       <FormControl>
-                        <Input
-                          {...form.register("fileParentalAuthorization", {
-                            required: "Ce document est obligatoire",
-                          })}
-                          id="fileParentalAuthorization"
-                          placeholder="id"
-                          type="file"                    
-                        />
+                        <FileInput form={form} id="fileParentalAuthorization" />
                       </FormControl>
                       <FormDescription>
                           <span className="text-blue-500">Remarque</span>: il faut l&apos;imprimer, la signer à la main, la légaliser, puis le scanner; <span className="font-bold">la légalisation est obligatoire</span>.
@@ -271,26 +208,13 @@ export const UploadStep = ({
               control={form.control}
               name="fileMembersCnie"
               render={({ field }) => {
-                if (field?.value && field?.value.length) {
-                  const dataTransfer = new DataTransfer();
-                  dataTransfer.items.add(field?.value[0]);
-                  setTimeout(() => {
-                    const fileInputElement = document.querySelector('#fileMembersCnie') as HTMLInputElement;
-                    fileInputElement.files = dataTransfer.files;
-                  }, 300)
-                }
+                initFileInput(field, "fileMembersCnie")
 
                 return (
                   <FormItem>
                     <FormLabel>Justificatif d&apos;identité des participants (carte d&apos;identité, passeport…) <RequiredAsterisk /></FormLabel>
                     <FormControl>
-                    <Input
-                      {...form.register("fileMembersCnie", {
-                        required: "Ce document est obligatoire",
-                      })}
-                      id="fileMembersCnie"
-                      type="file"
-                    />
+                      <FileInput form={form} id="fileMembersCnie" />
                     </FormControl>
                     <FormDescription>
                       <span className="text-blue-500">Remarque</span>: Le document doit de préférence être la CNIE ou le passeport. Si l&apos;équipe se compose de plusieurs personnes, veuillez <span className="font-bold">fusionner tous les justificatifs d&apos;identité</span> des participants dans le même PDF.
