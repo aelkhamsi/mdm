@@ -36,14 +36,13 @@ export const useApplicationHandlers = (
         throw new Error(applicationResponse?.message ?? 'Post of application failed')
       }
 
-      const applicationId = applicationResponse?.id;
-
       // Upload files
       const files = getFiles(formData)
       await uploadFiles(files, user)
-      await updateApplicationFiles(applicationId, files, user)
+      await updateApplicationFiles(formData, files, user)
       
       // Update application status
+      const applicationId = applicationResponse?.id;
       await updateApplicationStatus(applicationId, { status: user?.application?.status?.status === 'NOTIFIED'
         ? 'UPDATED'
         : 'PENDING'

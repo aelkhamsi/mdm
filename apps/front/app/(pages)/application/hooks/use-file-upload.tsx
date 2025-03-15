@@ -44,17 +44,17 @@ export const useFileUpload = () => {
   }
 
   const updateApplicationFiles = async (
-    applicationId: number, 
+    formData: z.infer<typeof applicationSchema>, 
     files: (File|undefined)[], 
     user: User|undefined
   ) => {
     const uploadFolderName = getUploadFolderName(user?.firstName, user?.lastName);
 
-    await putApplication(applicationId, {
-      fileCnieUrl: files[0] ? `upload_mdm/${uploadFolderName}/${files[0].name}` : null,
-      fileMembersCnieUrl: files[1] ? `upload_mdm/${uploadFolderName}/${files[1].name}` : null,
-      fileGradesUrl: files[2] ? `upload_mdm/${uploadFolderName}/${files[2].name}` : null,
-      fileParentalAuthorizationUrl: files[3] ? `upload_mdm/${uploadFolderName}/${files[3].name}` : null,
+    await putApplication(formData?.id, {
+      fileCnieUrl: files[0] ? `upload_mdm/${uploadFolderName}/${files[0].name}` : (formData?.fileCnieUrl ?? null),
+      fileMembersCnieUrl: files[1] ? `upload_mdm/${uploadFolderName}/${files[1].name}` : (formData?.fileMembersCnieUrl ?? null),
+      fileGradesUrl: files[2] ? `upload_mdm/${uploadFolderName}/${files[2].name}` : (formData?.fileGradesUrl ?? null),
+      fileParentalAuthorizationUrl: files[3] ? `upload_mdm/${uploadFolderName}/${files[3].name}` : (formData?.fileParentalAuthorizationUrl ?? null),
     }) as any
   }
 
