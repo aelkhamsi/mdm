@@ -8,6 +8,12 @@ function validateToken(token: string) {
 
 export function middleware(req: NextRequest) {
   const token = req.cookies.get('access_token')?.value
+  
+  const isInMaintenanceMode = true
+  if (isInMaintenanceMode) {
+    req.nextUrl.pathname = `/maintenance`
+    return NextResponse.rewrite(req.nextUrl)
+  }
 
   if (!token) {
     req.cookies.delete('access_token')
@@ -22,5 +28,5 @@ export function middleware(req: NextRequest) {
 
 // See "Matching Paths" below to learn more
 export const config = {
-  matcher: ['/profile/:path*', '/application/:path*'],
+  // matcher: ['/profile/:path*', '/application/:path*'],
 }
