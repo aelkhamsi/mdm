@@ -3,12 +3,9 @@ import { Workbook } from 'exceljs';
 import { ApplicationService } from 'src/modules/application/services/application.service';
 import * as tmp from 'tmp';
 import { ConfigService } from '@nestjs/config';
-import {
-  columns as applicationColumns,
-  rowFactory as applicationRowFactory,
-  styleSheet as styleApplicationsSheet,
-} from '../config/applications.excel';
-
+import { rowFactory as applicationRowFactory } from '../config/applications.excel';
+import { styleSheet as styleApplicationsSheet } from '../config/style.excel';
+import { columns as applicationColumns } from '../config/columns.excel';
 @Injectable()
 export class ExcelService {
   constructor(
