@@ -19,15 +19,17 @@ const RequiredAsterisk = () => <span className="text-red-500"> * </span>;
 export const MotivationStep = ({
   form,
   delta,
+  applicationStatus
 }:{
   form: UseFormReturn,
-  delta: number
+  delta: number,
+  applicationStatus: string
 }) => {
   const {
     isMathSprint,
     isBestMathVideo,
     isStand
-  } = useActivityChoice(form);
+  } = useActivityChoice(form, applicationStatus);
   
   const { fields, append } = useFieldArray({
     name: "standMembers",
