@@ -19,11 +19,13 @@ const RequiredAsterisk = () => <span className="text-red-500"> * </span>;
 export const UploadStep = ({
   form,
   delta,
+  applicationStatus
 }:{
   form: UseFormReturn,
-  delta: number
+  delta: number,
+  applicationStatus: string
 }) => {
-  const { isMathSprint, isBestMathVideo, isStand } = useActivityChoice(form);
+  const { isMathSprint, isBestMathVideo, isStand } = useActivityChoice(form, applicationStatus);
   const { isAdult } = useAge(form)
   const initFileInput = (field: ControllerRenderProps, id: string) => {
     if (field?.value && field?.value.length) {

@@ -65,14 +65,16 @@ const RequiredAsterisk = () => <span className="text-red-500"> * </span>;
 export const EducationStep = ({
   form,
   delta,
+  applicationStatus
 }:{
   form: UseFormReturn,
-  delta: number
+  delta: number,
+  applicationStatus: string
 }) => {
   const {
     isMathSprint,
     isBestMathVideo,
-  } = useActivityChoice(form);
+  } = useActivityChoice(form, applicationStatus);
 
   return (
     <motion.div
