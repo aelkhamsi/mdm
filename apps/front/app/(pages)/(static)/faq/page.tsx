@@ -37,8 +37,8 @@ export default function ConferencesPage() {
               <TabsTrigger value="general" className="text-sm">Général</TabsTrigger>
               <TabsTrigger value="math_sprint">Math Sprint</TabsTrigger>
               <TabsTrigger value="best_math_video">Best Math Video</TabsTrigger>
-              {/* <TabsTrigger value="stand">Stand</TabsTrigger>
-              <TabsTrigger value="conferences">Conférences</TabsTrigger> */}
+              <TabsTrigger value="stand">Stand</TabsTrigger>
+              {/* <TabsTrigger value="conferences">Conférences</TabsTrigger> */}
             </TabsList>
 
             <div className="mt-18 md:mt-0">
@@ -54,11 +54,11 @@ export default function ConferencesPage() {
                 <FaqAccordion items={bestMathVideoQuestions} />
               </TabsContent>
 
-              {/* <TabsContent value="stand">
+              <TabsContent value="stand">
                 <FaqAccordion items={standQuestions} />
               </TabsContent>
 
-              <TabsContent value="conferences">
+              {/* <TabsContent value="conferences">
                 <FaqAccordion items={conferencesQuestions} />
               </TabsContent> */}
             </div>
