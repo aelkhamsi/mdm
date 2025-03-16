@@ -133,14 +133,42 @@ export const bestMathVideoQuestions = [
 ]
 
 export const standQuestions = [
-  // {
-  //   question: "Question 5",
-  //   anwser: "Anwser 5"
-  // },
-  // {
-  //   question: "Question 6",
-  //   anwser: "Anwser 6"
-  // },
+  {
+    question: "Comment puis-je m’inscrire pour tenir un stand ?",
+    anwser: "L’inscription se fait en ligne via le site web officiel du MDM  avant la date limite."
+  },
+  {
+    question: "Y a-t-il des frais d’inscription pour proposer un stand ?",
+    anwser: "Non, la participation est gratuite pour tous les animateurs souhaitant exposer leur stand."
+  },
+  {
+    question: "Quelle est la durée de l'exposition des stands ?",
+    anwser: "Les stands seront accessibles au public pendant une grande partie de la journée du MDM. L’objectif est de permettre aux visiteurs de circuler librement entre les stands pour en découvrir plusieurs."
+  },
+  {
+    question: "Puis-je présenter mon stand avec un groupe ?",
+    anwser: "Oui, il est possible d’animer un stand en équipe."
+  },
+  {
+    question: "Quel matériel sera mis à disposition pour les stands ?",
+    anwser: "Les organisateurs fourniront des modulaires (stands non personnalisés). Pour tout matériel supplémentaire (écrans, affiches, maquettes, etc.), les participants devront s’en occuper eux-mêmes."
+  },
+  {
+    question: "Puis-je proposer un stand si je suis un étudiant indépendant ?",
+    anwser: "Les stands sont principalement destinés aux clubs, associations et entreprises. Cependant, si vous avez un projet solide et une bonne capacité de vulgarisation, vous pouvez candidater pour étudier la faisabilité de votre participation."
+  },
+  {
+    question: "Que se passe-t-il si je dois annuler ma participation ?",
+    anwser: "Si vous ne pouvez plus participer, veuillez prévenir les organisateurs dès que possible pour libérer votre place et permettre à d’autres participants de s’inscrire."
+  },
+  {
+    question: "Les frais de transports seront-ils remboursés ?",
+    anwser: "Oui, pour deux personnes au maximum pour chaque stand. Les frais de trains."
+  },
+  {
+    question: "Le logement des animateurs et leur restauration seront t-ils assurés par Math&Maroc ?",
+    anwser: "Nous avons la capacité de loger deux à trois personnes par stand la nuit du 18 au 19 juin. La restauration est offerte à l’ensemble des animateurs pour le dîner du 18, le petit déjeuner et le déjeuner du 19. "
+  },
 ]
 
 export const conferencesQuestions = [
