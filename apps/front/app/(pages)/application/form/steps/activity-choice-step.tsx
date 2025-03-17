@@ -32,7 +32,7 @@ export const choices = [
     type: "Compétition",
     color: 'orange-700',
     target: 'Élèves primaire/collège/lycée',
-    disabled: false,
+    disabled: true,
   },
   {
     value: ActivityChoiceValues.STAND,
