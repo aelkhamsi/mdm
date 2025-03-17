@@ -27,6 +27,21 @@ const hosts = [
   }
 ]
 
+const sponsors = [
+  {
+    key: 'evasan',
+    label: 'EVASAN',
+    imageHref: '/evasan.png',
+    imageHeight: '45px',
+  },
+  {
+    key: 'evalmee',
+    label: 'EVALMEE',
+    imageHref: '/evalmee.png',
+    imageHeight: '45px',
+  }
+]
+
 export default function PartnersPage() {
   return (
     <DivCircuitBg classNameBgImage="opacity-50">
@@ -129,6 +144,56 @@ export default function PartnersPage() {
                     <div>Elle se distingue par son engagement envers l&apos;excellence académique et sa quête d&apos;innovation en recherche de pointe.</div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            {/* SPONSORS */}
+            <div>
+              <h1 
+                className="animate-fade-up opacity-0 text-center text-3xl font-bold drop-shadow-sm"
+                style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
+              >
+                <span className='bg-gradient-to-br from-sky-800 to-[#272162] inline-block text-transparent bg-clip-text'>Sponsors</span>
+              </h1>
+
+              <div
+                className="flex justify-around flex-wrap gap-6 p-8 rounded-lg animate-fade-up opacity-0"
+                style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
+              >
+                <div
+                  className="w-[16rem] md:h-[16rem] md:w-[34rem] bg-white shadow-lg border-b-4 border-red-500 md:flex justify-center items-center rounded-md"
+                  key={sponsors[1].key}
+                > 
+                  <div className="h-[8rem] w-[16rem] md:h-fit md:w-[18rem] flex justify-center items-center">
+                    <img
+                      src={sponsors[1].imageHref}
+                      style={{height: sponsors[1].imageHeight, width: 'auto'}}
+                    />
+                  </div>
+
+                  <div className="h-fit w-[16rem] p-4 md:w-[20rem] flex flex-col space-y-2">
+                    <div><span className='mb-8 bg-gradient-to-br from-[#7cb9ff] to-[#3691FB] text-transparent bg-clip-text font-semibold'>Evalmee</span> est une plateforme d&apos;évaluation en ligne offrant des outils précis et personnalisés pour dévoiler et perfectionner les compétences. Découvrez une approche dynamique pour révéler le potentiel caché et atteindre l&apos;excellence professionnelle.</div>
+                  </div>
+                </div>
+
+                <div
+                  className="w-[16rem] md:h-[16rem] md:w-[34rem] bg-white shadow-lg border-b-4 border-red-500 md:flex justify-center items-center rounded-md"
+                  key={sponsors[0].key}
+                > 
+                  <div className="h-[8rem] w-[16rem] md:h-fit md:w-[18rem] flex justify-center items-center">
+                    <img
+                      src={sponsors[0].imageHref}
+                      style={{height: sponsors[0].imageHeight, width: 'auto'}}
+                    />
+                  </div>
+
+                  <div className="h-fit w-[16rem] p-4 md:w-[20rem] flex flex-col space-y-2">
+                    <div><span className='mb-8 text-[#222e84] font-semibold'>Evasan</span> est un courtier en assurances suisse de renom, offrant des solutions sur mesure pour la santé, le voyage et les visas. Grâce à son expertise et à son service d'assistance 24h/24, il garantit à ses clients une protection fiable et de qualité.</div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
