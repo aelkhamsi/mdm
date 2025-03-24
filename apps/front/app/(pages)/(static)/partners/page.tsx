@@ -39,6 +39,12 @@ const sponsors = [
     label: 'EVALMEE',
     imageHref: '/evalmee.png',
     imageHeight: '45px',
+  },
+  {
+    key: 'managem',
+    label: 'MANAGEM',
+    imageHref: '/managem.png',
+    imageHeight: '90px',
   }
 ]
 
@@ -191,6 +197,22 @@ export default function PartnersPage() {
 
                   <div className="h-fit w-[16rem] p-4 md:w-[20rem] flex flex-col space-y-2">
                     <div><span className='mb-8 text-[#222e84] font-semibold'>Evasan</span> est un courtier en assurances suisse de renom, offrant des solutions sur mesure pour la santé, le voyage et les visas. Grâce à son expertise et à son service d'assistance 24h/24, il garantit à ses clients une protection fiable et de qualité.</div>
+                  </div>
+                </div>
+
+                <div
+                  className="w-[16rem] md:h-[16rem] md:w-[34rem] bg-white shadow-lg border-b-4 border-red-500 md:flex justify-center items-center rounded-md"
+                  key={sponsors[2].key}
+                > 
+                  <div className="h-[8rem] w-[16rem] md:h-fit md:w-[18rem] flex justify-center items-center">
+                    <img
+                      src={sponsors[2].imageHref}
+                      style={{height: sponsors[2].imageHeight, width: 'auto'}}
+                    />
+                  </div>
+
+                  <div className="h-fit w-[16rem] p-4 md:w-[20rem] flex flex-col space-y-2">
+                    <div><span className='mb-8 text-[#084981] font-semibold'>Managem</span> est un leader dans le secteur minier, alliant innovation et durabilité pour extraire et valoriser des ressources naturelles de manière durable. Son engagement envers l'excellence et l'environnement soutient le développement économique.</div>
                   </div>
                 </div>
 
