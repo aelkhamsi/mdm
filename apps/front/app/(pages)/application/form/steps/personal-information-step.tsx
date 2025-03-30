@@ -145,6 +145,7 @@ export const PersonalInformationStep = ({
                     onSelect={(value) => {
                       const _isAdult = isOverEighteen(value as Date)
                       setIsAdult(_isAdult)
+                      form.clearErrors('identityCardNumber')
                       if (_isAdult) {
                         form.setValue('guardianFullName', '')
                         form.setValue('guardianPhoneNumber', '')
@@ -167,7 +168,7 @@ export const PersonalInformationStep = ({
           name="identityCardNumber"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Numéro CNIE</FormLabel>
+              <FormLabel>Numéro CNIE{isAdult && <RequiredAsterisk />}</FormLabel>
               <FormControl>
                 <Input placeholder="CNIE Number" {...field} />
               </FormControl>

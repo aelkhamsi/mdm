@@ -14,9 +14,11 @@ export const steps: Step[] = [
     getFields: (formState: any) => {
       const dob = formState?.dateOfBirth
       const isAdult = isOverEighteen(dob)
+      console.log('isAdult', isAdult)
       return [
         ...(!isAdult ? ['guardianFullName', 'guardianPhoneNumber', 'relationshipWithGuardian'] : []),
-        ...['firstName', 'lastName', 'dateOfBirth', 'identityCardNumber', 'city', 'region', 'phoneNumber']
+        ...(isAdult ? ['identityCardNumber'] : []),
+        ...['firstName', 'lastName', 'dateOfBirth', 'city', 'region', 'phoneNumber']
       ]
     }
   },
