@@ -14,7 +14,6 @@ export const steps: Step[] = [
     getFields: (formState: any) => {
       const dob = formState?.dateOfBirth
       const isAdult = isOverEighteen(dob)
-      console.log('isAdult', isAdult)
       return [
         ...(!isAdult ? ['guardianFullName', 'guardianPhoneNumber', 'relationshipWithGuardian'] : []),
         ...(isAdult ? ['identityCardNumber'] : []),
@@ -63,6 +62,7 @@ export const steps: Step[] = [
       const isMathSprint = formState?.activityChoices?.find((choice: string) => choice === ActivityChoiceValues.MATH_SPRINT) ? true : false
       const isBestMathVideo = formState?.activityChoices?.find((choice: string) => choice === ActivityChoiceValues.BEST_MATH_VIDEO) ? true : false
       const isStand = formState?.activityChoices?.find((choice: string) => choice === ActivityChoiceValues.STAND) ? true : false
+      const isVisitor = formState?.activityChoices?.find((choice: string) => choice === ActivityChoiceValues.VISITOR) ? true : false
       const isAdult = isOverEighteen(formState?.dateOfBirth)
       const isFileUploaded = (key: string) => !!formState?.[`${key}Url`]
 
@@ -81,10 +81,15 @@ export const steps: Step[] = [
         !isFileUploaded('fileMembersCnie') ? 'fileMembersCnie' : ''
       ] : []
 
+      const visitorFields = isVisitor ? [
+        ...(!isAdult ? [!isFileUploaded('fileParentalAuthorization') ? 'fileParentalAuthorization' : ''] : [])
+      ] : []
+
       return [
         ...mathSprintFields,
         ...bestMathVideoFields,
         ...standFields,
+        ...visitorFields,
       ]
     }
   },

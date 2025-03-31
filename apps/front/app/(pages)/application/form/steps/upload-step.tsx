@@ -25,7 +25,7 @@ export const UploadStep = ({
   delta: number,
   applicationStatus: string
 }) => {
-  const { isMathSprint, isBestMathVideo, isStand } = useActivityChoice(form, applicationStatus);
+  const { isMathSprint, isBestMathVideo, isStand, isVisitor } = useActivityChoice(form, applicationStatus);
   const { isAdult } = useAge(form)
   const initFileInput = (field: ControllerRenderProps, id: string) => {
     if (field?.value && field?.value.length) {
@@ -229,6 +229,41 @@ export const UploadStep = ({
           </div>
         </>
       )}
+
+      {/* VISITOR */}
+      {isVisitor && !isMathSprint && !isBestMathVideo && !isAdult && (
+        <>
+          <h2 className='mt-6 text-sm font-semibold leading-5 text-black'>
+            <span className='text-2xl'>🏖️</span> Visiteur
+          </h2>
+          <Separator className='mt-1 bg-black'/>
+
+          <div className='mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 justify-between'>
+            {/* PARENTAL AUTHORIZATION */}
+            <FormField
+              control={form.control}
+              name="fileParentalAuthorization"
+              render={({ field }) => {
+                initFileInput(field, "fileParentalAuthorization")
+
+                return (
+                  <FormItem>
+                    <FormLabel>Autorisation parentale signée et légalisée par le tuteur légal (<Link className="text-blue-500 underline" href='https://drive.google.com/file/d/15xD6J3oTd8pBoO5AS8BU-kOvJvvT77N1/view?usp=sharing' target="_blank">fichier</Link>)<RequiredAsterisk /></FormLabel>
+                    <FormControl>
+                      <FileInput form={form} id="fileParentalAuthorization" />
+                    </FormControl>
+                    <FormDescription>
+                        <span className="text-blue-500">Remarque</span>: il faut l&apos;imprimer, la signer à la main, la légaliser, puis la scanner; <span className="font-bold">la légalisation est obligatoire</span>.
+                    </FormDescription>
+                    <FormMessage />
+                  </FormItem>
+                )
+              }}
+            />
+          </div>
+        </>
+      )
+      }
     </motion.div>
   )
 }
