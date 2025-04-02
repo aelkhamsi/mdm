@@ -1,4 +1,5 @@
 import DivCircuitBg from "@/app/components/div-circuit-bg"
+import PartnerCard from "./partner-card"
 
 const organizers = [
   {
@@ -29,15 +30,15 @@ const hosts = [
 
 const sponsors = [
   {
-    key: 'evasan',
-    label: 'EVASAN',
-    imageHref: '/evasan.png',
-    imageHeight: '45px',
-  },
-  {
     key: 'evalmee',
     label: 'EVALMEE',
     imageHref: '/evalmee.png',
+    imageHeight: '45px',
+  },
+  {
+    key: 'evasan',
+    label: 'EVASAN',
+    imageHref: '/evasan.png',
     imageHeight: '45px',
   },
   {
@@ -45,7 +46,13 @@ const sponsors = [
     label: 'MANAGEM',
     imageHref: '/managem.png',
     imageHeight: '90px',
-  }
+  },
+  {
+    key: 'sidi_ali',
+    label: 'SIDI ALI',
+    imageHref: '/sidi_ali.png',
+    imageHeight: '170px',
+  },
 ]
 
 export default function PartnersPage() {
@@ -67,23 +74,17 @@ export default function PartnersPage() {
                 className="flex justify-around flex-wrap gap-6 p-8 rounded-lg animate-fade-up opacity-0"
                 style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
               >
-                <div
-                  className="w-[16rem] md:h-[16rem] md:w-[34rem] bg-white shadow-lg border-b-4 border-red-500 md:flex justify-center items-center rounded-md"
+                <PartnerCard
                   key={organizers[0].key}
-                > 
-                  <div className="h-[8rem] w-[16rem] md:h-fit md:w-[18rem] flex justify-center items-center">
-                    <img
-                      src={organizers[0].imageHref}
-                      style={{height: organizers[0].imageHeight, width: 'auto'}}
-                    />
-                  </div>
-
-                  <div className="h-fit w-[16rem] p-4 md:w-[24rem] flex flex-col space-y-2 text-sm">
+                  imageSrc={organizers[0].imageHref}
+                  imageHeight={organizers[0].imageHeight}
+                >
+                  <div className="text-sm space-y-2">
                     <div><span className='mb-8 bg-gradient-to-br from-sky-500 to-[#272162] text-transparent bg-clip-text font-semibold'>Math&Maroc</span> est une association à but non lucratif créée en 2016 par de jeunes Marocains souhaitant redonner à la collectivité.</div>
                     <div><span className="font-bold">Notre mission</span> est de promouvoir les mathématiques et les sciences au Maroc, et ainsi guider les jeunes vers l&apos;excellence.</div>
                     <div><span className='mb-8 bg-gradient-to-br from-sky-500 to-[#272162] text-transparent bg-clip-text font-semibold'>Math&Maroc</span> organise <span className="font-bold">MDM</span> depuis sa première édition en avril 2024.</div>
                   </div>
-                </div>
+                </PartnerCard>
               </div>
             </div>
           </div>
@@ -102,22 +103,16 @@ export default function PartnersPage() {
                 className="flex justify-around flex-wrap gap-6 p-8 rounded-lg animate-fade-up opacity-0"
                 style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
               >
-                <div 
-                  className="w-[16rem] md:h-[16rem] md:w-[34rem] bg-white shadow-lg border-b-4 border-red-500 md:flex justify-center items-center rounded-md"
+                <PartnerCard
                   key={partners[0].key}
+                  imageSrc={partners[0].imageHref}
+                  imageHeight={partners[0].imageHeight}
                 >
-                  <div className="h-[8rem] w-[16rem] md:h-fit md:w-[18rem] flex justify-center items-center">
-                    <img
-                      src={partners[0].imageHref}
-                      style={{height: partners[0].imageHeight, width: 'auto'}}
-                    />
-                  </div>
-
-                  <div className="h-fit w-[16rem] p-4 md:w-[20rem] flex flex-col space-y-2 text-sm">
+                  <div className="text-sm space-y-2">
                     <div><span className='mb-8 bg-gradient-to-br from-stone-500 to-[#FC5C00] text-transparent bg-clip-text font-semibold'>Adria Business and Technology</span> est un expert dans l&apos;édition et l&apos;intégration des logiciels destinés aux institutions financières.</div>
                     <div>Il s&apos;agit du <span className="font-semibold">partenaire officiel</span> de <span className='mb-8 bg-gradient-to-br from-sky-500 to-[#272162] text-transparent bg-clip-text font-semibold'>Math&Maroc</span>, qui a permis à la majorité de nos événements de voir le jour.</div>
                   </div>
-                </div>
+                </PartnerCard>
               </div>
             </div>
 
@@ -134,22 +129,16 @@ export default function PartnersPage() {
                 className="flex justify-around flex-wrap gap-6 p-8 rounded-lg animate-fade-up opacity-0"
                 style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
               >
-                <div
-                  className="w-[16rem] md:h-[16rem] md:w-[34rem] bg-white shadow-lg border-b-4 border-red-500 md:flex justify-center items-center rounded-md"
+                <PartnerCard
                   key={hosts[0].key}
-                > 
-                  <div className="h-[8rem] w-[16rem] md:h-fit md:w-[18rem] flex justify-center items-center">
-                    <img
-                      src={hosts[0].imageHref}
-                      style={{height: hosts[0].imageHeight, width: 'auto'}}
-                    />
-                  </div>
-
-                  <div className="h-fit w-[16rem] p-4 md:w-[24rem] flex flex-col space-y-2 text-sm">
+                  imageSrc={hosts[0].imageHref}
+                  imageHeight={hosts[0].imageHeight}
+                >
+                  <div className="text-sm">
                     <div>L&apos;<span className='mb-8 bg-gradient-to-br from-[#005598] to-sky-600 text-transparent bg-clip-text font-semibold'>UEMF</span> est une institution d&apos;enseignement supérieur qui favorise l&apos;échange et la coopération internationale dans l&apos;espace <span className="font-bold">Europe-Méditerranée-Afrique</span>, réunissant plus de <span className="font-bold">32 nationalités</span>.</div>
                     <div>Elle se distingue par son engagement envers l&apos;excellence académique et sa quête d&apos;innovation en recherche de pointe.</div>
                   </div>
-                </div>
+                </PartnerCard>
               </div>
             </div>
           </div>
@@ -168,54 +157,38 @@ export default function PartnersPage() {
                 className="flex justify-around flex-wrap gap-6 p-8 rounded-lg animate-fade-up opacity-0"
                 style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
               >
-                <div
-                  className="w-[16rem] md:h-[16rem] md:w-[34rem] bg-white shadow-lg border-b-4 border-red-500 md:flex justify-center items-center rounded-md"
-                  key={sponsors[1].key}
-                > 
-                  <div className="h-[8rem] w-[16rem] md:h-fit md:w-[18rem] flex justify-center items-center">
-                    <img
-                      src={sponsors[1].imageHref}
-                      style={{height: sponsors[1].imageHeight, width: 'auto'}}
-                    />
-                  </div>
-
-                  <div className="h-fit w-[16rem] p-4 md:w-[20rem] flex flex-col space-y-2">
-                    <div><span className='mb-8 bg-gradient-to-br from-[#7cb9ff] to-[#3691FB] text-transparent bg-clip-text font-semibold'>Evalmee</span> est une plateforme d&apos;évaluation en ligne offrant des outils précis et personnalisés pour dévoiler et perfectionner les compétences. Découvrez une approche dynamique pour révéler le potentiel caché et atteindre l&apos;excellence professionnelle.</div>
-                  </div>
-                </div>
-
-                <div
-                  className="w-[16rem] md:h-[16rem] md:w-[34rem] bg-white shadow-lg border-b-4 border-red-500 md:flex justify-center items-center rounded-md"
+                <PartnerCard
                   key={sponsors[0].key}
-                > 
-                  <div className="h-[8rem] w-[16rem] md:h-fit md:w-[18rem] flex justify-center items-center">
-                    <img
-                      src={sponsors[0].imageHref}
-                      style={{height: sponsors[0].imageHeight, width: 'auto'}}
-                    />
-                  </div>
+                  imageSrc={sponsors[0].imageHref}
+                  imageHeight={sponsors[0].imageHeight}
+                >
+                  <div><span className='mb-8 bg-gradient-to-br from-[#7cb9ff] to-[#3691FB] text-transparent bg-clip-text font-semibold'>Evalmee</span> est une plateforme d&apos;évaluation en ligne offrant des outils précis et personnalisés pour dévoiler et perfectionner les compétences. Découvrez une approche dynamique pour révéler le potentiel caché et atteindre l&apos;excellence professionnelle.</div>
+                </PartnerCard>
 
-                  <div className="h-fit w-[16rem] p-4 md:w-[20rem] flex flex-col space-y-2">
-                    <div><span className='mb-8 text-[#222e84] font-semibold'>Evasan</span> est un courtier en assurances suisse de renom, offrant des solutions sur mesure pour la santé, le voyage et les visas. Grâce à son expertise et à son service d'assistance 24h/24, il garantit à ses clients une protection fiable et de qualité.</div>
-                  </div>
-                </div>
+                <PartnerCard
+                  key={sponsors[1].key}
+                  imageSrc={sponsors[1].imageHref}
+                  imageHeight={sponsors[1].imageHeight}
+                >
+                  <div><span className='mb-8 text-[#222e84] font-semibold'>Evasan</span> est un courtier en assurances suisse de renom, offrant des solutions sur mesure pour la santé, le voyage et les visas. Grâce à son expertise et à son service d'assistance 24h/24, il garantit à ses clients une protection fiable et de qualité.</div>
+                </PartnerCard>
 
-                <div
-                  className="w-[16rem] md:h-[16rem] md:w-[34rem] bg-white shadow-lg border-b-4 border-red-500 md:flex justify-center items-center rounded-md"
+
+                <PartnerCard
                   key={sponsors[2].key}
-                > 
-                  <div className="h-[8rem] w-[16rem] md:h-fit md:w-[18rem] flex justify-center items-center">
-                    <img
-                      src={sponsors[2].imageHref}
-                      style={{height: sponsors[2].imageHeight, width: 'auto'}}
-                    />
-                  </div>
+                  imageSrc={sponsors[2].imageHref}
+                  imageHeight={sponsors[2].imageHeight}
+                >
+                  <div><span className='mb-8 text-[#084981] font-semibold'>Managem</span> est un leader dans le secteur minier, alliant innovation et durabilité pour extraire et valoriser des ressources naturelles de manière durable. Son engagement envers l'excellence et l'environnement soutient le développement économique.</div>
+                </PartnerCard>
 
-                  <div className="h-fit w-[16rem] p-4 md:w-[20rem] flex flex-col space-y-2">
-                    <div><span className='mb-8 text-[#084981] font-semibold'>Managem</span> est un leader dans le secteur minier, alliant innovation et durabilité pour extraire et valoriser des ressources naturelles de manière durable. Son engagement envers l'excellence et l'environnement soutient le développement économique.</div>
-                  </div>
-                </div>
-
+                <PartnerCard
+                  key={sponsors[3].key}
+                  imageSrc={sponsors[3].imageHref}
+                  imageHeight={sponsors[3].imageHeight}
+                >
+                  <div><span className='mb-8 text-[#084981] font-semibold'>Sidi Ali</span> est une entreprise engagée à offrir une eau minérale naturelle d'une pureté exceptionnelle, puisée au cœur des montagnes marocaines. <br/>Elle s&apos;impose comme un leader emblématique alliant qualité, tradition et innovation.</div>
+                </PartnerCard>
               </div>
             </div>
           </div>
