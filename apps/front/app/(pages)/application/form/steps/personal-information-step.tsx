@@ -140,7 +140,7 @@ export const PersonalInformationStep = ({
                     mode="single"
                     captionLayout="dropdown" //Also: dropdown | buttons
                     fromYear={1970} 
-                    toYear={2015}
+                    toYear={2024}
                     selected={field.value}
                     onSelect={(value) => {
                       const _isAdult = isOverEighteen(value as Date)
