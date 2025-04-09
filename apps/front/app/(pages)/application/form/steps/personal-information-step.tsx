@@ -139,7 +139,7 @@ export const PersonalInformationStep = ({
                     initialFocus
                     mode="single"
                     captionLayout="dropdown" //Also: dropdown | buttons
-                    fromYear={1970} 
+                    fromYear={1920} 
                     toYear={2024}
                     selected={field.value}
                     onSelect={(value) => {
