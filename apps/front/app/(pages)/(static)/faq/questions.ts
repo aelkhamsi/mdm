@@ -9,7 +9,7 @@ export const generalQuestions = [
   },
   {
     question: "Quel est le délai d’inscription ?",
-    anwser: "La date limite pour les visiteurs est fixée au 10 avril 2025. Pour la participation aux compétitions ou à l'animation des stands, vous trouverez les dates limites sur leurs pages correspondantes. N'attendez pas jusqu'au dernier jour pour soumettre votre candidature. Aucune exception ne sera accordée pour les candidatures tardives, quelles que soient les raisons invoquées, telles que l'oubli, des problèmes de connexion internet ou toute autre excuse."
+    anwser: "La date limite pour les visiteurs est fixée au 17 avril 2025 à 20h. Pour la participation aux compétitions ou à l'animation des stands, vous trouverez les dates limites sur leurs pages correspondantes. N'attendez pas jusqu'au dernier jour pour soumettre votre candidature. Aucune exception ne sera accordée pour les candidatures tardives, quelles que soient les raisons invoquées, telles que l'oubli, des problèmes de connexion internet ou toute autre excuse."
   },
   {
     question: "Est-ce que la nourriture et le transport seront pris en charge ?",
