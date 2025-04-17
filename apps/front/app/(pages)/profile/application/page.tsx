@@ -52,13 +52,13 @@ export default function ApplicationPage() {
     if (!application) {
       setContent({
         title: "Vous n'avez pas soumis une candidature",
-        subtitle: "On attend votre candidature avec impatience! N'hésitez pas à en créer une.",
+        subtitle: "Merci pour l'intérêt que vous portez à MTYM! Malheureusement les inscriptions sont désormais closes. Néanmoins, restez à l'écoute pour ne pas manquer de futures opportunités.",
         ctaLabel: "Créer votre candidature",
       })
     } else if (applicationStatus === 'DRAFT') {
       setContent({
         title: "Vous avez sauvegardé un brouillon de candidature. Elle n'est pas encore soumise.",
-        subtitle: "On attend votre candidature avec impatience! Attention, Vous ne l'avez pas encore finalisé!",
+        subtitle: "Merci pour l'intérêt que vous portez à MTYM! Malheureusement les inscriptions sont désormais closes. Néanmoins, restez à l'écoute pour ne pas manquer de futures opportunités.",
         ctaLabel: "Continuer votre candidature",
       })
     } else {
@@ -92,15 +92,17 @@ export default function ApplicationPage() {
       </CardContent>
 
       
-      <CardFooter>
-        <Button
-          onClick={() => router.push('/application')}
-        >
-          {content?.ctaLabel}
-        </Button>
-      </CardFooter> 
+      {user?.application && user?.application?.status?.status !== 'DRAFT' &&
+        <CardFooter>
+          <Button
+            onClick={() => router.push('/application')}
+          >
+            {content?.ctaLabel}
+          </Button>
+        </CardFooter> 
+      }
     </Card>
-  );
+  )
 
   return (
     <div className="space-y-6">
