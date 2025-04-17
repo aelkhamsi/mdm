@@ -48,7 +48,7 @@ export const choices = [
     type: "Visite",
     color: 'green-700',
     target: 'Ouvert pour tous',
-    disabled: false,
+    disabled: true,
   },
 ] as const
 
