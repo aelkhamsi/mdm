@@ -3,7 +3,7 @@
 
 import { Separator } from "@mdm/ui"
 import { formatDate } from "@mdm/utils";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Card,
   CardContent,
