@@ -1,6 +1,8 @@
 import CtaSection from "@/app/components/cta/cta-section"
 import DivCircuitBg from "@/app/components/div-circuit-bg"
 import { ImageStack } from "@/app/components/image-stack"
+import PanelSection from "./panel-section"
+import ConferenceSection from "./conference-section"
 
 const images = [
   {
@@ -38,6 +40,10 @@ export default function ConferencesPage() {
             />
           </div>
         </div>
+
+        <PanelSection />
+
+        <ConferenceSection />
 
         <CtaSection />
       </div>
