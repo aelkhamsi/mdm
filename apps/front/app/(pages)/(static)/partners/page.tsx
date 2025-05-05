@@ -45,7 +45,7 @@ const sponsors = [
     key: 'managem',
     label: 'MANAGEM',
     imageHref: '/managem.png',
-    imageHeight: '90px',
+    imageHeight: '45px',
   },
   {
     key: 'sidi_ali',
