@@ -27,19 +27,3 @@ services:
     restart: always
     ports:
       - 8080:80
-
-  # Node.js API service
-  api:
-    image: node
-    container_name: mdm_api
-    restart: always
-    depends_on:
-      - db
-    ports:
-      - "9000:9000"
-    volumes:
-      - ".:/home/node/app"
-    environment:
-      - MYSQL_HOST=db
-    working_dir: /home/node/app
-    command: npm run start:dev

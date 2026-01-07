@@ -24,7 +24,7 @@ export const choices = [
     type: "Compétition",
     color: 'orange-700',
     target: 'Élèves collège/lycée',
-    disabled: true,
+    disabled: false,
   },
   {
     value: ActivityChoiceValues.BEST_MATH_VIDEO,
@@ -32,7 +32,7 @@ export const choices = [
     type: "Compétition",
     color: 'orange-700',
     target: 'Élèves primaire/collège/lycée',
-    disabled: true,
+    disabled: false,
   },
   {
     value: ActivityChoiceValues.STAND,
@@ -40,7 +40,7 @@ export const choices = [
     type: "Organisation",
     color: 'blue-700',
     target: 'Étudiants universitaires',
-    disabled: true,
+    disabled: false,
   },
   {
     value: ActivityChoiceValues.VISITOR,
@@ -48,7 +48,7 @@ export const choices = [
     type: "Visite",
     color: 'green-700',
     target: 'Ouvert pour tous',
-    disabled: true,
+    disabled: false,
   },
 ] as const
 
