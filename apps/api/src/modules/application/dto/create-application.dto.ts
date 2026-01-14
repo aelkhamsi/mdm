@@ -1,4 +1,5 @@
 import { IsOptional, IsString } from 'class-validator';
+import { ApplicationStatus } from '../entities/application.entity';
 
 export class CreateApplicationDto {
   /* Personal informations */
@@ -145,4 +146,8 @@ export class CreateApplicationDto {
   @IsString()
   @IsOptional()
   fileParentalAuthorizationUrl: string;
+
+  @IsString()
+  @IsOptional()
+  status: ApplicationStatus;
 }

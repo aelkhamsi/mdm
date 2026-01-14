@@ -21,8 +21,6 @@ import { RolesGuard } from 'src/guards/roles.guard';
 import { ADMIN_ROLE } from 'src/constants';
 import { Roles } from 'src/decorators/roles.decorator';
 import { UserService } from 'src/modules/user/services/user.service';
-import { ApplicationStatusService } from '../services/application-status.service';
-import { UpdateApplicationStatusDto } from '../dto/update-application-status.dto';
 import { SerializedUser } from 'src/modules/user/entities/serialized-user';
 
 @Controller('mdm-api/applications')
@@ -30,7 +28,6 @@ export class ApplicationController {
   constructor(
     private readonly applicationService: ApplicationService,
     private readonly userService: UserService,
-    private readonly applicationStatusService: ApplicationStatusService,
   ) {}
 
   @Get('user/:id')
@@ -97,14 +94,6 @@ export class ApplicationController {
         application?.id,
         createApplicationDto,
       );
-
-      const applicationStatus = application?.status;
-      if (applicationStatus && applicationStatus.status === 'NOTIFIED') {
-        this.applicationStatusService.update(applicationStatus?.id, {
-          ...applicationStatus,
-          status: 'UPDATED',
-        });
-      }
     } else {
       // create
       application = await this.applicationService.create(
@@ -139,41 +128,8 @@ export class ApplicationController {
       updateApplicationDto,
     );
 
-    const applicationStatus = application?.status;
-    if (applicationStatus && applicationStatus.status === 'NOTIFIED') {
-      this.applicationStatusService.update(applicationStatus?.id, {
-        ...applicationStatus,
-        status: 'UPDATED',
-      });
-    }
-
     return {
       id: id,
-      update: update,
-      statusCode: 200,
-    };
-  }
-
-  @Put('status/:applicationId')
-  @HttpCode(200)
-  async updateStatus(
-    @Param('applicationId', ParseIntPipe) applicationId: number,
-    @Body() updateApplicationStatusDto: UpdateApplicationStatusDto,
-  ) {
-    const application = await this.applicationService.findOneById(
-      applicationId,
-    );
-    if (!application) {
-      throw new NotFoundException();
-    }
-
-    const update = await this.applicationStatusService.update(
-      application.status?.id,
-      updateApplicationStatusDto,
-    );
-
-    return {
-      id: applicationId,
       update: update,
       statusCode: 200,
     };

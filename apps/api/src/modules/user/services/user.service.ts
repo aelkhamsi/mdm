@@ -22,7 +22,6 @@ export class UserService {
     return this.userRepository
       .createQueryBuilder('user')
       .leftJoinAndSelect('user.application', 'application')
-      .leftJoinAndSelect('application.status', 'status')
       .getMany();
   }
 
@@ -31,7 +30,6 @@ export class UserService {
       .createQueryBuilder('user')
       .where('user.id = :id', { id })
       .leftJoinAndSelect('user.application', 'application')
-      .leftJoinAndSelect('application.status', 'status')
       .getOne();
   }
 
@@ -40,7 +38,6 @@ export class UserService {
       .createQueryBuilder('user')
       .where('user.email = :email', { email })
       .leftJoinAndSelect('user.application', 'application')
-      .leftJoinAndSelect('application.status', 'status')
       .getOne();
   }
 

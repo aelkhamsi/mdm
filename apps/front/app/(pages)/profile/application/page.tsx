@@ -23,20 +23,8 @@ const getBadgeClassname = (status: string) => {
   switch(status) {
     case 'DRAFT':
       return 'bg-gray-300 text-black';
-    case 'PENDING':
-      return 'bg-[#FFE380] text-black';
-    case 'NOTIFIED':
-      return 'bg-[#79E2F2] text-black';
-    case 'UPDATED':
-      return 'bg-[#B3D4FF] text-black';
-    case 'VALIDATED':
-      return 'bg-[#79F2C0] text-black';
-    case 'ACCEPTED':
+    case 'COMPLETE':
       return 'bg-[#006644] text-white';
-    case 'REJECTED':
-      return 'bg-[#BF2600] text-white';
-    case 'WAITLIST':
-      return 'bg-[#403294] text-white';
   }
 }
 
@@ -44,6 +32,7 @@ export default function ApplicationPage() {
   const user = useAtomValue(userAtom)
   const [content, setContent] = useState<any>(undefined);
   const router = useRouter();
+  console.log('user', user)
   
   useEffect(() => {
     const application = user?.application;
@@ -86,7 +75,7 @@ export default function ApplicationPage() {
           <>
             <div className="text-sm"><span className="font-bold">Date de soumission</span>: {formatDate(user?.application?.createdAt)}</div>
             <div className="text-sm"><span className="font-bold">Date de sauvegarde</span>: {formatDate(user?.application?.updatedAt)}</div>
-            <div className="text-sm"><span className="font-bold">Status</span>: <Badge className={`px-4 ${getBadgeClassname(user?.application?.status?.status)}`}>{user?.application?.status?.status}</Badge></div>
+            <div className="text-sm"><span className="font-bold">Status</span>: <Badge className={`px-4 ${getBadgeClassname(user?.application?.status)}`}>{user?.application?.status}</Badge></div>
           </>
         }
       </CardContent>

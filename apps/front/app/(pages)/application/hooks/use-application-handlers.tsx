@@ -4,7 +4,7 @@ import { applicationSchema } from '@/app/schemas/application.schema';
 import { User } from '@mdm/types';
 import { useState } from 'react';
 import { toast } from "@mdm/ui";
-import { postApplication, updateApplicationStatus } from '@/app/api/ApplicationApi';
+import { postApplication, putApplication } from '@/app/api/ApplicationApi';
 import { excludeFileFields, serializeApplication } from '../serialization';
 import { useFileUpload } from './use-file-upload';
 import { UseFormReturn } from 'react-hook-form';
@@ -43,10 +43,7 @@ export const useApplicationHandlers = (
       
       // Update application status
       const applicationId = applicationResponse?.id;
-      await updateApplicationStatus(applicationId, { status: user?.application?.status?.status === 'NOTIFIED'
-        ? 'UPDATED'
-        : 'PENDING'
-      }) as any;
+      await putApplication(applicationId, { status: 'COMPLETE' }) as any;
 
       toast({
         title: 'Application created with success',

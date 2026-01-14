@@ -4,24 +4,17 @@ import { Application } from './entities/application.entity';
 import { ApplicationController } from './controllers/application.controller';
 import { ApplicationService } from './services/application.service';
 import { UserModule } from '../user/user.module';
-import { ApplicationStatus } from './entities/application-status.entity';
-import { ApplicationStatusService } from './services/application-status.service';
-import { applicationCommands } from './commands';
 @Module({
   imports: [
     UserModule,
-    TypeOrmModule.forFeature([Application, ApplicationStatus]),
+    TypeOrmModule.forFeature([Application]),
   ],
   controllers: [ApplicationController],
   providers: [
-    ApplicationService,
-    ApplicationStatusService,
-    ...applicationCommands,
+    ApplicationService
   ],
   exports: [
-    ApplicationService,
-    ApplicationStatusService,
-    ...applicationCommands,
+    ApplicationService
   ],
 })
 export class ApplicationModule {}

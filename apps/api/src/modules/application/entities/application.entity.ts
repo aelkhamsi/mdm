@@ -8,7 +8,10 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
-import { ApplicationStatus } from './application-status.entity';
+
+export type ApplicationStatus =
+  | 'DRAFT'
+  | 'COMPLETE';
 
 @Entity({ name: 'applications' })
 export class Application {
@@ -23,13 +26,6 @@ export class Application {
   @OneToOne(() => User, (user) => user.application)
   @JoinColumn()
   user: User;
-
-  @OneToOne(
-    () => ApplicationStatus,
-    (applicationStatus) => applicationStatus.application,
-  )
-  @JoinColumn()
-  status: ApplicationStatus;
 
   @Column({ type: 'varchar', default: '' })
   firstName: string;
@@ -144,6 +140,10 @@ export class Application {
 
   @Column({ type: 'varchar', nullable: true })
   fileParentalAuthorizationUrl: string;
+
+  /* Status */
+  @Column({ type: 'varchar', default: 'DRAFT'})
+  status: ApplicationStatus;
 
   /* createAt & updatedAt */
   @CreateDateColumn({
