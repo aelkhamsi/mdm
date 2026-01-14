@@ -7,9 +7,13 @@ const sidebarNavItems = [
     href: "/profile/account",
   },
   {
-    title: "Candidature",
+    title: "Candidature Individuelle",
     href: "/profile/application",
-  }
+  },
+  {
+    title: "Candidature de groupe",
+    href: "/profile/group-application",
+  },
 ]
 
 interface ProfileLayoutProps {
