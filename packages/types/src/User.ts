@@ -10,6 +10,8 @@ type User = {
   identifier: string;
 
   application: any;
+
+  groupApplication: any;
 }
 
 export default User;

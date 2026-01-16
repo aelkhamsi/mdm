@@ -1,4 +1,5 @@
 import { Application } from 'src/modules/application/entities/application.entity';
+import { GroupApplication } from 'src/modules/group-application/entities/group-application.entity';
 import {
   Column,
   CreateDateColumn,
@@ -51,6 +52,10 @@ export class User {
   @OneToOne(() => Application, (application) => application.user)
   @JoinColumn()
   application: Application;
+
+  @OneToOne(() => GroupApplication, (groupApplication) => groupApplication.user)
+  @JoinColumn()
+  groupApplication: GroupApplication;
 
   @CreateDateColumn({
     type: 'timestamp',

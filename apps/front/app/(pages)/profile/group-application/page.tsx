@@ -59,8 +59,8 @@ export default function GroupApplicationPage() {
   const router = useRouter();
   
   useEffect(() => {
-    const application = user?.application;
-    const applicationStatus = application?.status?.status;
+    const application = user?.groupApplication;
+    const applicationStatus = application?.status;
     const wording = groupApplicationWording[applicationStatus] ?? groupApplicationWording['EMPTY']
 
     setContent(wording)
@@ -74,7 +74,7 @@ export default function GroupApplicationPage() {
       </CardHeader>
 
       <CardContent>
-        {groupApplicationCardContent(user?.application)}
+        {groupApplicationCardContent(user?.groupApplication)}
       </CardContent>
 
       {content?.showCtaButton &&

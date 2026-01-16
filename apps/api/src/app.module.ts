@@ -5,6 +5,7 @@ import { UserModule } from './modules/user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AuthModule } from './modules/auth/auth.module';
 import { ApplicationModule } from './modules/application/application.module';
+import { GroupApplicationModule } from './modules/group-application/group-application.module';
 import { APP_GUARD } from '@nestjs/core';
 import { AuthGuard } from './guards/auth.guard';
 import { ConfigModule, ConfigService } from '@nestjs/config';
@@ -45,6 +46,7 @@ import { ExcelModule } from './modules/excel/excel.module';
     UserModule,
     AdminUserModule,
     ApplicationModule,
+    GroupApplicationModule,
     MediaModule,
     AuthModule,
     MailModule,
