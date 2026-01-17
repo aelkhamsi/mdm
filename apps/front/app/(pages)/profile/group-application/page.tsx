@@ -48,7 +48,7 @@ const groupApplicationCardContent = (groupApplication: any) => {
     <>
       <div className="text-sm"><span className="font-bold">Date de soumission</span>: {formatDate(groupApplication?.createdAt)}</div>
       <div className="text-sm"><span className="font-bold">Date de sauvegarde</span>: {formatDate(groupApplication?.updatedAt)}</div>
-      <div className="text-sm"><span className="font-bold">Status</span>: <Badge className={`px-4 ${getBadgeClassname(groupApplication?.status?.status)}`}>{groupApplication?.status?.status}</Badge></div>
+      <div className="text-sm"><span className="font-bold">Status</span>: <Badge className={`px-4 ${getBadgeClassname(groupApplication?.status?.status)}`}>{groupApplication?.status}</Badge></div>
     </>
   )
 }

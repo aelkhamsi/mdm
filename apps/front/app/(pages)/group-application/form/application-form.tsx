@@ -3,9 +3,9 @@
 import { useState } from "react"
 import { FormSteps } from "./header/form-steps"
 import { FormNavigation } from "./navigation/form-navigation"
-import { PersonalInformationStep, EducationStep, MotivationStep, UploadStep, ValidationStep } from "./steps"
+import { EstablishmentInformationStep, PersonalInformationStep, UploadStep, ValidationStep } from "./steps"
 import { useForm } from "react-hook-form"
-import { applicationSchema, getApplicationDefaultValues } from "@/app/schemas/application.schema"
+import { groupApplicationSchema, getGroupApplicationDefaultValues } from "@/app/schemas/group-application.schema"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { sanitizeApplication } from "@/app/lib/utils"
 import { z } from "zod"
@@ -15,8 +15,7 @@ import { LoadingDots } from "@mdm/ui"
 import { User } from "@mdm/types"
 import FormHeader from "./header/form-header"
 import FormErrorDialog from "./error/form-error-dialog"
-import { ActivityChoiceStep } from "./steps/activity-choice-step"
-import { useApplicationHandlers } from "@/app/(pages)/application/hooks/use-application-handlers"
+import { useApplicationHandlers } from "@/app/(pages)/group-application/hooks/use-application-handlers"
 
 export const ApplicationForm = ({
   user
@@ -26,11 +25,11 @@ export const ApplicationForm = ({
   const [previousStep, setPreviousStep] = useState(0)
   const [currentStep, setCurrentStep] = useState(0)
   const delta = currentStep - previousStep
-  const form = useForm<z.infer<typeof applicationSchema>>({
-    resolver: zodResolver(applicationSchema),
-    defaultValues: user?.application 
-      ? {...sanitizeApplication(user?.application), firstName: user?.firstName, lastName: user?.lastName} 
-      : getApplicationDefaultValues(user),
+  const form = useForm<z.infer<typeof groupApplicationSchema>>({
+    resolver: zodResolver(groupApplicationSchema),
+    defaultValues: user?.groupApplication 
+      ? {...sanitizeApplication(user?.groupApplication), firstName: user?.firstName, lastName: user?.lastName} 
+      : getGroupApplicationDefaultValues(user),
     mode: "onChange",
   })
   const {
@@ -71,27 +70,19 @@ export const ApplicationForm = ({
           )}
 
           {currentStep === 1 && (
-            <ActivityChoiceStep form={form} delta={delta} applicationStatus={user?.application?.status?.status}/>
+            <EstablishmentInformationStep form={form} delta={delta} applicationStatus={user?.groupApplication?.status}/>
           )}
 
           {currentStep === 2 && (
-            <EducationStep form={form} delta={delta} applicationStatus={user?.application?.status?.status}/>
+            <UploadStep form={form} delta={delta} applicationStatus={user?.groupApplication?.status}/>
           )}
 
           {currentStep === 3 && (
-            <MotivationStep form={form} delta={delta} applicationStatus={user?.application?.status?.status}/>
-          )}
-
-          {currentStep === 4 && (
-            <UploadStep form={form} delta={delta} applicationStatus={user?.application?.status?.status}/>
-          )}
-
-          {currentStep === 5 && (
             <ValidationStep form={form} delta={delta} />
           )}
 
           {/* Submit Button */}
-          {currentStep === 5 && (
+          {currentStep === 3 && (
             <div className='mt-20 text-center'> 
               <Button type="submit" onClick={() => onSubmit(form.watch())}>
                 {isFormLoading ? (

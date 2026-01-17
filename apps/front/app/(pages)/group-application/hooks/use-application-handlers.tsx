@@ -1,10 +1,10 @@
 
 import { z } from 'zod';
-import { applicationSchema } from '@/app/schemas/application.schema';
+import { groupApplicationSchema } from '@/app/schemas/group-application.schema';
 import { User } from '@mdm/types';
 import { useState } from 'react';
 import { toast } from "@mdm/ui";
-import { postApplication, updateApplicationStatus } from '@/app/api/ApplicationApi';
+import { postGroupApplication, putGroupApplication } from '@/app/api/GroupApplicationApi';
 import { excludeFileFields, serializeApplication } from '../serialization';
 import { useFileUpload } from './use-file-upload';
 import { UseFormReturn } from 'react-hook-form';
@@ -23,12 +23,12 @@ export const useApplicationHandlers = (
     updateApplicationFiles,
   } = useFileUpload()
 
-  const onSubmit = async (formData: z.infer<typeof applicationSchema>) => {
+  const onSubmit = async (formData: z.infer<typeof groupApplicationSchema>) => {
     setIsFormLoading(true);
 
     try {
       // Post application
-      const applicationResponse = await postApplication(
+      const applicationResponse = await postGroupApplication(
         excludeFileFields(serializeApplication(formData))
       ) as any
 
@@ -43,17 +43,14 @@ export const useApplicationHandlers = (
       
       // Update application status
       const applicationId = applicationResponse?.id;
-      await updateApplicationStatus(applicationId, { status: user?.application?.status?.status === 'NOTIFIED'
-        ? 'UPDATED'
-        : 'PENDING'
-      }) as any;
+      await putGroupApplication(applicationId, { status: 'COMPLETE' }) as any;
 
       toast({
         title: 'Application created with success',
         description: 'You can access your current application in your profile page',
       });
 
-      router.push('/profile/application')
+      router.push('/profile/group-application')
       setTimeout(() => {
         window.location.reload();
       }, 1000)
@@ -73,7 +70,7 @@ export const useApplicationHandlers = (
     const application = form.watch()
 
     try {
-      const applicationResponse = await postApplication(
+      const applicationResponse = await postGroupApplication(
         excludeFileFields(serializeApplication(application))
       ) as any;
 
@@ -86,7 +83,7 @@ export const useApplicationHandlers = (
         description: 'You can access your current application in your profile page',
       });
       
-      router.push('/profile/application')
+      router.push('/profile/group-application')
       setTimeout(() => {
         window.location.reload();
       }, 1000)

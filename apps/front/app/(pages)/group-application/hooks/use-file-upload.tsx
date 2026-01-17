@@ -1,13 +1,13 @@
 import { z } from 'zod'
-import { applicationSchema } from "@/app/schemas/application.schema"
+import { groupApplicationSchema } from "@/app/schemas/group-application.schema"
 import { computeSHA256, generateFileName, getUploadFolderName } from '@/app/lib/utils';
 import { User } from '@mdm/types';
 import { getSignedURL, uploadFile } from '@/app/api/MediaApi';
-import { putApplication } from '@/app/api/ApplicationApi';
+import { putGroupApplication } from '@/app/api/GroupApplicationApi';
 
 export const useFileUpload = () => {
   const getFiles = (
-    formData: z.infer<typeof applicationSchema>
+    formData: z.infer<typeof groupApplicationSchema>
   ) => {
     const { fileCnie, fileMembersCnie, fileGrades, fileParentalAuthorization } = formData;
     const uploadFileNames = ['cnie', 'members_cnie', 'grades', 'parental_authorization']
@@ -44,13 +44,13 @@ export const useFileUpload = () => {
   }
 
   const updateApplicationFiles = async (
-    formData: z.infer<typeof applicationSchema>, 
+    formData: z.infer<typeof groupApplicationSchema>, 
     files: (File|undefined)[], 
     user: User|undefined
   ) => {
     const uploadFolderName = getUploadFolderName(user?.firstName, user?.lastName);
 
-    await putApplication(formData?.id, {
+    await putGroupApplication(formData?.id, {
       fileCnieUrl: files[0] ? `upload_mdm/${uploadFolderName}/${files[0].name}` : (formData?.fileCnieUrl ?? null),
       fileMembersCnieUrl: files[1] ? `upload_mdm/${uploadFolderName}/${files[1].name}` : (formData?.fileMembersCnieUrl ?? null),
       fileGradesUrl: files[2] ? `upload_mdm/${uploadFolderName}/${files[2].name}` : (formData?.fileGradesUrl ?? null),
