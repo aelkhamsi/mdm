@@ -13,7 +13,7 @@ const HeroSection = () => {
       classNameBgImage='opacity-70'
     > 
       {/* Hero Section */}
-      <div className="w-full flex flex-col items-center max-w-xl space-y-10">
+      <div className="w-full flex flex-col items-center max-w-2xl space-y-10">
         {/* Logo */}
         <div 
           className="animate-fade-up opacity-0 z-10 p-4 md:p-0"
@@ -48,7 +48,7 @@ const HeroSection = () => {
         </div>
 
         <div
-          className="flex flex-col items-center justify-between w-full space-y-4 md:flex-row md:space-y-0 animate-fade-up opacity-0 "
+          className="flex flex-col items-center justify-around w-full space-y-4 md:flex-row md:space-y-0 animate-fade-up opacity-0"
           style={{ animationDelay: "0.35s", animationFillMode: "forwards" }}
         >
           <div className='flex items-center space-x-4'>
@@ -83,6 +83,12 @@ const HeroSection = () => {
                 className="h-full w-auto filter grayscale brightness-50 contrast-125 hover:grayscale-0 hover:brightness-100 hover:contrast-100"
               />
             </Link>
+          </div>
+          
+          <div className="flex space-x-4 items-center">
+            <p className='text-sm text-gray-500'>
+              Hosted by
+            </p>
 
             <Link className="h-5 flex items-center bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#E5FF52]/[.15] via-transparent to-transparent" href="/partners">
               <Image
