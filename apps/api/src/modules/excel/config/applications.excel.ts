@@ -38,11 +38,6 @@ export const rowFactory = (applications: any[], configService) => {
 
     hasPreviouslyParticipated: application?.hasPreviouslyParticipated,
     previousCompetitions: application?.previousCompetitions,
-    videoTitle: application?.videoTitle,
-    videoLink: application?.videoLink,
-    videoSubject: application?.videoSubject,
-    videoMotivations: application?.videoMotivations,
-    videoRessources: application?.videoRessources,
     standSubjectTitle: application?.standSubjectTitle,
     standSubjectDetails: application?.standSubjectDetails,
     standMembers:

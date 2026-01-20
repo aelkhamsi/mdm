@@ -73,7 +73,6 @@ export const EducationStep = ({
 }) => {
   const {
     isMathSprint,
-    isBestMathVideo,
   } = useActivityChoice(form, applicationStatus);
 
   return (
@@ -87,7 +86,7 @@ export const EducationStep = ({
       </h2>
       <Separator className='my-6 bg-[#0284C7]'/>
 
-      {(isMathSprint || isBestMathVideo) && (
+      {isMathSprint && (
         <div className='mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 justify-between'>
           {/* Education Level */}
           <FormField

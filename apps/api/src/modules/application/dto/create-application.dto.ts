@@ -92,26 +92,6 @@ export class CreateApplicationDto {
 
   @IsString()
   @IsOptional()
-  videoTitle: string;
-
-  @IsString()
-  @IsOptional()
-  videoLink: string;
-
-  @IsString()
-  @IsOptional()
-  videoSubject: string;
-
-  @IsString()
-  @IsOptional()
-  videoMotivations: string;
-
-  @IsString()
-  @IsOptional()
-  videoRessources: string;
-
-  @IsString()
-  @IsOptional()
   standSubjectTitle: string;
 
   @IsString()

@@ -27,7 +27,6 @@ export const MotivationStep = ({
 }) => {
   const {
     isMathSprint,
-    isBestMathVideo,
     isStand
   } = useActivityChoice(form, applicationStatus);
   
@@ -130,105 +129,6 @@ export const MotivationStep = ({
         </>
       )}
 
-      {/* BEST MATH VIDEO */}
-      {isBestMathVideo && (
-        <>
-          <h2 className='mt-6 text-sm font-semibold leading-5 text-black'>
-            <span className='text-2xl'>📽️</span> Best Math Video
-          </h2>
-          <Separator className='mt-1 bg-black'/>
-
-          <div className='mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 justify-between'>
-            {/* Video Title */}
-            <FormField
-              control={form.control}
-              name="videoTitle"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Titre de la vidéo<RequiredAsterisk /></FormLabel>
-                  <FormControl>
-                    <Input placeholder="Entrez le titre de la vidéo" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            {/* Video Link */}
-            <FormField
-              control={form.control}
-              name="videoLink"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Lien de la vidéo<RequiredAsterisk /></FormLabel>
-                  <FormControl>
-                    <Input placeholder="Entrez le lien vers la vidéo" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            {/* Video Subject */}
-            <FormField
-              control={form.control}
-              name="videoSubject"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Parlez-nous brièvement du sujet que vous allez aborder <RequiredAsterisk /></FormLabel>
-                  <FormControl>
-                  <Textarea
-                    placeholder="Max 300 mots"
-                    className="resize-none"
-                    {...field}
-                  />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            {/* Video Motivations */}
-            <FormField
-              control={form.control}
-              name="videoMotivations"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Pourquoi avez-vous choisi ce sujet? <RequiredAsterisk /></FormLabel>
-                  <FormControl>
-                  <Textarea
-                    placeholder="Max 300 mots"
-                    className="resize-none"
-                    {...field}
-                  />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            {/* Video Ressources */}
-            <FormField
-              control={form.control}
-              name="videoRessources"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Citez les ressources que vous avez utilisées {'('}sites web, articles, logiciels, IA...{')'} <RequiredAsterisk /></FormLabel>
-                  <FormControl>
-                  <Textarea
-                    placeholder="Max 300 mots"
-                    className="resize-none"
-                    {...field}
-                  />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-        </>
-      )}
-
       {/* STAND */}
       {isStand && (
         <>
@@ -316,7 +216,7 @@ export const MotivationStep = ({
       )}
 
       {/* MOTIVATIONS */}
-      {(isMathSprint || isBestMathVideo || isStand) && (
+      {(isMathSprint || isStand) && (
         <>
           <h2 className='mt-6 text-sm font-semibold leading-5 text-black'>
             <span className='text-2xl'>🚀</span> Motivations

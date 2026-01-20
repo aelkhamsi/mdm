@@ -12,7 +12,6 @@ import { Checkbox } from '@mdm/ui'
 
 export enum ActivityChoiceValues {
   MATH_SPRINT = 'math_sprint',
-  BEST_MATH_VIDEO = 'best_math_video',
   STAND = 'stand',
   VISITOR = 'visitor'
 }
@@ -24,14 +23,6 @@ export const choices = [
     type: "Compétition",
     color: 'orange-700',
     target: 'Élèves collège/lycée',
-    disabled: false,
-  },
-  {
-    value: ActivityChoiceValues.BEST_MATH_VIDEO,
-    label: "📽️ Best mathematical video",
-    type: "Compétition",
-    color: 'orange-700',
-    target: 'Élèves primaire/collège/lycée',
     disabled: false,
   },
   {

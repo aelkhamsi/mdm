@@ -4,12 +4,10 @@ import { ActivityChoiceValues, choices } from '../form/steps/activity-choice-ste
 
 export const useActivityChoice = (form: UseFormReturn, applicationStatus: string) => {
   const [isMathSprint, setIsMathSprint] = useState<boolean>()
-  const [isBestMathVideo, setIsBestMathVideo] = useState<boolean>()
   const [isStand, setIsStand] = useState<boolean>()
   const [isVisitor, setVisitor] = useState<boolean>()
 
   const isMathSprintDisabled = choices?.find(choice => choice.value === ActivityChoiceValues.MATH_SPRINT)?.disabled
-  const isBestMathVideoDisabled = choices?.find(choice => choice.value === ActivityChoiceValues.BEST_MATH_VIDEO)?.disabled
   const isStandDisabled = choices?.find(choice => choice.value === ActivityChoiceValues.STAND)?.disabled
   const isVisitorDisabled = choices?.find(choice => choice.value === ActivityChoiceValues.VISITOR)?.disabled
 
@@ -25,9 +23,6 @@ export const useActivityChoice = (form: UseFormReturn, applicationStatus: string
     setIsMathSprint(
       getActivityState(activityChoices, ActivityChoiceValues.MATH_SPRINT, isMathSprintDisabled)
     )
-    setIsBestMathVideo(
-      getActivityState(activityChoices, ActivityChoiceValues.BEST_MATH_VIDEO, isBestMathVideoDisabled)
-    )
     setIsStand(
       getActivityState(activityChoices, ActivityChoiceValues.STAND, isStandDisabled)
     )
@@ -38,7 +33,6 @@ export const useActivityChoice = (form: UseFormReturn, applicationStatus: string
 
   return {
     isMathSprint,
-    isBestMathVideo,
     isStand,
     isVisitor,
   }

@@ -9,9 +9,7 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-export type ApplicationStatus =
-  | 'DRAFT'
-  | 'COMPLETE';
+export type ApplicationStatus = 'DRAFT' | 'COMPLETE';
 
 @Entity({ name: 'applications' })
 export class Application {
@@ -95,22 +93,6 @@ export class Application {
   @Column({ type: 'text', nullable: true })
   previousCompetitions: string;
 
-  // -> Best math video
-  @Column({ type: 'varchar', default: '' })
-  videoTitle: string;
-
-  @Column({ type: 'varchar', default: '' })
-  videoLink: string;
-
-  @Column({ type: 'text', nullable: true })
-  videoSubject: string;
-
-  @Column({ type: 'text', nullable: true })
-  videoMotivations: string;
-
-  @Column({ type: 'text', nullable: true })
-  videoRessources: string;
-
   // -> Stand
   @Column({ type: 'varchar', default: '' })
   standSubjectTitle: string;
@@ -142,7 +124,7 @@ export class Application {
   fileParentalAuthorizationUrl: string;
 
   /* Status */
-  @Column({ type: 'varchar', default: 'DRAFT'})
+  @Column({ type: 'varchar', default: 'DRAFT' })
   status: ApplicationStatus;
 
   /* createAt & updatedAt */

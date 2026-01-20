@@ -25,7 +25,7 @@ export const UploadStep = ({
   delta: number,
   applicationStatus: string
 }) => {
-  const { isMathSprint, isBestMathVideo, isStand, isVisitor } = useActivityChoice(form, applicationStatus);
+  const { isMathSprint, isStand, isVisitor } = useActivityChoice(form, applicationStatus);
   const { isAdult } = useAge(form)
   const initFileInput = (field: ControllerRenderProps, id: string) => {
     if (field?.value && field?.value.length) {
@@ -56,10 +56,7 @@ export const UploadStep = ({
       {isMathSprint && (
         <>
           <h2 className='mt-6 text-sm font-semibold leading-5 text-black'>
-            {isMathSprint && isBestMathVideo
-              ? (<><span className='text-2xl'>🏁</span> Math Sprint <span className='mx-2 font-light'>|</span> <span className='text-2xl'>📽️</span> Best Math Video</>)
-              : (<><span className='text-2xl'>🏁</span> Math Sprint</>)
-            }
+          <div><span className='text-2xl'>🏁</span> Math Sprint</div>
             
           </h2>
           <Separator className='mt-1 bg-black'/>
@@ -136,66 +133,6 @@ export const UploadStep = ({
         </>
       )}
 
-
-      {/* BEST MATH VIDEO */}
-      {(isBestMathVideo && !isMathSprint) && (
-        <>
-          <h2 className='mt-6 text-sm font-semibold leading-5 text-black'>
-            <span className='text-2xl'>📽️</span> Best Math Video
-          </h2>
-          <Separator className='mt-1 bg-black'/>
-
-          <div className='mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 justify-between'>
-            {/* CNIE */}
-            <FormField
-              control={form.control}
-              name="fileCnie"
-              render={({ field }) => {
-                initFileInput(field, "fileCnie")
-
-                return (
-                  <FormItem>
-                    <FormLabel>Justificatif d&apos;identité du participant avec photo (carte d&apos;identité, passeport…) <RequiredAsterisk /></FormLabel>
-                    <FormControl>
-                      <FileInput form={form} id="fileCnie" />
-                    </FormControl>
-                    <FormDescription>
-                      <span className="text-blue-500">Remarque</span>: Le document doit de préference être la CNIE ou le passeport. Sinon, vous pouvez envoyer tout document contenant les informations de l&apos;élève avec sa photo; ou bien son acte de naissance accompagné de sa photo dans le même PDF.
-                    </FormDescription>
-                    <FormMessage />
-                  </FormItem>
-                )
-              }}
-            />
-
-            {/* PARENTAL AUTHORIZATION */}
-            {!isAdult &&
-              <FormField
-                control={form.control}
-                name="fileParentalAuthorization"
-                render={({ field }) => {
-                  initFileInput(field, "fileParentalAuthorization")
-
-                  return (
-                    <FormItem>
-                      <FormLabel>Autorisation parentale signée et légalisée par le tuteur légal (<Link className="text-blue-500 underline" href='https://drive.google.com/file/d/15xD6J3oTd8pBoO5AS8BU-kOvJvvT77N1/view?usp=sharing' target="_blank">fichier</Link>)<RequiredAsterisk /></FormLabel>
-                      <FormControl>
-                        <FileInput form={form} id="fileParentalAuthorization" />
-                      </FormControl>
-                      <FormDescription>
-                          <span className="text-blue-500">Remarque</span>: il faut l&apos;imprimer, la signer à la main, la légaliser, puis le scanner; <span className="font-bold">la légalisation est obligatoire</span>.
-                      </FormDescription>
-                      <FormMessage />
-                    </FormItem>
-                  )
-                }}
-              />
-            }
-          </div>
-        </>
-      )}
-
-
       {/* STAND */}
       {isStand && (
         <>
@@ -231,7 +168,7 @@ export const UploadStep = ({
       )}
 
       {/* VISITOR */}
-      {isVisitor && !isMathSprint && !isBestMathVideo && !isAdult && (
+      {isVisitor && !isMathSprint && !isAdult && (
         <>
           <h2 className='mt-6 text-sm font-semibold leading-5 text-black'>
             <span className='text-2xl'>🏖️</span> Visiteur

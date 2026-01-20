@@ -41,12 +41,6 @@ export const applicationSchema: ZodSchema = z.object({
   hasPreviouslyParticipated: z.enum(["yes", "no"], { message: "Please select an option." }),
   previousCompetitions: z.string().optional(),
 
-  videoTitle: z.string().min(1).max(50),
-  videoLink: z.string().min(1).max(100),
-  videoSubject: z.string().min(1).refine(async text => text.split(' ').length <= 300, { message: "Text can't be more than 300 words", }),
-  videoMotivations: z.string().min(1).refine(async text => text.split(' ').length <= 300, { message: "Text can't be more than 300 words", }),
-  videoRessources: z.string().min(1).refine(async text => text.split(' ').length <= 300, { message: "Text can't be more than 300 words", }),
-
   standSubjectTitle: z.string().min(1).max(50),
   standSubjectDetails: z.string().min(1).refine(async text => text.split(' ').length <= 300, { message: "Text can't be more than 300 words", }),
   standMembers: z.array(z.string()).optional(),
@@ -94,11 +88,6 @@ export const getApplicationDefaultValues = (userData: any) => ({
 
   hasPreviouslyParticipated: "",
   previousCompetitions: "",
-  videoTitle: "",
-  videoLink: "",
-  videoSubject: "",
-  videoMotivations: "",
-  videoRessources: "",
   standSubjectTitle: "",
   standSubjectDetails: "",
   standMembers: "",

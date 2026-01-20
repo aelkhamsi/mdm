@@ -31,11 +31,9 @@ export const steps: Step[] = [
     name: 'Éducation',
     getFields: (formState: any) => {
       const isMathSprint = formState?.activityChoices?.find((choice: string) => choice === ActivityChoiceValues.MATH_SPRINT) ? true : false
-      const isBestMathVideo = formState?.activityChoices?.find((choice: string) => choice === ActivityChoiceValues.BEST_MATH_VIDEO) ? true : false
 
       return [
-        ...(isMathSprint ? ['averageGrade', 'ranking', 'mathAverageGrade', 'mathRanking', 'numberOfStudentsInClass'] : []),
-        ...(isMathSprint || isBestMathVideo ? ['educationLevel', 'educationField', 'highschool'] : [])
+        ...(isMathSprint ? ['educationLevel', 'educationField', 'highschool', 'averageGrade', 'ranking', 'mathAverageGrade', 'mathRanking', 'numberOfStudentsInClass'] : []),
       ]
     }
   },
@@ -44,14 +42,12 @@ export const steps: Step[] = [
     name: 'Motivations',
     getFields: (formState: any) => {
       const isMathSprint = formState?.activityChoices?.find((choice: string) => choice === ActivityChoiceValues.MATH_SPRINT) ? true : false
-      const isBestMathVideo = formState?.activityChoices?.find((choice: string) => choice === ActivityChoiceValues.BEST_MATH_VIDEO) ? true : false
       const isStand = formState?.activityChoices?.find((choice: string) => choice === ActivityChoiceValues.STAND) ? true : false
 
       return [
         ...(isMathSprint ? ['hasPreviouslyParticipated', 'previousCompetitions'] : []), 
-        ...(isBestMathVideo ? ['videoTitle', 'videoLink', 'videoSubject', 'videoMotivations', 'videoRessources'] : []),
         ...(isStand ? ['standSubjectTitle', 'standSubjectDetails', 'standMembers'] : []),
-        ...(isMathSprint || isBestMathVideo || isStand ? ['motivations', 'comments'] : []),
+        ...(isMathSprint || isStand ? ['motivations', 'comments'] : []),
       ]
     }
   },
@@ -60,7 +56,6 @@ export const steps: Step[] = [
     name: 'Uploads',
     getFields: (formState: any) => {
       const isMathSprint = formState?.activityChoices?.find((choice: string) => choice === ActivityChoiceValues.MATH_SPRINT) ? true : false
-      const isBestMathVideo = formState?.activityChoices?.find((choice: string) => choice === ActivityChoiceValues.BEST_MATH_VIDEO) ? true : false
       const isStand = formState?.activityChoices?.find((choice: string) => choice === ActivityChoiceValues.STAND) ? true : false
       const isVisitor = formState?.activityChoices?.find((choice: string) => choice === ActivityChoiceValues.VISITOR) ? true : false
       const isAdult = isOverEighteen(formState?.dateOfBirth)
@@ -69,11 +64,6 @@ export const steps: Step[] = [
       const mathSprintFields = isMathSprint ? [
         !isFileUploaded('fileCnie') ? 'fileCnie' : '',
         !isFileUploaded('fileGrades') ? 'fileGrades' : '', 
-        ...(!isAdult ? [!isFileUploaded('fileParentalAuthorization') ? 'fileParentalAuthorization' : ''] : [])
-      ] : []
-      
-      const bestMathVideoFields = isBestMathVideo ? [
-        !isFileUploaded('fileCnie') ? 'fileCnie' : '', 
         ...(!isAdult ? [!isFileUploaded('fileParentalAuthorization') ? 'fileParentalAuthorization' : ''] : [])
       ] : []
 
@@ -87,7 +77,6 @@ export const steps: Step[] = [
 
       return [
         ...mathSprintFields,
-        ...bestMathVideoFields,
         ...standFields,
         ...visitorFields,
       ]
