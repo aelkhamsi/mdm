@@ -31,37 +31,44 @@ const ThirdSection = () => {
         </div>
 
         <div
-          className="md:flex w-full lg:w-3/4 text-sm my-4"
+          className="md:flex w-full lg:px-10 text-sm my-4"
         >
-          <div className='w-full'>
+          <div className='w-full p-4 md:w-1/3 md:mr-2 md:p-0'>
             <div className='text-center font-bold text-[#1C55FF] p-6'>
               Compétitions
             </div>
 
-            <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-6 text-center px-14">
-              <Card href='math-sprint'>
+            <hr className='border-[#1C55FF] mx-4'/>
+
+            <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 text-center">
+              <Card className='h-[10rem] w-[10rem]' href='math-sprint'>
                 Math Sprint<br/>
-                <span className='font-base text-sm text-gray-400'>(collège & lycée)</span>
               </Card>
-              <Card href='best-math-video'>
-                Best Math Video <br/>
-                <span className='font-base text-sm text-gray-400'>(primaire, collège & lycée)</span>
+              <Card className='h-[10rem] w-[10rem]' href='math-sprint'>
+                Meilleur Stand<br/>
               </Card>
             </div>
           </div>
 
-          <div className='w-full'>
+          <div className='w-full p-4 md:w-2/3 md:ml-2 md:p-0'>
             <div className='text-center font-bold text-[#E5FF52] p-6'>
               Activités
             </div>
+            
+            <hr className='border-[#E5FF52] mx-4'/>
 
-            <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-6 text-center px-14">
-              <Card href='conferences'>
+            <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 text-center">
+              <Card className='h-[10rem] w-[10rem]'>
                 Conférences
               </Card>
-              <Card href='stands'>
-                Stands<br/>
-                <span className='font-base text-sm text-gray-400'>(université)</span>
+              <Card className='h-[10rem] w-[10rem]'>
+                Stands
+              </Card>
+              <Card className='h-[10rem] w-[10rem]'>
+                Workshops
+              </Card>
+              <Card className='h-[10rem] w-[10rem]'>
+                Musée des maths
               </Card>
             </div>
           </div>

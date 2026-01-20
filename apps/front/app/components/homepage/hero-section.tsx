@@ -33,7 +33,7 @@ const HeroSection = () => {
             style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
           >
             <span className='bg-gradient-to-br from-[#292660] via-[#292660] to-stone-800 inline-block text-transparent bg-clip-text'>
-              Le plus grand événement de mathématiques au Maroc
+              Une journée pour explorer, comprendre et s&apos;inspirer
             </span>
           </h1>
         </div>

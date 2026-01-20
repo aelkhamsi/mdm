@@ -35,12 +35,14 @@ const SecondSection = () => {
         <div className="w-full space-y-4 p-4">
           <p className='font-bold text-xs text-[#1C55FF]'>C'est quoi MDM ?</p>
           <h1 className='font-bold text-3xl'>MDM, La grande rencontre des passionnés de mathématiques</h1>
-          <p>Le &apos;<span className='font-bold'>Moroccan Day of Mathematics&apos; (MDM)</span> est un événement dédié aux passionnés de mathématiques, comprenant plusieurs compétitions et activités enrichissantes</p>
-          <p>Pendant cet événement, les participants pourront s'affronter dans plusieurs compétitions selon leurs niveaux. En plus des compétitions, il y aura des conférences et des stands pour explorer différentes facettes des mathématiques</p>
+          <p>Le &apos;<span className='font-bold'>Moroccan Day of Mathematics&apos; (MDM)</span> est un événement dédié aux passionnés de mathématiques, offrant un programme varié de compétitions et d’activités accessibles à tous les niveaux.</p>
+          <p>Les participants pourront prendre part à différentes compétitions tout au long de la journée, tandis que conférences, stands et workshops permettront de découvrir diverses facettes des mathématiques. </p>
+          <p>Ouvert aux adultes et aux enfants, cet événement vise à promouvoir l&apos;excellence mathématique et s&apos;adresse autant au grand public qu&apos;aux amateurs et spécialistes. </p>
+
           <div className='flex justify-center gap-x-8'>
             <div className='flex items-center justify-center'>
               <CalendarMDMIcon />
-              <div className="text-sm font-semibold text-[#272162]">19 avril 2025</div>
+              <div className="text-sm font-semibold text-[#272162]">28 mars 2026</div>
             </div>
 
             <div className='flex items-center justify-center' >
@@ -59,23 +61,24 @@ const SecondSection = () => {
       </div>
 
       <h1 className='text-3xl font-bold'>
-        Retour sur MDM 2024
+        Retour sur MDM 2025
       </h1>
 
       <div
         className="flex flex-col md:flex-row md:justify-between md:space-x-8 w-full lg:w-3/4 text-base my-14"
       >
         <div className="w-full flex flex-col px-4 space-y-4">
-          <p>L'édition passée de MDM s'est tenue à Ben Guerir en collaboration avec l&apos;UM6P</p>
-          <p>Une édition qui a réuni une centaine de passionnés de mathématiques autour de conférences d'experts, de stands et de compétitions</p>
-          <p>En 2025, MDM promet d'aller encore plus loin, en offrant une expérience enrichie avec de nouvelles activités, des intervenants de renommée internationale et des opportunités inédites pour tous les passionnés de mathématiques</p>
+          <p>La dernière édition du MDM s&apos;est tenue à Fès, en collaboration avec l&apos;UEMF. Un événement qui a réuni étudiants, lycéens et curieux de tous les horizons autour de conférences inspirantes, de stands interactifs et de compétitions intenses</p>
+          <p>En 2026, MDM revient de nouveau à Fès avec une ambition renouvelée ; de nouvelles activités, des intervenants de renom et une expérience accessible à tous,  quel que soit votre niveau en mathématiques.</p>
         </div>
 
         <div className='w-full flex justify-center p-4 md:p-0'>
-          <div className="w-fit space-y-4 font-medium text-4xl">
-            <p><span className='bg-gradient-to-br from-sky-500 to-[#272162] inline-block text-transparent bg-clip-text'>1000+</span> Participants</p>
-            <p><span className='bg-gradient-to-br from-sky-500 to-[#272162] inline-block text-transparent bg-clip-text'>6+</span> Speakers</p>
-            <p>🏆 Des prix pour les meilleurs</p>
+          <div className="w-fit space-y-4 font-medium text-2xl">
+            <p><span className='bg-gradient-to-br from-sky-500 to-[#272162] inline-block text-transparent bg-clip-text'>1500+</span> Participants</p>
+            <p><span className='bg-gradient-to-br from-sky-500 to-[#272162] inline-block text-transparent bg-clip-text'>4</span> Speakers de renommée internationale</p>
+            <p><span className='bg-gradient-to-br from-sky-500 to-[#272162] inline-block text-transparent bg-clip-text'>4</span> Workshops immersifs</p>
+            <p><span className='bg-gradient-to-br from-sky-500 to-[#272162] inline-block text-transparent bg-clip-text'>20</span> Stands interactifs</p>
+            <p><span className='bg-gradient-to-br from-sky-500 to-[#272162] inline-block text-transparent bg-clip-text'>20&apos;000 MAD</span> en prix</p>
           </div>
         </div>
         
