@@ -24,20 +24,8 @@ const getBadgeClassname = (status: string) => {
   switch(status) {
     case 'DRAFT':
       return 'bg-gray-300 text-black';
-    case 'PENDING':
-      return 'bg-[#FFE380] text-black';
-    case 'NOTIFIED':
-      return 'bg-[#79E2F2] text-black';
-    case 'UPDATED':
-      return 'bg-[#B3D4FF] text-black';
-    case 'VALIDATED':
-      return 'bg-[#79F2C0] text-black';
-    case 'ACCEPTED':
+    case 'COMPLETE':
       return 'bg-[#006644] text-white';
-    case 'REJECTED':
-      return 'bg-[#BF2600] text-white';
-    case 'WAITLIST':
-      return 'bg-[#403294] text-white';
   }
 }
 
@@ -48,7 +36,7 @@ const groupApplicationCardContent = (groupApplication: any) => {
     <>
       <div className="text-sm"><span className="font-bold">Date de soumission</span>: {formatDate(groupApplication?.createdAt)}</div>
       <div className="text-sm"><span className="font-bold">Date de sauvegarde</span>: {formatDate(groupApplication?.updatedAt)}</div>
-      <div className="text-sm"><span className="font-bold">Status</span>: <Badge className={`px-4 ${getBadgeClassname(groupApplication?.status?.status)}`}>{groupApplication?.status}</Badge></div>
+      <div className="text-sm"><span className="font-bold">Status</span>: <Badge className={`px-4 ${getBadgeClassname(groupApplication?.status)}`}>{groupApplication?.status}</Badge></div>
     </>
   )
 }

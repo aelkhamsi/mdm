@@ -36,27 +36,10 @@ const educationLevelsHighschool = [
   {label: "1ère année Bac", value:"1bac"},
   {label: "Tronc commun", value:"tronc-commun"},
 ]
-
-const educationFields = [
-  {label: "TC sciences", value:"tc-sciences"},
-  {label: "TC technologique", value:"tc-technologique"},
-  {label: "1BAC Sciences Economiques et Gestion", value:"1bac-sciences-economiques-et-gestion"},
-  {label: "1BAC Arts Appliqués", value:"1bac-arts-appliques"},
-  {label: "1BAC Sciences Expérimentales", value:"1bac-sciences-experimentales"},
-  {label: "1BAC Sciences Mathématiques", value:"1bac-sciences-mathematiques"},
-  {label: "1BAC Sciences et Technologies Electriques", value:"1bac-sciences-et-technologies-electriques"},
-  {label: "1BAC Sciences et Technologies Mécaniques", value:"1bac-sciences-et-technologies-mecaniques"},
-  {label: "2BAC Sciences Economiques", value:"2bac-sciences-economiques"},
-  {label: "2BAC Sciences de Gestion et Comptabilité", value:"2bac-sciences-de-gestion-et-comptabilite"},
-  {label: "2BAC Arts Appliqués", value:"2bac-arts-appliques "},
-  {label: "2BAC Sciences de la Vie et de la Terre", value:"2bac-sciences-de-la-vie-et-de-la-terre"},
-  {label: "2BAC Sciences Physique Chimie", value:"2bac-sciences-physique-chimie"},
-  {label: "2BAC Sciences Agronomiques", value:"2bac-sciences-agronomiques"},
-  {label: "2BAC Sciences Mathématiques A", value:"2bac-sciences-mathematiques-a"},
-  {label: "2BAC Sciences Mathématiques B", value:"2bac-sciences-mathematiques-b"},
-  {label: "2BAC Sciences et Technologies Electrique", value:"2bac-sciences-et-technologies-electrique"},
-  {label: "2BAC Sciences et Technologies Mécanique", value:"2bac-sciences-et-technologies-mecanique"},
-  {label: "Autre", value:"autre"},
+const educationLevelsHigherEducation = [
+  {label: "Université", value:"university"},
+  {label: "Classes Préparatoires", value:"cpge"},
+  {label: "Autre", value:"other"},
 ]
 
 const RequiredAsterisk = () => <span className="text-red-500"> * </span>;
@@ -64,11 +47,9 @@ const RequiredAsterisk = () => <span className="text-red-500"> * </span>;
 export const EstablishmentInformationStep = ({
   form,
   delta,
-  applicationStatus
 }:{
   form: UseFormReturn,
-  delta: number,
-  applicationStatus: string
+  delta: number
 }) => {
   return (
     <motion.div
@@ -82,13 +63,43 @@ export const EstablishmentInformationStep = ({
       <Separator className='my-6 bg-[#0284C7]'/>
 
       <div className='mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 justify-between'>
+        {/* Establishment */}
+        <FormField
+          control={form.control}
+          name="establishmentName"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Nom de l&apos;Établissement<RequiredAsterisk /></FormLabel>
+              <FormControl>
+                <Input placeholder="Nom de l'établissement" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        {/* Highschool */}
+        <FormField
+          control={form.control}
+          name="establishmentCity"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Ville de l&apos;Établissement<RequiredAsterisk /></FormLabel>
+              <FormControl>
+                <Input placeholder="Ville de l'établissement" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
         {/* Education Level */}
         <FormField
           control={form.control}
-          name="educationLevel"
+          name="establishmentLevel"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Niveau d&apos;étude <RequiredAsterisk /></FormLabel>
+              <FormLabel>Niveau d&apos;étude des participants <RequiredAsterisk /></FormLabel>
               <FormControl>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <SelectTrigger>
@@ -96,6 +107,10 @@ export const EstablishmentInformationStep = ({
                   </SelectTrigger>
                   <SelectContent className="max-h-60">
                     <SelectGroup>
+                      <SelectLabel>Supérieur <Separator className='mt-2 bg-gray-300' /></SelectLabel>
+                      {educationLevelsHigherEducation.map(level =>
+                        <SelectItem key={level.value} value={level.value}>{level.label}</SelectItem>
+                      )}
                       <SelectLabel>Lycée <Separator className='mt-2 bg-gray-300' /></SelectLabel>
                       {educationLevelsHighschool.map(level =>
                         <SelectItem key={level.value} value={level.value}>{level.label}</SelectItem>
@@ -117,42 +132,15 @@ export const EstablishmentInformationStep = ({
           )}
         />
 
-        {/* Education Field */}
-        <FormField
-          control={form.control}
-          name="educationField"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Filière d&apos;étude<RequiredAsterisk /></FormLabel>
-              <FormControl>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Choose an option" />
-                  </SelectTrigger>
-                  <SelectContent className="max-h-60">
-                    <SelectGroup>
-                      <SelectLabel>Filière</SelectLabel>
-                      {educationFields.map(field =>
-                        <SelectItem key={field.value} value={field.value}>{field.label}</SelectItem>
-                      )}
-                    </SelectGroup>
-                  </SelectContent>
-                </Select>
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
         {/* Highschool */}
         <FormField
           control={form.control}
-          name="highschool"
+          name="numberOfParticipants"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>École / Établissement<RequiredAsterisk /></FormLabel>
+              <FormLabel>Nombre de participants dans le groupe <RequiredAsterisk /></FormLabel>
               <FormControl>
-                <Input placeholder="Highschool" {...field} />
+                <Input placeholder="Nombre d'élèves" type='number' {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

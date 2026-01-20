@@ -2,24 +2,30 @@
 type Step = {
   id: string,
   name: string,
-  getFields: (formState: any) => string[],
+  getFields: (formState?: any) => string[],
 }
 
 export const steps: Step[] = [
   {
     id: 'Étape 1',
     name: "Informations Personnelles de l'accompagnateur",
-    getFields: (formState: any) => ['firstName', 'lastName', 'dateOfBirth', 'city', 'region', 'identityCardNumber', 'phoneNumber']
+    getFields: () => ['firstName', 'lastName', 'dateOfBirth', 'city', 'region', 'identityCardNumber', 'phoneNumber']
   },
   {
     id: 'Étape 2',
     name: "Informations sur l'école ou l'organisation",
-    getFields: (formState: any) => []
+    getFields: () => ['establishmentName', 'establishmentCity', 'establishmentLevel', 'numberOfParticipants']
   },
   {
     id: 'Étape 3',
     name: 'Uploads',
-    getFields: (formState: any) => []
+    getFields: (formState) => {
+      const isFileUploaded = (key: string) => !!formState?.[`${key}Url`]
+      return [
+        !isFileUploaded('fileCnie') ? 'fileCnie' : '',
+        !isFileUploaded('fileParticipantNames') ? 'fileParticipantNames' : '',
+      ]
+    }
   },
   { id: 'Étape 4', 
     name: 'Validation',

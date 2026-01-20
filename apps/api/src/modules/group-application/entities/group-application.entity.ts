@@ -9,9 +9,7 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-export type GroupApplicationStatus =
-  | 'DRAFT'
-  | 'COMPLETE';
+export type GroupApplicationStatus = 'DRAFT' | 'COMPLETE';
 
 @Entity({ name: 'group_applications' })
 export class GroupApplication {
@@ -19,7 +17,7 @@ export class GroupApplication {
     Object.assign(this, partial);
   }
 
-  /* Personal Informations */
+  /* Personal Information */
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -48,21 +46,28 @@ export class GroupApplication {
   @Column({ type: 'varchar', default: '' })
   phoneNumber: string;
 
+  /* Establishment Information */
+  @Column({ type: 'varchar', default: '' })
+  establishmentName: string;
+
+  @Column({ type: 'varchar', default: '' })
+  establishmentCity: string;
+
+  @Column({ type: 'varchar', default: '' })
+  establishmentLevel: string;
+
+  @Column({ type: 'varchar', default: '' })
+  numberOfParticipants: string;
+
   /* Uploads */
-  // @Column({ type: 'varchar', nullable: true })
-  // fileCnieUrl: string;
+  @Column({ type: 'varchar', nullable: true })
+  fileCnieUrl: string;
 
-  // @Column({ type: 'varchar', nullable: true })
-  // fileMembersCnieUrl: string;
-
-  // @Column({ type: 'varchar', nullable: true })
-  // fileGradesUrl: string;
-
-  // @Column({ type: 'varchar', nullable: true })
-  // fileParentalAuthorizationUrl: string;
+  @Column({ type: 'varchar', nullable: true })
+  fileParticipantNamesUrl: string;
 
   /* Status */
-  @Column({ type: 'varchar', default: 'DRAFT'})
+  @Column({ type: 'varchar', default: 'DRAFT' })
   status: GroupApplicationStatus;
 
   /* createAt & updatedAt */

@@ -17,6 +17,14 @@ export const groupApplicationSchema: ZodSchema = z.object({
   region: z.string().nonempty("Please select an option"),
   phoneNumber: z.string().refine(isValidPhoneNumber, { message: "Invalid phone number" }),
 
+  establishmentName: z.string().min(1, { message: "Champ obligatoire"}).max(50),
+  establishmentCity: z.string().min(1, { message: "Champ obligatoire"}).max(50),
+  establishmentLevel: z.string().nonempty("Sélectionnez une option"),
+  numberOfParticipants: z.string().min(1, { message: "Champ obligatoire"}).max(50),
+
+  fileCnie: zodFileValidation,
+  fileParticipantNames: zodFileValidation,
+
   termsAgreement: z.boolean().default(false).refine(value => value === true, { message: "Vous devez accepter les Conditions Générales."}),
 })
 
@@ -28,6 +36,14 @@ export const getGroupApplicationDefaultValues = (userData: any) => ({
   city: "",
   region: "",
   phoneNumber: "",
+
+  establishmentName: "",
+  establishmentCity: "",
+  establishmentLevel: "",
+  numberOfParticipants: "",
+
+  fileCnie: undefined,
+  fileParticipantNames: undefined,
 
   termsAgreement: false,
 })

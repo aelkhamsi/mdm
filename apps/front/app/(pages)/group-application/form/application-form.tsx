@@ -70,11 +70,11 @@ export const ApplicationForm = ({
           )}
 
           {currentStep === 1 && (
-            <EstablishmentInformationStep form={form} delta={delta} applicationStatus={user?.groupApplication?.status}/>
+            <EstablishmentInformationStep form={form} delta={delta} />
           )}
 
           {currentStep === 2 && (
-            <UploadStep form={form} delta={delta} applicationStatus={user?.groupApplication?.status}/>
+            <UploadStep form={form} delta={delta} />
           )}
 
           {currentStep === 3 && (

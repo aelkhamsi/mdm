@@ -32,7 +32,6 @@ export default function ApplicationPage() {
   const user = useAtomValue(userAtom)
   const [content, setContent] = useState<any>(undefined);
   const router = useRouter();
-  console.log('user', user)
   
   useEffect(() => {
     const application = user?.application;
@@ -94,7 +93,7 @@ export default function ApplicationPage() {
   return (
     <div className="space-y-6">
       <div>
-        <div className="text-lg font-medium">Candidature</div>
+        <div className="text-lg font-medium">Candidature individuelle</div>
         <p className="text-sm text-muted-foreground">
           C&apos;est ici que vous trouverez le statut de votre candidature.
         </p>

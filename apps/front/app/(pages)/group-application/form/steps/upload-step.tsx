@@ -3,13 +3,11 @@ import { ControllerRenderProps, UseFormReturn } from 'react-hook-form'
 import { Input, Separator } from "@mdm/ui"
 import {
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@mdm/ui"
-import Link from 'next/link';
 import { FileInput } from '../components/file-input';
 
 const RequiredAsterisk = () => <span className="text-red-500"> * </span>;
@@ -17,11 +15,9 @@ const RequiredAsterisk = () => <span className="text-red-500"> * </span>;
 export const UploadStep = ({
   form,
   delta,
-  applicationStatus
 }:{
   form: UseFormReturn,
   delta: number,
-  applicationStatus: string
 }) => {
   const initFileInput = (field: ControllerRenderProps, id: string) => {
     if (field?.value && field?.value.length) {
@@ -58,13 +54,10 @@ export const UploadStep = ({
 
             return (
               <FormItem>
-                <FormLabel>Justificatif d&apos;identité du participant avec photo (carte d&apos;identité, passeport…) <RequiredAsterisk /></FormLabel>
+                <FormLabel>Justificatif d&apos;identité de l'accompagnateur avec photo (carte d&apos;identité, passeport…) <RequiredAsterisk /></FormLabel>
                 <FormControl>
                   <FileInput form={form} id="fileCnie" />
                 </FormControl>
-                <FormDescription>
-                  <span className="text-blue-500">Remarque</span>: Le document doit de préference être la CNIE ou le passeport. Sinon, vous pouvez envoyer tout document contenant les informations de l&apos;élève avec sa photo; ou bien son acte de naissance accompagné de sa photo dans le même PDF.
-                </FormDescription>
                 <FormMessage />
               </FormItem>
             )
@@ -74,19 +67,16 @@ export const UploadStep = ({
         {/* GRADES */}
         <FormField
           control={form.control}
-          name="fileGrades"
+          name="fileParticipantNames"
           render={({ field }) => {
-            initFileInput(field, "fileGrades")
+            initFileInput(field, "fileParticipantNames")
 
             return (
               <FormItem>
-                <FormLabel>Bulletin du premier semestre de l&apos;année scolaire courante 2024-2025<RequiredAsterisk /></FormLabel>
+                <FormLabel>Liste des noms des participants <RequiredAsterisk /></FormLabel>
                 <FormControl>
-                  <FileInput form={form} id="fileGrades" />
+                  <FileInput form={form} id="fileParticipantNames" />
                 </FormControl>
-                <FormDescription>
-                  <span className="text-blue-500">Remarque</span>: votre bulletin sera utilisé pour vérifier les notes que vous avez fournies précédemment.
-                </FormDescription>
                 <FormMessage />
               </FormItem>
             )
