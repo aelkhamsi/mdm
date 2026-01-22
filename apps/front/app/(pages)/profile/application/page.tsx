@@ -35,24 +35,24 @@ export default function ApplicationPage() {
   
   useEffect(() => {
     const application = user?.application;
-    const applicationStatus = application?.status?.status;
+    const applicationStatus = application?.status;
 
     if (!application) {
       setContent({
         title: "Vous n'avez pas soumis une candidature",
-        subtitle: "Merci pour l'intérêt que vous portez à MTYM! Malheureusement les inscriptions sont désormais closes. Néanmoins, restez à l'écoute pour ne pas manquer de futures opportunités.",
+        subtitle: "On attend votre candidature avec impatience!",
         ctaLabel: "Créer votre candidature",
       })
     } else if (applicationStatus === 'DRAFT') {
       setContent({
         title: "Vous avez sauvegardé un brouillon de candidature. Elle n'est pas encore soumise.",
-        subtitle: "Merci pour l'intérêt que vous portez à MTYM! Malheureusement les inscriptions sont désormais closes. Néanmoins, restez à l'écoute pour ne pas manquer de futures opportunités.",
+        subtitle: "Complétez votre candidature avant la deadline pour qu'elle soit prise en compte.",
         ctaLabel: "Continuer votre candidature",
       })
     } else {
       setContent({
         title: "Vous avez déjà soumis une candidature",
-        subtitle: "Vous trouverez l'avancement de votre candidature ci-dessous. On vous notifiera des prochaines étapes par mail.",
+        subtitle: "Vous pouvez encore la modifier avant la deadline. On vous notifiera des prochaines étapes par mail.",
         ctaLabel: "Mettre à jour votre candidature",
       })
     }

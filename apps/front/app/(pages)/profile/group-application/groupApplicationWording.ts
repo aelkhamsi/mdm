@@ -2,7 +2,7 @@ export const groupApplicationWording: any = {
   EMPTY: {
     title: 'Représentez-vous une école ou une organisation ?',
     subtitle: 'Vous pouvez remplir une candidature pour un groupe de personnes',
-    ctaLabel: 'Remplir une candidature',
+    ctaLabel: 'Créer une candidature',
     showCtaButton: true
   },
   DRAFT: {
