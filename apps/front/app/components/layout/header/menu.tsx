@@ -36,9 +36,9 @@ export const Menu = () => {
                 </ListItem>
               </Link>
               
-              <Link href="/best-math-video" onClick={() => {setShowMenu(false)}}>
-                <ListItem title="Best Math Video">
-                  Partagez votre passion au grand public
+              <Link href="/stands" onClick={() => {setShowMenu(false)}}>
+                <ListItem title="Meilleur Stand">
+                  Le concours du meilleur stand MDM
                 </ListItem>
               </Link>
             </ul>
@@ -58,6 +58,18 @@ export const Menu = () => {
               <Link href="/conferences" onClick={() => {setShowMenu(false)}}>
                 <ListItem title="Conférences">
                   Découvrez ce que les experts ont à vous offrir
+                </ListItem>
+              </Link>
+
+              <Link href="/workshops" onClick={() => {setShowMenu(false)}}>
+                <ListItem title="Workshops">
+                  Participez à des ateliers pratiques pour apprendre en faisant
+                </ListItem>
+              </Link>
+
+              <Link href="/musee-des-maths" onClick={() => {setShowMenu(false)}}>
+                <ListItem title="Musée des maths">
+                  Explorez les mathématiques à travers des expériences interactives
                 </ListItem>
               </Link>
             </ul>

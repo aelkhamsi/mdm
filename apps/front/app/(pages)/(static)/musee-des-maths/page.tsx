@@ -1,8 +1,6 @@
 import CtaSection from "@/app/components/cta/cta-section"
 import DivCircuitBg from "@/app/components/div-circuit-bg"
 import { ImageStack } from "@/app/components/image-stack"
-import PanelSection from "./panel-section"
-import ConferenceSection from "./conference-section"
 
 const images = [
   {
@@ -21,10 +19,10 @@ export default function ConferencesPage() {
     <DivCircuitBg classNameBgImage="opacity-50 -z-[8]">
       <div className="w-full flex flex-col items-center max-w-sm md:max-w-screen-xl px-5 xl:px-0 space-y-20 mb-20">
         <h1 className="text-center text-4xl font-bold drop-shadow-sm">
-          <span className='bg-gradient-to-br from-sky-600 to-[#1C55FF] inline-block text-transparent bg-clip-text'>Conférences</span>
+          <span className='bg-gradient-to-br from-sky-600 to-[#1C55FF] inline-block text-transparent bg-clip-text'>Musée des maths</span>
         </h1>
 
-        <div
+        {/* <div
           className="flex flex-col w-full md:flex-row md:justify-between md:space-x-8 text-base"
         >
           <div className="w-full space-y-4 p-4">
@@ -39,11 +37,7 @@ export default function ConferencesPage() {
               autoplay={true}
             />
           </div>
-        </div>
-
-        {/* <PanelSection />
-
-        <ConferenceSection /> */}
+        </div> */}
 
         <CtaSection />
       </div>

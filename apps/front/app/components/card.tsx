@@ -21,7 +21,7 @@ const Card = ({
     
     <Link
       href={href || ''}
-      onClick={(e) => e.preventDefault()}
+      // onClick={(e) => e.preventDefault()}
       className={`group/canvas-card flex items-center justify-center border border-${color}/[0.2] w-full p-4 relative ${href ? 'hover:cursor-pointer' : ''} ${className}`}
       scroll={true}
     >
