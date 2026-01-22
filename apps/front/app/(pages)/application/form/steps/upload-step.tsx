@@ -163,6 +163,27 @@ export const UploadStep = ({
                 )
               }}
             />
+
+            <FormField
+              control={form.control}
+              name="fileStandAbstract"
+              render={({ field }) => {
+                initFileInput(field, "fileStandAbstract")
+
+                return (
+                  <FormItem>
+                    <FormLabel>Abstract du stand<RequiredAsterisk /></FormLabel>
+                    <FormControl>
+                      <FileInput form={form} id="fileStandAbstract" />
+                    </FormControl>
+                    <FormDescription>
+                      Ce document représente un résumé global des concepts que vous comptez présenter en stand et la manière dont vous allez l'animer.
+                    </FormDescription>
+                    <FormMessage />
+                  </FormItem>
+                )
+              }}
+            />
           </div>
         </>
       )}

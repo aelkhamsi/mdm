@@ -56,6 +56,7 @@ export const applicationSchema: ZodSchema = z.object({
   /* Uploads */
   fileCnie: zodFileValidation,
   fileMembersCnie: zodFileValidation,
+  fileStandAbstract: zodFileValidation,
   fileGrades: zodFileValidation,
   fileParentalAuthorization: zodFileValidation,
 
@@ -96,6 +97,7 @@ export const getApplicationDefaultValues = (userData: any) => ({
 
   fileCnie: undefined,
   fileMembersCnie: undefined,
+  fileStandAbstract: undefined,
   fileGrades: undefined,
   fileParentalAuthorization: undefined,
 

@@ -17,7 +17,7 @@ const CtaButton = () => {
   const handleClick = () => {
     if (user) {
       setIsLoading(true)
-      router.push('/application')
+      router.push('/profile/application')
     }
     else {
       setShowAuthModal(true)

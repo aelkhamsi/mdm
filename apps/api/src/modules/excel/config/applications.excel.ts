@@ -55,6 +55,10 @@ export const rowFactory = (applications: any[], configService) => {
       text: application?.fileMembersCnieUrl ? 'link' : ' ',
       hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.fileMembersCnieUrl}`,
     },
+    fileStandAbstract: {
+      text: application?.fileStandAbstractUrl ? 'link' : ' ',
+      hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.fileStandAbstractUrl}`,
+    },
     fileGrades: {
       text: application?.fileGradesUrl ? 'link' : ' ',
       hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.fileGradesUrl}`,

@@ -68,7 +68,8 @@ export const steps: Step[] = [
       ] : []
 
       const standFields = isStand ? [
-        !isFileUploaded('fileMembersCnie') ? 'fileMembersCnie' : ''
+        !isFileUploaded('fileMembersCnie') ? 'fileMembersCnie' : '',
+        !isFileUploaded('fileStandAbstract') ? 'fileStandAbstract' : ''
       ] : []
 
       const visitorFields = isVisitor ? [

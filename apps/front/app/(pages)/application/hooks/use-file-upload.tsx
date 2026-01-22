@@ -9,10 +9,10 @@ export const useFileUpload = () => {
   const getFiles = (
     formData: z.infer<typeof applicationSchema>
   ) => {
-    const { fileCnie, fileMembersCnie, fileGrades, fileParentalAuthorization } = formData;
-    const uploadFileNames = ['cnie', 'members_cnie', 'grades', 'parental_authorization']
+    const { fileCnie, fileMembersCnie, fileStandAbstract, fileGrades, fileParentalAuthorization } = formData;
+    const uploadFileNames = ['cnie', 'members_cnie', 'stand_abstract', 'grades', 'parental_authorization']
       .map(name => `${name}_${generateFileName()}`)
-    const files = [fileCnie, fileMembersCnie, fileGrades, fileParentalAuthorization]
+    const files = [fileCnie, fileMembersCnie, fileStandAbstract, fileGrades, fileParentalAuthorization]
       .map((files, index) => {
         if (files && files.length) {
           return new File(
@@ -53,8 +53,9 @@ export const useFileUpload = () => {
     await putApplication(formData?.id, {
       fileCnieUrl: files[0] ? `upload_mdm/${uploadFolderName}/${files[0].name}` : (formData?.fileCnieUrl ?? null),
       fileMembersCnieUrl: files[1] ? `upload_mdm/${uploadFolderName}/${files[1].name}` : (formData?.fileMembersCnieUrl ?? null),
-      fileGradesUrl: files[2] ? `upload_mdm/${uploadFolderName}/${files[2].name}` : (formData?.fileGradesUrl ?? null),
-      fileParentalAuthorizationUrl: files[3] ? `upload_mdm/${uploadFolderName}/${files[3].name}` : (formData?.fileParentalAuthorizationUrl ?? null),
+      fileStandAbstractUrl: files[2] ? `upload_mdm/${uploadFolderName}/${files[2].name}` : (formData?.fileStandAbstractUrl ?? null),
+      fileGradesUrl: files[3] ? `upload_mdm/${uploadFolderName}/${files[3].name}` : (formData?.fileGradesUrl ?? null),
+      fileParentalAuthorizationUrl: files[4] ? `upload_mdm/${uploadFolderName}/${files[4].name}` : (formData?.fileParentalAuthorizationUrl ?? null),
     }) as any
   }
 

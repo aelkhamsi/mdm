@@ -121,6 +121,10 @@ export class CreateApplicationDto {
 
   @IsString()
   @IsOptional()
+  fileStandAbstractUrl: string;
+
+  @IsString()
+  @IsOptional()
   fileGradesUrl: string;
 
   @IsString()

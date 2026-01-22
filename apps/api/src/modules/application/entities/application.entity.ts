@@ -118,6 +118,9 @@ export class Application {
   fileMembersCnieUrl: string;
 
   @Column({ type: 'varchar', nullable: true })
+  fileStandAbstractUrl: string;
+
+  @Column({ type: 'varchar', nullable: true })
   fileGradesUrl: string;
 
   @Column({ type: 'varchar', nullable: true })

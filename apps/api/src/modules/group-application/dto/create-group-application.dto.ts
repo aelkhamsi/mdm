@@ -32,21 +32,13 @@ export class CreateGroupApplicationDto {
   phoneNumber: string;
 
   /* Files */
-  // @IsString()
-  // @IsOptional()
-  // fileCnieUrl: string;
+  @IsString()
+  @IsOptional()
+  fileCnieUrl: string;
 
-  // @IsString()
-  // @IsOptional()
-  // fileMembersCnieUrl: string;
-
-  // @IsString()
-  // @IsOptional()
-  // fileGradesUrl: string;
-
-  // @IsString()
-  // @IsOptional()
-  // fileParentalAuthorizationUrl: string;
+  @IsString()
+  @IsOptional()
+  fileParticipantNamesUrl: string;
 
   @IsString()
   @IsOptional()
