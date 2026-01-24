@@ -1,30 +1,45 @@
-import { MailerService } from '@nestjs-modules/mailer';
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { User } from 'src/modules/user/entities/user.entity';
 
 @Injectable()
 export class MailService {
-  constructor(
-    private readonly mailerService: MailerService,
-    private readonly configService: ConfigService,
-  ) {}
+  constructor(private readonly configService: ConfigService) {}
 
-  async sendResetPasswordEmail(user: User, token: string) {
+  async sendResetPasswordEmail(user: User, accessToken: string) {
     const link =
-      this.configService.get('NODE_ENV') === 'production'
-        ? `https://mdm.mathmaroc.org/reset-password?token=${token}`
-        : `http://localhost:3000/reset-password?token=${token}`;
+      this.configService.get('app.nodenv') === 'production'
+        ? `https://mdm.mathmaroc.org/reset-password?token=${accessToken}`
+        : `http://localhost:3000/reset-password?token=${accessToken}`;
 
-    await this.mailerService.sendMail({
-      to: user.email,
-      // from: '"Support Team" <support@example.com>', // override default from
-      subject: 'MDM | Reset your password',
-      template: './reset-password',
-      context: {
-        firstName: user.firstName,
+    const url = this.configService.get('smtp.endpoint') + 'send';
+    const payload = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        templateName: 'reset-password',
+        recipient: user?.email,
+        firstName: user?.firstName,
         link,
-      },
-    });
+      }),
+    };
+
+    await fetch(url, payload);
+  }
+
+  async sendEmailVerificationEmail(user: User, verificationCode: string) {
+    const url = this.configService.get('smtp.endpoint') + 'send';
+    const payload = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        templateName: 'email-verification',
+        recipient: user?.email,
+        firstName: user?.firstName,
+        verificationCode,
+      }),
+    };
+
+    await fetch(url, payload);
   }
 }
