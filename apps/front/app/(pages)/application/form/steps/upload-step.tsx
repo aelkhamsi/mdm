@@ -116,7 +116,7 @@ export const UploadStep = ({
 
                   return (
                     <FormItem>
-                      <FormLabel>Autorisation parentale signée et légalisée par le tuteur légal (<Link className="text-blue-500 underline" href='https://drive.google.com/file/d/15xD6J3oTd8pBoO5AS8BU-kOvJvvT77N1/view?usp=sharing' target="_blank">fichier</Link>)<RequiredAsterisk /></FormLabel>
+                      <FormLabel>Autorisation parentale signée et légalisée par le tuteur légal (<Link className="text-blue-500 underline" href='https://drive.google.com/file/d/1gbrnffi33j5qk1JJttOlb7jAMX_OUZ6x/view?usp=sharing' target="_blank">fichier</Link>)<RequiredAsterisk /></FormLabel>
                       <FormControl>
                         <FileInput form={form} id="fileParentalAuthorization" />
                       </FormControl>
