@@ -31,9 +31,11 @@ export const steps: Step[] = [
     name: 'Éducation',
     getFields: (formState: any) => {
       const isMathSprint = formState?.activityChoices?.find((choice: string) => choice === ActivityChoiceValues.MATH_SPRINT) ? true : false
+      const isStand = formState?.activityChoices?.find((choice: string) => choice === ActivityChoiceValues.STAND) ? true : false
 
       return [
         ...(isMathSprint ? ['educationLevel', 'educationField', 'highschool', 'averageGrade', 'ranking', 'mathAverageGrade', 'mathRanking', 'numberOfStudentsInClass'] : []),
+        ...(isStand ? ['educationLevel', 'highschool'] : []),
       ]
     }
   },

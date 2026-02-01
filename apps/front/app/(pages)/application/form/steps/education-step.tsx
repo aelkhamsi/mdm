@@ -37,6 +37,12 @@ const educationLevelsHighschool = [
   {label: "1ère année Bac", value:"1bac"},
   {label: "Tronc commun", value:"tronc-commun"},
 ]
+const educationLevelsUniversity = [
+  {label: "Université", value:"university"},
+  {label: "École d'ingénieur", value:"engineering-school"},
+  {label: "Classes préparatoires", value:"cpge"},
+  {label: "Other", value:"other"},
+]
 
 const educationFields = [
   {label: "TC sciences", value:"tc-sciences"},
@@ -73,6 +79,7 @@ export const EducationStep = ({
 }) => {
   const {
     isMathSprint,
+    isStand
   } = useActivityChoice(form, applicationStatus);
 
   return (
@@ -86,7 +93,7 @@ export const EducationStep = ({
       </h2>
       <Separator className='my-6 bg-[#0284C7]'/>
 
-      {isMathSprint && (
+      {(isMathSprint || isStand) && (
         <div className='mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 justify-between'>
           {/* Education Level */}
           <FormField
@@ -102,6 +109,10 @@ export const EducationStep = ({
                     </SelectTrigger>
                     <SelectContent className="max-h-60">
                       <SelectGroup>
+                        <SelectLabel>Supérieur <Separator className='mt-2 bg-gray-300' /></SelectLabel>
+                        {educationLevelsUniversity.map(level =>
+                          <SelectItem key={level.value} value={level.value}>{level.label}</SelectItem>
+                        )}
                         <SelectLabel>Lycée <Separator className='mt-2 bg-gray-300' /></SelectLabel>
                         {educationLevelsHighschool.map(level =>
                           <SelectItem key={level.value} value={level.value}>{level.label}</SelectItem>
@@ -124,31 +135,33 @@ export const EducationStep = ({
           />
 
           {/* Education Field */}
-          <FormField
-            control={form.control}
-            name="educationField"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Filière d&apos;étude<RequiredAsterisk /></FormLabel>
-                <FormControl>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Choose an option" />
-                    </SelectTrigger>
-                    <SelectContent className="max-h-60">
-                      <SelectGroup>
-                        <SelectLabel>Filière</SelectLabel>
-                        {educationFields.map(field =>
-                          <SelectItem key={field.value} value={field.value}>{field.label}</SelectItem>
-                        )}
-                      </SelectGroup>
-                    </SelectContent>
-                  </Select>
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+          {isMathSprint && 
+            <FormField
+              control={form.control}
+              name="educationField"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Filière d&apos;étude<RequiredAsterisk /></FormLabel>
+                  <FormControl>
+                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Choose an option" />
+                      </SelectTrigger>
+                      <SelectContent className="max-h-60">
+                        <SelectGroup>
+                          <SelectLabel>Filière</SelectLabel>
+                          {educationFields.map(field =>
+                            <SelectItem key={field.value} value={field.value}>{field.label}</SelectItem>
+                          )}
+                        </SelectGroup>
+                      </SelectContent>
+                    </Select>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          }
 
           {/* Highschool */}
           <FormField
