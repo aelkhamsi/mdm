@@ -177,7 +177,8 @@ export const UploadStep = ({
                       <FileInput form={form} id="fileStandAbstract" />
                     </FormControl>
                     <FormDescription>
-                      Ce document représente un résumé global des concepts que vous comptez présenter en stand et la manière dont vous allez l'animer.
+                      Exemple d'abstract: <Link className="text-blue-500 underline" href='https://drive.google.com/file/d/1cQSE4k_aGe3yHqJiineQ1rWwe61uXDYu/view?usp=sharing' target="_blank">fichier</Link> <br/>
+                      Veuillez utiliser ce lien pour générer votre abstract au bon format: <Link className="text-blue-500 underline" href='https://genpdflatexcandidature.streamlit.app' target="_blank">lien</Link>
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
