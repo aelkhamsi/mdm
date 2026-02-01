@@ -43,7 +43,7 @@ const HeroSection = () => {
           style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
         >
           <CtaButton />
-          <PlanningButton />
+          {/* <PlanningButton /> */}
           <FaqButton />
         </div>
 

@@ -22,22 +22,23 @@ export default function ConferencesPage() {
           <span className='bg-gradient-to-br from-sky-600 to-[#1C55FF] inline-block text-transparent bg-clip-text'>Workshops</span>
         </h1>
 
-        {/* <div
-          className="flex flex-col w-full md:flex-row md:justify-between md:space-x-8 text-base"
+        <div
+          className="flex flex-col w-full md:w-3/4 md:flex-row md:justify-between md:space-x-8 text-base"
         >
           <div className="w-full space-y-4 p-4">
-            <h1 className='font-bold text-3xl'>Des conférences pour nourrir les esprits mathématiques curieux</h1>
-            <p className="text-lg">Plongez dans l'univers des mathématiques à travers une série de conférences captivantes animées par des experts renommés du domaine.</p>
-            <p className="text-lg">Ces interventions offriront des perspectives inédites, des discussions profondes et des éclairages sur des sujets mathématiques variés, allant des théories classiques aux dernières avancées</p>
+            {/* <h1 className='font-bold text-3xl'>Des expériences intéractives pour </h1> */}
+            <p className="text-lg">Plus de détails vont être communiqués dans les prochains jours</p>
+            {/* <p className="text-lg">Plongez dans l'univers des mathématiques à travers une série de conférences captivantes animées par des experts renommés du domaine.</p>
+            <p className="text-lg">Ces interventions offriront des perspectives inédites, des discussions profondes et des éclairages sur des sujets mathématiques variés, allant des théories classiques aux dernières avancées</p> */}
           </div>
 
-          <div className="w-full -z-[6]">
+          {/* <div className="w-full -z-[6]">
             <ImageStack
               images={images}
               autoplay={true}
             />
-          </div>
-        </div> */}
+          </div> */}
+        </div>
 
         <CtaSection />
       </div>
