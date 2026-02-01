@@ -1,27 +1,20 @@
 export const generalQuestions = [
   {
-    question: "Combien de temps durera l'événement ?",
-    anwser: "L'événement durera une journée. Le programme complet de cette journée sera publié ultérieurement."
-  },
-  {
-    question: "Qui peut s'inscrire ?",
+    question: "Qui peut s’inscrire ?",
     anwser: "Toute personne intéressée par les mathématiques peut participer à cet événement."
   },
+  // Quel est le délai d’inscription ?
   {
-    question: "Quel est le délai d’inscription ?",
-    anwser: "La date limite pour les visiteurs est fixée au 17 avril 2025 à 20h. Pour la participation aux compétitions ou à l'animation des stands, vous trouverez les dates limites sur leurs pages correspondantes. N'attendez pas jusqu'au dernier jour pour soumettre votre candidature. Aucune exception ne sera accordée pour les candidatures tardives, quelles que soient les raisons invoquées, telles que l'oubli, des problèmes de connexion internet ou toute autre excuse."
+    question: "Y-a-t-il des frais à payer pour la nourriture, et les activités ?",
+    anwser: "Les activités sont toutes prises en charge pour les participants tout au long de l'événement. Seuls les frais de transport  et la nourriture sont à leur charge."
   },
   {
-    question: "Est-ce que la nourriture et le transport seront pris en charge ?",
-    anwser: "Non, tout le transport et la nourriture seront entièrement à votre charge. En cas d’exception, vous en serez informés."
-  },
-  {
-    question: "Est-ce que nos parents peuvent nous accompagner pendant l’événement ?",
-    anwser: "Oui, vous pouvez être accompagnés par vos parents pendant l’événement."
+    question: "L’événement est-il accessible à tout public, y compris aux familles  ?",
+    anwser: "Oui, l’événement est entièrement ouvert à toutes et tous, sans restriction d’âge, et propose des activités variées pour tou·tes les participant·es."
   },
   {
     question: "Où pourrais-je vous contacter si j’ai une demande spéciale, ou une autre question ?",
-    anwser: "Vous pouvez envoyer un email à la boîte mail suivante: mathmarocmdm@gmail.com"
+    anwser: "Vous pouvez envoyer un email à la boîte mail suivante: mdm@mathmaroc.org"
   },
   {
     question: "Pourrais-je participer même si je n’ai pas encore de carte d’identité nationale ?",
@@ -36,6 +29,10 @@ export const generalQuestions = [
     anwser: "Normalement, vous avez tous le bulletin du premier semestre de l'année en cours. Si vous l’aviez perdu, il est de votre responsabilité de solliciter votre école pour une copie. En cas de preuve sérieuse on peut accepter le bulletin de l'année précédente."
   },
   {
+    question: "Je suis mineur, puis-je venir seul(e)",
+    anwser: "A condition de présenter une autorisation parentale signée et légalisée, nous ne pouvons malheureusement pas accueillir de mineurs."
+  },
+  {
     question: "Quelle est la langue utilisée pour les conférences?",
     anwser: "Les conférences sont en français."
   },
@@ -44,20 +41,20 @@ export const generalQuestions = [
 
 export const mathSprintQuestions = [
   {
-    question: "Comment savoir si j’ai été sélectionné",
-    anwser: "Vous serez notifié par email et on vous ajoutera dans un groupe whatsapp, pensez à bien vérifier que vous avez mis le bon numéro de téléphone qui contient whatsapp."
+    question: "Comment savoir si j’ai été sélectionné ?",
+    anwser: "Vous recevrez une notification par email et serez ajouté à un groupe WhatsApp. Veillez à ce que le numéro renseigné corresponde à votre profil."
   },
-  {
-    question: "Quand est-ce qu’on sera notifié si on est sélectionné ?",
-    anwser: "Les résultats de sélection seront envoyés au plus tard mi-mars."
-  },
+  // {
+  //   question: "Quand est-ce qu’on sera notifié si on est sélectionné ?",
+  //   answer: "Les résultats de sélection seront envoyés au plus tard XXXXX."
+  // },
   {
     question: "Est-ce qu’il y aura des problèmes différents selon le niveau scolaire ?",
-    anwser: "Non, tous les candidats auront affaire aux mêmes problèmes. il y aura juste deux types d’épreuves : une pour le collège et l’autre pour le lycée."
+    anwser: "Non, tous les candidats auront affaire aux mêmes problèmes. Il y aura juste deux types d’épreuves : une pour le collège et l’autre pour le lycée."
   },
   {
     question: "Y-a-t-il des problèmes sur lesquels on pourra s'entraîner ?",
-    anwser: "Vous trouverez des problèmes d'entraînement dans la page dédiée à Math Sprint."
+    anwser: "Vous trouverez des problèmes d'entraînement dans la page dédiée à MathSprint en plus des épreuves de l’édition précédente."
   },
   {
     question: "Est-ce qu’il y aura des certificats de participation ?",
@@ -66,8 +63,8 @@ export const mathSprintQuestions = [
   {
     question: "Quels sont les prix à gagner ?",
     anwser: "Les prix seront annoncés avant la journée de MDM sur nos réseaux sociaux."
-  },
-]
+  }
+];
 
 export const bestMathVideoQuestions = [
   {
@@ -128,14 +125,14 @@ export const bestMathVideoQuestions = [
   },
   {
     question: "Est-ce qu'un certificat de participation sera remis à tous les participants ?",
-    anwser: "Tous les participants peuvent recevoir une attestation de participation sur demande. Veuillez nous contacter sur mathmarocmdm@gmail.com."
+    anwser: "Tous les participants peuvent recevoir une attestation de participation sur demande. Veuillez nous contacter sur mdm@mathmaroc.org."
   },
 ]
 
 export const standQuestions = [
   {
     question: "Comment puis-je m’inscrire pour tenir un stand ?",
-    anwser: "L’inscription se fait en ligne via le site web officiel du MDM  avant la date limite."
+    anwser: "L’inscription se fait en ligne via le site web officiel du MDM."
   },
   {
     question: "Y a-t-il des frais d’inscription pour proposer un stand ?",
@@ -165,10 +162,10 @@ export const standQuestions = [
     question: "Les frais de transports seront-ils remboursés ?",
     anwser: "Oui, pour deux personnes au maximum pour chaque stand. Les frais de trains."
   },
-  {
-    question: "Le logement des animateurs et leur restauration seront t-ils assurés par Math&Maroc ?",
-    anwser: "Nous avons la capacité de loger deux à trois personnes par stand la nuit du 18 au 19 juin. La restauration est offerte à l’ensemble des animateurs pour le dîner du 18, le petit déjeuner et le déjeuner du 19. "
-  },
+  // {
+  //   question: "Le logement des animateurs et leur restauration seront t-ils assurés par Math&Maroc ?",
+  //   anwser: "Nous avons la capacité de loger deux à trois personnes par stand la nuit du 18 au 19 juin. La restauration est offerte à l’ensemble des animateurs pour le dîner du 18, le petit déjeuner et le déjeuner du 19. "
+  // },
 ]
 
 export const conferencesQuestions = [
