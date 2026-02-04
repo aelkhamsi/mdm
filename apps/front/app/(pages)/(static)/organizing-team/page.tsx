@@ -1,9 +1,5 @@
 import { Linkedin } from '@mdm/ui';
-import {
-  organizingCommittee,
-  webDevelopment,
-  brandDesign,
-} from './data';
+import { organizingCommittee } from './data';
 import Link from 'next/link';
 import { shuffle } from '@mdm/utils';
 import { Brush } from '@mdm/ui';
@@ -13,14 +9,14 @@ const Card = ({
   key,
   name,
   imageSrc,
-  linkedinSrc,
-  portfolioSrc,
+  linkedinUrl,
+  portfolioUrl,
 }:{
   key: string,
   name: string,
   imageSrc: string,
-  linkedinSrc?: string,
-  portfolioSrc?: string,
+  linkedinUrl?: string,
+  portfolioUrl?: string,
 }) => {
   return (
     <div 
@@ -36,8 +32,8 @@ const Card = ({
 
       <div className='flex space-x-2'>
         <div className='text-xs text-center font-semibold '>{name}</div>
-        {linkedinSrc && <div><Link href={linkedinSrc} target='_blank' className='shadow-md'><Linkedin className="h-5 w-5 text-[#f04b5b]" /></Link></div>}
-        {portfolioSrc && <div><Link href={portfolioSrc} target='_blank' className='shadow-md'><Brush className="h-6 w-6 text-[#f04b5b]" /></Link></div>}
+        {linkedinUrl && <div><Link href={linkedinUrl} target='_blank' className='shadow-md'><Linkedin className="h-5 w-5 text-[#f04b5b]" /></Link></div>}
+        {portfolioUrl && <div><Link href={portfolioUrl} target='_blank' className='shadow-md'><Brush className="h-6 w-6 text-[#f04b5b]" /></Link></div>}
       </div>
     </div>
   )
@@ -62,14 +58,15 @@ export default function OrganizingTeamPage() {
               key={person.name.toLowerCase().replace(' ', '_')}
               name={person.name}
               imageSrc={person.imageSrc} 
-              linkedinSrc={person.linkedinSrc}
+              linkedinUrl={person.linkedinUrl}
+              portfolioUrl={person.portfolioUrl}
             />
           )}
         </div>
 
         <div className='flex flex-col justify-around space-y-6 flex-wrap gap-y-6 md:flex-row md:space-y-0'>          
           {/* WEB DEV */}
-          <div className='w-full md:w-1/2 space-y-4'>
+          {/* <div className='w-full md:w-1/2 space-y-4'>
             <h1 className="text-center text-3xl font-bold drop-shadow-sm">
               <span className='bg-gradient-to-br from-sky-800 to-[#272162] inline-block text-transparent bg-clip-text'>Math&Maroc</span> <span className='font-extralight'>{" | "}</span>
               <span className='bg-gradient-to-br from-black to-stone-500 inline-block text-transparent bg-clip-text'>Web Development</span>
@@ -88,10 +85,10 @@ export default function OrganizingTeamPage() {
               )}
               
             </div>
-          </div>
+          </div> */}
           
           {/* BRANDING & DESIGN */}
-          <div className='w-full md:w-1/2 space-y-4'>
+          {/* <div className='w-full md:w-1/2 space-y-4'>
             <h1 className="text-center text-3xl font-bold drop-shadow-sm">
               <span className='bg-gradient-to-br from-sky-800 to-[#272162] inline-block text-transparent bg-clip-text'>Math&Maroc</span> <span className='font-extralight'>{" | "}</span>
               <span className='bg-gradient-to-br from-black to-stone-500 inline-block text-transparent bg-clip-text'>Branding & Design</span>
@@ -110,7 +107,7 @@ export default function OrganizingTeamPage() {
                 />
               )}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </DivCircuitBg>
