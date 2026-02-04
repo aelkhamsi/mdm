@@ -4,23 +4,23 @@ import { ImageStack } from '../image-stack'
 const images = [
   {
     name: 'MDM conference',
-    src: '/past-edition/mdm_1.webp' 
+    src: '/homepage/homepage_1.webp' 
   },
   {
     name: 'MDM conference',
-    src: '/past-edition/mdm_2.webp' 
+    src: '/homepage/homepage_2.webp' 
   },
   {
     name: 'MDM conference',
-    src: '/past-edition/mdm_3.webp' 
+    src: '/homepage/homepage_3.webp' 
   },
   {
     name: 'MathSprint contest',
-    src: '/past-edition/mathsprint_1.webp' 
+    src: '/homepage/homepage_4.webp' 
   },
   {
     name: 'MathSprint contest',
-    src: '/past-edition/mathsprint_2.webp'
+    src: '/homepage/homepage_5.webp'
   },
 ]
 
