@@ -7,11 +7,19 @@ import Link from "next/link";
 const images = [
   {
     name: 'MathSprint contest',
-    src: '/past-edition/mathsprint_1.webp' 
+    src: '/math_sprint/math_sprint_1.webp' 
   },
   {
     name: 'MathSprint contest',
-    src: '/past-edition/mathsprint_2.webp'
+    src: '/math_sprint/math_sprint_2.webp' 
+  },
+  {
+    name: 'MathSprint contest',
+    src: '/math_sprint/math_sprint_3.webp' 
+  },
+  {
+    name: 'MathSprint contest',
+    src: '/math_sprint/math_sprint_4.webp' 
   },
 ]
 
@@ -29,17 +37,8 @@ export default function MathSprintPage() {
         >
           <div className="w-full space-y-4 p-4">
             <h1 className='font-bold text-3xl'>Une compétition pour les esprits mathématiques affûtés</h1>
-            
-            <p className="text-lg">Math Sprint est une compétition individuelle destinée aux <span className="font-bold text-[#1C55FF]">collégiens</span> et <span className="font-bold text-[#1C55FF]">lycéens</span> passionnés de mathématiques.</p>
-            
-            <div>
-              <p className="text-lg">Elle se déroule en <span className="text-[#1C55FF]">deux étapes</span>:</p>
-              <ul className="text-lg list-disc ml-4">
-                <li>Une phase de sélection en ligne sur la plateforme Evalmee (accessible à tous)</li>
-                <li>A l&apos;issue de la phase de sélection, les participants sélectionnés seront convoqués, sur le campus de l&apos;UEMF à Fès,  pour passer une épreuve QCM d&apos;une heure avec des épreuves distinctes adaptées aux collégiens et lycéens
-Format QCM, surveillé par caméra</li>
-              </ul>
-            </div>
+            <p className="text-lg">Maths Sprint est une épreuve de mathématiques conçue comme un véritable “sprint” intellectuel. Il s&apos;agit d&apos;un test sous forme de QCM destiné aux élèves du <span className="font-bold text-[#1C55FF]">collège</span> et du <span className="font-bold text-[#1C55FF]">lycée</span>, les plaçant face à une série de questions mathématiques originales et stimulantes.</p>
+            <p className="text-lg">En une heure, les participants doivent répondre à plusieurs questions qui ne requièrent pas une maîtrise approfondie du programme scolaire, mais plutôt l&apos;utilisation astucieuse d&apos;outils mathématiques simples et d&apos;une réflexion logique efficace.</p>
           </div>
 
           <div className="w-full -z-[6]">
@@ -54,7 +53,22 @@ Format QCM, surveillé par caméra</li>
           className="flex flex-col w-full md:flex-row md:justify-between md:space-x-8 text-base"
         >
           <div className="w-full space-y-4 p-4">
-            <p className='font-bold text-sm text-[#1C55FF]'>Le syllabus</p>
+            {/* <p className='font-bold text-sm text-[#1C55FF]'>Le syllabus</p> */}
+            <h1 className='font-bold text-3xl'>Comment se déroulera la compétition ?</h1>
+            
+            <div>
+              <p className="text-lg">La compétition se déroule en <span className="text-[#1C55FF] font-bold">2</span> étapes:</p>
+              <ul className="text-lg list-disc ml-4">
+                <li>Une phase de présélection où les candidats doivent rendre un devoir, au plus tard le <span className="text-[#1C55FF] font-bold">8 mars, impérativement écrit à la main</span> sous peine de rejet de la candidature. Le devoir sera mis en ligne le <span className="text-[#1C55FF] font-bold">28 février</span>.</li>
+                <li>À l&apos;issue de cette phase, un nombre limité de candidats sera sélectionné pour participer à l&apos;épreuve finale en présentiel, organisée sur le campus de l&apos;<span className="text-[#1C55FF] font-bold">UEMF à Fès</span> lors du <span className="text-[#1C55FF] font-bold">Moroccan Day of Mathematics 2026</span>. L&apos;épreuve finale consiste en un QCM d&apos;une heure, avec des sujets <span className="text-[#1C55FF] font-bold">distincts</span> pour les collégiens et les lycéens.</li>
+              </ul>
+            </div>
+
+            <p className="text-lg">La clôture des inscriptions sera le <span className="text-[#1C55FF] font-bold">28 février</span>. Sauf problème technique de notre part, aucune extension de la deadline n&apos;est possible. </p>
+          </div>
+
+          <div className="w-full space-y-4 p-4">
+            {/* <p className='font-bold text-sm text-[#1C55FF]'>Le syllabus</p> */}
             <h1 className='font-bold text-3xl'>Quels sujets concernent l'épreuve ?</h1>
             
             <div className="flex flex-col items-center space-y-4 md:flex-row md:space-x-4 md:space-y-0">
