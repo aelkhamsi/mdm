@@ -53,6 +53,49 @@ const functions = [
   { label: "(Autre)", value: 'other' }
 ]
 
+const cities = [
+  { label: "Agadir", value: "agadir" },
+  { label: "Aït Melloul", value: "ait-melloul" },
+  { label: "Al Hoceima", value: "al-hoceima" },
+  { label: "Ben Guerir", value: "ben-guerir" },
+  { label: "Beni Mellal", value: "beni-mellal" },
+  { label: "Berrechid", value: "berrechid" },
+  { label: "Berkane", value: "berkane" },
+  { label: "Bouskoura", value: "bouskoura" },
+  { label: "Casablanca", value: "casablanca" },
+  { label: "El Jadida", value: "el-jadida" },
+  { label: "Errachidia", value: "errachidia" },
+  { label: "Essaouira", value: "essaouira" },
+  { label: "Fez", value: "fez" },
+  { label: "Guelmim", value: "guelmim" },
+  { label: "Guercif", value: "guercif" },
+  { label: "Ifrane", value: 'ifrane' },
+  { label: "Kenitra", value: "kenitra" },
+  { label: "Khouribga", value: "khouribga" },
+  { label: "Khemisset", value: "khemisset" },
+  { label: "Khenifra", value: "khenifra" },
+  { label: "Larache", value: "larache" },
+  { label: "Marrakesh", value: "marrakesh" },
+  { label: "Meknes", value: "meknes" },
+  { label: "Mohammedia", value: "mohammedia" },
+  { label: "Nador", value: "nador" },
+  { label: "Ouarzazate", value: "ouarzazate" },
+  { label: "Oujda", value: "oujda" },
+  { label: "Rabat", value: "rabat" },
+  { label: "Safi", value: "safi" },
+  { label: "Salé", value: "sale" },
+  { label: "Sefrou", value: "sefrou" },
+  { label: "Settat", value: "settat" },
+  { label: "Tan-Tan", value: "tan-tan" },
+  { label: "Tangier", value: "tangier" },
+  { label: "Taroudant", value: "taroudant" },
+  { label: "Taza", value: "taza" },
+  { label: "Temara", value: "temara" },
+  { label: "Tetouan", value: "tetouan" },
+  { label: "Tifelt", value: "tifelt" },
+  { label: "Tiznit", value: "tiznit" },
+  { label: "(Autre)", value: 'other' }
+]
 
 const RequiredAsterisk = () => <span className="text-red-500"> * </span>;
 
@@ -165,19 +208,13 @@ export const PersonalInformationStep = ({
         />
 
         {/* City */}
-        <FormField
-          control={form.control}
+        <SelectOrInput
           name="city"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Ville de résidence<RequiredAsterisk /></FormLabel>
-              <FormControl>
-                <Input placeholder="Ville" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+          form={form}
+          label="Ville de résidence"
+          options={cities}
+          required={true}
+        ></SelectOrInput>
 
         {/* Region */}
         <FormField

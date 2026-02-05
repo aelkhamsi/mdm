@@ -28,15 +28,6 @@ const hosts = [
   }
 ]
 
-const sponsors = [
-  {
-    key: 'evalmee',
-    label: 'EVALMEE',
-    imageHref: '/evalmee.png',
-    imageHeight: '45px',
-  }
-]
-
 export default function PartnersPage() {
   return (
     <DivCircuitBg classNameBgImage="opacity-50">
@@ -120,31 +111,6 @@ export default function PartnersPage() {
                     <div>L&apos;<span className='mb-8 bg-gradient-to-br from-[#005598] to-sky-600 text-transparent bg-clip-text font-semibold'>UEMF</span> est une institution d&apos;enseignement supérieur qui favorise l&apos;échange et la coopération internationale dans l&apos;espace <span className="font-bold">Europe-Méditerranée-Afrique</span>, réunissant plus de <span className="font-bold">32 nationalités</span>.</div>
                     <div>Elle se distingue par son engagement envers l&apos;excellence académique et sa quête d&apos;innovation en recherche de pointe.</div>
                   </div>
-                </PartnerCard>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            {/* SPONSORS */}
-            <div>
-              <h1 
-                className="animate-fade-up opacity-0 text-center text-3xl font-bold drop-shadow-sm"
-                style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
-              >
-                <span className='bg-gradient-to-br from-sky-800 to-[#272162] inline-block text-transparent bg-clip-text'>Sponsors</span>
-              </h1>
-
-              <div
-                className="flex justify-around flex-wrap gap-6 p-8 rounded-lg animate-fade-up opacity-0"
-                style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
-              >
-                <PartnerCard
-                  key={sponsors[0].key}
-                  imageSrc={sponsors[0].imageHref}
-                  imageHeight={sponsors[0].imageHeight}
-                >
-                  <div><span className='mb-8 bg-gradient-to-br from-[#7cb9ff] to-[#3691FB] text-transparent bg-clip-text font-semibold'>Evalmee</span> est une plateforme d&apos;évaluation en ligne offrant des outils précis et personnalisés pour dévoiler et perfectionner les compétences. Découvrez une approche dynamique pour révéler le potentiel caché et atteindre l&apos;excellence professionnelle.</div>
                 </PartnerCard>
               </div>
             </div>

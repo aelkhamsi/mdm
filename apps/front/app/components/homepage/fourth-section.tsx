@@ -17,12 +17,6 @@ const getSlideshowImages = () => ([
 
 const people = [
   {
-    id: 2,
-    name: "Oussama ZOUHRY",
-    designation: "Student @ Ecole Polytechnique X",
-    image: "/organizing-team/oussama_zouhry.webp",
-  },
-  {
     id: 3,
     name: "Chaimaa LOUTFI",
     designation: "Student @ EPFL",

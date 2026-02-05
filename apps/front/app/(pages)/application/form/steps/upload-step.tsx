@@ -93,7 +93,7 @@ export const UploadStep = ({
 
                 return (
                   <FormItem>
-                    <FormLabel>Bulletin du premier semestre de l&apos;année scolaire courante 2024-2025<RequiredAsterisk /></FormLabel>
+                    <FormLabel>Bulletin du premier semestre de l&apos;année scolaire courante 2025-2026<RequiredAsterisk /></FormLabel>
                     <FormControl>
                       <FileInput form={form} id="fileGrades" />
                     </FormControl>
@@ -210,7 +210,7 @@ export const UploadStep = ({
 
                 return (
                   <FormItem>
-                    <FormLabel>Autorisation parentale signée et légalisée par le tuteur légal (<Link className="text-blue-500 underline" href='https://drive.google.com/file/d/15xD6J3oTd8pBoO5AS8BU-kOvJvvT77N1/view?usp=sharing' target="_blank">fichier</Link>)<RequiredAsterisk /></FormLabel>
+                    <FormLabel>Autorisation parentale signée et légalisée par le tuteur légal (<Link className="text-blue-500 underline" href='https://drive.google.com/file/d/1gbrnffi33j5qk1JJttOlb7jAMX_OUZ6x/view?usp=sharing' target="_blank">fichier</Link>)<RequiredAsterisk /></FormLabel>
                     <FormControl>
                       <FileInput form={form} id="fileParentalAuthorization" />
                     </FormControl>
