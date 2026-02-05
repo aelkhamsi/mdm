@@ -46,6 +46,9 @@ export class GroupApplication {
   @Column({ type: 'varchar', default: '' })
   phoneNumber: string;
 
+  @Column({ type: 'varchar', default: '' })
+  function: string;
+
   /* Establishment Information */
   @Column({ type: 'varchar', default: '' })
   establishmentName: string;

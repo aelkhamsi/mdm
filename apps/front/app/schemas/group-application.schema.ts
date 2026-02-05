@@ -27,8 +27,9 @@ export const groupApplicationSchema: ZodSchema = z.object({
     }),
   identityCardNumber: z.string().min(1).max(50),
   city: z.string().min(1).max(50),
-  region: z.string().nonempty("Please select an option"),
+  region: z.string().nonempty("Choisissez une option"),
   phoneNumber: z.string().refine(isValidPhoneNumber, { message: "Invalid phone number" }),
+  function: z.string().min(1, {message: "Choisissez une option"}).max(50),
 
   establishmentName: z.string().min(1, { message: "Champ obligatoire"}).max(50),
   establishmentCity: z.string().min(1, { message: "Champ obligatoire"}).max(50),
@@ -49,6 +50,7 @@ export const getGroupApplicationDefaultValues = (userData: any) => ({
   city: "",
   region: "",
   phoneNumber: "",
+  function: "",
 
   establishmentName: "",
   establishmentCity: "",

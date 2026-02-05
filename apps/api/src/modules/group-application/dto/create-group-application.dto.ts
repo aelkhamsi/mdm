@@ -31,6 +31,10 @@ export class CreateGroupApplicationDto {
   @IsOptional()
   phoneNumber: string;
 
+  @IsString()
+  @IsOptional()
+  function: string;
+
   /* Files */
   @IsString()
   @IsOptional()

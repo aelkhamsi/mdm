@@ -25,9 +25,10 @@ import {
 import { Calendar } from "@mdm/ui"
 import { CalendarIcon } from "@mdm/ui"
 import { PhoneInput } from "@mdm/ui"
-import { cn, isOverEighteen } from '@mdm/utils'
+import { cn } from '@mdm/utils'
 import { Button } from "@mdm/ui"
 import { format } from "@mdm/ui"
+import SelectOrInput from '@/app/components/forms/select-or-input'
 
 const regions = [
   {label: "Tanger-Tétouan-Al Hoceïma", value:"tanger-tetouan-al-houceima"},
@@ -45,11 +46,13 @@ const regions = [
   {label: "Abroad", value:"abroad"},
 ]
 
-const relationshipsWithGuardian = [
-  {label: "Père", value:"father"},
-  {label: "Mère", value:"mother"},
-  {label: "Tuteur", value:"guardian"},
+const functions = [
+  { label: "Directeur", value: "director" },
+  { label: "Professeur", value: "professor" },
+  { label: "Surveillant", value: "supervisor" },
+  { label: "(Autre)", value: 'other' }
 ]
+
 
 const RequiredAsterisk = () => <span className="text-red-500"> * </span>;
 
@@ -217,6 +220,15 @@ export const PersonalInformationStep = ({
             </FormItem>
           )}
         />
+
+        {/* Qualité de la personne */}
+        <SelectOrInput
+          name="function"
+          form={form}
+          label="Fonction de la personne"
+          options={functions}
+          required={true}
+        ></SelectOrInput>
       </div>
     </motion.div>
   )
