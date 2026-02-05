@@ -1,6 +1,7 @@
 import CtaSection from "@/app/components/cta/cta-section"
 import DivCircuitBg from "@/app/components/div-circuit-bg"
-import { AwardIcon, BoardGamesIcon, LightbulbIcon, Separator, StarShineIcon } from "@mdm/ui"
+import { AwardIcon, BoardGamesIcon, ExamIcon, LightbulbIcon, Separator, StarShineIcon } from "@mdm/ui"
+import Link from "next/link"
 
 export default function StandsPage() {
 
@@ -118,6 +119,57 @@ export default function StandsPage() {
               Chaque participant pourra voter pour le stand qui l&apos;a le plus marqué.<br/>
               Un <span className="font-bold">prix sera décerné au meilleur stand</span>
             </p>
+          </div>
+        </div>
+
+        <div
+          className="flex flex-col w-full md:flex-row md:justify-between md:space-x-8 text-base"
+        >
+          <div className="w-full space-y-4 p-4">
+            <h1 className='font-bold text-3xl'>Prix du meilleur Stand 🏆</h1>
+
+            <p>
+              Tous les stands animés participeront automatiquement à la compétition{" "}
+              <span className="font-semibold">Meilleur Stand</span>.
+            </p>
+
+            <p>
+              À l&apos;issue de l&apos;événement, le stand ayant le plus séduit le public sera élu{" "}
+              <span className="font-semibold">Meilleur Stand</span> et se verra décerner le
+              prix correspondant.
+            </p>
+          </div>
+
+          <div className="w-full space-y-4 p-4">
+            <h1 className='font-bold text-3xl'>Bien préparer votre candidature</h1>
+            
+            <p>Pour déposer votre candidature, il va falloir préparer un <span className="font-semibold">abstract</span> décrivant les sujets que vous souhaitez aborder sur votre stand ainsi que la manière dont vous comptez l'animer.</p>
+
+            <p>Afin de vous accompagner dans cette démarche, vous trouverez ci-dessous un <span className="font-semibold">exemple d&apos;abstract</span> ainsi qu'un lien vers un <span className="font-semibold">générateur d&apos;abstract</span>:</p>
+
+            <div className="flex flex-col items-center space-y-4 md:flex-row md:space-x-4 md:space-y-0">
+              <Link href='https://drive.google.com/file/d/1cQSE4k_aGe3yHqJiineQ1rWwe61uXDYu/view?usp=sharing' target="_blank">
+                <div 
+                  className="h-[8rem] w-[9rem] bg-white border-b-4 border-b-red-500 border-2 shadow-md flex justify-center items-center rounded-md hover:cursor-pointer"
+                > 
+                  <div className="flex flex-col items-center text-center">
+                    <span className="font-bold">Exemple d&apos;abstract</span>
+                    <ExamIcon className="h-[4rem]"/>
+                  </div>
+                </div>
+              </Link>
+
+              <Link href='https://genpdflatexcandidature.streamlit.app/' target="_blank">
+                <div 
+                  className="h-[8rem] w-[9rem] bg-white border-b-4 border-b-red-500 border-2 shadow-md flex justify-center items-center rounded-md hover:cursor-pointer"
+                > 
+                  <div className="flex flex-col items-center text-center">
+                    <span className="font-bold">Générateur d&apos;abstract</span>
+                    <ExamIcon className="h-[4rem]"/>
+                  </div>
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
 

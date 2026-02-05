@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { ControllerRenderProps, UseFormReturn } from 'react-hook-form'
-import { Input, Separator } from "@mdm/ui"
+import { ExternalLink, Separator } from "@mdm/ui"
 import {
   FormControl,
   FormDescription,
@@ -177,8 +177,11 @@ export const UploadStep = ({
                       <FileInput form={form} id="fileStandAbstract" />
                     </FormControl>
                     <FormDescription>
-                      Exemple d'abstract: <Link className="text-blue-500 underline" href='https://drive.google.com/file/d/1cQSE4k_aGe3yHqJiineQ1rWwe61uXDYu/view?usp=sharing' target="_blank">fichier</Link> <br/>
-                      Veuillez utiliser ce lien pour générer votre abstract au bon format: <Link className="text-blue-500 underline" href='https://genpdflatexcandidature.streamlit.app' target="_blank">lien</Link>
+                      Veuillez trouver ci-dessous un exemple d&apos;abstract ainsi qu'un générateur d&apos;abstract qui vous aidera à le créer au bon format.
+                      <ul className='list-disc ml-4 font-medium'>
+                        <li><span className='font-bold'>Exemple d'abstract</span>: <Link className="text-blue-600 font-bold underline" href='https://drive.google.com/file/d/1cQSE4k_aGe3yHqJiineQ1rWwe61uXDYu/view?usp=sharing' target="_blank">lien <ExternalLink /></Link> <br/></li>
+                        <li><span className='font-bold'>Générateur d&apos;abstract au bon format</span>: <Link className="text-blue-600 font-bold underline" href='https://genpdflatexcandidature.streamlit.app' target="_blank">lien <ExternalLink /></Link></li>
+                      </ul>
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
