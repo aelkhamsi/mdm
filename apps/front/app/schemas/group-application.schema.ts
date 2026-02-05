@@ -11,7 +11,20 @@ const zodFileValidation = z.any()
 export const groupApplicationSchema: ZodSchema = z.object({
   firstName: z.string().min(1).max(50),
   lastName: z.string().min(1).max(50),
-  dateOfBirth: z.date({ required_error: "A date of birth is required." }),
+  dateOfBirth: z
+    .date({ required_error: "A date of birth is required." })
+    .refine((dob) => {
+      const today = new Date();
+      const age = today.getFullYear() - dob.getFullYear();
+      const m = today.getMonth() - dob.getMonth();
+
+      if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+        return age - 1 >= 18;
+      }
+      return age >= 18;
+    }, {
+      message: "Vous devez avoir au moins 18 ans",
+    }),
   identityCardNumber: z.string().min(1).max(50),
   city: z.string().min(1).max(50),
   region: z.string().nonempty("Please select an option"),

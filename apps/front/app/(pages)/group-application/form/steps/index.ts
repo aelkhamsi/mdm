@@ -1,3 +1,4 @@
+import { isOverEighteen } from '@mdm/utils'
 
 type Step = {
   id: string,
@@ -9,7 +10,7 @@ export const steps: Step[] = [
   {
     id: 'Étape 1',
     name: "Informations Personnelles de l'accompagnateur",
-    getFields: () => ['firstName', 'lastName', 'dateOfBirth', 'city', 'region', 'identityCardNumber', 'phoneNumber']
+    getFields: () => ['firstName', 'lastName', 'dateOfBirth', 'city', 'region', 'identityCardNumber', 'phoneNumber'],
   },
   {
     id: 'Étape 2',
