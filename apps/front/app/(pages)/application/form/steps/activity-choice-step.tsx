@@ -27,7 +27,7 @@ export const choices = [
   },
   {
     value: ActivityChoiceValues.STAND,
-    label: "🎤 Présenter en Stand",
+    label: "🎤 Présenter un Stand",
     type: "Organisation",
     color: 'blue-700',
     target: 'Étudiants universitaires',
@@ -35,7 +35,7 @@ export const choices = [
   },
   {
     value: ActivityChoiceValues.VISITOR,
-    label: "🏖️ Visiteur (conférences et stands)",
+    label: "🏖️ Visiteur (conférences, stands et workshops)",
     type: "Visite",
     color: 'green-700',
     target: 'Ouvert pour tous',
