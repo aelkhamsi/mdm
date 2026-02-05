@@ -6,12 +6,16 @@ import ConferenceSection from "./conference-section"
 
 const images = [
   {
-    name: 'MathSprint contest',
-    src: '/past-edition/mdm_1.webp' 
+    name: 'MDM conferences',
+    src: '/conferences/conferences_1.webp' 
   },
   {
-    name: 'MathSprint contest',
-    src: '/past-edition/mdm_2.webp'
+    name: 'MDM conferences',
+    src: '/conferences/conferences_2.webp' 
+  },
+  {
+    name: 'MDM conferences',
+    src: '/conferences/conferences_3.webp' 
   },
 ]
 
