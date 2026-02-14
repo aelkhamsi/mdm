@@ -17,7 +17,7 @@ const PlanningButton = () => {
     >
       <SheetIcon className='h-5 w-5'/>
       {!isLoading
-        ? <span className="hidden sm:inline-block">Planning</span>
+        ? <span>Planning</span>
         : <LoadingDots color="#808080" />
       }
     </Link>

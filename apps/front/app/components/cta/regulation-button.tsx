@@ -15,7 +15,7 @@ const RegulationButton = () => {
       target='_blank'
     >
       <Scroll className='h-5 w-5'/>
-      <span className="hidden sm:inline-block">Réglement</span>
+      <span>Réglement</span>
     </Link>
   )
 }

@@ -40,13 +40,13 @@ const HeroSection = () => {
         </div>
 
         <div
-          className="mx-auto flex animate-fade-up items-center justify-center space-x-5 opacity-0"
+          className="mx-auto flex flex-wrap gap-y-4 animate-fade-up items-center justify-center space-x-5 opacity-0"
           style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
         >
           <CtaButton />
+          <DeadlineButton />
           <RegulationButton />
           <FaqButton />
-          <DeadlineButton />
         </div>
 
         <div

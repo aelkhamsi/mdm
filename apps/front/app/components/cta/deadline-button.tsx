@@ -11,7 +11,7 @@ const DeadlineButton = () => {
       href="#deadlines"
     >
       <Timer className='h-5 w-5'/>
-      <span className="hidden sm:inline-block">Dates limites</span>
+      <span>Dates limites</span>
     </Link>
   )
 }

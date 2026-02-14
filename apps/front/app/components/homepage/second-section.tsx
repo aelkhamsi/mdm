@@ -64,7 +64,7 @@ const SecondSection = () => {
         className="w-full lg:w-3/4 flex flex-col text-center items-center justify-around space-y-4 animate-fade-up opacity-0 backdrop-blur-md border border-red-500 rounded-xl shadow-sm py-2 my-14 md:mb-10 md:mt-0"
         style={{ animationDelay: "0.35s", animationFillMode: "forwards" }}
       >
-        <div>Dates limites d&apos;inscription selon votre choix de participation</div>
+        <div><span className='font-medium text-red-700'>Date limite pour l&apos;inscription</span> selon votre choix de participation</div>
 
         <div className='w-full lg:w-3/4 flex justify-center'>
           <div className='w-1/3 '><span className='font-bold'>28 février</span><br/>Animation Stand</div>
