@@ -59,12 +59,12 @@ export default function MathSprintPage() {
             <div>
               <p className="text-lg">La compétition se déroule en <span className="text-[#1C55FF] font-bold">2</span> étapes:</p>
               <ul className="text-lg list-disc ml-4">
-                <li>Une phase de présélection où les candidats doivent rendre un devoir, au plus tard le <span className="text-[#1C55FF] font-bold">8 mars, impérativement écrit à la main</span> sous peine de rejet de la candidature. Le devoir sera mis en ligne le <span className="text-[#1C55FF] font-bold">28 février</span>.</li>
+                <li>Une phase de présélection où les candidats doivent rendre un devoir, au plus tard le <span className="text-[#1C55FF] font-bold">9 mars, impérativement écrit à la main</span> sous peine de rejet de la candidature. Le devoir sera mis en ligne le <span className="text-[#1C55FF] font-bold">5 mars</span>.</li>
                 <li>À l&apos;issue de cette phase, un nombre limité de candidats sera sélectionné pour participer à l&apos;épreuve finale en présentiel, organisée sur le campus de l&apos;<span className="text-[#1C55FF] font-bold">UEMF à Fès</span> lors du <span className="text-[#1C55FF] font-bold">Moroccan Day of Mathematics 2026</span>. L&apos;épreuve finale consiste en un QCM d&apos;une heure, avec des sujets <span className="text-[#1C55FF] font-bold">distincts</span> pour les collégiens et les lycéens.</li>
               </ul>
             </div>
 
-            <p className="text-lg">La clôture des inscriptions sera le <span className="text-[#1C55FF] font-bold">28 février</span>. Sauf problème technique de notre part, aucune extension de la deadline n&apos;est possible. </p>
+            <p className="text-lg">La clôture des inscriptions sera le <span className="text-[#1C55FF] font-bold">5 mars</span>. Sauf problème technique de notre part, aucune extension de la deadline n&apos;est possible. </p>
           </div>
 
           <div className="w-full space-y-4 p-4">
