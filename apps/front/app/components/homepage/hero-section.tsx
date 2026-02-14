@@ -4,7 +4,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import CtaButton from '../cta/cta-button'
 import FaqButton from '../cta/faq-button'
-import PlanningButton from '../cta/planning-button'
+import RegulationButton from '../cta/regulation-button'
+import DeadlineButton from '../cta/deadline-button'
 
 const HeroSection = () => {
   return (
@@ -43,8 +44,9 @@ const HeroSection = () => {
           style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
         >
           <CtaButton />
-          {/* <PlanningButton /> */}
+          <RegulationButton />
           <FaqButton />
+          <DeadlineButton />
         </div>
 
         <div
