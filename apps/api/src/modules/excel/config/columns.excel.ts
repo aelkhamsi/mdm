@@ -68,11 +68,6 @@ export const columns = [
     key: 'details-of-experience',
     width: 20,
   },
-  { header: '[BMV] Video Title', key: 'education-level', width: 20 },
-  { header: '[BMV] Video Link', key: 'education-field', width: 20 },
-  { header: '[BMV] Video Subject', key: 'highschool', width: 15 },
-  { header: '[BMV] Video Motivations', key: 'highschool', width: 15 },
-  { header: '[BMV] Video Ressources', key: 'highschool', width: 15 },
 
   { header: '[STAND] Subject Title', key: 'highschool', width: 15 },
   { header: '[STAND] Subject Details', key: 'highschool', width: 15 },
@@ -82,13 +77,14 @@ export const columns = [
   { header: 'Comments', key: 'id', width: 30 },
 
   { header: 'CNIE', key: 'cnie', width: 10 },
-  { header: '[STAND] Members CNIE', key: 'members-cnie', width: 10 },
-  { header: '[SPRINT] Grades', key: 'grades', width: 10 },
   {
     header: 'Parental Authorization',
     key: 'parental-authorization',
     width: 10,
   },
+  { header: '[SPRINT] Grades', key: 'grades', width: 10 },
+  { header: '[STAND] Members CNIE', key: 'members-cnie', width: 10 },
+  { header: '[STAND] Abstract', key: 'stand-abstract', width: 10 },
 
   { header: 'Status', key: 'status', width: 15 },
 ];

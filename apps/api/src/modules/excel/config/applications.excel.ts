@@ -51,6 +51,14 @@ export const rowFactory = (applications: any[], configService) => {
       text: application?.fileCnieUrl ? 'link' : ' ',
       hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.fileCnieUrl}`,
     },
+    fileParentalAuthorization: {
+      text: application?.fileParentalAuthorizationUrl ? 'link' : ' ',
+      hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.fileParentalAuthorizationUrl}`,
+    },
+    fileGrades: {
+      text: application?.fileGradesUrl ? 'link' : ' ',
+      hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.fileGradesUrl}`,
+    },
     fileMembersCnie: {
       text: application?.fileMembersCnieUrl ? 'link' : ' ',
       hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.fileMembersCnieUrl}`,
@@ -59,15 +67,7 @@ export const rowFactory = (applications: any[], configService) => {
       text: application?.fileStandAbstractUrl ? 'link' : ' ',
       hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.fileStandAbstractUrl}`,
     },
-    fileGrades: {
-      text: application?.fileGradesUrl ? 'link' : ' ',
-      hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.fileGradesUrl}`,
-    },
-    fileParentalAuthorization: {
-      text: application?.fileParentalAuthorizationUrl ? 'link' : ' ',
-      hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.fileParentalAuthorizationUrl}`,
-    },
 
-    status: application?.status?.status,
+    status: application?.status,
   }));
 };
