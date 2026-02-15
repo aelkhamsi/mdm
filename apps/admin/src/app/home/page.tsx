@@ -29,7 +29,7 @@ const countApplications = (
       const activityChoices = JSON.parse(application?.activityChoices || "[]");
       if (!activityChoice || activityChoices.includes(activityChoice)) {
         count[0]++;
-        if (application?.status?.status === "PENDING") {
+        if (application?.status === "COMPLETE") {
           count[1]++;
         }
       }
@@ -42,16 +42,16 @@ const countApplications = (
 
 export default function Home() {
   const applications = useRecoilValue(applicationsState);
-  const [countAll, countPending] = countApplications(applications);
-  const [mathSprintAll, mathSprintPending] = countApplications(
+  const [countAll, countComplete] = countApplications(applications);
+  const [mathSprintAll, mathSprintComplete] = countApplications(
     applications,
     ActivityChoiceValues.MATH_SPRINT,
   );
-  const [standAll, standPending] = countApplications(
+  const [standAll, standComplete] = countApplications(
     applications,
     ActivityChoiceValues.STAND,
   );
-  const [visitorAll, visitorPending] = countApplications(
+  const [visitorAll, visitorComplete] = countApplications(
     applications,
     ActivityChoiceValues.VISITOR,
   );
@@ -67,25 +67,25 @@ export default function Home() {
           title="General"
           className="text-white bg-[#272162]"
           valueAll={countAll}
-          valuePending={countPending}
+          valueComplete={countComplete}
         />
         <Stats
           title="🏁 Math Sprint"
           className="bg-gray-300"
           valueAll={mathSprintAll}
-          valuePending={mathSprintPending}
+          valueComplete={mathSprintComplete}
         />
         <Stats
           title="🎤 Stand"
           className="bg-gray-300"
           valueAll={standAll}
-          valuePending={standPending}
+          valueComplete={standComplete}
         />
         <Stats
           title="🏖️ Visitor"
           className="bg-gray-300"
           valueAll={visitorAll}
-          valuePending={visitorPending}
+          valueComplete={visitorComplete}
         />
       </div>
     </>
