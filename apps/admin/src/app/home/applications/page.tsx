@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { ApplicationsTable } from "@/app/home/applications/components/applications-table";
 import { applicationsState } from "@/store/applicationsState";
@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 
 export default function ApplicationsPage() {
   const applications = useRecoilValue(applicationsState);
-  const [tableData, setTableData] = useState<ApplicationRow[]>([])
+  const [tableData, setTableData] = useState<ApplicationRow[]>([]);
 
   useEffect(() => {
     if (applications) {
@@ -22,15 +22,15 @@ export default function ApplicationsPage() {
           city: application?.city,
           establishment: application?.highschool,
           activityChoices: application?.activityChoices,
-          status: application?.status?.status,
-        }))
-      )
+          status: application?.status,
+        })),
+      );
     }
-  }, [applications])
+  }, [applications]);
 
   return (
     <div className="space-y-8">
-      <div className='from-black to-stone-500 bg-clip-text text-4xl font-medium'>
+      <div className="from-black to-stone-500 bg-clip-text text-4xl font-medium">
         Applications
       </div>
 
