@@ -115,11 +115,15 @@ export class ApplicationController {
     @Body() updateApplicationDto: UpdateApplicationDto,
     @Request() req,
   ) {
-    const userId = req['user'].id;
+    const user = req['user'];
     const application = await this.applicationService.findOneById(id);
-    const user = application?.user;
+    const applicationUser = application?.user;
 
-    if (user && user?.id !== userId) {
+    if (
+      applicationUser &&
+      user?.role !== ADMIN_ROLE &&
+      user?.id !== applicationUser?.id
+    ) {
       throw new ForbiddenException('This user can not update this application');
     }
 

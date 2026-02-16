@@ -42,15 +42,6 @@ const FilesTable = ({ application }: { application: any }) => {
           </TableRow>
         )}
 
-        {application?.fileMembersCnieUrl && (
-          <TableRow key="members-cnie">
-            <TableCell>Members CNIE</TableCell>
-            <TableCell>
-              <FileCard href={application?.fileMembersCnieUrl} />
-            </TableCell>
-          </TableRow>
-        )}
-
         {application?.fileGradesUrl && (
           <TableRow key="grades">
             <TableCell>Grades</TableCell>
@@ -65,6 +56,15 @@ const FilesTable = ({ application }: { application: any }) => {
             <TableCell>Parental Authorization</TableCell>
             <TableCell>
               <FileCard href={application?.fileParentalAuthorizationUrl} />
+            </TableCell>
+          </TableRow>
+        )}
+
+        {application?.fileMembersCnieUrl && (
+          <TableRow key="members-cnie">
+            <TableCell>Stand Members CNIE</TableCell>
+            <TableCell>
+              <FileCard href={application?.fileMembersCnieUrl} />
             </TableCell>
           </TableRow>
         )}
