@@ -84,7 +84,8 @@ export default function StandsPage() {
           <div>
             Si vous êtes:
             <ol className="list-decimal ml-6">
-              <li className="marker:text-[#1C55FF] marker:text-2xl">Membre d&apos;un club, d&apos;une association ou représentant d&apos;une entreprise passionnée par les mathématiques</li>
+              <li className="marker:text-[#1C55FF] marker:text-2xl">Étudiant universitaire</li>
+              <li className="marker:text-[#1C55FF] marker:text-2xl">Membres d&apos;un club ou d&apos;une association, représentants d&apos;une entreprise ou simplement un groupe d&apos;amis passionné par les mathématiques</li>
               <li className="marker:text-[#1C55FF] marker:text-2xl">Vous souhaitez partager vos idées innovantes et vulgariser des concepts mathématiques auprès d&apos;un public diversifié</li>
             </ol>
           </div>

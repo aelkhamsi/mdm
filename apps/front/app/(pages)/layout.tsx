@@ -12,7 +12,7 @@ import { Toaster } from "@mdm/ui";
 
 
 export const metadata = {
-  title: "MDM 2025",
+  title: "MDM 2026",
   description: "MDM: La grande rencontre des passionnés de mathématiques",
   metadataBase: new URL("https://mdm.mathmaroc.org"),
   icons: {

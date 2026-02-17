@@ -3,10 +3,17 @@ export const generalQuestions = [
     question: "Qui peut s’inscrire ?",
     anwser: "Toute personne intéressée par les mathématiques peut participer à cet événement."
   },
-  // Quel est le délai d’inscription ?
+  {
+    question: "Quel est le délai d’inscription ?",
+    anwser: "La date limite pour les visiteurs est fixée au 26 mars. Pour la participation aux compétitions ou à l'animation des stands, vous trouverez les dates limites sur leurs pages correspondantes. N'attendez pas jusqu'au dernier jour pour soumettre votre candidature. Aucune exception ne sera accordée pour les candidatures tardives, quelles que soient les raisons invoquées, telles que l'oubli, des problèmes de connexion internet ou toute autre excuse.",
+  },
   {
     question: "Y-a-t-il des frais à payer pour la nourriture, et les activités ?",
-    anwser: "Les activités sont toutes prises en charge pour les participants tout au long de l'événement. Seuls les frais de transport  et la nourriture sont à leur charge."
+    anwser: "Les activités sont toutes prises en charge pour les participants tout au long de l'événement. Seuls les frais de transport et de nourriture sont à leur charge sauf exception basée sur des critères sociaux."
+  },
+  {
+    question: "Est-ce que les frais de transport et de nourriture peuvent être partiellement remboursés ?",
+    anwser: "Oui, une portion des participants Math Sprint peut être partiellement remboursée selon des critères sociaux. Un formulaire sera communiqué après le 13 mars aux personnes sélectionnées pour l'épreuve afin de candidater pour cette aide."
   },
   {
     question: "L’événement est-il accessible à tout public, y compris aux familles  ?",
@@ -44,10 +51,10 @@ export const mathSprintQuestions = [
     question: "Comment savoir si j’ai été sélectionné ?",
     anwser: "Vous recevrez une notification par email et serez ajouté à un groupe WhatsApp. Veillez à ce que le numéro renseigné corresponde à votre profil."
   },
-  // {
-  //   question: "Quand est-ce qu’on sera notifié si on est sélectionné ?",
-  //   answer: "Les résultats de sélection seront envoyés au plus tard XXXXX."
-  // },
+  {
+    question: "Quand est-ce qu’on sera notifié si on est sélectionné ?",
+    anwser: "Les résultats de sélection seront envoyés au plus tard 13 mars."
+  },
   {
     question: "Est-ce qu’il y aura des problèmes différents selon le niveau scolaire ?",
     anwser: "Non, tous les candidats auront affaire aux mêmes problèmes. Il y aura juste deux types d’épreuves : une pour le collège et l’autre pour le lycée."
@@ -132,7 +139,7 @@ export const bestMathVideoQuestions = [
 export const standQuestions = [
   {
     question: "Comment puis-je m’inscrire pour tenir un stand ?",
-    anwser: "L’inscription se fait en ligne via le site web officiel du MDM."
+    anwser: "L’inscription se fait en ligne via le site web officiel du MDM avant le 8 mars."
   },
   {
     question: "Y a-t-il des frais d’inscription pour proposer un stand ?",
@@ -162,10 +169,10 @@ export const standQuestions = [
     question: "Les frais de transports seront-ils remboursés ?",
     anwser: "Oui, pour deux personnes au maximum pour chaque stand. Les frais de trains."
   },
-  // {
-  //   question: "Le logement des animateurs et leur restauration seront t-ils assurés par Math&Maroc ?",
-  //   anwser: "Nous avons la capacité de loger deux à trois personnes par stand la nuit du 18 au 19 juin. La restauration est offerte à l’ensemble des animateurs pour le dîner du 18, le petit déjeuner et le déjeuner du 19. "
-  // },
+  {
+    question: "Le logement des animateurs et leur restauration seront t-ils assurés par Math&Maroc ?",
+    anwser: "Nous avons la capacité de loger deux personnes par stand la nuit du 27 au 28 mars. La restauration est offerte à l’ensemble des animateurs pour le dîner du 27, le petit déjeuner et le déjeuner du 28. Veuillez nous contacter par mail pour toute demande spéciale."
+  },
 ]
 
 export const conferencesQuestions = [

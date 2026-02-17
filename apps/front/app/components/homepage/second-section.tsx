@@ -69,7 +69,7 @@ const SecondSection = () => {
         <div className='w-full lg:w-3/4 flex justify-center'>
           <div className='w-1/3 '><span className='font-bold'>5 mars</span><br/>Math Sprint</div>
           <div className='w-1/3 '><span className='font-bold'>8 mars</span><br/>Animation Stand</div>
-          <div className='w-1/3 '><span className='font-bold'>22 mars</span><br/>Visiteurs</div>
+          <div className='w-1/3 '><span className='font-bold'>26 mars</span><br/>Visiteurs</div>
         </div>
       </div>
 
