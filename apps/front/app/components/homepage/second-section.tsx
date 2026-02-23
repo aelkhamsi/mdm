@@ -25,8 +25,10 @@ const images = [
 ]
 
 const SecondSection = () => {
+  const bgColorClassname = 'bg-[#121212] bg-gradient-to-tr from-[#CBFF8C]/10 via-transparent to-transparent'
+
   return (    
-    <div className='w-full flex flex-col justify-center items-center pt-14 pb-32 space-y-12 text-lg text-white bg-[#121212]'>
+    <div className={`w-full flex flex-col justify-center items-center pt-14 pb-32 space-y-12 text-lg text-white ${bgColorClassname}`}>
       <div
         className="relative flex flex-col w-full md:flex-row md:justify-between md:space-x-8 lg:w-3/4"
       >
@@ -63,7 +65,7 @@ const SecondSection = () => {
       </div>
 
       <div
-        className="w-full lg:w-3/4 flex flex-col text-center items-center justify-around space-y-4 px-2 animate-fade-up opacity-0 backdrop-blur-md border border-[#F25C54]/[0.6] rounded-xl shadow-sm py-6"
+        className="w-full lg:w-3/4 flex flex-col text-center items-center justify-around space-y-4 px-2 animate-fade-up opacity-0 backdrop-blur-md border border-[#F25C54]/[0.3] rounded-xl shadow-sm py-6"
         style={{ animationDelay: "0.35s", animationFillMode: "forwards" }}
       >
         <div><span className='font-medium text-[#F25C54]'>Date limite pour l&apos;inscription</span> selon votre choix de participation</div>

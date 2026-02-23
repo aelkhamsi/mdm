@@ -9,7 +9,7 @@ const ThirdSection = () => {
         <div className="flex justify-between mx-auto w-full px-[1.6rem] sm:max-w-[40rem] md:max-w-[48rem] lg:max-w-[64rem] xl:max-w-[80rem]">
           <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <polygon points="0,100 0,0 100,100" fill="#F9F6EE" />
-            <polygon points="100,0 0,0 100,100" fill="#121212" />
+            <polygon points="100,0 0,0 100,100" fill="#21251c" />
           </svg>
 
           <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">

@@ -4,7 +4,7 @@ import Link from 'next/link'
 const HeroSectionPartners = () => {
   return (
     <div
-      className="flex flex-col items-center justify-around w-full space-y-4 md:flex-row md:space-y-0 animate-fade-up opacity-0"
+      className="flex flex-col items-center justify-center w-full gap-x-20 space-y-4 md:flex-row md:space-y-0 animate-fade-up opacity-0"
       style={{ animationDelay: "0.35s", animationFillMode: "forwards" }}
     >
       <div className='flex items-center space-x-4'>
