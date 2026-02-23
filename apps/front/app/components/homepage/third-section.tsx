@@ -38,7 +38,6 @@ const ThirdSection = () => {
               Activités
             </div>
             
-            {/* <hr className='border-[#E5FF52] mx-4 my-4' /> */}
             <div className="w-full h-px my-4 bg-gradient-to-r from-transparent via-[#F25C54] to-transparent"></div>
 
             <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-4 text-center">
