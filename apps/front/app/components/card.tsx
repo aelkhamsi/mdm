@@ -22,7 +22,7 @@ const Card = ({
     <Link
       href={href || ''}
       // onClick={(e) => e.preventDefault()}
-      className={`group/canvas-card flex items-center justify-center border border-${color}/[0.2] w-full p-4 relative ${href ? 'hover:cursor-pointer' : ''} ${className}`}
+      className={`group/canvas-card flex items-center justify-center border border-${color}/[0.1] w-full p-4 relative ${href ? 'hover:cursor-pointer' : ''} ${className}`}
       scroll={true}
     >
       <CustomPlusIcon className={`absolute h-6 w-6 -top-3 -left-3 text-${color}`} />

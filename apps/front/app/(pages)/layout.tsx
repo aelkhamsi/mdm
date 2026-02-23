@@ -45,7 +45,7 @@ export default async function RootLayout({
               <Header />
             </Suspense>
 
-            <main className="flex min-h-screen w-full flex-col items-center">
+            <main className="flex min-h-screen w-full flex-col items-center bg-[#F9F6EE]">
               {children}
             </main>
 

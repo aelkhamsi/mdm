@@ -68,7 +68,7 @@ const people = [
 
 const FourthSection = () => {
   return (
-    <div className='relative isolate overflow-hidden w-full flex flex-col justify-center items-center py-12 px-2 space-y-6'>
+    <div className='relative isolate overflow-hidden w-full flex flex-col justify-center items-center text-lg py-12 px-2 space-y-6'>
       <h1 className='text-3xl font-bold'>
         Qui sommes-nous ?
       </h1>
@@ -96,7 +96,7 @@ const FourthSection = () => {
         href='organizing-team'
       >
         <button
-          className="p-[3px] relative text-sm"
+          className="p-[3px] relative"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-sky-500 to-[#272162] rounded-lg" />
           <div className="px-8 py-2 bg-white rounded-[6px] relative group transition duration-200 text-black hover:bg-transparent hover:text-white">

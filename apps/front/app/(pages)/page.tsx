@@ -11,7 +11,7 @@ export default async function Home() {
       <SecondSection />
       <ThirdSection />
       <FourthSection />
-      <CtaSection className="mt-6 mb-20" />
+      <CtaSection className="mt-6 mb-20 bg-[#F9F6EE]" />
     </>
   );
 }
