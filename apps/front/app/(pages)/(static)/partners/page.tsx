@@ -40,7 +40,7 @@ export default function PartnersPage() {
                 className="animate-fade-up opacity-0 text-center text-3xl font-bold drop-shadow-sm"
                 style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
               >
-                <span className='bg-gradient-to-br from-sky-800 to-[#272162] inline-block text-transparent bg-clip-text'>Organisateur</span>
+                <span className='font-literata leading-[1.3] bg-gradient-to-br from-sky-800 to-[#272162] inline-block text-transparent bg-clip-text'>Organisateur</span>
               </h1>
 
               <div
@@ -69,7 +69,7 @@ export default function PartnersPage() {
                 className="animate-fade-up opacity-0 text-center text-3xl font-bold drop-shadow-sm"
                 style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
               >
-                <span className='bg-gradient-to-br from-sky-800 to-[#272162] inline-block text-transparent bg-clip-text'>Partenaire Officiel</span>
+                <span className='font-literata leading-[1.3] bg-gradient-to-br from-sky-800 to-[#272162] inline-block text-transparent bg-clip-text'>Partenaire Officiel</span>
               </h1>
 
               <div 
@@ -95,7 +95,7 @@ export default function PartnersPage() {
                 className="animate-fade-up opacity-0 text-center text-3xl font-bold drop-shadow-sm"
                 style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
               >
-                <span className='bg-gradient-to-br from-sky-800 to-[#272162] inline-block text-transparent bg-clip-text'>En partenariat avec</span>
+                <span className='font-literata leading-[1.3] bg-gradient-to-br from-sky-800 to-[#272162] inline-block text-transparent bg-clip-text'>En partenariat avec</span>
               </h1>
 
               <div

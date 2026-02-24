@@ -22,7 +22,7 @@ const ThirdSection = () => {
 
       {/* Content */}
       <div className='relative w-full flex flex-col justify-center items-center text-lg py-14'>
-        <h1 className='text-3xl text-center font-bold'>
+        <h1 className='text-3xl text-center font-bold font-literata'>
           Activités & Compétitions
         </h1>
 

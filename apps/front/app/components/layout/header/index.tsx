@@ -42,7 +42,7 @@ export default function Header() {
         <div className="mx-5 flex h-16 w-full lg:w-3/4 items-center justify-between">
           <Link href="/" className="flex items-center font-display text-2xl">
             <Image
-              src="/images/logos/logomark.svg"
+              src={pathname === '/' ? "/images/logos/logomark.svg" : "/images/logos/logomark_dark.svg"}
               alt="MDM logo"
               width={45}
               height={45}

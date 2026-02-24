@@ -20,14 +20,14 @@ export default function MathSprintPage() {
     <DivCircuitBg classNameBgImage="opacity-50 -z-[8]">
       <div className="w-full flex flex-col items-center max-w-screen-xl px-5 xl:px-0 space-y-10 mb-20">
         <h1 className="text-center text-4xl font-bold drop-shadow-sm">
-          <span className='bg-gradient-to-br from-sky-600 to-[#1C55FF] inline-block text-transparent bg-clip-text'>Workshops</span>
+          <span className='font-literata text-[#F25C54]'>Workshops</span>
         </h1>
 
         <div
           className="flex flex-col w-full md:flex-row md:justify-between md:space-x-8 text-base"
         >
           <div className="w-full space-y-4 p-4">
-            <h1 className='font-bold text-3xl'>Workshops – Pour tous les âges et tous les niveaux</h1>
+            <h1 className='font-bold font-literata text-3xl'>Workshops – Pour tous les âges et tous les niveaux</h1>
             <p className="text-lg">Tout au long de la journée, nous proposons une série de workshops interactifs autour des mathématiques, adaptés à chaque tranche d&apos;âge et à chaque niveau. Chaque workshop est dédié à un public spécifique afin de garantir un contenu adapté, ludique et enrichissant.</p>
           </div>
 
@@ -44,12 +44,12 @@ export default function MathSprintPage() {
         >
           <div className="w-full space-y-4 p-6 bg-[#F9FAFB] rounded-3xl shadow-sm border-[1px] border-gray-100">
             <div className="flex justify-center">
-              <div className="w-fit p-[10px] bg-[#1C55FF] rounded-full">
+              <div className="w-fit p-[10px] bg-[#F25C54] rounded-full">
                 <PlayButtonIcon className="h-8 w-8"/>
               </div>
             </div>
 
-            <h1 className='text-center font-bold text-2xl'>Workshop d&apos;orientation – Lycéens</h1>
+            <h1 className='text-center font-bold font-literata text-2xl'>Workshop d&apos;orientation – Lycéens</h1>
 
             <div>
               <p className="text-lg mb-4">Que faire après le baccalauréat dans un monde bouleversé par l&apos;IA?</p>
@@ -65,12 +65,12 @@ export default function MathSprintPage() {
 
           <div className="w-full space-y-4 p-6 bg-[#F9FAFB] rounded-3xl shadow-sm border-[1px] border-gray-100">
             <div className="flex justify-center">
-              <div className="w-fit p-[10px] bg-[#1C55FF] rounded-full">
+              <div className="w-fit p-[10px] bg-[#F25C54] rounded-full">
                 <StarShineIcon className="h-8 w-8"/>
               </div>
             </div>
 
-            <h1 className='text-center font-bold text-2xl'>Workshop primaire – Enfants et parents</h1>
+            <h1 className='text-center font-bold font-literata text-2xl'>Workshop primaire – Enfants et parents</h1>
             <div>
               <p className="text-lg mb-4">Un atelier ludique et interactif destiné aux élèves du primaires qui sont curieux et intéressés par les mathématiques, ainsi qu&apos;aux parents souhaitant éveiller l&apos;intérêt de leurs enfants pour cette discipline.</p>
               <p className="text-lg">À travers des énigmes, jeux et défis stimulants, les élèves découvrent les mathématiques de manière amusante et développent leur logique et leur créativité.</p>
@@ -79,12 +79,12 @@ export default function MathSprintPage() {
 
           <div className="w-full space-y-4 p-6 bg-[#F9FAFB] rounded-3xl shadow-sm border-[1px] border-gray-100">
             <div className="flex justify-center">
-              <div className="w-fit p-[10px] bg-[#1C55FF] rounded-full">
+              <div className="w-fit p-[10px] bg-[#F25C54] rounded-full">
                 <LightbulbIcon className="h-8 w-8"/>
               </div>
             </div>
 
-            <h1 className='text-center font-bold text-2xl'>Workshop collégiens – Explorer, comprendre, s&apos;épanouir</h1>
+            <h1 className='text-center font-bold font-literata text-2xl'>Workshop collégiens – Explorer, comprendre, s&apos;épanouir</h1>
             
             <div>
               <p className="text-lg mb-4">Ce workshop est destiné aux collégiens souhaitant découvrir tout ce que le collège et le lycée peuvent offrir au-delà des cours.</p>
@@ -99,12 +99,12 @@ export default function MathSprintPage() {
 
           <div className="w-full space-y-4 p-6 bg-[#F9FAFB] rounded-3xl shadow-sm border-[1px] border-gray-100">
             <div className="flex justify-center">
-              <div className="w-fit p-[10px] bg-[#1C55FF] rounded-full">
+              <div className="w-fit p-[10px] bg-[#F25C54] rounded-full">
                 <GlitterIcon className="h-8 w-8"/>
               </div>
             </div>
 
-            <h1 className='text-center font-bold text-2xl'>Workshops scientifiques – Lycéens (Bac) et post-bac</h1>
+            <h1 className='text-center font-bold font-literata text-2xl'>Workshops scientifiques – Lycéens (Bac) et post-bac</h1>
             <div>
               <p className="text-lg mb-4">Ces workshops s&apos;adressent aux élèves du bac et aux étudiants post-bac intéressés par des sujets scientifiques en lien avec les mathématiques.</p>
               <p className="text-lg">Dans le menu:</p>

@@ -9,7 +9,7 @@ const HeroSectionLogo = () => {
       <Image
         src="/images/logos/primary_logo.svg"
         alt="MDM logo"
-        width='600'
+        width='570'
         height='200'
       />
     </div>

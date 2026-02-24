@@ -38,7 +38,7 @@ const SecondSection = () => {
 
         <div className="w-full space-y-6 p-4">
           <p className='font-bold text-xs text-[#F25C54]'>C'est quoi MDM ?</p>
-          <h1 className='font-bold text-3xl'>MDM, La grande rencontre des passionnés de mathématiques</h1>
+          <h1 className='font-bold text-3xl font-literata'>MDM, La grande rencontre des passionnés de mathématiques</h1>
           <p>Le &apos;<span className='font-bold'>Moroccan Day of Mathematics&apos; (MDM)</span> est un événement dédié aux passionnés de mathématiques, offrant un programme varié de compétitions et d’activités accessibles à tous les niveaux.</p>
           <p>Les participants pourront prendre part à différentes compétitions tout au long de la journée, tandis que conférences, stands et workshops permettront de découvrir diverses facettes des mathématiques. </p>
           <p>Ouvert aux adultes et aux enfants, cet événement vise à promouvoir l&apos;excellence mathématique et s&apos;adresse autant au grand public qu&apos;aux amateurs et spécialistes. </p>
@@ -84,8 +84,8 @@ const SecondSection = () => {
         <div className="absolute -bottom-12 left-0 h-px w-full bg-gradient-to-l from-[#CBFF8C] to-transparent"></div>
         <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-t from-[#CBFF8C] to-transparent"></div>
 
-        <h1 className='text-3xl font-bold'>
-          <div className="w-full my-4  h-px bg-gradient-to-r from-transparent via-[#F25C54] to-transparent"></div>
+        <h1 className='text-3xl font-bold font-literata'>
+          <div className="w-full my-4 h-px bg-gradient-to-r from-transparent via-[#F25C54] to-transparent"></div>
           Retour sur MDM 2025
         </h1>
 
