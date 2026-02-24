@@ -4,5 +4,5 @@
 
 .custom-shadow {
   @apply rounded-3xl;
-  box-shadow: 0px 0px 25px 0px rgba(28, 85, 255, 0.7);
+  box-shadow: 0px 0px 25px 0px #CBFF8C;
 }
