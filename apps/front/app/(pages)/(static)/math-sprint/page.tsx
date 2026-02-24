@@ -41,7 +41,7 @@ export default function MathSprintPage() {
             <p className="text-lg">En une heure, les participants doivent répondre à plusieurs questions qui ne requièrent pas une maîtrise approfondie du programme scolaire, mais plutôt l&apos;utilisation astucieuse d&apos;outils mathématiques simples et d&apos;une réflexion logique efficace.</p>
           </div>
 
-          <div className="w-full -z-[6]">
+          <div className="w-full z-0">
             <ImageStack
               images={images}
               autoplay={true}

@@ -1,18 +1,4 @@
-import CtaSection from "@/app/components/cta/cta-section"
 import DivCircuitBg from "@/app/components/div-circuit-bg"
-import { ImageStack } from "@/app/components/image-stack"
-import Image from "next/image"
-
-const images = [
-  {
-    name: 'MathSprint contest',
-    src: '/past-edition/mdm_1.webp' 
-  },
-  {
-    name: 'MathSprint contest',
-    src: '/past-edition/mdm_2.webp'
-  },
-]
 
 export default function ConferencesPage() {
 

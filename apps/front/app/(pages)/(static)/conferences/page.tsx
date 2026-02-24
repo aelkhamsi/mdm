@@ -37,7 +37,7 @@ export default function ConferencesPage() {
             <p className="text-lg">Ces interventions offriront des perspectives inédites, des discussions profondes et des éclairages sur des sujets mathématiques variés, allant des théories classiques aux dernières avancées</p>
           </div>
 
-          <div className="w-full -z-[6]">
+          <div className="w-full z-0">
             <ImageStack
               images={images}
               autoplay={true}

@@ -1,8 +1,7 @@
 import CtaSection from "@/app/components/cta/cta-section"
 import DivCircuitBg from "@/app/components/div-circuit-bg"
 import { ImageStack } from "@/app/components/image-stack"
-import { DumbbellIcon, ExamIcon, GlitterIcon, LightbulbIcon, PlayButtonIcon, StarShineIcon } from "@mdm/ui";
-import Link from "next/link";
+import { GlitterIcon, LightbulbIcon, PlayButtonIcon, StarShineIcon } from "@mdm/ui";
 
 const images = [
   {
@@ -32,7 +31,7 @@ export default function MathSprintPage() {
             <p className="text-lg">Tout au long de la journée, nous proposons une série de workshops interactifs autour des mathématiques, adaptés à chaque tranche d&apos;âge et à chaque niveau. Chaque workshop est dédié à un public spécifique afin de garantir un contenu adapté, ludique et enrichissant.</p>
           </div>
 
-          <div className="w-full -z-[6]">
+          <div className="w-full z-0">
             <ImageStack
               images={images}
               autoplay={true}
