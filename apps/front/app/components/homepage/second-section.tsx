@@ -65,7 +65,7 @@ const SecondSection = () => {
       </div>
 
       <div
-        className="w-full lg:w-3/4 flex flex-col text-center items-center justify-around space-y-4 px-2 animate-fade-up opacity-0 backdrop-blur-md border border-[#F25C54]/[0.3] rounded-xl shadow-sm py-6"
+        className="w-full w-5/6 lg:w-4/6 flex flex-col text-center items-center justify-around space-y-4 px-2 animate-fade-up opacity-0 backdrop-blur-md border border-[#F25C54]/[0.3] rounded-xl shadow-sm py-6"
         style={{ animationDelay: "0.35s", animationFillMode: "forwards" }}
       >
         <div><span className='font-medium text-[#F25C54]'>Date limite pour l&apos;inscription</span> selon votre choix de participation</div>
