@@ -51,9 +51,10 @@ export default function Footer() {
               <h1 className='font-bold'>Activités</h1>
               <ul className='space-y-2'>
                 <li><Link href='/math-sprint' className='hover:underline'>Math Sprint</Link></li>
-                <li><Link href='/best-math-video' className='hover:underline'>Best Math Video</Link></li>
                 <li><Link href='/stands' className='hover:underline'>Stands</Link></li>
                 <li><Link href='/conferences' className='hover:underline'>Conférences</Link></li>
+                <li><Link href='/workshops' className='hover:underline'>Workshops</Link></li>
+                <li><Link href='/musee-des-maths' className='hover:underline'>Musée des maths</Link></li>
               </ul>
             </div>
 
