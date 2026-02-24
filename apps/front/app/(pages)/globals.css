@@ -6,3 +6,11 @@
   @apply rounded-3xl;
   box-shadow: 0px 0px 25px 0px #CBFF8C;
 }
+
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
