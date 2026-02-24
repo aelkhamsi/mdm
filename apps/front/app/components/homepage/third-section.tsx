@@ -13,7 +13,7 @@ const ThirdSection = () => {
           </svg>
 
           <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="0,0 100,0 0,100" fill="#121212" />
+            <polygon points="0,0 100,0 0,100" fill="#161715" />
             <polygon points="100,100 100,0 0,100" fill="#F9F6EE" />
           </svg>
         </div>

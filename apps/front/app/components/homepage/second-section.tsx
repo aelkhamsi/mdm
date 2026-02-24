@@ -60,7 +60,7 @@ const SecondSection = () => {
 
         <div className='flex items-center justify-center gap-x-6' >
           <LocationIcon />
-          <div className="font-semibold text-center">Université Euro-méditerranéenne <br/> de Fès</div>
+          <div className="font-semibold text-center w-[8rem] md:w-full">Université Euro-méditerranéenne <br/> de Fès</div>
         </div>
       </div>
 
