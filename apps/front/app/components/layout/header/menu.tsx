@@ -25,7 +25,7 @@ export const Menu = () => {
 
   const template = (
     <NavigationMenu>
-      <NavigationMenuList className={(isMobile || isTablet) ? 'flex flex-col space-y-4' : ''}>
+      <NavigationMenuList className={(isMobile || isTablet) ? 'flex flex-col space-y-4 text-black' : ''}>
         <NavigationMenuItem>
           <NavigationMenuTrigger className="text-sm mr-6">Compétitions</NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -122,7 +122,7 @@ export const Menu = () => {
         {(isMobile || isTablet) && (
           <div className="flex justify-between hover:cursor-pointer">
             <div>{" "}</div>
-            <Cross1Icon className="h-6 w-6 mr-4" onClick={() => {setShowMenu(false)}}/>
+            <Cross1Icon className="h-6 w-6 mr-4 text-black" onClick={() => {setShowMenu(false)}}/>
           </div>
         )}
         
