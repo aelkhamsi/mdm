@@ -82,7 +82,7 @@ export default function Footer() {
         <Separator className='w-3/4 bg-gray-600' />
 
         <div className='w-3/4 text-sm text-left text-gray-600'>
-          Math&Maroc © 2025. All Rights Reserved
+          Math&Maroc © 2026. All Rights Reserved
         </div>
       </div>
     </footer>
