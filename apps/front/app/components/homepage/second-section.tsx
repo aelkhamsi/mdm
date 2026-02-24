@@ -44,7 +44,7 @@ const SecondSection = () => {
           <p>Ouvert aux adultes et aux enfants, cet événement vise à promouvoir l&apos;excellence mathématique et s&apos;adresse autant au grand public qu&apos;aux amateurs et spécialistes. </p>
         </div>
 
-        <div id="deadlines" className="w-full flex flex-col justify-center">
+        <div id="deadlines" className="w-full flex flex-col justify-center z-0">
           <ImageStack
             images={images}
             autoplay={true}
