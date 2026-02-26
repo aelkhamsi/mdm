@@ -8,7 +8,7 @@ import HeroSectionTitle from './hero-section-title'
 import HeroSectionLogo from './hero-section-logo'
 
 const HeroSection = () => {
-  const backgroundColorClassname = "bg-[#121212]"
+  const backgroundColorClassname = "bg-[#111111]"
 
   return (
     <CenterContainer className={`pt-28 pb-10 z-0 space-y-10 ${backgroundColorClassname}`}>
