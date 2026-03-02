@@ -19,7 +19,7 @@ export class MailController {
   async sendReminderEmail(@Body() body: { activityName: string }) {
     const { activityName } = body;
     const users = await this.userService.findAll();
-    const mathSprintUsers = users
+    const filteredUsers = users
       .filter((user) => {
         const choices = user.application?.activityChoices ?? [];
         return choices.includes(activityName);
@@ -28,9 +28,9 @@ export class MailController {
         return user.application?.status === 'DRAFT';
       });
 
-    if (mathSprintUsers?.length) {
+    if (filteredUsers?.length) {
       await this.mailService.sendReminderEmail(
-        users,
+        filteredUsers,
         activityName.split('_').join('-'),
       );
     }
