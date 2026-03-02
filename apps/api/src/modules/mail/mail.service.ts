@@ -39,13 +39,17 @@ export class MailService {
     });
   }
 
-  async sendApplicationReminderEmail(users: User[]) {
+  async sendReminderEmail(users: User[], templateName: string) {
+    const capitalize = (s) =>
+      (s && String(s[0]).toUpperCase() + String(s).slice(1)) || '';
     if (!users) return;
 
     await this.mailerService.sendMail({
-      to: users.map((user) => user?.email).reverse(),
-      subject: 'Complétez votre candidature Math Sprint',
-      template: 'math-sprint-reminder',
+      to: users.map((user) => user?.email),
+      subject: `Complétez votre candidature ${capitalize(
+        templateName.split('-').join(' '),
+      )}`,
+      template: `${templateName}-reminder`,
     });
   }
 }

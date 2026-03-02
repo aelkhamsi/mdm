@@ -1,31 +1,17 @@
 "use client";
 
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-  LoadingDots,
-  toast,
-} from "@mdm/ui";
-import { Cross1Icon, Cross2Icon } from "@radix-ui/react-icons";
+import { Cross2Icon } from "@radix-ui/react-icons";
 import { Table } from "@tanstack/react-table";
 import { Button } from "@/components/shared/button";
 import { ApplicationsViewOptions } from "./applications-view-options";
 import { statusOptions } from "./application-status";
 import { ApplicationsFacetedFilter } from "./applications-faceted-filter";
-import { FileTextIcon, EnvelopeClosedIcon } from "@radix-ui/react-icons";
+import { FileTextIcon } from "@radix-ui/react-icons";
 import axios from "axios-typescript";
 import { getToken } from "@/lib/utils";
 import { activityOptions } from "./application-activity-choices";
-import { sendMathSprintReminder } from "@/api/MailerApi";
-import { useState } from "react";
-import { ApplicationsEmailButton } from "./applications-email-button";
+import { sendMathSprintReminder, sendStandReminder } from "@/api/MailerApi";
+import { ReminderEmailButton } from "./reminder-email-button";
 export interface ApplicationsToolbarProps<TData> {
   table: Table<TData>;
 }
@@ -34,8 +20,6 @@ export function ApplicationsToolbar<TData>({
   table,
 }: ApplicationsToolbarProps<TData>) {
   const isFiltered = table.getState().columnFilters.length > 0;
-  const [isMailSending, setIsMailSending] = useState(false);
-
   const onExportData = async () => {
     axios({
       url: process.env.NEXT_PUBLIC_API_ENDPOINT + `excel/applications`,
@@ -85,7 +69,6 @@ export function ApplicationsToolbar<TData>({
       </div>
 
       <div className="flex space-x-4">
-        {/* export applications excel */}
         <Button
           variant="outline"
           size="sm"
@@ -96,10 +79,12 @@ export function ApplicationsToolbar<TData>({
           Export data
         </Button>
 
-        <ApplicationsEmailButton
+        <ReminderEmailButton
           name="Math Sprint"
           sendEmails={sendMathSprintReminder}
         />
+
+        <ReminderEmailButton name="Stand" sendEmails={sendStandReminder} />
 
         <ApplicationsViewOptions table={table} />
       </div>

@@ -14,7 +14,7 @@ import {
 } from "@mdm/ui";
 import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
 
-export function ApplicationsEmailButton({
+export function ReminderEmailButton({
   name,
   sendEmails,
 }: {
@@ -25,20 +25,21 @@ export function ApplicationsEmailButton({
   const [loading, setLoading] = useState(false);
   const onSend = async () => {
     setLoading(true);
+    await new Promise((r) => setTimeout(r, 2000));
     const response = (await sendEmails()) as any;
 
     switch (response?.statusCode) {
       case 200:
         toast({
           title: "✅ Emails were sent successfully",
-          description: "",
+          description: `Emails for DRAFT application of ${name} were sent successfully`,
         });
         break;
 
       default:
         toast({
           title: "❌ An error has occured. Please try again later",
-          description: "",
+          description: `Emails for DRAFT application of ${name} failed`,
         });
         break;
     }
@@ -59,7 +60,7 @@ export function ApplicationsEmailButton({
         Send {name} Reminder
       </Button>
 
-      <AlertDialog open={open} onOpenChange={setOpen}>
+      <AlertDialog open={open}>
         <AlertDialogContent className="w-full xl:w-1/3">
           <AlertDialogHeader>
             <AlertDialogTitle>Send {name} Reminder</AlertDialogTitle>

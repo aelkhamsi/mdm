@@ -1,4 +1,4 @@
-import { Controller, HttpCode, UseGuards, Post } from '@nestjs/common';
+import { Controller, HttpCode, UseGuards, Post, Body } from '@nestjs/common';
 import { Roles } from 'src/decorators/roles.decorator';
 import { RolesGuard } from 'src/guards/roles.guard';
 import { ADMIN_ROLE } from 'src/constants';
@@ -12,27 +12,28 @@ export class MailController {
     private readonly mailService: MailService,
   ) {}
 
-  @Post('math-sprint-reminder')
+  @Post('reminder')
   @HttpCode(200)
   @UseGuards(RolesGuard)
   @Roles(ADMIN_ROLE)
-  async sendMathSprintReminder() {
+  async sendReminderEmail(@Body() body: { activityName: string }) {
+    const { activityName } = body;
     const users = await this.userService.findAll();
-
     const mathSprintUsers = users
       .filter((user) => {
         const choices = user.application?.activityChoices ?? [];
-        return choices.includes('math_sprint');
+        return choices.includes(activityName);
       })
       .filter((user) => {
         return user.application?.status === 'DRAFT';
       });
 
     if (mathSprintUsers?.length) {
-      await this.mailService.sendApplicationReminderEmail(users);
+      await this.mailService.sendReminderEmail(
+        users,
+        activityName.split('_').join('-'),
+      );
     }
-
-    console.log('done');
 
     return { statusCode: 200 };
   }
