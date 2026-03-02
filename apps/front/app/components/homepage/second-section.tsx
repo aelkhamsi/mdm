@@ -39,9 +39,9 @@ const SecondSection = () => {
         <div className="w-full space-y-6 p-4">
           <p className='font-bold text-xs text-[#F25C54]'>C'est quoi MDM ?</p>
           <h1 className='font-bold text-3xl font-literata'>MDM, La grande rencontre des passionnés de mathématiques</h1>
-          <p>Le &apos;<span className='font-bold'>Moroccan Day of Mathematics&apos; (MDM)</span> est un événement dédié aux passionnés de mathématiques, offrant un programme varié de compétitions et d’activités accessibles à tous les niveaux.</p>
-          <p>Les participants pourront prendre part à différentes compétitions tout au long de la journée, tandis que conférences, stands et workshops permettront de découvrir diverses facettes des mathématiques. </p>
-          <p>Ouvert aux adultes et aux enfants, cet événement vise à promouvoir l&apos;excellence mathématique et s&apos;adresse autant au grand public qu&apos;aux amateurs et spécialistes. </p>
+          <p>Le &apos;<span className='font-bold'>Moroccan Day of Mathematics&apos; (MDM)</span> est un événement dédié aux passionné·es de mathématiques, offrant un programme varié de compétitions et d’activités accessibles à tous les niveaux.</p>
+          <p>Les participant·es pourront prendre part à différentes compétitions tout au long de la journée, tandis que conférences, stands et workshops permettront de découvrir diverses facettes des mathématiques. </p>
+          <p>Ouvert aux adultes et aux enfants, cet événement vise à promouvoir l&apos;excellence mathématique et s&apos;adresse autant au grand public qu&apos;aux amateur·rices et spécialistes. </p>
         </div>
 
         <div id="deadlines" className="w-full flex flex-col justify-center z-0">
@@ -90,7 +90,7 @@ const SecondSection = () => {
         </h1>
 
         <div className="w-full lg:w-3/4 flex flex-col px-4 text-center">
-          <p>La dernière édition du MDM s&apos;est tenue à Fès, en collaboration avec l&apos;UEMF. Un événement qui a réuni étudiants, lycéens et curieux de tous les horizons autour de conférences inspirantes, de stands interactifs et de compétitions intenses</p>
+          <p>La dernière édition du MDM s&apos;est tenue à Fès, en collaboration avec l&apos;UEMF. Un événement qui a réuni étudiant·es, lycéen·nes et curieux·ses de tous les horizons autour de conférences inspirantes, de stands interactifs et de compétitions intenses.</p>
         </div>
 
         <div className='w-full flex justify-center'>
