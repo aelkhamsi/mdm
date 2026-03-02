@@ -72,7 +72,9 @@ export function ReminderEmailButton({
           </AlertDialogHeader>
 
           <AlertDialogFooter>
-            <AlertDialogCancel>Close</AlertDialogCancel>
+            <AlertDialogCancel onClick={() => setOpen(false)}>
+              Close
+            </AlertDialogCancel>
             <AlertDialogAction onClick={onSend}>
               {!loading ? (
                 <span>Send Emails</span>
