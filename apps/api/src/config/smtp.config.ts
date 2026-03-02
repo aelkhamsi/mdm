@@ -3,9 +3,7 @@ import { HandlebarsAdapter } from '@nestjs-modules/mailer/dist/adapters/handleba
 import { join } from 'path';
 
 export default registerAs('smtp', () => ({
-  endpoint: process.env.SMTP_ENDPOINT,
   transport: {
-    service: 'Gmail',
     host: process.env.SMTP_HOST,
     port: 465,
     secure: true,
@@ -15,11 +13,11 @@ export default registerAs('smtp', () => ({
     },
   },
   defaults: {
-    from: '"noreply" <noreply@example.com>',
-    replyTo: 'noreply@gmail.com',
+    from: `"MDM" <${process.env.SMTP_USER}>`,
+    replyTo: process.env.SMTP_USER,
   },
   template: {
-    dir: join(__dirname, '../modules/mail/templates/'),
+    dir: join(__dirname, '../../modules/mail/templates/'),
     adapter: new HandlebarsAdapter(),
     options: {
       strict: true,
