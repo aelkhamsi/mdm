@@ -66,7 +66,7 @@ export function ReminderEmailButton({
             <AlertDialogTitle>Send {name} Reminder</AlertDialogTitle>
 
             <AlertDialogDescription>
-              You'll be sending an email to users that have a{" "}
+              You&apos;ll be sending an email to users that have a{" "}
               <span className="font-bold">DRAFT</span> {name} application.
             </AlertDialogDescription>
           </AlertDialogHeader>
