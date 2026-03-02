@@ -38,4 +38,12 @@ export class MailService {
       },
     });
   }
+
+  async sendApplicationReminderEmail(users: User[]) {
+    await this.mailerService.sendMail({
+      to: users.map((user) => user?.email).reverse(),
+      subject: 'Complétez votre candidature Math Sprint',
+      template: 'math-sprint-reminder',
+    });
+  }
 }

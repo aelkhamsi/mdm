@@ -1,42 +1,55 @@
-"use client"
+"use client";
 
-import { Cross2Icon } from "@radix-ui/react-icons"
-import { Table } from "@tanstack/react-table"
-import { Button } from "@/components/shared/button"
-import { ApplicationsViewOptions } from "./applications-view-options"
-import { statusOptions } from "./application-status"
-import { ApplicationsFacetedFilter } from "./applications-faceted-filter"
-import { FileTextIcon } from "@radix-ui/react-icons"
-import axios from 'axios-typescript';
-import { getToken } from "@/lib/utils"
-import { activityOptions } from "./application-activity-choices"
+import { Cross2Icon } from "@radix-ui/react-icons";
+import { Table } from "@tanstack/react-table";
+import { Button } from "@/components/shared/button";
+import { ApplicationsViewOptions } from "./applications-view-options";
+import { statusOptions } from "./application-status";
+import { ApplicationsFacetedFilter } from "./applications-faceted-filter";
+import { FileTextIcon, EnvelopeClosedIcon } from "@radix-ui/react-icons";
+import axios from "axios-typescript";
+import { getToken } from "@/lib/utils";
+import { activityOptions } from "./application-activity-choices";
+import { sendMathSprintReminder } from "@/api/MailerApi";
 
 export interface ApplicationsToolbarProps<TData> {
-  table: Table<TData>
+  table: Table<TData>;
 }
 
 export function ApplicationsToolbar<TData>({
   table,
 }: ApplicationsToolbarProps<TData>) {
-  const isFiltered = table.getState().columnFilters.length > 0
+  const isFiltered = table.getState().columnFilters.length > 0;
   const onExportData = async () => {
     axios({
       url: process.env.NEXT_PUBLIC_API_ENDPOINT + `excel/applications`,
-      method: 'GET',
-      headers: {
+      method: "GET",
+      headers: {
         Authorization: `Bearer ${getToken()}`,
       },
-      responseType: 'blob', // important
+      responseType: "blob", // important
     }).then((response: any) => {
       const url = window.URL.createObjectURL(new Blob([response.data]));
-      const link = document?.createElement('a');
+      const link = document?.createElement("a");
       link.href = url;
-      link.setAttribute('download', 'applications.xlsx'); //or any other extension
+      link.setAttribute("download", "applications.xlsx"); //or any other extension
       document.body.appendChild(link);
       link.click();
       window.URL.revokeObjectURL(url);
     });
-  }
+  };
+
+  const onMathSprintReminder = async () => {
+    const response = (await sendMathSprintReminder()) as any;
+
+    switch (response?.statusCode) {
+      case 200:
+        console.log("ane9i");
+        break;
+      default:
+        console.log("oukoukouk koukouk");
+    }
+  };
 
   return (
     <div className="flex items-center justify-between">
@@ -76,12 +89,21 @@ export function ApplicationsToolbar<TData>({
           onClick={onExportData}
         >
           <FileTextIcon className="mr-2 h-4 w-4" />
-
           Export data
+        </Button>
+
+        <Button
+          variant="outline"
+          size="sm"
+          className="ml-auto hidden h-8 lg:flex"
+          onClick={onMathSprintReminder}
+        >
+          <EnvelopeClosedIcon className="mr-2 h-4 w-4" />
+          Send MathSprint Reminder
         </Button>
 
         <ApplicationsViewOptions table={table} />
       </div>
     </div>
-  )
+  );
 }
