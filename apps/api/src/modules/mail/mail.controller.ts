@@ -32,6 +32,8 @@ export class MailController {
       await this.mailService.sendApplicationReminderEmail(users);
     }
 
+    console.log('done');
+
     return { statusCode: 200 };
   }
 }

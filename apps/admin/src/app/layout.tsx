@@ -4,7 +4,7 @@ import "./globals.css";
 import cx from "classnames";
 import RecoilContextProvider from "./recoilContextProvider";
 import { DataLoader } from "@/components/layout/data-loader";
-import { Toaster } from "@/components/shared/toaster";
+import { Toaster } from "@mdm/ui";
 
 export const metadata: Metadata = {
   title: "MDM 1938 Admin",

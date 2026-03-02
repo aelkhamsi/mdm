@@ -11,6 +11,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
   LoadingDots,
+  toast,
 } from "@mdm/ui";
 import { Cross1Icon, Cross2Icon } from "@radix-ui/react-icons";
 import { Table } from "@tanstack/react-table";
@@ -24,7 +25,7 @@ import { getToken } from "@/lib/utils";
 import { activityOptions } from "./application-activity-choices";
 import { sendMathSprintReminder } from "@/api/MailerApi";
 import { useState } from "react";
-
+import { ApplicationsEmailButton } from "./applications-email-button";
 export interface ApplicationsToolbarProps<TData> {
   table: Table<TData>;
 }
@@ -52,21 +53,6 @@ export function ApplicationsToolbar<TData>({
       link.click();
       window.URL.revokeObjectURL(url);
     });
-  };
-
-  const onMathSprintReminder = async () => {
-    setIsMailSending(true);
-    await new Promise((r) => setTimeout(r, 5000));
-    const response = (await sendMathSprintReminder()) as any;
-
-    switch (response?.statusCode) {
-      case 200:
-        setIsMailSending(false);
-        break;
-
-      default:
-        console.log("ayayay");
-    }
   };
 
   return (
@@ -110,41 +96,10 @@ export function ApplicationsToolbar<TData>({
           Export data
         </Button>
 
-        <AlertDialog>
-          <AlertDialogTrigger asChild>
-            <Button
-              variant="outline"
-              size="sm"
-              className="ml-auto hidden h-8 lg:flex"
-            >
-              <EnvelopeClosedIcon className="mr-2 h-4 w-4" />
-              Send MathSprint Reminder
-            </Button>
-          </AlertDialogTrigger>
-
-          <AlertDialogContent className="w-full xl:w-1/3">
-            <AlertDialogHeader>
-              <AlertDialogTitle>Send MathSprint Reminder</AlertDialogTitle>
-
-              <AlertDialogDescription>
-                You'll be sending an email to users that have a{" "}
-                <span className="font-bold">DRAFT</span> Math Sprint
-                application.
-              </AlertDialogDescription>
-            </AlertDialogHeader>
-
-            <AlertDialogFooter>
-              <AlertDialogCancel>Close</AlertDialogCancel>
-              <AlertDialogAction onClick={onMathSprintReminder}>
-                {!isMailSending ? (
-                  <span>Send Emails</span>
-                ) : (
-                  <LoadingDots color="#808080" />
-                )}
-              </AlertDialogAction>
-            </AlertDialogFooter>
-          </AlertDialogContent>
-        </AlertDialog>
+        <ApplicationsEmailButton
+          name="Math Sprint"
+          sendEmails={sendMathSprintReminder}
+        />
 
         <ApplicationsViewOptions table={table} />
       </div>
