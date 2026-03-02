@@ -38,7 +38,7 @@ export default function MathSprintPage() {
           <div className="w-full space-y-4 p-4">
             <h1 className='font-literata font-bold text-3xl'>Une compétition pour les esprits mathématiques affûtés</h1>
             <p className="text-lg">Maths Sprint est une épreuve de mathématiques conçue comme un véritable “sprint” intellectuel. Il s&apos;agit d&apos;un test sous forme de QCM destiné aux élèves du <span className="font-bold text-[#F0463D]">collège</span> et du <span className="font-bold text-[#F0463D]">lycée</span>, les plaçant face à une série de questions mathématiques originales et stimulantes.</p>
-            <p className="text-lg">En une heure, les participants doivent répondre à plusieurs questions qui ne requièrent pas une maîtrise approfondie du programme scolaire, mais plutôt l&apos;utilisation astucieuse d&apos;outils mathématiques simples et d&apos;une réflexion logique efficace.</p>
+            <p className="text-lg">En une heure, les participant·es doivent répondre à plusieurs questions qui ne requièrent pas une maîtrise approfondie du programme scolaire, mais plutôt l&apos;utilisation astucieuse d&apos;outils mathématiques simples et d&apos;une réflexion logique efficace.</p>
           </div>
 
           <div className="w-full z-0">
@@ -58,8 +58,8 @@ export default function MathSprintPage() {
             <div>
               <p className="text-lg">La compétition se déroule en <span className="text-[#F0463D] font-bold">2</span> étapes:</p>
               <ul className="text-lg list-disc ml-4">
-                <li>Une phase de présélection où les candidats doivent rendre un devoir, au plus tard le <span className="text-[#F0463D] font-bold">9 mars, impérativement écrit à la main</span> sous peine de rejet de la candidature. Le devoir sera mis en ligne le <span className="text-[#F0463D] font-bold">5 mars</span>.</li>
-                <li>À l&apos;issue de cette phase, un nombre limité de candidats sera sélectionné pour participer à l&apos;épreuve finale en présentiel, organisée sur le campus de l&apos;<span className="text-[#F0463D] font-bold">UEMF à Fès</span> lors du <span className="text-[#F0463D] font-bold">Moroccan Day of Mathematics 2026</span>. L&apos;épreuve finale consiste en un QCM d&apos;une heure, avec des sujets <span className="text-[#F0463D] font-bold">distincts</span> pour les collégiens et les lycéens.</li>
+                <li>Une phase de présélection où les candidat·es doivent rendre un devoir, au plus tard le <span className="text-[#F0463D] font-bold">9 mars, impérativement écrit à la main</span> sous peine de rejet de la candidature. Le devoir sera mis en ligne le <span className="text-[#F0463D] font-bold">5 mars</span>.</li>
+                <li>À l&apos;issue de cette phase, un nombre limité de candidat·es sera sélectionné pour participer à l&apos;épreuve finale en présentiel, organisée sur le campus de l&apos;<span className="text-[#F0463D] font-bold">UEMF à Fès</span> lors du <span className="text-[#F0463D] font-bold">Moroccan Day of Mathematics 2026</span>. L&apos;épreuve finale consiste en un QCM d&apos;une heure, avec des sujets <span className="text-[#F0463D] font-bold">distincts</span> pour les collégien·nes et les lycéen·nes.</li>
               </ul>
             </div>
 
@@ -97,7 +97,7 @@ export default function MathSprintPage() {
                   className="h-[8rem] w-[9rem] bg-white border-b-4 border-b-red-500 border-2 shadow-md flex justify-center items-center rounded-md hover:cursor-pointer"
                 > 
                   <div className="flex flex-col items-center text-center">
-                    <span className="font-bold">Entrainement</span>
+                    <span className="font-bold">Entraînement</span>
                     <DumbbellIcon className="h-[4rem]"/>
                   </div>
                 </div>

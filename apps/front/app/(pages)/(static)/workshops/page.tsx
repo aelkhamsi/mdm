@@ -49,16 +49,16 @@ export default function MathSprintPage() {
               </div>
             </div>
 
-            <h1 className='text-center font-bold font-literata text-2xl'>Workshop d&apos;orientation – Lycéens</h1>
+            <h1 className='text-center font-bold font-literata text-2xl'>Workshop d&apos;orientation – Lycéen·nes</h1>
 
             <div>
               <p className="text-lg mb-4">Que faire après le baccalauréat dans un monde bouleversé par l&apos;IA?</p>
-              <p className="text-lg mb-4">Ce workshop s&apos;adresse aux lycéens souhaitant réfléchir à leur orientation après le bac. Il propose un temps d&apos;échange autour des des métiers liés aux mathématiques.</p>
+              <p className="text-lg mb-4">Ce workshop s&apos;adresse aux lycéen·nes souhaitant réfléchir à leur orientation après le bac. Il propose un temps d&apos;échange autour des des métiers liés aux mathématiques.</p>
               <p className="text-lg">L&apos;objectif est de:</p>
               <ul className="text-lg list-disc ml-4">
                 <li>Mieux comprendre les parcours possibles après le lycée</li>
                 <li>Découvrir les débouchés liés aux mathématiques</li>
-                <li>Poser ses questions et échanger avec des intervenants</li>
+                <li>Poser ses questions et échanger avec des intervenant·es</li>
               </ul>
             </div>
           </div>
@@ -72,7 +72,7 @@ export default function MathSprintPage() {
 
             <h1 className='text-center font-bold font-literata text-2xl'>Workshop primaire – Enfants et parents</h1>
             <div>
-              <p className="text-lg mb-4">Un atelier ludique et interactif destiné aux élèves du primaires qui sont curieux et intéressés par les mathématiques, ainsi qu&apos;aux parents souhaitant éveiller l&apos;intérêt de leurs enfants pour cette discipline.</p>
+              <p className="text-lg mb-4">Un atelier ludique et interactif destiné aux élèves du primaires qui sont curieux·ses et intéressé·es par les mathématiques, ainsi qu&apos;aux parents souhaitant éveiller l&apos;intérêt de leurs enfants pour cette discipline.</p>
               <p className="text-lg">À travers des énigmes, jeux et défis stimulants, les élèves découvrent les mathématiques de manière amusante et développent leur logique et leur créativité.</p>
             </div>
           </div>
@@ -84,13 +84,13 @@ export default function MathSprintPage() {
               </div>
             </div>
 
-            <h1 className='text-center font-bold font-literata text-2xl'>Workshop collégiens – Explorer, comprendre, s&apos;épanouir</h1>
+            <h1 className='text-center font-bold font-literata text-2xl'>Workshop collégien·nes – Explorer, comprendre, s&apos;épanouir</h1>
             
             <div>
-              <p className="text-lg mb-4">Ce workshop est destiné aux collégiens souhaitant découvrir tout ce que le collège et le lycée peuvent offrir au-delà des cours.</p>
-              <p className="text-lg">Les participants pourront:</p>
+              <p className="text-lg mb-4">Ce workshop est destiné aux collégien·nes souhaitant découvrir tout ce que le collège et le lycée peuvent offrir au-delà des cours.</p>
+              <p className="text-lg">Les participant·es pourront:</p>
               <ul className="text-lg list-disc ml-4">
-                <li>Découvrir les olympiades de mathématiques et échanger avec d'anciens participants aux Olympiades.</li>
+                <li>Découvrir les olympiades de mathématiques et échanger avec d'ancien·nes participant·es aux Olympiades.</li>
                 <li>Comprendre comment développer un esprit scientifique : curiosité, raisonnement, esprit critique</li>
                 <li>Apprendre à profiter pleinement de leurs années au collège et à se préparer sereinement au lycée</li>
               </ul>
@@ -104,9 +104,9 @@ export default function MathSprintPage() {
               </div>
             </div>
 
-            <h1 className='text-center font-bold font-literata text-2xl'>Workshops scientifiques – Lycéens (Bac) et post-bac</h1>
+            <h1 className='text-center font-bold font-literata text-2xl'>Workshops scientifiques – Lycéen·nes (Bac) et post-bac</h1>
             <div>
-              <p className="text-lg mb-4">Ces workshops s&apos;adressent aux élèves du bac et aux étudiants post-bac intéressés par des sujets scientifiques en lien avec les mathématiques.</p>
+              <p className="text-lg mb-4">Ces workshops s&apos;adressent aux élèves du bac et aux étudiant·es post-bac intéressé·es par des sujets scientifiques en lien avec les mathématiques.</p>
               <p className="text-lg">Dans le menu:</p>
               <ul className="text-lg list-disc ml-4">
                 <li>Ateliers thématiques autour de concepts mathématiques</li>

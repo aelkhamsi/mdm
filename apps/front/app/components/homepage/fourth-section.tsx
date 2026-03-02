@@ -74,7 +74,7 @@ const FourthSection = () => {
       </h1>
 
       <div className='max-w-screen-md text-center my-6 xl:p-0'>
-        Nous sommes des mathématicien·nes, physicien·nes, ingénieur·es et chercheur·es marocain·es réparti·es aux quatre coins du monde : France, Suisse, États-Unis, Royaume-Uni, Maroc… tous bénévoles, tous mobilisé·es pour une même mission : rendre les mathématiques accessibles et transformatrices pour chaque jeune au Maroc.
+        Nous sommes des mathématicien·nes, physicien·nes, ingénieur·es et chercheur·es marocain·es réparti·es aux quatre coins du monde : France, Suisse, États-Unis, Royaume-Uni, Maroc… tous·tes bénévoles, tous·tes mobilisé·es pour une même mission : rendre les mathématiques accessibles et transformatrices pour chaque jeune au Maroc.
       </div>
 
       {/* <div 

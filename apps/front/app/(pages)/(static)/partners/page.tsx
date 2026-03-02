@@ -40,7 +40,7 @@ export default function PartnersPage() {
                 className="animate-fade-up opacity-0 text-center text-3xl font-bold drop-shadow-sm"
                 style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
               >
-                <span className='font-literata leading-[1.3] bg-gradient-to-br from-sky-800 to-[#272162] inline-block text-transparent bg-clip-text'>Organisateur</span>
+                <span className='font-literata leading-[1.3] bg-gradient-to-br from-sky-800 to-[#272162] inline-block text-transparent bg-clip-text'>Organisateur·rices</span>
               </h1>
 
               <div
@@ -53,7 +53,7 @@ export default function PartnersPage() {
                   imageHeight={organizers[0].imageHeight}
                 >
                   <div className="text-sm space-y-2">
-                    <div><span className='mb-8 bg-gradient-to-br from-sky-500 to-[#272162] text-transparent bg-clip-text font-semibold'>Math&Maroc</span> est une association à but non lucratif créée en 2016 par de jeunes Marocains souhaitant redonner à la collectivité.</div>
+                    <div><span className='mb-8 bg-gradient-to-br from-sky-500 to-[#272162] text-transparent bg-clip-text font-semibold'>Math&Maroc</span> est une association à but non lucratif créée en 2016 par de jeunes Marocain·nes souhaitant redonner à la collectivité.</div>
                     <div><span className="font-bold">Notre mission</span> est de promouvoir les mathématiques et les sciences au Maroc, et ainsi guider les jeunes vers l&apos;excellence.</div>
                     <div><span className='mb-8 bg-gradient-to-br from-sky-500 to-[#272162] text-transparent bg-clip-text font-semibold'>Math&Maroc</span> organise <span className="font-bold">MDM</span> depuis sa première édition en avril 2024.</div>
                   </div>
