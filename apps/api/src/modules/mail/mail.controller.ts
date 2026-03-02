@@ -18,11 +18,20 @@ export class MailController {
   @Roles(ADMIN_ROLE)
   async sendMathSprintReminder() {
     const users = await this.userService.findAll();
-    console.log(
-      'users',
-      users.map((user) => user.email),
-    );
-    await this.mailService.sendApplicationReminderEmail(users);
+
+    const mathSprintUsers = users
+      .filter((user) => {
+        const choices = user.application?.activityChoices ?? [];
+        return choices.includes('math_sprint');
+      })
+      .filter((user) => {
+        return user.application?.status === 'DRAFT';
+      });
+
+    if (mathSprintUsers?.length) {
+      await this.mailService.sendApplicationReminderEmail(users);
+    }
+
     return { statusCode: 200 };
   }
 }

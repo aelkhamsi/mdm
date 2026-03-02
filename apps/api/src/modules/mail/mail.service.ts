@@ -40,6 +40,8 @@ export class MailService {
   }
 
   async sendApplicationReminderEmail(users: User[]) {
+    if (!users) return;
+
     await this.mailerService.sendMail({
       to: users.map((user) => user?.email).reverse(),
       subject: 'Complétez votre candidature Math Sprint',
