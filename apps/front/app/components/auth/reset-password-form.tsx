@@ -24,11 +24,9 @@ export function ResetPasswordForm({ className, ...props }: ResetPasswordFormProp
   const [successMessage, setSuccessMessage] = useState<string>('')
 
   const onSubmit = async (formData: any) => {
-    console.log('reset submit')
     const { email } = formData;
     setIsFormLoading(true)
     const response = await resetPassword(email) as any;
-    console.log('response', response)
 
     switch(response?.statusCode) {
       case 200:
