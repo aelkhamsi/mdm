@@ -3,7 +3,6 @@ import { HandlebarsAdapter } from '@nestjs-modules/mailer/dist/adapters/handleba
 import { join } from 'path';
 
 export default registerAs('smtp', () => ({
-  endpoint: process.env.SMTP_ENDPOINT,
   transport: {
     host: process.env.SMTP_HOST,
     port: 465,
