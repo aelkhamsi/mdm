@@ -16,16 +16,37 @@ export class MailService {
         ? `https://mdm.mathmaroc.org/reset-password?token=${accessToken}`
         : `http://localhost:3000/reset-password?token=${accessToken}`;
 
-    await this.mailerService.sendMail({
-      to: user?.email,
-      subject: 'Réinitialiser votre mot de passe',
-      template: 'reset-password',
-      context: {
+    const url = this.configService.get('smtp.endpoint') + 'send';
+    const payload = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        templateName: 'reset-password',
+        recipient: user?.email,
         firstName: user?.firstName,
         link,
-      },
-    });
+      }),
+    };
+
+    await fetch(url, payload);
   }
+
+  // async sendResetPasswordEmail(user: User, accessToken: string) {
+  //   const link =
+  //     this.configService.get('app.nodenv') === 'production'
+  //       ? `https://mdm.mathmaroc.org/reset-password?token=${accessToken}`
+  //       : `http://localhost:3000/reset-password?token=${accessToken}`;
+
+  //   await this.mailerService.sendMail({
+  //     to: user?.email,
+  //     subject: 'Réinitialiser votre mot de passe',
+  //     template: 'reset-password',
+  //     context: {
+  //       firstName: user?.firstName,
+  //       link,
+  //     },
+  //   });
+  // }
 
   async sendEmailVerificationEmail(user: User, verificationCode: string) {
     await this.mailerService.sendMail({
