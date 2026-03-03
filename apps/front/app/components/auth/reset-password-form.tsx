@@ -24,9 +24,11 @@ export function ResetPasswordForm({ className, ...props }: ResetPasswordFormProp
   const [successMessage, setSuccessMessage] = useState<string>('')
 
   const onSubmit = async (formData: any) => {
+    console.log('reset submit')
     const { email } = formData;
     setIsFormLoading(true)
     const response = await resetPassword(email) as any;
+    console.log('response', response)
 
     switch(response?.statusCode) {
       case 200:
@@ -35,7 +37,8 @@ export function ResetPasswordForm({ className, ...props }: ResetPasswordFormProp
         break;
       case 400:
       case 401:
-        setErrorMessage('The email is incorrect')
+      case 404:
+        setErrorMessage('There is no account registered with this email')
         setIsFormLoading(false)
         break
       default:
