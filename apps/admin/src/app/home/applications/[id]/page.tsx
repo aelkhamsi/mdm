@@ -111,6 +111,7 @@ export default function ApplicationDetailsPage({
         (application: any) => application?.id === id,
       );
       setApplication(searchResult);
+      console.log("application", application);
       const activityChoices = JSON.parse(searchResult?.activityChoices);
       setActivityChoices(activityChoices ? activityChoices?.sort() : undefined);
     }

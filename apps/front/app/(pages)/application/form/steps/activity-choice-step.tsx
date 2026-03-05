@@ -78,7 +78,7 @@ export const ActivityChoiceStep = ({
                   control={form.control}
                   name="activityChoices"
                   render={({ field }) => {
-                    const checked = !choice.disabled || applicationStatus === 'PENDING'
+                    const checked = !choice.disabled || applicationStatus === 'COMPLETE'
                       ? field.value?.includes(choice.value)
                       : false
 

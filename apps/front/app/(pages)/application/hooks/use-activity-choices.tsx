@@ -12,7 +12,7 @@ export const useActivityChoice = (form: UseFormReturn, applicationStatus: string
   const isVisitorDisabled = choices?.find(choice => choice.value === ActivityChoiceValues.VISITOR)?.disabled
 
   const getActivityState = (activityChoices: string[], targetValue: string, isDisabled: boolean|undefined) => {
-    return !isDisabled || applicationStatus === 'PENDING'
+    return !isDisabled || applicationStatus === 'COMPLETE'
       ? activityChoices?.find((choice: string) => choice === targetValue) ? true : false
       : false
   }
