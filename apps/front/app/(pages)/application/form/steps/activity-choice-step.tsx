@@ -78,9 +78,11 @@ export const ActivityChoiceStep = ({
                   control={form.control}
                   name="activityChoices"
                   render={({ field }) => {
-                    const checked = !choice.disabled || applicationStatus === 'COMPLETE'
-                      ? field.value?.includes(choice.value)
-                      : false
+                    const isChoiceDisabled = choice.disabled && applicationStatus !== 'COMPLETE'
+                    const isChecked = isChoiceDisabled ? false : field.value?.includes(choice.value)
+                    if (isChoiceDisabled && field.value?.includes(choice.value)) {
+                      field.onChange(field.value.filter((value: string) => value !== choice.value))
+                    }
 
                     return (
                       <FormItem
@@ -101,7 +103,7 @@ export const ActivityChoiceStep = ({
 
                         <FormControl>
                           <Checkbox
-                            checked={checked}
+                            checked={isChecked}
                             disabled={choice.disabled}
                             onCheckedChange={(checked) => {
                               return checked
