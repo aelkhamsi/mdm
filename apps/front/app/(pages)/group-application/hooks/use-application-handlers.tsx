@@ -39,7 +39,7 @@ export const useApplicationHandlers = (
       // Upload files
       const files = getFiles(formData)
       await uploadFiles(files, user)
-      await updateApplicationFiles(formData, files, user)
+      await updateApplicationFiles(applicationResponse?.id, formData, files, user)
       
       // Update application status
       const applicationId = applicationResponse?.id;
