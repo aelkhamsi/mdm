@@ -67,6 +67,22 @@ export default function MathSprintPage() {
           </div>
 
           <div className="w-full space-y-4 p-4">
+            <h1 className='font-literata font-bold text-3xl'>Devoir maison de sélection</h1>
+            <p>Vous devez préparer un devoir maison rédigé à la main. Il permettra d&apos;évaluer votre niveau et servira de test de sélection pour l&apos;épreuve MathSprint.</p>
+
+            <div className="flex flex-col items-center space-y-4 md:flex-row md:space-x-4 md:space-y-0">
+              <Link href='https://drive.google.com/file/d/1C-Pk9S3px2kvO9XFkoOKnlWvh7Rl8RNv/view?usp=sharing' target="_blank">
+                <div 
+                  className="h-[8rem] w-[9rem] bg-white border-b-4 border-b-red-500 border-2 shadow-md flex justify-center items-center rounded-md hover:cursor-pointer"
+                > 
+                  <div className="flex flex-col items-center text-center">
+                    <span className="font-bold">Devoir Maison</span>
+                    <ExamIcon className="h-[4rem]"/>
+                  </div>
+                </div>
+              </Link>
+            </div>
+
             <h1 className='font-literata font-bold text-3xl'>Quels sujets concernent l'épreuve ?</h1>
             
             <div className="flex flex-col items-center space-y-4 md:flex-row md:space-x-4 md:space-y-0">
