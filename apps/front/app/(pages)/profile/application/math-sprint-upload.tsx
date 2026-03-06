@@ -18,15 +18,18 @@ import { useFileUpload } from "@/app/(pages)/application/hooks/use-file-upload";
 import { getUploadFolderName } from "@/app/lib/utils";
 import { putApplication } from "@/app/api/ApplicationApi";
 import { ActivityChoiceValues } from "@/app/(pages)/application/form/steps/activity-choice-step";
+import FormErrorDialog from "../../application/form/error/form-error-dialog";
 
 const MathSprintUpload = () => {  
   const user = useAtomValue(userAtom)
   const [mathSprintFile, setMathSprintFile] = useState<File | null>(null)
-  const [mathSprintError, setMathSprintError] = useState<{message: string} | null>(null)
+  const [validationError, setValidationError] = useState<{message: string} | null>(null)
   const [isLoading, setIsLoading] = useState<boolean>(false)
   const [inputLabel, setInputLabel] = useState<string>('')
   const [inputPlaceholder, setInputPlaceholder] = useState<string>('')
   const [isFileUploaded, setIsFileUploaded] = useState<boolean>(false)
+  const [error, setError] = useState<any>(undefined)
+  const [showErrorDialog, setShowErrorDialog] = useState<boolean>(false)
   const { uploadFiles } = useFileUpload()
   const MAX_UPLOAD_SIZE = 1024 * 1024 * 3; // 3MB
   const isVisible = user?.application?.status === 'COMPLETE' && user?.application?.activityChoices?.includes(ActivityChoiceValues.MATH_SPRINT)
@@ -42,18 +45,18 @@ const MathSprintUpload = () => {
     const file = e.target.files?.[0]
     if (!file) {
       setMathSprintFile(null)
-      setMathSprintError(null)
+      setValidationError(null)
       setInputPlaceholder(isFileUploaded ? '✅ Fichier Uploadé!' : 'Aucun fichier')
       return
     }
 
     if (file?.size > MAX_UPLOAD_SIZE) {
-      setMathSprintError({message: 'La taille du fichier ne doit pas dépasser 3MB'})
+      setValidationError({message: 'La taille du fichier ne doit pas dépasser 3MB'})
       return
     }
 
     if (file?.type !== 'application/pdf') {
-      setMathSprintError({message: 'Le fichier doit être sous format PDF'})
+      setValidationError({message: 'Le fichier doit être sous format PDF'})
       return
     }
     
@@ -63,7 +66,7 @@ const MathSprintUpload = () => {
       { type: file.type },
     ))
     setInputPlaceholder(file ? file?.name : inputPlaceholder)
-    setMathSprintError(null)
+    setValidationError(null)
   }
 
   const onUploadMathSprintTest = async () => {
@@ -82,6 +85,8 @@ const MathSprintUpload = () => {
     } catch (e) {
       console.error('upload error', e)
       setIsLoading(false)
+      setError(e)
+      setShowErrorDialog(true)
     }
   }
 
@@ -115,12 +120,12 @@ const MathSprintUpload = () => {
           <div>{inputPlaceholder}</div>
         </label>
 
-        <CardDescription className="mt-2 text-red-500">{mathSprintError?.message}</CardDescription>
+        <CardDescription className="mt-2 text-red-500">{validationError?.message}</CardDescription>
       </CardContent>
       
       <CardFooter>
         <Button 
-          disabled={!mathSprintFile || mathSprintError !== null}
+          disabled={!mathSprintFile || validationError !== null}
           onClick={onUploadMathSprintTest}
         >
           {isLoading
@@ -148,6 +153,8 @@ const MathSprintUpload = () => {
       ? <ProfileSkeleton />
       : mathSprintTestCard
     }
+
+    <FormErrorDialog showDialog={showErrorDialog} setShowDialog={setShowErrorDialog} error={error} />
   </>
 }
 
