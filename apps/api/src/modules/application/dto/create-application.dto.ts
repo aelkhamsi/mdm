@@ -133,5 +133,9 @@ export class CreateApplicationDto {
 
   @IsString()
   @IsOptional()
+  fileMathSprintTestUrl: string;
+
+  @IsString()
+  @IsOptional()
   status: ApplicationStatus;
 }

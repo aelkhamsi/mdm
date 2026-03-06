@@ -67,6 +67,10 @@ export const rowFactory = (applications: any[], configService) => {
       text: application?.fileStandAbstractUrl ? 'link' : ' ',
       hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.fileStandAbstractUrl}`,
     },
+    fileMathSprintTest: {
+      text: application?.fileMathSprintTestUrl ? 'link' : ' ',
+      hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.fileMathSprintTestUrl}`,
+    },
 
     status: application?.status,
   }));

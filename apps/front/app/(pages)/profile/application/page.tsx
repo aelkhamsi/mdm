@@ -1,9 +1,9 @@
 
 "use client"
 
-import { Separator } from "@mdm/ui"
+import { Input, Separator } from "@mdm/ui"
 import { formatDate } from "@mdm/utils";
-import { useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import {
   Card,
   CardContent,
@@ -18,6 +18,9 @@ import { useRouter } from "next/navigation";
 import { useAtomValue } from "jotai";
 import { userAtom } from "@/app/store/userAtom";
 import { ProfileSkeleton } from "@mdm/ui";
+import { useFileUpload } from "@/app/(pages)/application/hooks/use-file-upload";
+import { getUploadFolderName } from "@/app/lib/utils";
+import { putApplication } from "@/app/api/ApplicationApi";
 
 const getBadgeClassname = (status: string) => {
   switch(status) {
@@ -31,7 +34,11 @@ const getBadgeClassname = (status: string) => {
 export default function ApplicationPage() {
   const user = useAtomValue(userAtom)
   const [content, setContent] = useState<any>(undefined);
+  const [mathSprintFile, setMathSprintFile] = useState<File | null>(null)
+  const [mathSprintError, setMathSprintError] = useState<{message: string} | null>(null)
+  const { uploadFiles } = useFileUpload()
   const router = useRouter();
+  const MAX_UPLOAD_SIZE = 1024 * 1024 * 3; // 3MB
   
   useEffect(() => {
     const application = user?.application;
@@ -57,6 +64,46 @@ export default function ApplicationPage() {
       })
     }
   }, [user])
+
+  const onChangeMathSprintTest = (e: ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0]
+    if (!file) {
+      setMathSprintFile(null)
+      setMathSprintError(null)
+      return
+    }
+
+    if (file?.size > MAX_UPLOAD_SIZE) {
+      setMathSprintError({message: 'La taille du fichier ne doit pas dépasser 3MB'})
+      return
+    }
+
+    if (file?.type !== 'application/pdf') {
+      setMathSprintError({message: 'Le fichier doit être sous format PDF'})
+      return
+    }
+    
+    setMathSprintFile(new File(
+      [file],
+      'math_sprint_test' + '.' + file.name.split('.').pop(),
+      { type: file.type },
+    ))
+    setMathSprintError(null)
+  }
+
+  const onUploadMathSprintTest = async () => {
+    if (!mathSprintFile) return
+
+    try {
+      const uploadFolderName = getUploadFolderName(user?.firstName, user?.lastName);
+      await uploadFiles([mathSprintFile], user)
+      await putApplication(user?.application?.id, {
+        fileMathSprintTestUrl: `upload_mdm/${uploadFolderName}/${mathSprintFile.name}`,
+      })
+    } catch (e) {
+      console.error('upload error', e)
+    }
+  }
 
   const applicationCard = (
     <Card>
@@ -90,6 +137,38 @@ export default function ApplicationPage() {
     </Card>
   )
 
+  const mathSprintTestCard = <>
+    <Card>
+      <CardHeader>
+        <CardTitle>
+          Vous n&apos;avez pas encore soumis votre devoir
+        </CardTitle>
+        <CardDescription>
+          Il vous est demandé de rédiger votre devoir à la main, puis de scanner l&apos;ensemble de vos feuilles et de les regrouper dans un seul fichier.
+        </CardDescription>
+      </CardHeader>
+
+      <CardContent>
+        <Input
+          id="fileMathSprintTest" 
+          type="file"
+          onChange={onChangeMathSprintTest}
+        />
+
+        <CardDescription className="mt-2 text-red-500">{mathSprintError?.message}</CardDescription>
+      </CardContent>
+      
+      <CardFooter>
+        <Button 
+          disabled={!mathSprintFile || mathSprintError !== null}
+          onClick={onUploadMathSprintTest}
+        >
+          Envoyer votre devoir
+        </Button>
+      </CardFooter> 
+    </Card>
+  </>
+
   return (
     <div className="space-y-6">
       <div>
@@ -105,6 +184,25 @@ export default function ApplicationPage() {
         ? <ProfileSkeleton />
         : applicationCard
       }
+
+      {user?.application?.status === 'COMPLETE' && 
+        <>
+          <div>
+            <div className="text-lg font-medium">Devoir de sélection MathSprint</div>
+            <p className="text-sm text-muted-foreground">
+              C&apos;est ici que vous devrez uploader votre devoir de sélection Math Sprint.
+            </p>
+          </div>
+
+          <Separator />
+
+          {!user
+            ? <ProfileSkeleton />
+            : mathSprintTestCard
+          }
+        </>
+      }
+      
     </div>
   )
 }

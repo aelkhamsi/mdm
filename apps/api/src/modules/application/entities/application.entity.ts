@@ -126,6 +126,9 @@ export class Application {
   @Column({ type: 'varchar', nullable: true })
   fileParentalAuthorizationUrl: string;
 
+  @Column({ type: 'varchar', nullable: true })
+  fileMathSprintTestUrl: string;
+
   /* Status */
   @Column({ type: 'varchar', default: 'DRAFT' })
   status: ApplicationStatus;

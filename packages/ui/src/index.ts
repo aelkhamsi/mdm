@@ -31,6 +31,7 @@ export * from './components/accordion'
 export * from './components/card'
 export * from './components/badge'
 export * from './components/alert-dialog'
+export * from './components/field'
 export * from 'date-fns'
 export * from '@radix-ui/react-icons'
 
