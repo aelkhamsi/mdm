@@ -71,8 +71,8 @@ const SecondSection = () => {
         <div><span className='font-medium text-[#F25C54]'>Date limite pour l&apos;inscription</span> selon votre choix de participation</div>
 
         <div className='w-full lg:w-3/4 flex justify-center'>
-          <div className='w-1/3 '><span className='font-bold'>5 mars</span><br/>Math Sprint</div>
           <div className='w-1/3 '><span className='font-bold'>8 mars</span><br/>Animation Stand</div>
+          <div className='w-1/3 '><span className='font-bold'>11 mars</span><br/>Math Sprint</div>
           <div className='w-1/3 '><span className='font-bold'>26 mars</span><br/>Visiteurs</div>
         </div>
       </div>

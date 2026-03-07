@@ -63,7 +63,7 @@ export default function MathSprintPage() {
               </ul>
             </div>
 
-            <p className="text-lg">La clôture des inscriptions sera le <span className="text-[#F0463D] font-bold">5 mars</span>. Sauf problème technique de notre part, aucune extension de la deadline n&apos;est possible. </p>
+            <p className="text-lg">La clôture des inscriptions sera le <span className="text-[#F0463D] font-bold">11 mars</span>. Sauf problème technique de notre part, aucune extension de la deadline n&apos;est possible. </p>
           </div>
 
           <div className="w-full space-y-4 p-4">

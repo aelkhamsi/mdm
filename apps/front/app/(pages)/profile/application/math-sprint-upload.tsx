@@ -1,6 +1,6 @@
 "use client"
 
-import { Input, LoadingDots, Separator } from "@mdm/ui"
+import { ExternalLink, Input, LoadingDots, Separator } from "@mdm/ui"
 import { ChangeEvent, useEffect, useState } from "react";
 import {
   Card,
@@ -19,6 +19,8 @@ import { getUploadFolderName } from "@/app/lib/utils";
 import { putApplication } from "@/app/api/ApplicationApi";
 import { ActivityChoiceValues } from "@/app/(pages)/application/form/steps/activity-choice-step";
 import FormErrorDialog from "../../application/form/error/form-error-dialog";
+import { LinkIcon } from "lucide-react";
+import Link from "next/link";
 
 const MathSprintUpload = () => {  
   const user = useAtomValue(userAtom)
@@ -101,7 +103,8 @@ const MathSprintUpload = () => {
           
         </CardTitle>
         <CardDescription>
-          Il vous est demandé de rédiger votre devoir à la main, puis de scanner l&apos;ensemble de vos feuilles et de les regrouper dans un seul fichier PDF.
+          Il vous est demandé de rédiger votre devoir à la main, puis de scanner l&apos;ensemble de vos feuilles et de les regrouper dans un seul fichier PDF.{" "}
+          <Link className="text-blue-600 font-bold underline" href='https://drive.google.com/file/d/1C-Pk9S3px2kvO9XFkoOKnlWvh7Rl8RNv/view?usp=sharing' target="_blank">lien vers le devoir<ExternalLink /></Link>
         </CardDescription>
       </CardHeader>
 
