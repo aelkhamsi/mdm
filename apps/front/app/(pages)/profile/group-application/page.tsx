@@ -26,6 +26,8 @@ const getBadgeClassname = (status: string) => {
       return 'bg-gray-300 text-black';
     case 'COMPLETE':
       return 'bg-[#006644] text-white';
+    case 'UNDER_REVIEW':
+      return 'bg-amber-400 text-black';
   }
 }
 

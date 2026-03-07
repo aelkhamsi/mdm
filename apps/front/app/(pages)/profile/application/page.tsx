@@ -1,9 +1,9 @@
 
 "use client"
 
-import { Input, Separator } from "@mdm/ui"
+import { Separator } from "@mdm/ui"
 import { formatDate } from "@mdm/utils";
-import { ChangeEvent, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Card,
   CardContent,
@@ -18,10 +18,6 @@ import { useRouter } from "next/navigation";
 import { useAtomValue } from "jotai";
 import { userAtom } from "@/app/store/userAtom";
 import { ProfileSkeleton } from "@mdm/ui";
-import { useFileUpload } from "@/app/(pages)/application/hooks/use-file-upload";
-import { getUploadFolderName } from "@/app/lib/utils";
-import { putApplication } from "@/app/api/ApplicationApi";
-import { ActivityChoiceValues } from "@/app/(pages)/application/form/steps/activity-choice-step";
 import MathSprintUpload from "./math-sprint-upload";
 
 const getBadgeClassname = (status: string) => {
@@ -30,6 +26,8 @@ const getBadgeClassname = (status: string) => {
       return 'bg-gray-300 text-black';
     case 'COMPLETE':
       return 'bg-[#006644] text-white';
+    case 'UNDER_REVIEW':
+    return 'bg-amber-400 text-black';
   }
 }
 
@@ -79,7 +77,7 @@ export default function ApplicationPage() {
           <>
             <div className="text-sm"><span className="font-bold">Date de soumission</span>: {formatDate(user?.application?.createdAt)}</div>
             <div className="text-sm"><span className="font-bold">Date de sauvegarde</span>: {formatDate(user?.application?.updatedAt)}</div>
-            <div className="text-sm"><span className="font-bold">Status</span>: <Badge className={`px-4 ${getBadgeClassname(user?.application?.status)}`}>{user?.application?.status}</Badge></div>
+            <div className="text-sm"><span className="font-bold">Status</span>: <Badge className={`px-4 ${getBadgeClassname(user?.application?.status)}`}>{user?.application?.status.split('_').join(' ')}</Badge></div>
           </>
         }
       </CardContent>

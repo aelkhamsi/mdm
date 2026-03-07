@@ -77,6 +77,15 @@ const FilesTable = ({ application }: { application: any }) => {
             </TableCell>
           </TableRow>
         )}
+
+        {application?.fileMathSprintTestUrl && (
+          <TableRow key="parental-authorization">
+            <TableCell>Math Sprint Test</TableCell>
+            <TableCell>
+              <FileCard href={application?.fileMathSprintTestUrl} />
+            </TableCell>
+          </TableRow>
+        )}
       </TableBody>
     </Table>
   );
