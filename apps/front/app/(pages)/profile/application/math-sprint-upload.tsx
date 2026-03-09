@@ -33,7 +33,7 @@ const MathSprintUpload = () => {
   const [showErrorDialog, setShowErrorDialog] = useState<boolean>(false)
   const { uploadFiles } = useFileUpload()
   const MAX_UPLOAD_SIZE = 1024 * 1024 * 3; // 3MB
-  const isVisible = user?.application?.status === 'COMPLETE' && user?.application?.activityChoices?.includes(ActivityChoiceValues.MATH_SPRINT)
+  const isVisible = user?.application?.status !== 'DRAFT' && user?.application?.activityChoices?.includes(ActivityChoiceValues.MATH_SPRINT)
 
   useEffect(() => {
     const isUploaded = user?.application?.fileMathSprintTestUrl !== null
@@ -80,11 +80,12 @@ const MathSprintUpload = () => {
       await putApplication(user?.application?.id, {
         fileMathSprintTestUrl: `upload_mdm/${uploadFolderName}/${mathSprintFile.name}`,
       })
+      await putApplication(user?.application?.id, { status: 'TEST_SUBMITTED' })
+
       setTimeout(() => {
         window.location.reload();
       }, 1000)
     } catch (e) {
-      console.error('upload error', e)
       setIsLoading(false)
       setError(e)
       setShowErrorDialog(true)

@@ -42,8 +42,9 @@ export const useApplicationHandlers = (
       await updateApplicationFiles(applicationResponse?.id, formData, files, user)
       
       // Update application status
-      const applicationId = applicationResponse?.id;
-      await putGroupApplication(applicationId, { status: 'COMPLETE' }) as any;
+      if (!formData.status || formData.status === 'DRAFT') {
+        await putGroupApplication(applicationResponse?.id, { status: 'COMPLETE' }) as any;
+      }
 
       toast({
         title: 'Application created with success',

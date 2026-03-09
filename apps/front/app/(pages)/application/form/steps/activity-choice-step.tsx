@@ -78,7 +78,7 @@ export const ActivityChoiceStep = ({
                   control={form.control}
                   name="activityChoices"
                   render={({ field }) => {
-                    const isChoiceDisabled = choice.disabled && applicationStatus !== 'COMPLETE'
+                    const isChoiceDisabled = choice.disabled && applicationStatus === 'DRAFT'
                     const isChecked = isChoiceDisabled ? false : field.value?.includes(choice.value)
                     if (isChoiceDisabled && field.value?.includes(choice.value)) {
                       field.onChange(field.value.filter((value: string) => value !== choice.value))

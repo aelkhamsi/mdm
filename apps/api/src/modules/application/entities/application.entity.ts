@@ -9,7 +9,11 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-export type ApplicationStatus = 'DRAFT' | 'COMPLETE' | 'UNDER_REVIEW';
+export type ApplicationStatus =
+  | 'DRAFT'
+  | 'COMPLETE'
+  | 'TEST_SUBMITTED'
+  | 'UNDER_REVIEW';
 
 @Entity({ name: 'applications' })
 export class Application {

@@ -32,18 +32,21 @@ const countApplications = (
         if (application?.status === "COMPLETE") {
           count[1]++;
         }
+        if (activityChoice === ActivityChoiceValues.MATH_SPRINT && application?.fileMathSprintTestUrl !== null) {
+          count[2]++;
+        }
       }
 
       return count;
     },
-    [0, 0],
+    [0, 0, 0],
   );
 };
 
 export default function Home() {
   const applications = useRecoilValue(applicationsState);
   const [countAll, countComplete] = countApplications(applications);
-  const [mathSprintAll, mathSprintComplete] = countApplications(
+  const [mathSprintAll, mathSprintComplete, mathSprintTestComplete] = countApplications(
     applications,
     ActivityChoiceValues.MATH_SPRINT,
   );
@@ -74,6 +77,7 @@ export default function Home() {
           className="bg-gray-300"
           valueAll={mathSprintAll}
           valueComplete={mathSprintComplete}
+          valueTestComplete={mathSprintTestComplete}
         />
         <Stats
           title="🎤 Stand"
