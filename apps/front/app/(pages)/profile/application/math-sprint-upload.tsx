@@ -79,8 +79,8 @@ const MathSprintUpload = () => {
       await uploadFiles([mathSprintFile], user)
       await putApplication(user?.application?.id, {
         fileMathSprintTestUrl: `upload_mdm/${uploadFolderName}/${mathSprintFile.name}`,
+        status: 'TEST_SUBMITTED'
       })
-      await putApplication(user?.application?.id, { status: 'TEST_SUBMITTED' })
 
       setTimeout(() => {
         window.location.reload();
