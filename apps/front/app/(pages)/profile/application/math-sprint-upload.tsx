@@ -19,7 +19,6 @@ import { getUploadFolderName } from "@/app/lib/utils";
 import { putApplication } from "@/app/api/ApplicationApi";
 import { ActivityChoiceValues } from "@/app/(pages)/application/form/steps/activity-choice-step";
 import FormErrorDialog from "../../application/form/error/form-error-dialog";
-import { LinkIcon } from "lucide-react";
 import Link from "next/link";
 
 const MathSprintUpload = () => {  

@@ -31,7 +31,7 @@ export const choices = [
     type: "Organisation",
     color: 'blue-700',
     target: 'Étudiants universitaires',
-    disabled: false,
+    disabled: true,
   },
   {
     value: ActivityChoiceValues.VISITOR,
