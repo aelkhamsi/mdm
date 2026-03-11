@@ -10,7 +10,6 @@ import JotaiContextProvider from "./jotaiContextProvider";
 import { DataProvider } from "../providers/data.provider";
 import { Toaster } from "@mdm/ui";
 
-
 export const metadata = {
   title: "MDM 2026",
   description: "MDM: La grande rencontre des passionnés de mathématiques",

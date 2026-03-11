@@ -32,7 +32,7 @@ const countApplications = (
         if (application?.status === "COMPLETE") {
           count[1]++;
         }
-        if (activityChoice === ActivityChoiceValues.MATH_SPRINT && application?.fileMathSprintTestUrl !== null) {
+        if (application?.status === "TEST_SUBMITTED") {
           count[2]++;
         }
       }
@@ -46,10 +46,8 @@ const countApplications = (
 export default function Home() {
   const applications = useRecoilValue(applicationsState);
   const [countAll, countComplete] = countApplications(applications);
-  const [mathSprintAll, mathSprintComplete, mathSprintTestComplete] = countApplications(
-    applications,
-    ActivityChoiceValues.MATH_SPRINT,
-  );
+  const [mathSprintAll, mathSprintComplete, mathSprintTestComplete] =
+    countApplications(applications, ActivityChoiceValues.MATH_SPRINT);
   const [standAll, standComplete] = countApplications(
     applications,
     ActivityChoiceValues.STAND,
