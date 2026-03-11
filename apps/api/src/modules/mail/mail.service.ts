@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { MailerService } from '@nestjs-modules/mailer';
 import { User } from 'src/modules/user/entities/user.entity';
+import * as path from 'path';
 
 @Injectable()
 export class MailService {
@@ -50,6 +51,20 @@ export class MailService {
         templateName.split('-').join(' '),
       )}`,
       template: `${templateName}-reminder`,
+      attachments: [
+        {
+          filename: 'devoir_maison.pdf',
+          path: path.join(
+            __dirname,
+            '..',
+            '..',
+            '..',
+            'attachments',
+            'devoir_maison.pdf',
+          ),
+          contentType: 'application/pdf',
+        },
+      ],
     });
   }
 }

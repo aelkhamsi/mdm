@@ -84,7 +84,7 @@ export function ApplicationsToolbar<TData>({
           sendEmails={sendMathSprintReminder}
         />
 
-        <ReminderEmailButton name="Stand" sendEmails={sendStandReminder} />
+        {/* <ReminderEmailButton name="Stand" sendEmails={sendStandReminder} /> */}
 
         <ApplicationsViewOptions table={table} />
       </div>

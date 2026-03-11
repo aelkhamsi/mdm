@@ -32,14 +32,14 @@ export function ReminderEmailButton({
       case 200:
         toast({
           title: "✅ Emails were sent successfully",
-          description: `Emails for DRAFT application of ${name} were sent successfully`,
+          description: `Emails for DRAFT/COMPLETE application sof ${name} were sent successfully`,
         });
         break;
 
       default:
         toast({
           title: "❌ An error has occured. Please try again later",
-          description: `Emails for DRAFT application of ${name} failed`,
+          description: `Emails for DRAFT/COMPLETE applications of ${name} failed`,
         });
         break;
     }
@@ -67,7 +67,8 @@ export function ReminderEmailButton({
 
             <AlertDialogDescription>
               You&apos;ll be sending an email to users that have a{" "}
-              <span className="font-bold">DRAFT</span> {name} application.
+              <span className="font-bold">DRAFT / COMPLETE</span> {name}{" "}
+              application.
             </AlertDialogDescription>
           </AlertDialogHeader>
 

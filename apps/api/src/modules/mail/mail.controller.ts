@@ -25,7 +25,10 @@ export class MailController {
         return choices.includes(activityName);
       })
       .filter((user) => {
-        return user.application?.status === 'DRAFT';
+        return (
+          user.application?.status === 'DRAFT' ||
+          user.application?.status === 'COMPLETE'
+        );
       });
 
     if (filteredUsers?.length) {
