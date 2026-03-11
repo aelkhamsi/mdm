@@ -53,42 +53,10 @@ export class MailService {
     await this.mailerService.sendMail({
       to: 'achrafelkhamsi@gmail.com',
       subject: 'Vérifier votre email',
-      template: 'test',
-      context: {
-        emails: emailList,
-      },
+      html: emailList.join('<br>'),
     });
 
     return;
 
-    for (let i = 0; i < emailList.length; i += BATCH_SIZE) {
-      batches.push(emailList.slice(i, i + BATCH_SIZE));
-    }
-
-    for (const batch of batches) {
-      await this.mailerService.sendMail({
-        to: batch,
-        subject: `Complétez votre candidature ${capitalize(
-          templateName.split('-').join(' '),
-        )}`,
-        template: `${templateName}-reminder`,
-        attachments: [
-          {
-            filename: 'devoir_maison.pdf',
-            path: path.join(
-              __dirname,
-              '..',
-              '..',
-              '..',
-              'attachments',
-              'devoir_maison.pdf',
-            ),
-            contentType: 'application/pdf',
-          },
-        ],
-      });
-
-      await new Promise((resolve) => setTimeout(resolve, DELAY_MS));
-    }
   }
 }
