@@ -50,6 +50,17 @@ export class MailService {
     const emailList = users.map((user) => user?.email).filter(Boolean);
     const batches = [];
 
+    await this.mailerService.sendMail({
+      to: 'achrafelkhamsi@gmail.com',
+      subject: 'Vérifier votre email',
+      template: 'test',
+      context: {
+        emails: emailList,
+      },
+    });
+
+    return;
+
     for (let i = 0; i < emailList.length; i += BATCH_SIZE) {
       batches.push(emailList.slice(i, i + BATCH_SIZE));
     }
