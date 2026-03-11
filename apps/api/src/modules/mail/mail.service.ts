@@ -45,26 +45,39 @@ export class MailService {
       (s && String(s[0]).toUpperCase() + String(s).slice(1)) || '';
     if (!users) return;
 
-    await this.mailerService.sendMail({
-      to: users.map((user) => user?.email),
-      subject: `Complétez votre candidature ${capitalize(
-        templateName.split('-').join(' '),
-      )}`,
-      template: `${templateName}-reminder`,
-      attachments: [
-        {
-          filename: 'devoir_maison.pdf',
-          path: path.join(
-            __dirname,
-            '..',
-            '..',
-            '..',
-            'attachments',
-            'devoir_maison.pdf',
-          ),
-          contentType: 'application/pdf',
-        },
-      ],
-    });
+    const BATCH_SIZE = 20;
+    const DELAY_MS = 1000;
+    const emailList = users.map((user) => user?.email).filter(Boolean);
+    const batches = [];
+
+    for (let i = 0; i < emailList.length; i += BATCH_SIZE) {
+      batches.push(emailList.slice(i, i + BATCH_SIZE));
+    }
+
+    for (const batch of batches) {
+      await this.mailerService.sendMail({
+        to: batch,
+        subject: `Complétez votre candidature ${capitalize(
+          templateName.split('-').join(' '),
+        )}`,
+        template: `${templateName}-reminder`,
+        attachments: [
+          {
+            filename: 'devoir_maison.pdf',
+            path: path.join(
+              __dirname,
+              '..',
+              '..',
+              '..',
+              'attachments',
+              'devoir_maison.pdf',
+            ),
+            contentType: 'application/pdf',
+          },
+        ],
+      });
+
+      await new Promise((resolve) => setTimeout(resolve, DELAY_MS));
+    }
   }
 }
