@@ -36,7 +36,7 @@ const MathSprintUpload = () => {
   const isVisible = user?.application?.status !== 'DRAFT' && user?.application?.activityChoices?.includes(ActivityChoiceValues.MATH_SPRINT)
 
   useEffect(() => {
-    const isUploaded = user?.application?.fileMathSprintTestUrl !== null
+    const isUploaded = !!user?.application?.fileMathSprintTestUrl
     setIsFileUploaded(isUploaded)
     setInputLabel(isUploaded ? 'Modifier le fichier' : 'Ajouter un fichier')
     setInputPlaceholder(isUploaded ? '✅ Fichier Uploadé!' : 'Aucun fichier')
