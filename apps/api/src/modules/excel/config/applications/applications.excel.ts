@@ -1,4 +1,8 @@
-import { educationFields, educationLevels, regionLabels } from '../labels';
+import {
+  educationFields,
+  educationLevelLabels,
+  regionLabels,
+} from '../../labels';
 
 export const rowFactory = (applications: any[], configService) => {
   const awsBucketName = configService.get('AWS_BUCKET_NAME');
@@ -23,9 +27,7 @@ export const rowFactory = (applications: any[], configService) => {
         ? JSON.parse(application?.activityChoices)?.join(';')
         : '',
 
-    educationLevel: educationLevels.find(
-      (level) => level.value == application?.educationLevel,
-    )?.label,
+    educationLevel: educationLevelLabels[application?.educationLevel],
     educationField: educationFields.find(
       (field) => field.value == application?.educationField,
     )?.label,
