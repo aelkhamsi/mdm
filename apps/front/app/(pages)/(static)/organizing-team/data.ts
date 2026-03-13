@@ -48,12 +48,6 @@ export const organizingCommittee = [
     imageSrc: "/organizing-team/ilyass_bouazza.webp"
   },
   {
-    name: "Abderrahmane ECHAARANI",
-    profession: "Student @ CentraleSupélec",
-    linkedinUrl: "https://www.linkedin.com/in/abderrahmane-echaarani-41ab66201",
-    imageSrc: "/organizing-team/abderrahmane_echaarani.webp"
-  },
-  {
     name: "Mohammed Ali Benchekroun",
     profession: "Data Scientist @ Walmart / MIT / CentraleSupélec",
     linkedinUrl: "https://www.linkedin.com/in/mohammed-ali-benchekroun/",
@@ -136,5 +130,20 @@ export const organizingCommittee = [
     profession: "Software Engineer @ Bouygues Telecom",
     linkedinUrl: "https://www.linkedin.com/in/achrafelkhamsi/",
     imageSrc: "/organizing-team/achraf_el_khamsi.webp"
+  },
+  {
+    name: "Rihab Essafi",
+    linkedinUrl: "https://www.linkedin.com/in/rihab-essafi-909575285",
+    imageSrc: "/organizing-team/rihab_essafi.webp"
+  },
+  {
+    name: "Mohammed Ali Kabiri",
+    linkedinUrl: "https://www.linkedin.com/in/mohamed-ali-kabiri-7491b3242/",
+    imageSrc: "/organizing-team/mohammed_ali_kabiri.webp"
+  },
+  {
+    name: "Aymane El Mir",
+    linkedinUrl: "https://www.linkedin.com/in/aymane-el-mir/",
+    imageSrc: "/organizing-team/aymane_el_mir.webp"
   }
 ];
