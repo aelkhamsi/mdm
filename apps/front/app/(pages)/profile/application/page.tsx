@@ -109,7 +109,7 @@ export default function ApplicationPage() {
         : applicationCard
       }
 
-      <MathSprintUpload />
+      {/* <MathSprintUpload /> */}
     </div>
   )
 }
