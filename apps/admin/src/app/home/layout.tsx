@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import { Inter } from 'next/font/google';
+import { Inter } from "next/font/google";
 import "../globals.css";
-import { NavItem } from '@/components/layout/nav-item';
-import { UsersIcon } from '@/components/shared/icons';
-import { SettingsIcon } from '@/components/shared/icons';
-import Logo from '@/components/layout/logo';
-import { useRecoilValue } from 'recoil';
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { adminState } from '@/store/adminState';
-import { objIsEmpty } from '@/lib/utils';
-import PageSkeleton from './page-skeleton';
-import { AdminNav } from '@/components/layout/admin-nav';
+import { NavItem } from "@/components/layout/nav-item";
+import { UsersIcon } from "@/components/shared/icons";
+import { SettingsIcon } from "@/components/shared/icons";
+import Logo from "@/components/layout/logo";
+import { useRecoilValue } from "recoil";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { adminState } from "@/store/adminState";
+import { objIsEmpty } from "@/lib/utils";
+import PageSkeleton from "./page-skeleton";
+import { AdminNav } from "@/components/layout/admin-nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,13 +23,12 @@ export default function HomeLayout({
 }>) {
   const adminData = useRecoilValue(adminState);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const router = useRouter();
 
   useEffect(() => {
     if (adminData && !objIsEmpty(adminData)) {
       setIsLoading(false);
     }
-  }, [adminData])
+  }, [adminData]);
 
   return (
     <div className="grid min-h-screen w-full lg:grid-cols-[280px_1fr]">
@@ -43,6 +42,10 @@ export default function HomeLayout({
               <NavItem href="/home/applications" className="h-12">
                 <UsersIcon className="h-4 w-4" />
                 Applications
+              </NavItem>
+              <NavItem href="/home/group-applications" className="h-12">
+                <UsersIcon className="h-4 w-4" />
+                Group Applications
               </NavItem>
               <NavItem href="/home/users" className="h-12">
                 <UsersIcon className="h-4 w-4" />
@@ -61,12 +64,7 @@ export default function HomeLayout({
           {!isLoading ? <AdminNav /> : <></>}
         </header>
 
-        <div className='p-8'>
-          {isLoading
-            ? <PageSkeleton />
-            : children
-          }
-        </div>
+        <div className="p-8">{isLoading ? <PageSkeleton /> : children}</div>
       </div>
     </div>
   );

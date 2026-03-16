@@ -1,11 +1,11 @@
 import CtaButton from '../../cta/cta-button'
 import FaqButton from '../../cta/faq-button'
-import RegulationButton from '../../cta/regulation-button'
 import DeadlineButton from '../../cta/deadline-button'
 import CenterContainer from '../../center-container'
 import HeroSectionPartners from './hero-section-partners'
 import HeroSectionTitle from './hero-section-title'
 import HeroSectionLogo from './hero-section-logo'
+import MathSprintButton from '../../cta/math-sprint-button'
 
 const HeroSection = () => {
   const backgroundColorClassname = "bg-[#111111]"
@@ -25,7 +25,7 @@ const HeroSection = () => {
           >
             <CtaButton />
             <DeadlineButton />
-            <RegulationButton />
+            <MathSprintButton />
             <FaqButton />
           </div>
 

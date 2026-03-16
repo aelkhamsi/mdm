@@ -18,6 +18,7 @@ import { useRouter } from "next/navigation";
 import { useAtomValue } from "jotai";
 import { userAtom } from "@/app/store/userAtom";
 import { ProfileSkeleton } from "@mdm/ui";
+import MathSprintUpload from "./math-sprint-upload";
 
 const getBadgeClassname = (status: string) => {
   switch(status) {
@@ -25,6 +26,8 @@ const getBadgeClassname = (status: string) => {
       return 'bg-gray-300 text-black';
     case 'COMPLETE':
       return 'bg-[#006644] text-white';
+    case 'TEST_SUBMITTED':
+      return 'bg-amber-400 text-black';
   }
 }
 
@@ -32,7 +35,7 @@ export default function ApplicationPage() {
   const user = useAtomValue(userAtom)
   const [content, setContent] = useState<any>(undefined);
   const router = useRouter();
-  
+
   useEffect(() => {
     const application = user?.application;
     const applicationStatus = application?.status;
@@ -74,7 +77,7 @@ export default function ApplicationPage() {
           <>
             <div className="text-sm"><span className="font-bold">Date de soumission</span>: {formatDate(user?.application?.createdAt)}</div>
             <div className="text-sm"><span className="font-bold">Date de sauvegarde</span>: {formatDate(user?.application?.updatedAt)}</div>
-            <div className="text-sm"><span className="font-bold">Status</span>: <Badge className={`px-4 ${getBadgeClassname(user?.application?.status)}`}>{user?.application?.status}</Badge></div>
+            <div className="text-sm"><span className="font-bold">Status</span>: <Badge className={`px-4 ${getBadgeClassname(user?.application?.status)}`}>{user?.application?.status.split('_').join(' ')}</Badge></div>
           </>
         }
       </CardContent>
@@ -105,6 +108,8 @@ export default function ApplicationPage() {
         ? <ProfileSkeleton />
         : applicationCard
       }
+
+      {/* <MathSprintUpload /> */}
     </div>
   )
 }

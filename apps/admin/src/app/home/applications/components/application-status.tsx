@@ -10,7 +10,7 @@ import {
 import { putApplication } from "@/api/ApplicationApi";
 import { toast } from "@/components/hooks/use-toast";
 
-export type Status = "DRAFT" | "COMPLETE" | "EMPTY";
+export type Status = "DRAFT" | "COMPLETE" | "TEST_SUBMITTED";
 
 export const getStatusClassname = (status: Status, size: "sm" | "md") => {
   const baseClassname =
@@ -22,8 +22,8 @@ export const getStatusClassname = (status: Status, size: "sm" | "md") => {
     case "DRAFT":
       colorClassname = "bg-gray-300 text-black";
       break;
-    case "EMPTY":
-      colorClassname = "bg-gray-100 text-black";
+    case "TEST_SUBMITTED":
+      colorClassname = "bg-amber-400 text-black";
       break;
     case "COMPLETE":
       colorClassname = "bg-[#006644] text-white";
@@ -36,6 +36,7 @@ export const getStatusClassname = (status: Status, size: "sm" | "md") => {
 export const statusOptions = [
   { value: "DRAFT", label: "DRAFT" },
   { value: "COMPLETE", label: "COMPLETE" },
+  { value: "TEST_SUBMITTED", label: "TEST_SUBMITTED" },
 ];
 
 const StatusCard = ({ value }: { value: Status }) => {
@@ -90,6 +91,9 @@ const ApplicationStatus = ({
           </SelectItem>
           <SelectItem value="COMPLETE">
             <StatusCard value="COMPLETE" />
+          </SelectItem>
+          <SelectItem value="TEST_SUBMITTED">
+            <StatusCard value="TEST_SUBMITTED" />
           </SelectItem>
         </SelectContent>
       </Select>

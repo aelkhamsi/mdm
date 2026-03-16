@@ -9,7 +9,11 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-export type ApplicationStatus = 'DRAFT' | 'COMPLETE';
+export type ApplicationStatus =
+  | 'DRAFT'
+  | 'COMPLETE'
+  | 'TEST_SUBMITTED'
+  | 'UNDER_REVIEW';
 
 @Entity({ name: 'applications' })
 export class Application {
@@ -125,6 +129,9 @@ export class Application {
 
   @Column({ type: 'varchar', nullable: true })
   fileParentalAuthorizationUrl: string;
+
+  @Column({ type: 'varchar', nullable: true })
+  fileMathSprintTestUrl: string;
 
   /* Status */
   @Column({ type: 'varchar', default: 'DRAFT' })

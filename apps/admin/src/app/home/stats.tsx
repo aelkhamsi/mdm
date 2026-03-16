@@ -2,11 +2,13 @@ const Stats = ({
   title,
   valueAll,
   valueComplete,
+  valueTestComplete,
   className,
 }: {
   title: string;
   valueAll: number;
   valueComplete: number;
+  valueTestComplete?: number;
   className?: string;
 }) => {
   return (
@@ -21,13 +23,23 @@ const Stats = ({
         </div>
       </div>
       <div className="flex items-center space-x-4 text-sm">
-        <div className="rounded-lg px-2 py-1 bg-[#FFE380] text-black">
+        <div className="rounded-lg px-2 py-1 bg-[#006644] text-white">
           COMPLETE
         </div>
         <div className={title == "General" ? "text-white" : "text-gray-600"}>
           {valueComplete}
         </div>
       </div>
+      {valueTestComplete &&
+        <div className="flex items-center space-x-4 text-sm">
+          <div className="rounded-lg px-2 py-1 bg-amber-400 text-black">
+            TEST SUBMITTED
+          </div>
+          <div className={title == "General" ? "text-white" : "text-gray-600"}>
+            {valueTestComplete}
+          </div>
+        </div>
+      }
     </div>
   );
 };

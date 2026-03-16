@@ -39,11 +39,12 @@ export const useApplicationHandlers = (
       // Upload files
       const files = getFiles(formData)
       await uploadFiles(files, user)
-      await updateApplicationFiles(formData, files, user)
+      await updateApplicationFiles(applicationResponse?.id, formData, files, user)
       
       // Update application status
-      const applicationId = applicationResponse?.id;
-      await putApplication(applicationId, { status: 'COMPLETE' }) as any;
+      if (!formData.status || formData.status === 'DRAFT') {
+        await putApplication(applicationResponse?.id, { status: 'COMPLETE' }) as any;
+      }
 
       toast({
         title: 'Application created with success',

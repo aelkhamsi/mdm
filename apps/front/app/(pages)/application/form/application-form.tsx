@@ -71,19 +71,19 @@ export const ApplicationForm = ({
           )}
 
           {currentStep === 1 && (
-            <ActivityChoiceStep form={form} delta={delta} applicationStatus={user?.application?.status?.status}/>
+            <ActivityChoiceStep form={form} delta={delta} applicationStatus={user?.application?.status}/>
           )}
 
           {currentStep === 2 && (
-            <EducationStep form={form} delta={delta} applicationStatus={user?.application?.status?.status}/>
+            <EducationStep form={form} delta={delta} applicationStatus={user?.application?.status}/>
           )}
 
           {currentStep === 3 && (
-            <MotivationStep form={form} delta={delta} applicationStatus={user?.application?.status?.status}/>
+            <MotivationStep form={form} delta={delta} applicationStatus={user?.application?.status}/>
           )}
 
           {currentStep === 4 && (
-            <UploadStep form={form} delta={delta} applicationStatus={user?.application?.status?.status}/>
+            <UploadStep form={form} delta={delta} applicationStatus={user?.application?.status}/>
           )}
 
           {currentStep === 5 && (

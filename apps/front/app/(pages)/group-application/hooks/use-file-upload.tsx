@@ -44,13 +44,14 @@ export const useFileUpload = () => {
   }
 
   const updateApplicationFiles = async (
+    applicationId: number,
     formData: z.infer<typeof groupApplicationSchema>, 
     files: (File|undefined)[], 
     user: User|undefined
   ) => {
     const uploadFolderName = getUploadFolderName(user?.firstName, user?.lastName);
 
-    await putGroupApplication(formData?.id, {
+    await putGroupApplication(applicationId, {
       fileCnieUrl: files[0] ? `upload_mdm/${uploadFolderName}/${files[0].name}` : (formData?.fileCnieUrl ?? null),
       fileParticipantNamesUrl: files[1] ? `upload_mdm/${uploadFolderName}/${files[1].name}` : (formData?.fileParticipantNamesUrl ?? null),
     }) as any

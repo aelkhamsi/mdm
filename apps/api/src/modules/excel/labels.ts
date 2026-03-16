@@ -14,20 +14,23 @@ export const regionLabels = {
   abroad: 'Abroad',
 } as any;
 
-export const educationLevels = [
-  { label: 'CE6', value: 'ce6' },
-  { label: 'CE5', value: 'ce5' },
-  { label: 'CE4', value: 'ce4' },
-  { label: 'CE3', value: 'ce3' },
-  { label: 'CE2', value: 'ce2' },
-  { label: 'CE1', value: 'ce1' },
-  { label: '3AC', value: '3ac' },
-  { label: '2AC', value: '2ac' },
-  { label: '1AC', value: '1ac' },
-  { label: '2ème année Bac', value: '2bac' },
-  { label: '1ère année Bac', value: '1bac' },
-  { label: 'Tronc commun', value: 'tronc-commun' },
-];
+export const educationLevelLabels: Record<string, string> = {
+  ce6: 'CE6',
+  ce5: 'CE5',
+  ce4: 'CE4',
+  ce3: 'CE3',
+  ce2: 'CE2',
+  ce1: 'CE1',
+  '3ac': '3AC',
+  '2ac': '2AC',
+  '1ac': '1AC',
+  '2bac': '2ème année Bac',
+  '1bac': '1ère année Bac',
+  'tronc-commun': 'Tronc commun',
+  university: 'Université',
+  cpge: 'Classes Préparatoires',
+  other: 'Autre',
+};
 
 export const educationFields = [
   { label: 'TC sciences', value: 'tc-sciences' },
@@ -86,3 +89,9 @@ export const educationFields = [
   },
   { label: 'Autre', value: 'autre' },
 ];
+
+export const functionsLabels: Record<string, string> = {
+  director: 'Directeur',
+  professor: 'Professeur',
+  supervisor: 'Surveillant',
+};

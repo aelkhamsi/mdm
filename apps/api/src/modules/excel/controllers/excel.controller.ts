@@ -28,4 +28,17 @@ export class ExcelController {
 
     res.download(`${file}`);
   }
+
+  @Get('group-applications')
+  @Header('Content-Type', 'text/xlsx')
+  @UseGuards(RolesGuard)
+  @Roles(ADMIN_ROLE)
+  async downloadGroupApplications(@Res() res: Response) {
+    const file = await this.excelService.downloadGroupApplications();
+    if (!file) {
+      return new BadRequestException();
+    }
+
+    res.download(`${file}`);
+  }
 }

@@ -1,13 +1,8 @@
-"use client"
-
-import { useState } from 'react';
 import Link from 'next/link';
 import { Scroll } from 'lucide-react';
 
 
 const RegulationButton = () => {
-  const [isLoading, setIsLoading] = useState(false)
-
   return (
     <Link
       className="flex max-w-fit items-center justify-center h-11 text-lg space-x-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-gray-700 shadow-md transition-colors hover:border-gray-800"

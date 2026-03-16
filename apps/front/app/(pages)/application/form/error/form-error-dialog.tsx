@@ -21,10 +21,10 @@ const FormErrorDialog = ({
     <Dialog open={showDialog} onOpenChange={setShowDialog}>
       <DialogContent className="sm:max-w-[525px]">
         <DialogHeader>
-          <DialogTitle className="my-2 text-red-700">La soumission de votre candidature a échouée</DialogTitle>
+          <DialogTitle className="my-2 text-red-700">La soumission de vos données a échouée</DialogTitle>
           <DialogDescription className="text-xs space-y-2">
             <div>
-              Une erreur est survenue lors de la soumission de votre candidature. <br/>
+              Une erreur est survenue lors de la soumission de vos données. <br/>
               Message de l&apos;erreur: <span className="text-black">{error?.message}</span>
             </div>
             <div>

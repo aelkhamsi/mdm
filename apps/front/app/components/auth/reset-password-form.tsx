@@ -35,7 +35,8 @@ export function ResetPasswordForm({ className, ...props }: ResetPasswordFormProp
         break;
       case 400:
       case 401:
-        setErrorMessage('The email is incorrect')
+      case 404:
+        setErrorMessage('There is no account registered with this email')
         setIsFormLoading(false)
         break
       default:

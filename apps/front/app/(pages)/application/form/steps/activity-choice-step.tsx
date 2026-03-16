@@ -23,7 +23,7 @@ export const choices = [
     type: "Compétition",
     color: 'orange-700',
     target: 'Élèves collège/lycée',
-    disabled: false,
+    disabled: true,
   },
   {
     value: ActivityChoiceValues.STAND,
@@ -31,7 +31,7 @@ export const choices = [
     type: "Organisation",
     color: 'blue-700',
     target: 'Étudiants universitaires',
-    disabled: false,
+    disabled: true,
   },
   {
     value: ActivityChoiceValues.VISITOR,
@@ -78,9 +78,11 @@ export const ActivityChoiceStep = ({
                   control={form.control}
                   name="activityChoices"
                   render={({ field }) => {
-                    const checked = !choice.disabled || applicationStatus === 'PENDING'
-                      ? field.value?.includes(choice.value)
-                      : false
+                    const isChoiceDisabled = choice.disabled && applicationStatus === 'DRAFT'
+                    const isChecked = isChoiceDisabled ? false : field.value?.includes(choice.value)
+                    if (isChoiceDisabled && field.value?.includes(choice.value)) {
+                      field.onChange(field.value.filter((value: string) => value !== choice.value))
+                    }
 
                     return (
                       <FormItem
@@ -101,7 +103,7 @@ export const ActivityChoiceStep = ({
 
                         <FormControl>
                           <Checkbox
-                            checked={checked}
+                            checked={isChecked}
                             disabled={choice.disabled}
                             onCheckedChange={(checked) => {
                               return checked
