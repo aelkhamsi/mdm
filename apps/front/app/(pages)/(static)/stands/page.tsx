@@ -49,7 +49,7 @@ export default function StandsPage() {
               </div>
 
               <h1 className='text-center font-bold font-literata text-2xl'>Participez activement</h1>
-              <p className="text-center text-xl">Engagez-vous dans des activités pratiques, des démonstrations en direct ou des jeux stimulants proposés par les animateurs.</p>
+              <p className="text-center text-xl">Engagez-vous dans des activités pratiques, des démonstrations en direct ou des jeux stimulants proposés par les animateur·rices.</p>
             </div>
 
             <div className="w-full space-y-4 p-8 bg-[#F9FAFB] rounded-3xl shadow-sm border-[1px] border-gray-100">
@@ -78,14 +78,14 @@ export default function StandsPage() {
 
         {/* ANIMATORS SECTION */}
         <div className="text-left w-full">
-          <h2 className="text-3xl font-bold font-literata">Pour les animateurs</h2>
+          <h2 className="text-3xl font-bold font-literata">Pour les animateur·rices</h2>
           <Separator className="my-4 bg-[#F25C54]" />
 
           <div>
             Si vous êtes:
             <ol className="list-decimal ml-6">
-              <li className="marker:text-[#F25C54] marker:text-2xl">Étudiant universitaire</li>
-              <li className="marker:text-[#F25C54] marker:text-2xl">Membres d&apos;un club ou d&apos;une association, représentants d&apos;une entreprise ou simplement un groupe d&apos;amis passionné par les mathématiques</li>
+              <li className="marker:text-[#F25C54] marker:text-2xl">Étudiant·e universitaire</li>
+              <li className="marker:text-[#F25C54] marker:text-2xl">Membres d&apos;un club ou d&apos;une association, représentant·es d&apos;une entreprise ou simplement un groupe d&apos;ami·es passionné·es par les mathématiques</li>
               <li className="marker:text-[#F25C54] marker:text-2xl">Vous souhaitez partager vos idées innovantes et vulgariser des concepts mathématiques auprès d&apos;un public diversifié</li>
             </ol>
           </div>
@@ -117,7 +117,7 @@ export default function StandsPage() {
           <div className="text-center space-y-4 p-8 bg-[#F9FAFB] rounded-3xl shadow-sm border-[1px] border-gray-100">
             <h2 className="text-2xl font-bold font-literata text-[#F25C54]">Le vote du public présent</h2>
             <p>
-              Chaque participant pourra voter pour le stand qui l&apos;a le plus marqué.<br/>
+              Chaque participant·e pourra voter pour le stand qui l&apos;a le plus marqué·e.<br/>
               Un <span className="font-bold">prix sera décerné au meilleur stand</span>
             </p>
           </div>

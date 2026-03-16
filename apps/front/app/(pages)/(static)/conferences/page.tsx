@@ -33,7 +33,7 @@ export default function ConferencesPage() {
         >
           <div className="w-full space-y-4 p-4">
             <h1 className='font-bold font-literata text-3xl'>Des conférences pour nourrir les esprits mathématiques curieux</h1>
-            <p className="text-lg">Plongez dans l'univers des mathématiques à travers une série de conférences captivantes animées par des experts renommés du domaine.</p>
+            <p className="text-lg">Plongez dans l'univers des mathématiques à travers une série de conférences captivantes animées par des expert·es renommé·es du domaine.</p>
             <p className="text-lg">Ces interventions offriront des perspectives inédites, des discussions profondes et des éclairages sur des sujets mathématiques variés, allant des théories classiques aux dernières avancées</p>
           </div>
 

@@ -5,11 +5,11 @@ export const generalQuestions = [
   },
   {
     question: "Quel est le délai d’inscription ?",
-    anwser: "La date limite pour les visiteurs est fixée au 26 mars. Pour la participation aux compétitions ou à l'animation des stands, vous trouverez les dates limites sur leurs pages correspondantes. N'attendez pas jusqu'au dernier jour pour soumettre votre candidature. Aucune exception ne sera accordée pour les candidatures tardives, quelles que soient les raisons invoquées, telles que l'oubli, des problèmes de connexion internet ou toute autre excuse.",
+    anwser: "La date limite pour les visiteur·euses est fixée au 26 mars. Pour la participation aux compétitions ou à l'animation des stands, vous trouverez les dates limites sur leurs pages correspondantes. N'attendez pas jusqu'au dernier jour pour soumettre votre candidature. Aucune exception ne sera accordée pour les candidatures tardives, quelles que soient les raisons invoquées, telles que l'oubli, des problèmes de connexion internet ou toute autre excuse.",
   },
   {
     question: "Y-a-t-il des frais à payer pour la nourriture, et les activités ?",
-    anwser: "Les activités sont toutes prises en charge pour les participants tout au long de l'événement. Seuls les frais de transport et de nourriture sont à leur charge sauf exception basée sur des critères sociaux."
+    anwser: "Les activités sont toutes prises en charge pour les participant·es tout au long de l'événement. Seuls les frais de transport et de nourriture sont à leur charge sauf exception basée sur des critères sociaux."
   },
   {
     question: "Est-ce que les frais de transport et de nourriture peuvent être partiellement remboursés ?",
@@ -17,7 +17,7 @@ export const generalQuestions = [
   },
   {
     question: "L’événement est-il accessible à tout public, y compris aux familles  ?",
-    anwser: "Oui, l’événement est entièrement ouvert à toutes et tous, sans restriction d’âge, et propose des activités variées pour tou·tes les participant·es."
+    anwser: "Oui, l’événement est entièrement ouvert à toutes et tous, sans restriction d’âge, et propose des activités variées pour tous·tes les participant·es."
   },
   {
     question: "Où pourrais-je vous contacter si j’ai une demande spéciale, ou une autre question ?",
@@ -29,18 +29,18 @@ export const generalQuestions = [
   },
   {
     question: "Faut-il une lettre de motivation lors de l’inscription ?",
-    anwser: "Non, les lettres de motivation ne seront pas prises en considération. Par contre dans le formulaire d’inscription il sera demandé d’inclure une motivation de max 300 mots pour les participants aux compétitions ou aux animateurs de stands."
+    anwser: "Non, les lettres de motivation ne seront pas prises en considération. Par contre dans le formulaire d’inscription il sera demandé d’inclure une motivation de max 300 mots pour les participant·es aux compétitions ou aux animateur·rices de stands."
   },
   {
     question: "Que faire si je n’ai pas encore reçu mon relevé de notes ?",
     anwser: "Normalement, vous avez tous le bulletin du premier semestre de l'année en cours. Si vous l’aviez perdu, il est de votre responsabilité de solliciter votre école pour une copie. En cas de preuve sérieuse on peut accepter le bulletin de l'année précédente."
   },
   {
-    question: "Je suis mineur, puis-je venir seul(e)",
+    question: "Je suis mineur, puis-je venir seul·e ?",
     anwser: "A condition de présenter une autorisation parentale signée et légalisée, nous ne pouvons malheureusement pas accueillir de mineurs."
   },
   {
-    question: "Quelle est la langue utilisée pour les conférences?",
+    question: "Quelle est la langue utilisée pour les conférences ?",
     anwser: "Les conférences sont en français."
   },
 ]
@@ -48,16 +48,16 @@ export const generalQuestions = [
 
 export const mathSprintQuestions = [
   {
-    question: "Comment savoir si j’ai été sélectionné ?",
-    anwser: "Vous recevrez une notification par email et serez ajouté à un groupe WhatsApp. Veillez à ce que le numéro renseigné corresponde à votre profil."
+    question: "Comment savoir si j’ai été sélectionné·e ?",
+    anwser: "Vous recevrez une notification par email et serez ajouté·e à un groupe WhatsApp. Veillez à ce que le numéro renseigné corresponde à votre profil."
   },
   {
-    question: "Quand est-ce qu’on sera notifié si on est sélectionné ?",
+    question: "Quand est-ce qu’on sera notifié si on est sélectionné·e ?",
     anwser: "Les résultats de sélection seront envoyés au plus tard 13 mars."
   },
   {
     question: "Est-ce qu’il y aura des problèmes différents selon le niveau scolaire ?",
-    anwser: "Non, tous les candidats auront affaire aux mêmes problèmes. Il y aura juste deux types d’épreuves : une pour le collège et l’autre pour le lycée."
+    anwser: "Non, tous les candidat·es auront affaire aux mêmes problèmes. Il y aura juste deux types d’épreuves : une pour le collège et l’autre pour le lycée."
   },
   {
     question: "Y-a-t-il des problèmes sur lesquels on pourra s'entraîner ?",
@@ -65,7 +65,7 @@ export const mathSprintQuestions = [
   },
   {
     question: "Est-ce qu’il y aura des certificats de participation ?",
-    anwser: "Oui, il y aura des certificats aux gagnants ainsi qu’aux participants."
+    anwser: "Oui, il y aura des certificats aux gagnant·es ainsi qu’aux participant·es."
   },
   {
     question: "Quels sont les prix à gagner ?",
@@ -79,7 +79,7 @@ export const bestMathVideoQuestions = [
     anwser: "La compétition “Best Mathematical Video” est ouverte à tous les élèves de moins de 18 ans, du primaire, du collège et du lycée."
   },
   {
-    question: "Puis-je participer tout en étant candidat à d’autres compétitions de MDM (ex: Math sprint)",
+    question: "Puis-je participer tout en étant candidat·e à d’autres compétitions de MDM (ex: Math sprint)",
     anwser: "Oui tout à fait."
   },
   {
@@ -95,7 +95,7 @@ export const bestMathVideoQuestions = [
     anwser: "La vidéo doit durer au maximum 4 minutes et au minimum 3 minutes. Au-delà de ceci la vidéo sera sanctionnée."
   },
   {
-    question: "Je ne souhaite pas montrer mon visage sur la vidéo; Est-ce un problème?",
+    question: "Je ne souhaite pas montrer mon visage sur la vidéo; Est-ce un problème ?",
     anwser: "Non. Si vous n’êtes pas à l’aise à le faire, ne vous inquiétez pas ce n’est pas obligatoire (mais encouragé si vous le pouvez). Il est cependant nécessaire que vous utilisiez votre propre voix pour expliquer et non une IA."
   },
   {
@@ -103,8 +103,8 @@ export const bestMathVideoQuestions = [
     anwser: "Oui avec modération. N’oubliez pas que le travail doit être fait par vous."
   },
   {
-    question: "Je ne sais pas comment faire le montage, serais-je pénalisé?",
-    anwser: "Ne vous inquiétez pas! On ne juge pas vos aptitudes de montage mais plutôt le contenu de la vidéo. Il suffit que la vidéo soit cohérente et présentable. Vous trouverez par ailleurs une liste de logiciels de montage pour vous aider à démarrer sur la page de Best Math video. Vous n’êtes bien entendu pas obligés de les utiliser."
+    question: "Je ne sais pas comment faire le montage, serais-je pénalisé·e ?",
+    anwser: "Ne vous inquiétez pas! On ne juge pas vos aptitudes de montage mais plutôt le contenu de la vidéo. Il suffit que la vidéo soit cohérente et présentable. Vous trouverez par ailleurs une liste de logiciels de montage pour vous aider à démarrer sur la page de Best Math video. Vous n’êtes bien entendu pas obligé·e de les utiliser."
   },
   {
     question: "Puis-je inclure des graphiques, animations ou effets spéciaux dans ma vidéo ?",
@@ -116,23 +116,23 @@ export const bestMathVideoQuestions = [
   },
   {
     question: "Les vidéos seront-elles partagées publiquement ou resteront-elles privées ?",
-    anwser: "Les vidéos seront partagées publiquement sur Youtube. En signant le règlement de MDM, vous consentez à ceci."
+    anwser: "Les vidéos seront partagées publiquement sur YouTube. En signant le règlement de MDM, vous consentez à ceci."
   },
   {
-    question: "Quand et comment les gagnants seront-ils annoncés ?",
-    anwser: "Les gagnants seront contactés par email brièvement après l’évaluation des participations."
+    question: "Quand et comment les gagnant·es seront-ils annoncé·es ?",
+    anwser: "Les gagnant·es seront contacté·es par email brièvement après l’évaluation des participations."
   },
   {
-    question: "Si je suis parmi les gagnants, suis-je obligé d’assister à la journée MDM ?",
-    anwser: "Oui. En signant le règlement, tu t'engages à te présenter à MDM si ta vidéo a été sélectionnée. En cas d'empêchement majeur, contactez nous."
+    question: "Si je suis parmi les gagnant·es, suis-je obligé·e d’assister à la journée MDM ?",
+    anwser: "Oui. En signant le règlement, vous vous engagez à vous présentez à MDM si votre vidéo a été sélectionnée. En cas d'empêchement majeur, contactez-nous."
   },
   {
     question: "Quels sont les prix à gagner ?",
-    anwser: "4 gagnants seront choisi comme suit: 3 prix du jury math et maroc et 1 prix choix du public"
+    anwser: "4 gagnant·es seront choisi comme suit: 3 prix du jury math et maroc et 1 prix choix du public"
   },
   {
-    question: "Est-ce qu'un certificat de participation sera remis à tous les participants ?",
-    anwser: "Tous les participants peuvent recevoir une attestation de participation sur demande. Veuillez nous contacter sur mdm@mathmaroc.org."
+    question: "Est-ce qu'un certificat de participation sera remis à tous les participant·es ?",
+    anwser: "Tous les participant·es peuvent recevoir une attestation de participation sur demande. Veuillez nous contacter sur mdm@mathmaroc.org."
   },
 ]
 
@@ -143,11 +143,11 @@ export const standQuestions = [
   },
   {
     question: "Y a-t-il des frais d’inscription pour proposer un stand ?",
-    anwser: "Non, la participation est gratuite pour tous les animateurs souhaitant exposer leur stand."
+    anwser: "Non, la participation est gratuite pour tous les animateur·rices souhaitant exposer leur stand."
   },
   {
     question: "Quelle est la durée de l'exposition des stands ?",
-    anwser: "Les stands seront accessibles au public pendant une grande partie de la journée du MDM. L’objectif est de permettre aux visiteurs de circuler librement entre les stands pour en découvrir plusieurs."
+    anwser: "Les stands seront accessibles au public pendant une grande partie de la journée du MDM. L’objectif est de permettre aux visiteur·rices de circuler librement entre les stands pour en découvrir plusieurs."
   },
   {
     question: "Puis-je présenter mon stand avec un groupe ?",
@@ -155,23 +155,23 @@ export const standQuestions = [
   },
   {
     question: "Quel matériel sera mis à disposition pour les stands ?",
-    anwser: "Les organisateurs fourniront des modulaires (stands non personnalisés). Pour tout matériel supplémentaire (écrans, affiches, maquettes, etc.), les participants devront s’en occuper eux-mêmes."
+    anwser: "Les organisateur·rices fourniront des modulaires (stands non personnalisés). Pour tout matériel supplémentaire (écrans, affiches, maquettes, etc.), les participant·es devront s’en occuper eux-mêmes."
   },
   {
-    question: "Puis-je proposer un stand si je suis un étudiant indépendant ?",
+    question: "Puis-je proposer un stand si je suis un étudiant·e indépendant·e ?",
     anwser: "Les stands sont principalement destinés aux clubs, associations et entreprises. Cependant, si vous avez un projet solide et une bonne capacité de vulgarisation, vous pouvez candidater pour étudier la faisabilité de votre participation."
   },
   {
     question: "Que se passe-t-il si je dois annuler ma participation ?",
-    anwser: "Si vous ne pouvez plus participer, veuillez prévenir les organisateurs dès que possible pour libérer votre place et permettre à d’autres participants de s’inscrire."
+    anwser: "Si vous ne pouvez plus participer, veuillez prévenir les organisateur·rices dès que possible pour libérer votre place et permettre à d’autres participant·es de s’inscrire."
   },
   {
     question: "Les frais de transports seront-ils remboursés ?",
     anwser: "Oui, pour deux personnes au maximum pour chaque stand. Les frais de trains."
   },
   {
-    question: "Le logement des animateurs et leur restauration seront t-ils assurés par Math&Maroc ?",
-    anwser: "Nous avons la capacité de loger deux personnes par stand la nuit du 27 au 28 mars. La restauration est offerte à l’ensemble des animateurs pour le dîner du 27, le petit déjeuner et le déjeuner du 28. Veuillez nous contacter par mail pour toute demande spéciale."
+    question: "Le logement des animateur·rices et leur restauration seront t-ils assurés par Math&Maroc ?",
+    anwser: "Nous avons la capacité de loger deux personnes par stand la nuit du 27 au 28 mars. La restauration est offerte à l’ensemble des animateur·rices pour le dîner du 27, le petit déjeuner et le déjeuner du 28. Veuillez nous contacter par mail pour toute demande spéciale."
   },
 ]
 

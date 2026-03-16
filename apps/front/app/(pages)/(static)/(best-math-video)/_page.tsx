@@ -35,7 +35,7 @@ export default function BestMathVideoPage() {
             className="w-full lg-w-3/4 text-xl text-center"
           >
             Les mathématiques sont partout autour de nous, souvent cachées dans les subtilités de la vie quotidienne. <br/> 
-            Si vous êtes étudiants en <span className="font-bold">primaire, collège ou lycée</span>, nous vous invitons à devenir notre guide à travers ce monde captivant!
+            Si vous êtes étudiant·es en <span className="font-bold">primaire, collège ou lycée</span>, nous vous invitons à devenir notre guide à travers ce monde captivant!
           </div>
         </div>
         
@@ -61,7 +61,7 @@ export default function BestMathVideoPage() {
             </div>
 
             <h1 className='text-center font-bold text-2xl'>Choisissez un sujet fascinant</h1>
-            <p className="text-center text-lg">Une notion de géométrie, une formule algébrique, une démonstration créative. Soyez imaginatifs et rendez ce concept accessible pour le public</p>
+            <p className="text-center text-lg">Une notion de géométrie, une formule algébrique, une démonstration créative. Soyez imaginatif·ve et rendez ce concept accessible pour le public</p>
           </div>
 
           <div className="w-full space-y-4 p-10 bg-[#F9FAFB] rounded-3xl shadow-sm border-[1px] border-gray-100">
@@ -104,7 +104,7 @@ export default function BestMathVideoPage() {
                   Les langues autorisées sont la <span className="font-bold text-[#1C55FF]">Darija marocaine</span>, l&apos;<span className="font-bold text-[#1C55FF]">arabe</span>, le <span className="font-bold text-[#1C55FF]">français</span> et l&apos;<span className="font-bold text-[#1C55FF]">anglais</span>. Nous ne mesurons pas votre maîtrise de la langue, ainsi nous vous encourageons à utiliser la langue où vous êtes le plus à l&apos;aise.
                 </li>
                 <li>Toute vulgarisation simple de l&apos;histoire du concept seule <span className="font-bold">ne sera pas acceptée</span>. Nous vous invitons à expliquer les concepts par des démonstrations bien faites.</li>
-                <li>La vidéo doit être uploadée en premier lieu sur youtube avec un titre sous la forme: <span className="font-bold">{"<Titre de la vidéo> | <Nom prénom> #MDM"}</span>, ensuite le lien doit être renseigné dans le formulaire d&apos;inscription.</li>
+                <li>La vidéo doit être uploadée en premier lieu sur YouTube avec un titre sous la forme: <span className="font-bold">{"<Titre de la vidéo> | <Nom prénom> #MDM"}</span>, ensuite le lien doit être renseigné dans le formulaire d&apos;inscription.</li>
                 <li>Les vidéos présélectionnées par notre jury seront soumises à un <span className="font-bold">vote public</span>.</li>
                 <li>L&apos;usage de l&apos;IA en cas de besoin doit être modéré.</li>
               </ul>
@@ -148,7 +148,7 @@ export default function BestMathVideoPage() {
             Des récompenses attendent les vidéos les plus instructives et interactives !
           </div>
           <div className="text-xl text-center">
-            Le visionnage des vidéos sélectionnées, l&apos;annonce des gagnants et la remise des prix auront lieu pendant la journée marocaine des mathématiques.<br/>
+            Le visionnage des vidéos sélectionnées, l&apos;annonce des gagnant·es et la remise des prix auront lieu pendant la journée marocaine des mathématiques.<br/>
             Nous nous réjouissons de découvrir et d&apos;apprendre à vos côtés les merveilles des mathématiques!
           </div>
         </div>
