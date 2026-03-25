@@ -27,6 +27,16 @@ export const Menu = () => {
     <NavigationMenu>
       <NavigationMenuList className={(isMobile || isTablet) ? 'flex flex-col space-y-4 text-black' : ''}>
         <NavigationMenuItem>
+          <Link 
+            className="text-sm font-medium mr-6 hover:cursor-pointer hover:underline" 
+            href="/planning"
+            onClick={() => {setShowMenu(false)}}
+          >
+            Planning
+          </Link>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
           <NavigationMenuTrigger className="text-sm mr-6">Compétitions</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[270px] p-4 md:w-[400px] md:grid-cols-2 lg:w-[500px]">
