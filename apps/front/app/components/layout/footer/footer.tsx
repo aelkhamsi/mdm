@@ -61,7 +61,7 @@ export default function Footer() {
             <div className='space-y-6'>
               <h1 className='font-bold'>Pages</h1>
               <ul className='space-y-2'>
-                {/* <li><Link href='/planning' className='hover:underline'>Planning</Link></li> */}
+                <li><Link href='/planning' className='hover:underline'>Planning</Link></li>
                 <li><Link href='/organizing-team' className='hover:underline'>Equipe organisatrice</Link></li>
                 <li><Link href='/partners' className='hover:underline'>Partenaires</Link></li>
                 <li><Link href='/faq' className='hover:underline'>FAQ</Link></li>

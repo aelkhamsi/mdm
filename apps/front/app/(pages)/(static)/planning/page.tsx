@@ -10,7 +10,7 @@ export default function ConferencesPage() {
         </h1>
 
         <img
-          src='/planning.jpg'
+          src='/planning.png'
           alt='planning'
           style={{height: 'auto', width: '100%'}}
         /> 

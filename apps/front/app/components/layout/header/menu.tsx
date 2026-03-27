@@ -26,7 +26,7 @@ export const Menu = () => {
   const template = (
     <NavigationMenu>
       <NavigationMenuList className={(isMobile || isTablet) ? 'flex flex-col space-y-4 text-black' : ''}>
-        {/* <NavigationMenuItem>
+        <NavigationMenuItem>
           <Link 
             className="text-sm font-medium mr-6 hover:cursor-pointer hover:underline" 
             href="/planning"
@@ -34,7 +34,7 @@ export const Menu = () => {
           >
             Planning
           </Link>
-        </NavigationMenuItem> */}
+        </NavigationMenuItem>
 
         <NavigationMenuItem>
           <NavigationMenuTrigger className="text-sm mr-6">Compétitions</NavigationMenuTrigger>
