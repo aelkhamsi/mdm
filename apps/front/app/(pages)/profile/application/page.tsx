@@ -83,13 +83,13 @@ export default function ApplicationPage() {
       </CardContent>
 
       
-      <CardFooter>
+      {/* <CardFooter>
         <Button
           onClick={() => router.push('/application')}
         >
           {content?.ctaLabel}
         </Button>
-      </CardFooter> 
+      </CardFooter>  */}
     </Card>
   )
 

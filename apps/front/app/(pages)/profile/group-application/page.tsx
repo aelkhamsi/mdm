@@ -65,7 +65,7 @@ export default function GroupApplicationPage() {
         {groupApplicationCardContent(user?.groupApplication)}
       </CardContent>
 
-      {content?.showCtaButton &&
+      {/* {content?.showCtaButton &&
         <CardFooter>
           <Button
             onClick={() => router.push('/group-application')}
@@ -73,7 +73,7 @@ export default function GroupApplicationPage() {
             {content?.ctaLabel}
           </Button>
         </CardFooter> 
-      }
+      } */}
     </Card>
   )
 
